@@ -8,7 +8,7 @@ Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5` <=> `k1 = 5`
 Condicional | If, If Else, Else e [Switch (ou case)](https://youtu.be/csGFRErhmAU?t=33m2s).
-[Operadores Lógicos](https://www.youtube.com/watch?v=8yeJf1Uq4J0&index=8&list=PLEdPHGYbHhle3ZM7xZaEnPF7RF3d2sUJU) | ==, !=, >, <, && (e), >=, <= e Double <br> pipe (ou).
+[Operadores Lógicos](https://www.youtube.com/watch?v=8yeJf1Uq4J0&index=8&list=PLEdPHGYbHhle3ZM7xZaEnPF7RF3d2sUJU) | ==, !=, >, <, && (e), >=, <= e &#124;&#124; (ou).
 [Looping](https://www.youtube.com/watch?v=cmf0M-u1EMU&index=11&list=PLEdPHGYbHhle3ZM7xZaEnPF7RF3d2sUJU) | While e For.
 Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
 Hash | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
