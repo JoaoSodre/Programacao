@@ -4,6 +4,6 @@
 
 # Alguns Css Properties
 
-`text-align:justify;` = deixa o texto alinhado nos 2 lados<br>
-`text-indent:50px;` = deixa uma margem na primeira linha do texto<br>
-`background-color:#xxx;` (#hexadecimal) = muda cor do fundo do site
+`text-align:justify;` = Deixa o texto alinhado nos 2 lados<br>
+`text-indent:50px;` = Deixa uma margem na primeira linha do texto<br>
+`background-color:#xxx;` (#hexadecimal) = Muda cor do fundo do site<br>
