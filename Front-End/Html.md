@@ -28,7 +28,3 @@
 `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome)<br>
 `<img src=""/>` &rarr; `img` = Imagem , `src` = source (fonte)<br>
 `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)<br>
-
-<!-- <style> text-align:justify;  = deixa o texto alinhado nos 2 lados -->
-<!-- <style> text-indent:50px; = deixa uma margem na primeira linha do texto -->
-<!-- <style> background-color: #xxx; (hexadecimal) = muda fundo do site
