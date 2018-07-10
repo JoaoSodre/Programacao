@@ -5,6 +5,7 @@
 * [W3Schools](https://www.w3schools.com/)
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
 * [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
+* [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 
 # Themes/Templates/Design
 
