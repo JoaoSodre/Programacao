@@ -4,7 +4,7 @@
 
 * [W3Schools](https://www.w3schools.com/)
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
-* [Bit Degree](https://www.bitdegree.org/)
+* [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
 
 # Themes/Templates
 
