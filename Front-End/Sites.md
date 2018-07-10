@@ -6,7 +6,9 @@
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
 * [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
 
-# Themes/Templates
+# Themes/Templates/Design
 
 * [Fresh Design Web](https://freshdesignweb.com/), também possui alguns [tutoriais](https://freshdesignweb.com/category/tutorials/)
 * [WP Freeware](https://www.wpfreeware.com/)
+* [Designs Hack](https://designshack.net/)
+* [Templaza](https://www.templaza.com/blog/)
