@@ -27,7 +27,7 @@
 `<header>(/)` = Cabeçalho<br>
 `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag<br>
 `<figure>(/)` = Usado para demilitar imagens que pertencem a **conteúdos**<br>
-`<figcaption>(/)` = Usado para dar uma legenda a foto (só funciona dentro da tag `<figure>(/)`)<br><br>
+`<figcaption>(/)` = Usado para dar uma legenda a foto (para mecânismos de pesquisa e <br>só funciona dentro da tag `<figure>(/)`)<br><br>
 `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome)<br>
 `<img src=""/>` &rarr; `img` = Imagem , `src` = source (fonte)<br>
 `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)<br>
