@@ -10,6 +10,7 @@
 * [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 * [Tableless (Guia para iniciantes na área de web) (Pt-Br)](http://tableless.github.io/iniciantes/)
 * [Developer Drive](http://www.developerdrive.com/)
+* [Torque](https://torquemag.io/)
 
 # Themes/Templates/Design
 
