@@ -1,6 +1,6 @@
 # Syntax
 
-# 
-#
-#
+# Html
+# Css
+# Javascript
 
