@@ -19,4 +19,4 @@
 * [WP Freeware](https://www.wpfreeware.com/)
 * [Designs Hack](https://designshack.net/)
 * [Templaza](https://www.templaza.com/blog/)
-* [Fontes no Google](https://fonts.google.com/)
+* [Fontes do Google](https://fonts.google.com/)
