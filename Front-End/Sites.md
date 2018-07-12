@@ -5,12 +5,13 @@
 * [W3Schools](https://www.w3schools.com/)
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
 * [Html Dog](http://www.htmldog.com/)
-* [Tutorials Point (Qualquer linguagem)](https://www.tutorialspoint.com/index.htm)
+* [Hackr.io (Tutoriais de qualquer linguagem)](https://hackr.io/)
+* [Tutorials Point (Tutoriais de qualquer linguagem)](https://www.tutorialspoint.com/index.htm)
 * [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
-* [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 * [Tableless (Guia para iniciantes na área de web) (Pt-Br)](http://tableless.github.io/iniciantes/)
-* [Developer Drive](http://www.developerdrive.com/)
-* [Torque](https://torquemag.io/)
+* [Torque (Conselhos e Tutoriais)](https://torquemag.io/)
+* [Enlight (Projetos Open-Source)](https://enlight.nyc/)
+* [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 
 # Themes/Templates/Design
 
