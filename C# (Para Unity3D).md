@@ -17,5 +17,5 @@ public class PlayerController : MonoBehaviour {
 }
 </pre>
 
-Onde `Start ()` seria a função que só vai funcionar **UMA VEZ** quando o código for ativado.
+Onde `Start ()` seria a função que só vai funcionar **UMA VEZ** quando o código for ativado.<br>
 E `Update ()` irá funcionar a cada momento (clock do processador) 
