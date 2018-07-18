@@ -15,4 +15,8 @@ Hash | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidad
 Função (Sem parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`a1 = getName()` , `a1` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para a função funcionar.
 Função (Com parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;k1 = (num1 * 2)<br>&nbsp;&nbsp;&nbsp;&nbsp;k2 = (num2 * 3)<br>&nbsp;&nbsp;&nbsp;&nbsp;b1 = (k1 + k2) / 7<br>&nbsp;&nbsp;&nbsp;&nbsp;return b1;<br>}</pre> `a1 = calcular(3, 5)`-> 3 , `a1`-> 3 
 
-##
+## Fluxograma
+
+Exemplo:<br>
+
+![Fluxograma](https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg)
