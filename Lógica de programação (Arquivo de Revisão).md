@@ -19,4 +19,4 @@ Função (Com parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;
 
 Exemplo:<br>
 
-![Fluxograma](https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg)
+<img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">
