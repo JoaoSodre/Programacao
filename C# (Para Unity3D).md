@@ -54,4 +54,4 @@ void Update()
     transform.position = pos;      
 }
 </pre>
-o Objeto irá pra direção z uma unidade (1.0f) por segundo
+O Objeto irá pra direção Z uma unidade (1.0f) por segundo
