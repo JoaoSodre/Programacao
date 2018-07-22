@@ -6,6 +6,7 @@
 * [Tutorials Point (Qualquer linguagem)](https://www.tutorialspoint.com/index.htm)
 * [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
 * [Enlight (Projetos Open-Source)](https://enlight.nyc/)
+* [Goalkicker (Livros de Programação de Graça)](https://goalkicker.com/)
 * [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 
 # Front-End
@@ -16,6 +17,7 @@
 * [Html Dog](http://www.htmldog.com/)
 * [Tableless (Guia para iniciantes na área de web) (Pt-Br)](http://tableless.github.io/iniciantes/)
 * [Torque (Conselhos e Tutoriais)](https://torquemag.io/)
+* [Css Tricks](https://css-tricks.com/)
 
 ### Themes/Templates/Design
 
