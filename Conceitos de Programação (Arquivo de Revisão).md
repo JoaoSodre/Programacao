@@ -1,6 +1,8 @@
-# Lógica de programação (Arquivo de Revisão)
+# Conceitos de programação (Arquivo de Revisão)
 
-> **Nota**: Todos comandos em javascript devem ser feitos dentro de um arquivo html e também dentro das tags <br> `<script></script>`.
+> Todos comandos em javascript devem ser feitos dentro de um arquivo html e também dentro das tags <br> `<script></script>`.
+
+<!-- Add algoritmo dps -->
 
 ## Básico
 
@@ -17,6 +19,6 @@ Função (Com parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;
 
 ## Fluxograma
 
-Exemplo:<br>
+Exemplo de Fluxograma:<br>
 
 <img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">
