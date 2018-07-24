@@ -1,4 +1,4 @@
-# Conceitos de programação (Arquivo de Revisão)
+# Conceitos de Programação (Arquivo de Revisão)
 
 > Todos comandos em javascript devem ser feitos dentro de um arquivo html e também dentro das tags <br> `<script></script>`.
 
