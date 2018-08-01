@@ -1,8 +1,8 @@
 # Front-End
-
+<br><br>
 # Html
 
-> Nota: Todas as tags e seus significados podem ser encontradas [nesse site (W3Schools)](https://www.w3schools.com/tags/default.asp)
+[Lista de todas tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)
 
 ### Documento Básico de HTML
 
@@ -34,3 +34,15 @@
 * `<img src=""/>` &rarr; `img` = Imagem , `src` = source (fonte)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = 
+
+# Css
+
+> **Nota**: Todo código css deve ser escrito dentro das tags `<style></style>` dentro do `<head></head>` no html
+
+# Alguns Css Properties
+[Lista de todos os propeties do Css com tutoriais (W3Schools)](https://www.w3schools.com/cssref/default.asp)<br> 
+
+`text-align: justify;` = Deixa o texto alinhado nos 2 lados<br>
+`text-indent: 50px;` = Deixa uma margem na primeira linha do texto<br>
+`background-color: #xxx;` (#hexadecimal) = Muda cor do fundo do site<br>
+
