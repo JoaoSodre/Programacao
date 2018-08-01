@@ -1,6 +1,0 @@
-# Syntax
-
-# Html
-# Css
-# Javascript
-
