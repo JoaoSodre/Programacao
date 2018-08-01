@@ -56,4 +56,5 @@ void Update()
     transform.position = pos;      
 }
 </pre>
-O Objeto irá pra direção Z uma unidade (1.0f) por segundo
+O Objeto irá pra direção Z uma unidade (1.0f) por segundo.<br>
+**Nota:** `pos.z += (1.0f * Time.deltaTime);` também funcionaria nesse caso.
