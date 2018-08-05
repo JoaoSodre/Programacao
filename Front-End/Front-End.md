@@ -4,7 +4,8 @@
 # Html
 
 [Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
-[Syntax do Html e Css (Com boas Práticas)](http://codeguide.co/#html)
+[O que é Id, Classes, Styles, Etc, Aqui (W3Schools)](https://www.w3schools.com/Html/default.asp)<br>
+[Syntax do Html e Css (Com boas Práticas) (Codeguide)](http://codeguide.co/#html)
 
 ### Documento Básico de HTML
 
