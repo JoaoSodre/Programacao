@@ -1,6 +1,7 @@
 # Geral
 
 * [W3Schools](https://www.w3schools.com/)
+* [The Odin Project (Melhor lugar para aprender na minha opnião)](https://www.theodinproject.com/courses)
 * [Learn X in Y minutes (Qualquer Linguagem)](https://learnxinyminutes.com/)
 * [Hackr.io (Qualquer linguagem)](https://hackr.io/)
 * [Tutorials Point (Qualquer linguagem)](https://www.tutorialspoint.com/index.htm)
