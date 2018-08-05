@@ -1,8 +1,10 @@
+> Esse documento serve apenas como um pequeno memo
+
 # Front-End
-<br><br>
 # Html
 
-[Lista de todas tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)
+[Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
+[Syntax do Html e Css (Com boas Práticas)](http://codeguide.co/#html)
 
 ### Documento Básico de HTML
 
@@ -14,12 +16,12 @@
 &lt;/head&gt; 
 &lt;body&gt;<br>
 &lt;/body&gt; 
-&lt;/html&gt; </pre>
+&lt;/html&gt; </pre><br>
+`&nbsp;` = (pular espaço) <br>
+`&lt;` = (<) <br>
+`&gt;` = (>) <br>
 
-<!-- &nbsp; (pular espaço) -->
-<!-- &lt; (<) e &gt; (>) -->
-
-### Algumas Tags e Seus Significados
+### _Algumas_ Tags e Seus Significados
 > **Legenda:** <br>(/) = Precisa de outra tag para fechar (Ex: `<h1></h1>`) <br><  /> = Tag que tem fechamento em si mesmo (Ex: `<img src""/>`) <br>
 
 * `<b>(/)` = Bold (negrito)
@@ -28,19 +30,18 @@
 * `<hgroup>(/)` = Grupo de Títulos
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
-* `<figure>(/)` = Usado para demilitar imagens que pertencem a **conteúdos** 
-* `<figcaption>(/)` = Usado para dar uma legenda a foto (só funciona dentro da tag `<figure>`)
 * `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome) 
 * `<img src=""/>` &rarr; `img` = Imagem , `src` = source (fonte)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
-* `<link/>` = 
+* `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
 
 # Css
 
 > **Nota**: Todo código css deve ser escrito dentro das tags `<style></style>` dentro do `<head></head>` no html
 
-# Alguns Css Properties
-[Lista de todos os propeties do Css com tutoriais (W3Schools)](https://www.w3schools.com/cssref/default.asp)<br> 
+# _Algumas_ Css Properties
+
+[Lista de todos os propeties do Css com alguns tutoriais (W3Schools)](https://www.w3schools.com/cssref/default.asp)<br> 
 
 `text-align: justify;` = Deixa o texto alinhado nos 2 lados<br>
 `text-indent: 50px;` = Deixa uma margem na primeira linha do texto<br>
