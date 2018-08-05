@@ -42,10 +42,12 @@ public class PlayerController : MonoBehaviour {
 Onde `Start ()` seria o método que só vai funcionar **UMA VEZ** quando o código for ativado.<br>
 E `Update ()` irá funcionar de tempos em tempos baseado no clock do processador.
 
-### Códigos Unity
+
+### _Alguns_ Códigos Unity
 
 `Vector3 A1 = transform.position` -> Irá pegar as cordenadas do objeto (x, y, z) e colocar na variável `A1` (Do Tipo Vector 3)<br>
-`Time.deltaTime` = Calcula quanto que é 1 segundo baseado nos clocks do processador.<br><br>
+`Time.deltaTime` = Calcula quanto que é 1 segundo baseado nos frame rates.<br><br>
+**É SEMPRE Recomendável usar Time.deltaTime no Update() devido aos frames de diferentes computadores**<br><br>
 
 Exemplo de Algoritmo:
 <pre>
