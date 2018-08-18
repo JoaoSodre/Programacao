@@ -4,7 +4,7 @@
 # Html
 
 [Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
-[O que é Id, Classes, Styles, Etc, Aqui (W3Schools)](https://www.w3schools.com/Html/default.asp)<br>
+[O que é Id, Classes, Styles, Etc (W3Schools)](https://www.w3schools.com/Html/default.asp)<br>
 [Syntax do Html e Css (Com boas Práticas) (Codeguide)](http://codeguide.co/#html)
 
 ### Documento Básico de HTML
@@ -32,7 +32,7 @@
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
 * `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome) 
-* `<img src=""/>` &rarr; `img` = Imagem , `src` = source (fonte)
+* `<img src="" width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar Tamanho<br> da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
 
