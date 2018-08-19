@@ -1,12 +1,13 @@
 # Geral
 
 * [W3Schools](https://www.w3schools.com/)
-* [The Odin Project (Melhor lugar para aprender na minha opnião)](https://www.theodinproject.com/courses)
+* [The Odin Project (Melhor lugar para estudar)](https://www.theodinproject.com/courses)
 * [Learn X in Y minutes (Qualquer Linguagem)](https://learnxinyminutes.com/)
 * [Hackr.io (Qualquer linguagem)](https://hackr.io/)
 * [Tutorials Point (Qualquer linguagem)](https://www.tutorialspoint.com/index.htm)
 * [Bit Degree (Existe muito material de graça)](https://www.bitdegree.org/)
 * [Enlight (Projetos Open-Source)](https://enlight.nyc/)
+* [Six Figure Guy](http://sixfigureguy.com/posts/)
 * [Goalkicker (Livros de Programação de Graça)](https://goalkicker.com/)
 * [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 
