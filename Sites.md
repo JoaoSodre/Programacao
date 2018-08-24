@@ -1,3 +1,5 @@
+* [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+
 # Geral
 
 * [W3Schools](https://www.w3schools.com/)
