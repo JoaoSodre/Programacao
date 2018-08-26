@@ -11,6 +11,7 @@
 * [Enlight (Projetos Open-Source)](https://enlight.nyc/)
 * [Six Figure Guy](http://sixfigureguy.com/posts/)
 * [Goalkicker (Livros de Programação de Graça)](https://goalkicker.com/)
+* [Python: 49 Ideas for Game Clones](https://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 * [Reddit: Learn Programming](https://www.reddit.com/r/learnprogramming/)
 
 # Front-End
