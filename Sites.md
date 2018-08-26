@@ -1,5 +1,5 @@
 * [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
+* [100 Recursos para Web Design](https://www.updateordie.com/2018/08/10/100-links-de-ferramentas-e-recursos-para-web-design/)
 # Geral
 
 * [W3Schools](https://www.w3schools.com/)
