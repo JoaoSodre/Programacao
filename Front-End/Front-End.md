@@ -2,7 +2,7 @@
 
 # Front-End
 # Html
-
+[How to Layout a Website (5 Tutoriais)](https://www.youtube.com/watch?v=Ghnrxgk-jCc&list=PLGLfVvz_LVvT59FVZJeJtVUr3h7PluW6Q&index=1)<br>
 [Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
 [O que é Id, Classes, Styles, Etc (W3Schools)](https://www.w3schools.com/Html/default.asp)<br>
 [Syntax do Html e Css (Com boas Práticas) (Codeguide)](http://codeguide.co/#html)
