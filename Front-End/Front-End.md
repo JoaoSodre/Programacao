@@ -1,8 +1,10 @@
 > Esse documento serve apenas como um pequeno memo
 
 # Front-End
-# Html
+### Playlists
 [How to Layout a Website (5 Tutoriais)](https://www.youtube.com/watch?v=Ghnrxgk-jCc&list=PLGLfVvz_LVvT59FVZJeJtVUr3h7PluW6Q&index=1)<br>
+[CSS Video Tutorials (7 Vídeos)](https://www.youtube.com/watch?v=I-rTKuEhrCM&index=1&list=PL07454EA7FF8D28AB)
+# Html
 [Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
 [O que é Id, Classes, Styles, Etc (W3Schools)](https://www.w3schools.com/Html/default.asp)<br>
 [Syntax do Html e Css (Com boas Práticas) (Codeguide)](http://codeguide.co/#html)
