@@ -1,4 +1,4 @@
-> Esse documento serve apenas como um pequeno memo
+> Esse documento serve apenas como um pequeno lembrete
 
 # Html
 [Lista de **todas** tags HTML com tutoriais (W3Schools)](https://www.w3schools.com/tags/default.asp)<br>
