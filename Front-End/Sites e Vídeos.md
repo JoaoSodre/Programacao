@@ -20,8 +20,8 @@
 # Vídeos
 
 ### Canais
-[]()<br>
-[]()
+[Online Tutorials (Css)](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog/videos)<br>
+[Creative Creations (Css)](https://www.youtube.com/channel/UCOKmVksbzoKJKmtu7rlEM1A/videos)
 ### Playlists
 [How to Layout a Website (5 Tutoriais)](https://www.youtube.com/watch?v=Ghnrxgk-jCc&list=PLGLfVvz_LVvT59FVZJeJtVUr3h7PluW6Q&index=1)<br>
 [CSS Video Tutorials (7 Vídeos)](https://www.youtube.com/watch?v=I-rTKuEhrCM&index=1&list=PL07454EA7FF8D28AB)
