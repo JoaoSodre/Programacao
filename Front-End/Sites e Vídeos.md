@@ -1,5 +1,7 @@
 # Sites
 
+* [Site excelente para estudar funções do javascript](https://www.sketchywebsite.net/)
+
 ### Referências, Tutoriais e Dicas
 
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
