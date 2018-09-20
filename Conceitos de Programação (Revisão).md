@@ -9,6 +9,7 @@
 Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5` <=> `k1 = 5`
+Constante | `const pi = 3.1415`
 Condicional | If, If Else, Else e Switch (ou case).
 Operadores Lógicos | ==, !=, >, <, && (e), >=, <= e &#124;&#124; (ou).
 Looping | While e For.
