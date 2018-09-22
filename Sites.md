@@ -1,7 +1,7 @@
 * [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 * [100 Recursos para Web Design](https://www.updateordie.com/2018/08/10/100-links-de-ferramentas-e-recursos-para-web-design/)
 # Geral
-
+* [Dotnetperls (Tutoriais e exercícios com várias linguagens)](https://www.dotnetperls.com/#default)
 * [W3Schools](https://www.w3schools.com/)
 * [The Odin Project (Melhor lugar para estudar)](https://www.theodinproject.com/courses)
 * [Learn X in Y minutes (Qualquer Linguagem)](https://learnxinyminutes.com/)
