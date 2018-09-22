@@ -8,6 +8,8 @@
 
 > **Nota:** não é necessário usar `var` antes de declarar uma variável, porém é sempre recomendável usa-lá para "good practices" e para não se perder, assim como `;` no final de todo comando.
 
+> Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
+
 Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5` <=> `k1 = 5`
