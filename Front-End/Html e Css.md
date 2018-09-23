@@ -30,14 +30,15 @@
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
 * `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome) 
-* `<img src="" width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar Tamanho<br> da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
+* `<img src=".png .jpg ..." width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
+* `<script src=".js">(/)` = Programação orientada a funções.
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
 
 # Css
 
 > **Nota**: Todo código css deve ser escrito dentro das tags `<style></style>` dentro do `<head></head>` no html
-
+`<script src="url do css">(/)`
 # _Algumas_ Css Properties
 
 [Lista de todos os propeties do Css com alguns tutoriais (W3Schools)](https://www.w3schools.com/cssref/default.asp)<br> 
