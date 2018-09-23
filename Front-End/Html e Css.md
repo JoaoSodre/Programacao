@@ -28,7 +28,7 @@
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
 * `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Único nome do código **inteiro**) 
-* `<img src=".png .jpg ..." &nbsp;&nbsp;&nbsp; width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
+* `<img src=".png .jpg ..."      width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
 * `<script src=".js">(/)` = Programação orientada a funções.
