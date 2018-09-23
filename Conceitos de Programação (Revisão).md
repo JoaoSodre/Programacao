@@ -25,7 +25,7 @@ Função Recursiva<br>(Função que se chama) | <pre>var jkjk = 10;<br>function 
 
 ## Mais Exemplos e Syntaxes
 
-> Lembrete: Em programação a contagem começara na maioria das vezes em **0**
+> Lembrete: Em programação a contagem começará na maioria das vezes em **0**
 
 ### Array
 <pre>
