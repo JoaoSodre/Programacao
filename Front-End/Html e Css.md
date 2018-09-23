@@ -23,17 +23,15 @@
 ### _Algumas_ Tags e Seus Significados
 > **Legenda:** <br>(/) = Precisa de outra tag para fechar (Ex: `<h1></h1>`) <br><  /> = Tag que tem fechamento em si mesmo (Ex: `<img src""/>`) <br>
 
-* `<b>(/)` = Bold (negrito)
-* `<i>(/)` ou `<em>(/)` = Itálico
 * `<p>(/)` = Parágrafo
 * `<hgroup>(/)` = Grupo de Títulos
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
-* `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Nome) 
-* `<img src=".png .jpg ..." width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
-* `<script src=".js">(/)` = Programação orientada a funções.
+* `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Único nome do código **inteiro**) 
+* `<img src=".png .jpg ..." &nbsp;&nbsp;&nbsp; width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
+* `<script src=".js">(/)` = Programação orientada a funções.
 
 # Css
 
