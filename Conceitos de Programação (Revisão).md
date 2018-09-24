@@ -10,6 +10,8 @@
 
 > Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
 
+> [Mais Exemplos dos Conceitos](https://github.com/JoaoSodre/Programacao/blob/master/Mais%20Exemplos%20e%20Syntaxes%20(L%C3%B3gica).md)
+
 Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5` <=> `k1 = 5`
@@ -23,31 +25,9 @@ Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&
 Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;mmm = num1 + num2;<br>&nbsp;&nbsp;&nbsp;&nbsp;return mmm ;<br>}</pre> `a1 = calcular(3, 5)`,`a1`-> 8 
 Função Recursiva<br>(Função que se chama) | <pre>var jkjk = 10;<br>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (jkjk == 10) {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Olá!");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}
 
-## Mais Exemplos e Syntaxes
+## Orientação a Objeto
 
-> Lembrete: Em programação a contagem começará na maioria das vezes em **0**
 
-### Array
-<pre>
-media = 8
-nota1 = 7
 
-w = [] // Criando o array sem atributos.
-
-w.push(5)     // Ficara no slot 0 do array.
-w.push(media) // Ficara no slot 1 do array.
-w.push(nota1) // Ficara no slot 2 do array.
-</pre>
-
-`alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
-
-### Hash
-<pre>
-g = {}
-g.nome = "joao";
-g.nota = 8;
-</pre>
-
-`alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria nesse caso pois é necessário definir o **atributo**.
 
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
