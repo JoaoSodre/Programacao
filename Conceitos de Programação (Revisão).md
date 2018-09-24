@@ -48,6 +48,6 @@ g.nome = "joao";
 g.nota = 8;
 </pre>
 
-`alert(g.nota + 10)` -> `18` &nbsp;&nbsp;( alert(g) não funcionaria, é necessário definir o **atributo**).
+`alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria, é necessário definir o **atributo**.
 
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
