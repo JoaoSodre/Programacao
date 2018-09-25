@@ -1,4 +1,4 @@
-# Conceitos de Programação (Revisão)
+# Conceitos de Programação
 
 > Todos comandos em javascript devem ser feitos dentro de um arquivo html e também dentro das tags <br> `<script></script>`.
 
@@ -27,7 +27,12 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 ## Orientação a Objeto
 
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Ex: Arquivos .js), *encapsulando-os* em **Classes** (Objetos/Modelos) que possuem o mesmo **contexto**, facilitando assim todo o processo de programação.
 
+Fora da Classe | Dentro da Classe
+-------------- | ---------
+Variável | Atributo
+Função | Método
 
 
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
