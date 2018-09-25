@@ -34,5 +34,5 @@ Fora da Classe | Dentro da Classe
 Variável | Atributo
 Função | Método
 
-
+Instancias -> Clones de Classes
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
