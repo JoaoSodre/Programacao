@@ -27,12 +27,13 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 ## Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Ex: Arquivos .js), *encapsulando-os* em **Classes** (Objetos/Modelos) que possuem o mesmo **contexto**, facilitando assim todo o processo de programação.
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Ex: Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, facilitando assim todo o processo de programação.
 
-Fora da Classe | Dentro da Classe
--------------- | ---------
-Variável | Atributo
+Nome Comum | Orientação Objeto
+--- | ---
+Variável | Atributo/Propiedades
 Função | Método
+Modelo | Classe/Objeto
 
-Instancias -> Clones de Classes
+Instancias -> Clones de classes que podem ir dentro de uma variável.
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
