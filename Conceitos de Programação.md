@@ -18,7 +18,7 @@ Variável | `var k1 = 5` <=> `k1 = 5`
 Constante (Var que <br>não muda) | `const pi = 3.1415`
 Condicional | If, If Else, Else e Switch (ou case).
 Operadores Lógicos | ==, !=, >, <, && (e), >=, <= e &#124;&#124; (ou).
-Looping | While e For.
+Looping | While e For. <!-- ([Diferenças entre os dois]() -->)
 Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
 Hash | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
 Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`nome = getName()` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
