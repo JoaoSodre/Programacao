@@ -35,6 +35,7 @@ Variável | Atributo/Propiedades
 Função | Método
 Modelo | Classe/Objeto
 
-Instancias -> Clones de classes que podem ser inseridas dentro de uma variável.<br>
+Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<br>
+
 <!-- [Exemplo de Orientação Objeto]() -->
 <!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
