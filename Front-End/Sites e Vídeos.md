@@ -22,6 +22,7 @@
 # Vídeos
 
 ### Canais
+[Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw/videos)<br>
 [Online Tutorials (Css)](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog/videos)<br>
 [Creative Creations (Css)](https://www.youtube.com/channel/UCOKmVksbzoKJKmtu7rlEM1A/videos)
 ### Playlists
