@@ -1,6 +1,6 @@
 # Sites
 
-* [Site excelente para estudar funções do javascript](https://www.sketchywebsite.net/)
+* [Site excelente para estudar algumas funções do javascript](https://www.sketchywebsite.net/)
 
 ### Referências, Tutoriais e Dicas
 
