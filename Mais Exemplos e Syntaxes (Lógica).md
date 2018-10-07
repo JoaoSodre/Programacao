@@ -2,6 +2,8 @@
 
 > Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
 
+## Loopings
+
 ## Array
 <pre>
 media = 8
