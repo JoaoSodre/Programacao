@@ -1,6 +1,6 @@
 # Mais Exemplos e Syntaxes
 
-> Lembrete: Em programação a contagem começará em **0**
+> Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
 
 ## Array
 <pre>
