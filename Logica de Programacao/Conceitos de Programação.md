@@ -10,7 +10,7 @@
 
 > Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
 
-> [Mais Exemplos dos Conceitos e Syntaxes](https://github.com/JoaoSodre/Programacao/blob/master/Mais%20Exemplos%20e%20Syntaxes%20(L%C3%B3gica).md)
+> [Mais Exemplos dos Conceitos e Syntaxes](https://github.com/JoaoSodre/Programacao/blob/master/Logica%20de%20Programacao/Conceitos%20de%20Programa%C3%A7%C3%A3o%20(Exemplos%20e%20Syntaxes).md#conceitos-de-programa%C3%A7%C3%A3o-exemplos-e-syntaxes)
 
 Conceito | Exemplo (Javascript)
 -------- | -----------
