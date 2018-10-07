@@ -1,4 +1,4 @@
-# Mais Exemplos e Syntaxes
+# Conceitos de Programação (Exemplos e Syntaxes)
 
 > Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
 
