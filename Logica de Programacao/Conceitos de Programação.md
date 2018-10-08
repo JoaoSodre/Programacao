@@ -31,10 +31,11 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 Código-Fonte | Orientação Objeto
 --- | ---
-Variável | Atributo/Propiedades
+Variável | Propiedades
 Função | Método
 Modelo | Classe/Objeto
 
+Atributo -> Mesma que propiedades simples.
 Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<br>
 
 <!-- [Exemplo de Orientação Objeto]() -->
