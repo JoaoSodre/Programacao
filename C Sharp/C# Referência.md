@@ -21,13 +21,13 @@ Array
 
 ### Loopings
 
-o `break` é usado para encerar o looping vai para } // if [a==1]{break;}<br>
-o `continue` é usado para
+o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo if (a) {break;}<br>
+o `continue` é usado para **pular** uma repetição
 
 while = enquanto tal condição, execute o bloco.<br>
 do..while = faça a operação primeiro e depois entra no looping.<br>
 for = já determina a quantidade de repetições.<br>
-foreach = varre um array.
+foreach = para cada elemento de um array.
 
 # Syntaxes
 
@@ -35,7 +35,7 @@ foreach = varre um array.
 
 ### [Variáveis](https://github.com/JoaoSodre/GameDev/blob/master/Unity3D/C%23%20ScriptsExamples.md#variables)
 
-> É necessário usar either `private` ou `public` antes de uma variável, e [depois declarar qual o tipo dela](https://github.com/JoaoSodre/GameDev/blob/master/Unity3D/C%23%20Refer%C3%AAncia.md#alguns-tipos-de-vari%C3%A1veis) quando estiver usando **Unity Engine**.
+<!-- > É necessário usar either `private` ou `public` antes de uma variável, e [depois declarar qual o tipo dela](https://github.com/JoaoSodre/GameDev/blob/master/Unity3D/C%23%20Refer%C3%AAncia.md#alguns-tipos-de-vari%C3%A1veis). -->
 
 `(Tipo de Variável) + (Nome da Variável) = (Valor) ;`<br>
 `(Tipo de Variável) + (Nome da Variável) ;`<br>
@@ -46,7 +46,7 @@ foreach = varre um array.
 Hash 
 Array
 
-### Loopings
+### [Loopings](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/C%23%20ScriptsExamples.md#looping)
 
 
 ### Coroutines
