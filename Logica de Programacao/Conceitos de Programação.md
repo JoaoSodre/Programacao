@@ -31,12 +31,11 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 Código-Fonte | Orientação Objeto
 --- | ---
-Variável | Propiedades
+Variável | Propiedades/Atributo
 Função | Método
 Modelo | Classe/Objeto
 
-Atributo -> Mesma que propiedades simples.
+Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
 Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<br>
 
 <!-- [Exemplo de Orientação Objeto]() -->
-<!--##FluxogramaExemplo de Fluxograma:<br><img src="https://raw.githubusercontent.com/JoaoSodre/Programacao/master/Img/Fluxograma.jpg" width="600">-->
