@@ -16,22 +16,26 @@ Exemplo (Javascript):
 <pre>
 var Clientes = function() // em javascript se cria uma classe usando o comando function dessa forma.
 {
-    var nome = ""; // propiedade
-    var telefone = ""; // propiedade
+    // this = Clientes
+    this.nome = ""; // propiedade
+    this.telefone = ""; // propiedade
     
-    functon Mostrar() // método
+    this.Mostrar = function() // método
     {
-        document.write("Nome: " + nome);
-        document.write("Telefone: " + telefone)
+        alert("Nome: " + this.nome);
+        alert("Telefone: " + this.telefone);
     }
 }
 
-var A = new Clientes // Instanciando o objeto
-var B = new Clientes // Instanciando o mesmo objeto novamente, porem outra variavel
+var A = new Clientes() // Instanciando o objeto
+var B = new Clientes() // Instanciando o mesmo objeto novamente, porem outra variavel
 
+// Atribuindo valores as propiedades
 A.nome = "João"
 A.telefone = "111"
 B.nome = "José"
 B.telefone = "222"
+
 </pre>
-<!-- [Exemplo de Orientação Objeto]() -->
+## Syntax Orientação Objeto
+
