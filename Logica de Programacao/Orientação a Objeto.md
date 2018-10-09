@@ -11,8 +11,27 @@ Modelo | Classe/Objeto
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
 Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<br>
 
-Ex:
-<pre>
+Exemplo (Javascript):
 
+<pre>
+var Clientes = function() // em javascript se cria uma classe usando o comando function dessa forma.
+{
+    var nome = ""; // propiedade
+    var telefone = ""; // propiedade
+    
+    functon Mostrar() // método
+    {
+        document.write("Nome: " + nome);
+        document.write("Telefone: " + telefone)
+    }
+}
+
+var A = new Clientes // Instanciando o objeto
+var B = new Clientes // Instanciando o mesmo objeto novamente, porem outra variavel
+
+A.nome = "João"
+A.telefone = "111"
+B.nome = "José"
+B.telefone = "222"
 </pre>
 <!-- [Exemplo de Orientação Objeto]() -->
