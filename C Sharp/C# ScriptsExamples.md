@@ -1,7 +1,9 @@
 ### Variables
-`bool running = true;`<br>
-`int idade = 30;`<br>
-`public float A1, A2, A3;`<br>
+<pre>
+bool running = true;
+int idade = 30;
+public float A1, A2, A3;
+</pre>
 ### Looping
 <pre>
 int a = 1;
