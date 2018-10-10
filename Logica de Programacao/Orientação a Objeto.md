@@ -17,6 +17,7 @@ Exemplo (Javascript):
 var Clientes = function() // em javascript se cria uma classe usando o comando function dessa forma.
 {
     // this = Clientes
+    
     this.nome = ""; // propiedade
     this.telefone = ""; // propiedade
     
@@ -26,16 +27,17 @@ var Clientes = function() // em javascript se cria uma classe usando o comando f
         alert("Telefone: " + this.telefone);
     }
 }
-
+</pre>
+<pre>
 var A = new Clientes() // Instanciando o objeto
 var B = new Clientes() // Instanciando o mesmo objeto novamente, porem outra variavel
-
+</pre>
+<pre>
 // Atribuindo valores as propiedades
 A.nome = "João"
 A.telefone = "111"
 B.nome = "José"
 B.telefone = "222"
-
 </pre>
 ## Syntax Orientação Objeto
 
