@@ -5,7 +5,7 @@
 Estruturado | Orientação Objeto
 --- | ---
 Variável | Propiedades/Atributo
-Função | Método
+Função | Método/Ação
 Modelo | Classe/Objeto
 
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
