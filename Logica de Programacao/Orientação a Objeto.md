@@ -35,7 +35,7 @@ var Clientes = function()
 </pre>
 
 <pre>
-// Como intanciar um objeto -> var + (Nome da variável) = new (Nome do objeto junto com parênteses)
+// Como intanciar um objeto -> var + (Nome da variável) = new (Nome do objeto junto com parênteses);
 var A = new Clientes();
 var B = new Clientes();
 </pre>
