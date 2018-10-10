@@ -19,9 +19,9 @@ Exemplo (Javascript):
 // Como criar um objeto -> var + (Nome do objeto) = function() {  ...  }
 var Clientes = function()
 {
-    // `this` <=> (Nome da variável), nesse caso `Clientes`.  
+    // `this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.  
     
-    // Como criar uma propiedade -> this.(Nome do atributo) = (Valor);
+    // Como criar uma propiedade -> this.(Nome da propiedade) = (Valor);
     this.nome = "";
     this.telefone = "";
     
@@ -33,6 +33,7 @@ var Clientes = function()
     }
 }
 </pre>
+
 <pre>
 // Como intanciar um objeto -> var + (Nome da variável) = new (Nome do objeto junto com parênteses)
 var A = new Clientes();
