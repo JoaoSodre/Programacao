@@ -2,7 +2,7 @@
 
 É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de programação.
 
-Estruturado | Orientação Objeto
+Código Estruturado | Orientação Objeto
 --- | ---
 Variável | Propiedades/Atributo
 Função | Método/Ação
@@ -13,15 +13,20 @@ Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<b
 
 Exemplo (Javascript):
 
+> Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
+
 <pre>
-var Clientes = function() // em javascript se cria uma classe usando o comando function dessa forma.
+// Como criar um objeto -> var + (Nome do objeto) = function() {  ...  }
+var Clientes = function()
 {
-    // this = Clientes
+    // `this` <=> (Nome da variável), nesse caso `Clientes`.  
     
-    this.nome = ""; // propiedade
-    this.telefone = ""; // propiedade
+    // Como criar uma propiedade -> this.(Nome do atributo) = (Valor);
+    this.nome = "";
+    this.telefone = "";
     
-    this.Mostrar = function() // método
+    // Como criar um método -> this.(Nome do método) = function () { ... }
+    this.Mostrar = function()
     {
         alert("Nome: " + this.nome);
         alert("Telefone: " + this.telefone);
@@ -29,15 +34,15 @@ var Clientes = function() // em javascript se cria uma classe usando o comando f
 }
 </pre>
 <pre>
-var A = new Clientes() // Instanciando o objeto
-var B = new Clientes() // Instanciando o mesmo objeto novamente, porem outra variavel
+// Como intanciar um objeto -> var + (Nome da variável) = new (Nome do objeto junto com parênteses)
+var A = new Clientes();
+var B = new Clientes();
 </pre>
-<pre>
-// Atribuindo valores as propiedades
-A.nome = "João"
-A.telefone = "111"
-B.nome = "José"
-B.telefone = "222"
-</pre>
-## Syntax Orientação Objeto
 
+<pre>
+// Como atribuir valor as propiedades dentro das instâncias -> (Nome da variável).(Nome do atributo) = (Valor);
+A.nome = "João";
+A.telefone = "111";
+B.nome = "José";
+B.telefone = "222";
+</pre>
