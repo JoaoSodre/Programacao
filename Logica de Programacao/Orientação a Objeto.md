@@ -9,7 +9,7 @@ Função | Método/Ação
 Modelo | Classe/Objeto
 
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
-Instancias -> Clones de classes (Podem ser inseridas dentro de uma variável).<br>
+Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br>
 
 Exemplo (Javascript):
 
