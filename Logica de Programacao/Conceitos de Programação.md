@@ -59,9 +59,8 @@ deVezes = prompt("Até qual número você deseja repetir?");
 daBase = prompt("De qual número você deseja começar?");
 resultados = []; // Caso precise, os resultados estaram aqui
 
-for (J = 0; J <= deVezes; J++) 
-{
-    if (J == J) {J = daBase;} // Ou no statment 1 do comando for ->  J = daBase 
+for (var J = daBase; J <= deVezes; J++) 
+{ 
     multiplicacao = deQual * daBase;
     alert(deQual + " * " + daBase + " = " + multiplicacao);
     resultados.push(multiplicacao);
