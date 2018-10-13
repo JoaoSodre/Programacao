@@ -15,18 +15,21 @@ Exemplo (Javascript):
 
 > Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
 
+Criando:<br>
+Objeto -> `var + (Nome do objeto) = function() {  ...  }` <br>
+Propiedade -> `this.(Nome da propiedade) = (Valor);` <br>
+Método -> `this.(Nome do método) = function () { ... }` <br>
+Intanciar um objeto -> `var + (Nome da variável) = new (Nome do OBJETO junto com parênteses);` <br>
+Atribuir valor as instâncias -> `(Nome da variável).(Nome do atributo) = (Valor);`
 <pre>
-// Como criar um objeto -> var + (Nome do objeto) = function() {  ...  }
-var Clientes = function()
+var Clientes = function() // Objeto
 {
     // `this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.  
-    
-    // Como criar uma propiedade -> this.(Nome da propiedade) = (Valor);
-    this.nome = "";
-    this.telefone = "";
-    
-    // Como criar um método -> this.(Nome do método) = function () { ... }
-    this.Mostrar = function()
+
+    this.nome = ""; // Propiedade "nome"
+    this.telefone = ""; // Propiedade "telefone"
+
+    this.Mostrar = function() // Método "Mostrar"
     {
         alert("Nome: " + this.nome);
         alert("Telefone: " + this.telefone);
@@ -35,14 +38,12 @@ var Clientes = function()
 </pre>
 
 <pre>
-// Como intanciar um objeto -> var + (Nome da variável) = new (Nome do objeto junto com parênteses);
-var A = new Clientes();
-var B = new Clientes();
+var A = new Clientes(); // Instânciando o objeto "Cliente"
+var B = new Clientes(); // Instânciando o objeto "Cliente", numa variável diferente
 </pre>
 
 <pre>
-// Como atribuir valor as propiedades dentro das instâncias -> (Nome da variável).(Nome do atributo) = (Valor);
-A.nome = "João";
+A.nome = "João"; // Atribuindo valores as Instâncias
 A.telefone = "111";
 B.nome = "José";
 B.telefone = "222";
