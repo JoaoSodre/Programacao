@@ -1,10 +1,10 @@
 # Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de programação.
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização.
 
 Código Estruturado | Orientação Objeto
 --- | ---
-Variável | Propiedades/Atributo
+Variável | Atributo/Propiedades
 Função | Método/Ação
 Modelo | Classe/Objeto
 
@@ -13,7 +13,7 @@ Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br
 
 #### Exemplos (Javascript):
 
-Como | Syntax (Javascript)
+Como | Syntax
 --- | ---
 Criar um Objeto | `var + (Nome do objeto) = function () {  ...  }` 
 Criar uma Propiedade | `this.(Nome da propiedade) = (Valor);` 
@@ -27,7 +27,7 @@ Atribuir valor as instâncias | `(Nome da variável).(Nome do atributo) = (Valor
 
 <br>
 <pre>
-var Clientes = function() // Objeto
+var Clientes = function() // Objeto "Cliente"
 {
     this.nome = ""; // Propiedade "nome"
     this.telefone = ""; // Propiedade "telefone"
@@ -45,8 +45,34 @@ var B = new Clientes(); // Instânciando o objeto "Cliente", numa variável dife
 </pre>
 
 <pre>
-A.nome = "João"; // Atribuindo valores as Instâncias
+A.nome = "João"; // Atribuindo valores aos atributos das instâncias
 A.telefone = "111";
 B.nome = "José";
 B.telefone = "222";
+</pre>
+### Métodos/Atributos de Instância
+São usados apenas para **UMA** instância.<br>
+Exemplo:
+<pre>
+var A = function()
+{
+    this.lugar = "";
+}
+
+var B = new A();
+var C = new A();
+
+B.lugar = "São Paulo";
+C.lugar = "Campinas";
+
+// O atributo só serviu para cada uma das instâncias, logo atributo de instância
+</pre>
+### Métodos/Atributos de Classe
+São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
+Exemplo:
+<pre>
+var A = function()
+{
+    this.lugar = "";
+}
 </pre>
