@@ -29,23 +29,9 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 > Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
 
-## Loopings
-Tabuada:
-<pre>
-deQual = prompt("De qual número você quer saber a tabulada?");
-deVezes = prompt("Até qual número você deseja repetir?");
-daBase = prompt("De qual número você quer que começa?");
-resultados = [];
-
-for (i=0; i<deVezes; i++) 
-{
-    alert(deQual + " * " + daBase + " = " + deQual*daBase);
-    resultados.push(deQual*daBase) // Jogando num array os resultados, caso precise
-    daBase++;
-}
-</pre>
 
 ## Array
+
 <pre>
 media = 8
 nota1 = 7
@@ -60,6 +46,7 @@ w.push(nota1) // Ficara no slot 2 do array.
 `alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
 
 ## Hash
+
 <pre>
 g = {}
 g.nome = "joao";
