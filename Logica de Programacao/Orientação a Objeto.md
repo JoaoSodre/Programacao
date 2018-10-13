@@ -26,13 +26,13 @@ Atribuir valor as instâncias | `(Nome da variável).(Nome do atributo) = (Valor
 <pre>
 var Clientes = function () // Objeto
 {
-  this.nome = ""; // Propiedade "nome"
-  this.telefone = ""; // Propiedade "telefone"
-  this.Mostrar = function() // Método "Mostrar"
-  {
-    alert("Nome: " + this.nome);
-    alert("Telefone: " + this.telefone);
-  }
+    this.nome = ""; // Propiedade "nome"
+    this.telefone = ""; // Propiedade "telefone"
+    this.Mostrar = function() // Método "Mostrar"
+    {
+        alert("Nome: " + this.nome);
+        alert("Telefone: " + this.telefone);
+    }
 }
 </pre>
 
