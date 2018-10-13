@@ -13,23 +13,23 @@ Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br
 
 #### Exemplos (Javascript):
 
-Criando:<br>
-Objeto -> `var + (Nome do objeto) = function() {  ...  }` <br>
-Propiedade -> `this.(Nome da propiedade) = (Valor);` <br>
-Método -> `this.(Nome do método) = function () { ... }` <br>
-Intanciar um objeto -> `var + (Nome da variável) = new (Nome do OBJETO junto com parênteses);` <br>
-Atribuir valor as instâncias -> `(Nome da variável).(Nome do atributo) = (Valor);`<br>
+Como | Syntax (Javascript)
+--- | ---
+Criar um Objeto | `var + (Nome do objeto) = function () {  ...  }` 
+Criar uma Propiedade | `this.(Nome da propiedade) = (Valor);` 
+Criar um Método | `this.(Nome do método) = function () { ... }` 
+Intanciar um objeto | `var + (Nome da variável) = new (Nome do OBJETO)();` 
+Atribuir valor as instâncias | `(Nome da variável).(Nome do atributo) = (Valor);`
 
 > Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
 <br>
 <pre>
-var Clientes = function() // Objeto
-{
-    // `this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.  
-
+var Clientes = function () // Objeto
+{   
+    // `this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.
+    
     this.nome = ""; // Propiedade "nome"
     this.telefone = ""; // Propiedade "telefone"
-
     this.Mostrar = function() // Método "Mostrar"
     {
         alert("Nome: " + this.nome);
