@@ -1,10 +1,4 @@
-# Conceitos de Programação
-
-> Todos comandos em javascript devem ser feitos dentro de um arquivo html e também dentro das tags <br> `<script></script>`.
-
-<!-- Add algoritmo dps -->
-
-## Básico
+# Básico
 
 > **Nota:** não é necessário usar `var` antes de declarar uma variável, porém é sempre recomendável usa-lá para "good practices" e para não se perder, assim como `;` no final de todo comando.
 
