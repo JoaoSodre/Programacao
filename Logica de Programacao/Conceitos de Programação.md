@@ -10,7 +10,7 @@
 
 > Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
 
-> [Mais Exemplos dos Conceitos e Syntaxes](https://github.com/JoaoSodre/Programacao/blob/master/Logica%20de%20Programacao/Conceitos%20de%20Programa%C3%A7%C3%A3o%20(Exemplos%20e%20Syntaxes).md#conceitos-de-programa%C3%A7%C3%A3o-exemplos-e-syntaxes)
+> [Mais Exemplos dos Conceitos e Syntaxes](https://github.com/JoaoSodre/Programacao/blob/master/Logica%20de%20Programacao/Conceitos%20de%20Programa%C3%A7%C3%A3o.md#b%C3%A1sico)
 
 Conceito | Exemplo (Javascript)
 -------- | -----------
@@ -24,3 +24,32 @@ Hash | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidad
 Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
 Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;mmm = num1 + num2;<br>&nbsp;&nbsp;&nbsp;&nbsp;return mmm ;<br>}</pre> `a1 = calcular(3, 5);`,`a1`-> 8 
 Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (PPP == 10) {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Olá!");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</pre><br> **Nota**: Sempre pense numa valvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas. 
+
+# Mais Exemplos e Syntaxes
+
+> Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
+
+## Loopings
+
+## Array
+<pre>
+media = 8
+nota1 = 7
+
+w = [] // Criando o array sem atributos.
+
+w.push(5)     // Ficara no slot 0 do array.
+w.push(media) // Ficara no slot 1 do array.
+w.push(nota1) // Ficara no slot 2 do array.
+</pre>
+
+`alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
+
+## Hash
+<pre>
+g = {}
+g.nome = "joao";
+g.nota = 8;
+</pre>
+
+`alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria nesse caso pois é necessário definir o **atributo**.
