@@ -11,16 +11,17 @@ Modelo | Classe/Objeto
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
 Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br>
 
-Exemplo (Javascript):
-
-> Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
+#### Exemplos (Javascript):
 
 Criando:<br>
 Objeto -> `var + (Nome do objeto) = function() {  ...  }` <br>
 Propiedade -> `this.(Nome da propiedade) = (Valor);` <br>
 Método -> `this.(Nome do método) = function () { ... }` <br>
 Intanciar um objeto -> `var + (Nome da variável) = new (Nome do OBJETO junto com parênteses);` <br>
-Atribuir valor as instâncias -> `(Nome da variável).(Nome do atributo) = (Valor);`
+Atribuir valor as instâncias -> `(Nome da variável).(Nome do atributo) = (Valor);`<br>
+
+> Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
+<br>
 <pre>
 var Clientes = function() // Objeto
 {
