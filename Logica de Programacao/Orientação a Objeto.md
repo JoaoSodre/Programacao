@@ -21,10 +21,13 @@ Criar um Método | `this.(Nome do método) = function () { ... }`
 Intanciar um objeto | `var + (Nome da variável) = new (Nome do OBJETO)();` 
 Atribuir valor as instâncias | `(Nome da variável).(Nome do atributo) = (Valor);`
 
-> Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.<br>`this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.
+> Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
+
+>`this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.
+
 <br>
 <pre>
-var Clientes = function () // Objeto
+var Clientes = function() // Objeto
 {
     this.nome = ""; // Propiedade "nome"
     this.telefone = ""; // Propiedade "telefone"
