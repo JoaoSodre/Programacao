@@ -85,7 +85,7 @@ var A = function()
 
 ### Construtores
 
-São usados basicamente para economizar linhas de código classe, são acessados por deio dos parâmetros.
+São usados basicamente para economizar linhas de código, são acessados por deio dos parâmetros do objeto (previamente) e da instância.
 <pre>
 var Casas = function(casa1, casa2)
 {
