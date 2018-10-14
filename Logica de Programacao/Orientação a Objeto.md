@@ -1,7 +1,7 @@
 # Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classe é o mesmo que um **modelo** que você fez.<br><br>
-Nomenclatura:<br><br>
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classe é o mesmo que um modelo que você deixou disponivel para ser copiado.<br><br>
+Nomenclaturas:<br><br>
 
 Código Estruturado | Orientação Objeto
 --- | ---
@@ -12,7 +12,7 @@ Classe | Objeto/Intância
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
 Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br>
 
-#### Exemplos (Javascript):
+### Exemplos (Javascript):
 
 Como | Syntax
 --- | ---
@@ -88,15 +88,29 @@ var A = function()
 
 São usados basicamente para economizar linhas de código, são acessados por deio dos parâmetros do objeto (previamente) e da instância.
 <pre>
-var Casas = function(casa1, casa2)
+var Casas = function(_casa1, _casa2) // O underline é usado para não confundir o algoritmo e o programador
 {
-    this.casa1 = "";
-    this.casa2 = "";
+    this.casa1 = _casa1;
+    this.casa2 = _casa2;
 }
 </pre>
+<pre>
+var C = new Casas("Sobrado", "Triplex"); // Construtor 
+</pre>
 
-Construtor atuando nos parâmentros da instância.
+### Hash nos Contrutores
+
+O uso de hash pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores
 
 <pre>
-var C = new Casas("Sobrado", "Triplex");
+var Casas = function(_casas, _tamanhos)
+{
+    this.casa1 = _casas.casa1;
+    this.casa2 = _casas.casa2;
+    this.tamanho1 = _tamanhos.tamanho1;
+    this.tamanho2 = _tamanhos.tamanho2;
+}
+</pre>
+<pre>
+var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tamanho2:"Pequena"});
 </pre>
