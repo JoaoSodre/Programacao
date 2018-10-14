@@ -50,8 +50,10 @@ A.telefone = "111";
 B.nome = "José";
 B.telefone = "222";
 </pre>
+
 ### Métodos/Atributos de Instância
 São usados apenas para **UMA** instância.<br>
+
 Exemplo:
 <pre>
 var A = function()
@@ -67,12 +69,34 @@ C.lugar = "Campinas";
 
 // O atributo só serviu para cada uma das instâncias, logo atributo de instância
 </pre>
+
+<!-- 
 ### Métodos/Atributos de Classe
+
 São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
+
 Exemplo:
 <pre>
 var A = function()
 {
     this.lugar = "";
 }
+</pre> 
+-->
+
+### Construtores
+
+São usados basicamente para economizar linhas de código classe, são usados por deio dos parâmetros.
+<pre>
+var Casas = function(casa1, casa2)
+{
+    this.casa1 = "";
+    this.casa2 = "";
+}
+</pre>
+
+Construtor atuando nos parâmentros da instância.
+
+<pre>
+var C = new Casas("Sobrado", "Triplex");
 </pre>
