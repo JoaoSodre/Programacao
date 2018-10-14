@@ -1,12 +1,13 @@
 # Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização.
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), *encapsulando-os* em **Classes** que possuem o mesmo **contexto**, podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classe é o mesmo que um **modelo** que você fez.<br><br>
+Nomenclatura:<br><br>
 
 Código Estruturado | Orientação Objeto
 --- | ---
 Variável | Atributo/Propiedades
 Função | Método/Ação
-Modelo | Classe/Objeto
+Classe | Objeto/Intância
 
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
 Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br>
