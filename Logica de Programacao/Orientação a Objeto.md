@@ -23,10 +23,9 @@ Atribuir valor as instâncias | `(Nome da variável).(Nome do atributo) = (Valor
 
 > Nota: A palavra `var` é usada quando uma variável ainda não foi criada, caso contrário não precisa do uso dela.
 
->`this` é o mesmo que (Nome da variável), que nesse caso é `Clientes`.
-
 <br>
 <pre>
+// this é o mesmo que o nome do objeto, nesse caso é Clientes.
 var Clientes = function() // Objeto "Cliente"
 {
     this.nome = ""; // Propiedade "nome"
