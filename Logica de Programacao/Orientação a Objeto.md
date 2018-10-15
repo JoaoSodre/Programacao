@@ -93,7 +93,13 @@ O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 ### Métodos/Atributos de Classe ou Estátco
 
 São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
-Syntax para Criar: `(NomeDaClasse).(NomeAtribulo/Metodo) = (Valor/Ação)`
+
+Syntax para criação (FORA da Classe) | Syntax para chamar
+--- | ---
+`(NomeDaClasse).(NomeAtribulo) = (Valor)` | `(NomeDaClasse).(NomeAtribulo)`
+`(NomeDaClasse).(NomeMétodo) = function() { ... }` | `(NomeDaClasse).(NomeMétodo)()`
+
+> Relembrando: Essa syntax é da liguagem javascript
 
 <pre>
 var A = function(_lugar)
@@ -106,18 +112,20 @@ A.quantidadeLugares = []; // Criando um atributo de CLASSE
 
 A.ListarLugares = function() // Criando um método de CLASSE
 {
-    for (var i=0;i<A.quantidadeLugares.length;i++)
-    {
-		places = A.quantidadeLugares[i];
-		console.log(places.lugar); // Não esquecer da SYNTAX (Classe).(NomeAtributo)
+	for (var Y1 = 0; Y1 < A.quantidadeLugares.length; Y1++)
+	{
+		places = A.quantidadeLugares[Y1]; // 
+		console.log(places.lugar); // Não esquecer da SYNTAX (AtributoDeCLASSE).(NomeAtributo);
 	}
 }
 </pre>
+
 <pre>
 var B = new A("Salvador");
 var C = new A("Rio Branco");
 </pre>
+
 <pre>
 A.quantidadeLugares; // Irá mostrar 2 atributos (Como no hash), e o nome da CLASSE que eles pertencem
-A.ListarLugares(); // Irá listar todos os atributos
+A.ListarLugares(); // Irá listar todos os atributos com o método de CLASSE
 </pre>
