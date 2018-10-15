@@ -1,3 +1,5 @@
+resultados = CalcularCaraCoroa(Colocar quantas vezes aqui);
+
 function CalcularCaraCoroa(quantasVezes)
 {  
 	function Aleatorio()
@@ -52,8 +54,6 @@ function CalcularCaraCoroa(quantasVezes)
 	console.log("Quantidades de Coroas: " + quantidadeCoroas.length);
 	return resultados;
 }
-
-resultados = CalcularCaraCoroa(6);
 
 function Repetiu() 
 {
