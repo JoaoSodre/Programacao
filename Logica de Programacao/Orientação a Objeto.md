@@ -10,9 +10,12 @@ Função | Método/Ação
 Classe | Objeto/Instância
 
 Atributo -> Mesmo que propiedade simples (Serve tanto como get quanto set).<br>
-Instancias -> Clones de classes (Que são inseridas dentro de uma variável).<br>
+Instâncias -> Clones de classes (Objetos), que são inseridas dentro de uma variável.<br>
 
-### Exemplos (Javascript):
+<br>
+<br>
+
+## Introdução (Javascript):
 
 Como: | Syntax
 --- | ---
@@ -41,8 +44,10 @@ var A = new Clientes(); // Instânciando a classe "Cliente"
 <pre>
 A.nome = "João"; // Atribuindo valor ao atributo do objeto
 </pre>
+<br>
+<br>
 
-### Construtores
+## Construtores
 
 São usados basicamente para economizar linhas de código, são acessados por deio dos parâmetros do objeto (previamente) e da instância.
 
@@ -56,8 +61,10 @@ var Casas = function(_casa1, _casa2)
 <pre>
 var C = new Casas("Sobrado", "Triplex"); // Construtor 
 </pre>
+<br>
+<br>
 
-### Hash nos Contrutores
+## Hash nos Contrutores
 
 O uso de hash pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
 
@@ -73,8 +80,10 @@ var Casas = function(_casas, _tamanhos)
 <pre>
 var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tamanho2:"Pequena"});
 </pre>
+<br>
+<br>
 
-### Métodos/Atributos de Instância
+## Métodos/Atributos de Instância
 
 São usados apenas para **UMA** instância.
 
@@ -89,6 +98,8 @@ var C = new A("Campinas");
 </pre>
 
 O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
+<br>
+<br>
 
 ### Métodos/Atributos de Classe ou Estátco
 
@@ -109,18 +120,15 @@ var A = function(_lugar)
 }
 
 A.quantidadeLugares = []; // Criando um atributo de CLASSE
-
 A.ListarLugares = function() // Criando um método de CLASSE
 {
 	for (var Y1 = 0; Y1 < A.quantidadeLugares.length; Y1++)
 	{
-		places = A.quantidadeLugares[Y1]; // 
-		console.log(places.lugar); // Não esquecer da SYNTAX (AtributoDeCLASSE).(NomeAtributo);
+		places = A.quantidadeLugares[Y1];
+		console.log(places.lugar);
+		// Não esquecer da SYNTAX (AtributoDeCLASSE).(NomeAtributo);
 	}
 }
-</pre>
-
-<pre>
 var B = new A("Salvador");
 var C = new A("Rio Branco");
 </pre>
@@ -129,3 +137,5 @@ var C = new A("Rio Branco");
 A.quantidadeLugares; // Irá mostrar 2 atributos (Como no hash), e o nome da CLASSE que eles pertencem
 A.ListarLugares(); // Irá listar todos os atributos com o método de CLASSE
 </pre>
+<br>
+<br>
