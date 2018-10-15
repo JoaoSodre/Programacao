@@ -173,7 +173,9 @@ Públicos | Privados
 --- | ---
 Atributos: this.(Nome) = (Valor); | var (Nome) = (Valor);
 Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
+
 <br><br>
+
 <pre>
 var CalcularMedia = function(_nota1 , _nota2)
 {
