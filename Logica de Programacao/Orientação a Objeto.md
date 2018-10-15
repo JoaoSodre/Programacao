@@ -19,9 +19,9 @@ Instâncias -> Clones de classes (Objetos), que são inseridas dentro de uma var
 
 Como: | Syntax
 --- | ---
-Criar uma classe | `var + (NomeDaClasse) = function () {  ...  }` 
+Criar uma classe | `var + (NomeDaClasse) = function () {  }` 
 Criar uma Propiedade<br>(Dentro da Classe) | `this.(NomeDaPropiedade) = (Valor);` 
-Criar um Método<br>(Dentro da Classe) | `this.(NomeDoMétodo) = function () { ... }` 
+Criar um Método<br>(Dentro da Classe) | `this.(NomeDoMétodo) = function () {  }` 
 Intanciar uma classe<br>(Criar um objeto) | `var + (NomeDaVariável) = new (NomeDaClasse)();` 
 Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAtributo) = (Valor);`
 
@@ -107,10 +107,10 @@ São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** 
 
 > Lembrando que pertence ao Javascript, NÃO repetir nas outras linguagens.
 
-Syntax para criação (FORA da Classe) | Syntax para chamar
+Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 --- | ---
-`(NomeDaClasse).(NomeAtribulo) = (Valor)` | `(NomeDaClasse).(NomeAtribulo)`
-`(NomeDaClasse).(NomeMétodo) = function() { ... }` | `(NomeDaClasse).(NomeMétodo)()`
+`(NomeClasse).(NomeAtribulo) = (Valor)` | `(NomeClasse).(NomeAtribulo)`
+`(NomeClasse).(NomeMétodo) = function() {  }` | `(NomeClasse).(NomeMétodo)()`
 
 <pre>
 var A = function(_lugar, _lugar2)
@@ -164,3 +164,12 @@ A.ListarLugares();
 <br>
 
 ### Métodos/Atributos Públicos e Privados
+
+Privados: Apenas o **escopo** da classe vai usar-los, vão ser usados apenas dentro dele.<br>
+Público: Variáveis que podem ser usadas tanto na classe, quanto fora dela (Para expor ou para inserir dados).<br><br>
+Syntax (Dentro da classe):<br>
+
+Públicos | Privados
+--- | ---
+Atributos: this.(Nome) = (Valor); | var (Nome) = (Valor);
+Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
