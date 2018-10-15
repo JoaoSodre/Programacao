@@ -113,32 +113,54 @@ Syntax para criação (FORA da Classe) | Syntax para chamar
 `(NomeDaClasse).(NomeMétodo) = function() { ... }` | `(NomeDaClasse).(NomeMétodo)()`
 
 <pre>
-var A = function(_lugar)
+var A = function(_lugar, _lugar2)
 {
-    this.lugar = _lugar;
-    A.quantidadeLugares.push(this) // Jogando o OBJETO no array
-}
-
-A.quantidadeLugares = []; // Criando um atributo de CLASSE
-A.ListarLugares = function() // Criando um método de CLASSE
-{
-	for (var Y1 = 0; Y1 < A.quantidadeLugares.length; Y1++)
+	this.lugar = _lugar;
+	this.lugar2 = _lugar2;
+	this.ContarLugares = function()
 	{
-		places = A.quantidadeLugares[Y1];
-		console.log(places.lugar);
-		
-		// Não esquecer da SYNTAX (AtributoDeCLASSE).(NomeAtributo);
+		A.quantidadeLugares.push({lugar1:this.lugar, lugar2:this.lugar2});
 	}
+	A.quantidadeIntancias.push(this);
 }
 </pre>
 
 <pre>
-var B = new A("Salvador");
-var C = new A("Rio Branco");
+// Criando atributo de CLASSE
+A.quantidadeLugares = []; 
+A.quantidadeIntancias = [];
 
-A.quantidadeLugares; // Irá mostrar 2 atributos (Como no hash), e o nome da CLASSE que eles pertencem
-A.ListarLugares(); // Irá listar todos os atributos com o método de CLASSE
+// Criando um Método de CLASSE
+A.ListarLugares = function()
+{
+	for (var i = 0; i < A.quantidadeLugares.length; i++)
+    {
+		cliente = i + 1;
+		J = A.quantidadeLugares[i];
+		console.log("Cliente " + cliente + ": " + J.lugar1 + " e " + J.lugar2);
+    }
+}
+</pre>
+
+<pre>
+var B = new A("Salvador" , "Sertãozinho");
+var C = new A("Rio Branco" , "Ribeirão");
+
+B.ContarLugares();
+C.ContarLugares();
+</pre>
+
+<pre>
+// Irá mostrar 2 objetos com seus atributos/metodos, e o nome da CLASSE que eles pertencem
+A.quantidadeIntancias;
+
+// Irá mostrar 4 Atributos
+A.quantidadeLugares;
+
+// Irá monstrar no console os atributos dos objetos, usando o MÉTODO DE CLASSE para isso
+A.ListarLugares(); 
 </pre>
 <br>
 <br>
+
 ### Métodos/Atributos Públicos e Privados
