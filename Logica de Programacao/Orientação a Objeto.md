@@ -167,9 +167,26 @@ A.ListarLugares();
 
 Privados: Apenas o **escopo** da classe vai usar-los, vão ser usados apenas dentro dele.<br>
 Público: Variáveis que podem ser usadas tanto na classe, quanto fora dela (Para expor ou para inserir dados).<br><br>
-Syntax (Dentro da classe):<br>
+Syntax (Dentro da classe):<br><br>
 
 Públicos | Privados
 --- | ---
 Atributos: this.(Nome) = (Valor); | var (Nome) = (Valor);
 Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
+
+<pre>
+var CalcularMedia = function(_nota1 , _nota2)
+{
+	this.nota1 = _nota1;
+	this.nota2 = _nota2;
+
+	var notas = [];
+	var Media = function()
+	{
+		console.log((_nota1 + _nota2)/notas.length)
+	}
+	notas.push(_nota1 , _nota2);
+	Media();
+}
+
+</pre>
