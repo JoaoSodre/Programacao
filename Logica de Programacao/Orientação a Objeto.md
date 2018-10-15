@@ -177,16 +177,19 @@ Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
 <pre>
 var CalcularMedia = function(_nota1 , _nota2)
 {
+	// Atributos Públicos
 	this.nota1 = _nota1;
 	this.nota2 = _nota2;
 
+    	// Atributo e Método PRIVADOS
 	var notas = [];
 	var Media = function()
 	{
 		console.log((_nota1 + _nota2)/notas.length)
 	}
+	
+	// Ações quando a classe for instanciada
 	notas.push(_nota1 , _nota2);
 	Media();
 }
-
 </pre>
