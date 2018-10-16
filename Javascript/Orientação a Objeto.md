@@ -12,13 +12,13 @@ Classe | Objeto/Instância
 Atributo -> Mesmo que *propiedade simples* (Serve tanto como get quanto set).<br>
 Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma variável.<br>
 
-* [Introdução]()
-* [Construtores]()
-* [Hash nos Contrutores]()
-* [Métodos/Atributos de Instância]()
-* [Métodos/Atributos de Classe ou Estátco]()
-* [Métodos/Atributos Públicos e Privados]()
-* [Herança]()
+* [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#introdu%C3%A7%C3%A3o)
+* [Construtores](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#construtores)
+* [Hash nos Contrutores](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#hash-nos-contrutores)
+* [Métodos/Atributos de Instância](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-inst%C3%A2ncia)
+* [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tco)
+* [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
+* [Herança](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#heran%C3%A7a)
 
 <br>
 
@@ -33,6 +33,7 @@ Intanciar uma classe<br>(Criar um objeto) | `var + (NomeDaVariável) = new (Nome
 Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAtributo) = (Valor);`
 
 <br>
+
 <pre>
 var Clientes = function() // Objeto "Cliente"
 {
@@ -43,12 +44,12 @@ var Clientes = function() // Objeto "Cliente"
     }
 }
 
-// OU
 
-function Clientes() // Objeto "Cliente"
+// Outra forma de fazer
+function Clientes()
 {
-    this.nome = ""; // Propiedade "nome"
-    this.Mostrar = function() // Método "Mostrar"
+    this.nome = "";
+    this.Mostrar = function()
     {
         alert("Nome: " + this.nome);
     }
@@ -119,14 +120,16 @@ O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 <br>
 <br>
 
-### Métodos/Atributos de Classe ou Estátco
+### Métodos/Atributos de Classe ou Estático
 
-São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
+São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br><br>
 
 Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 --- | ---
 `(NomeClasse).(NomeAtribulo) = (Valor)` | `(NomeClasse).(NomeAtribulo)`
 `(NomeClasse).(NomeMétodo) = function() {  }` | `(NomeClasse).(NomeMétodo)()`
+
+<br><br>
 
 <pre>
 var A = function(_lugar, _lugar2)
@@ -176,6 +179,7 @@ A.quantidadeLugares;
 // Irá monstrar no console os atributos dos objetos, usando o MÉTODO DE CLASSE para isso
 A.ListarLugares(); 
 </pre>
+
 <br>
 <br>
 
@@ -189,6 +193,8 @@ Públicos | Privados
 --- | ---
 Atributos: this.(Nome) = (Valor); | var (Nome) = (Valor);
 Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
+
+<br><br>
 
 <pre>
 var CalcularMedia = function(_nota1 , _nota2)
@@ -216,7 +222,7 @@ var CalcularMedia = function(_nota1 , _nota2)
 
 Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herda atributos e métodos **PÚBLICOS**.<br><br>
 
-Syntax: `prototype`<br>
+Syntax: `prototype`<br><br>
 
 <pre>
 var A = function()
