@@ -1,7 +1,7 @@
 # Orientação a Objeto
 
 É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instânciados) depois.<br><br>
-Nomenclaturas:<br><br>
+Nomenclaturas:
 
 Código Estruturado | Orientação Objeto
 --- | ---
@@ -12,10 +12,7 @@ Classe | Objeto/Instância
 Atributo -> Mesmo que *propiedade simples* (Serve tanto como get quanto set).<br>
 Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma variável.<br>
 
-<br>
-<br>
-
-## Introdução (Javascript):
+## Introdução:
 
 Como: | Syntax
 --- | ---
@@ -105,8 +102,6 @@ O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 
 São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
 
-> Lembrando que pertence ao Javascript, NÃO repetir nas outras linguagens.
-
 Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 --- | ---
 `(NomeClasse).(NomeAtribulo) = (Valor)` | `(NomeClasse).(NomeAtribulo)`
@@ -173,8 +168,6 @@ Públicos | Privados
 --- | ---
 Atributos: this.(Nome) = (Valor); | var (Nome) = (Valor);
 Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
-
-<br><br>
 
 <pre>
 var CalcularMedia = function(_nota1 , _nota2)
