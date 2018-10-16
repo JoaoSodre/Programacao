@@ -12,7 +12,17 @@ Classe | Objeto/Instância
 Atributo -> Mesmo que *propiedade simples* (Serve tanto como get quanto set).<br>
 Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma variável.<br>
 
-## Introdução:
+* [Introdução]()
+* [Construtores]()
+* [Hash nos Contrutores]()
+* [Métodos/Atributos de Instância]()
+* [Métodos/Atributos de Classe ou Estátco]()
+* [Métodos/Atributos Públicos e Privados]()
+* [Herança]()
+
+<br>
+
+## Introdução
 
 Como: | Syntax
 --- | ---
@@ -25,6 +35,17 @@ Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAt
 <br>
 <pre>
 var Clientes = function() // Objeto "Cliente"
+{
+    this.nome = ""; // Propiedade "nome"
+    this.Mostrar = function() // Método "Mostrar"
+    {
+        alert("Nome: " + this.nome);
+    }
+}
+
+// OU
+
+function Clientes() // Objeto "Cliente"
 {
     this.nome = ""; // Propiedade "nome"
     this.Mostrar = function() // Método "Mostrar"
@@ -187,4 +208,24 @@ var CalcularMedia = function(_nota1 , _nota2)
 	notas.push(_nota1 , _nota2);
 	Media();
 }
+</pre>
+
+<br><br>
+
+### Herança
+
+Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herda atributos e métodos **PÚBLICOS**.<br><br>
+
+Syntax: `prototype`<br>
+
+<pre>
+var A = function()
+{
+	this.nome="Joao";
+	this.numero= 444;
+}
+
+var B = function () {}
+
+
 </pre>
