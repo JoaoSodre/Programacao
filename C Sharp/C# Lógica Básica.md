@@ -20,12 +20,13 @@ bool | Verdadeiro ou Falso | Lâmpada Acesa?
 Vector3<br>(Unity3D) | Vetor em 3 Dimensões | (0, 10, 5) `x, y, z`
 GameObject<br>(Unity3D) | Objeto na Cena | Casa001
 
+<br><br>
 ### Collections
 
 Hash
 Array
-
-### [Loopings](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/C%23%20ScriptsExamples.md#looping)
+<br><br>
+### Loopings
 
 o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo if (a) {break;}<br>
 o `continue` é usado para **pular** uma repetição
@@ -34,5 +35,4 @@ while = enquanto tal condição, execute o bloco.<br>
 do..while = faça a operação primeiro e depois entra no looping.<br>
 for = já determina a quantidade de repetições.<br>
 foreach = para cada elemento de um array.
-
-# Orientação Objeto
+<br><br>
