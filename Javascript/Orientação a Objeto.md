@@ -1,6 +1,6 @@
 # Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instânciados) depois.<br><br>
+É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) depois.<br><br>
 Nomenclaturas:
 
 Código Estruturado | Orientação Objeto
@@ -57,7 +57,7 @@ function Clientes()
 </pre>
 
 <pre>
-var A = new Clientes(); // Instânciando a classe "Cliente"
+var A = new Clientes(); // Instanciando a classe "Cliente"
 </pre>
 
 <pre>
@@ -222,25 +222,37 @@ var CalcularMedia = function(_nota1 , _nota2)
 
 Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herda atributos e métodos **PÚBLICOS**.<br><br>
 
-Syntax: `(NomeObjeto).prototype = new (ClasseASerHerdada);`<br><br>
+Syntax: `(NomeClasse).prototype = new (ClasseASerHerdada);`<br><br>
+Depois é apenas **instanciar** a classe filha, que o objeto ficará com ambos os atributos/métodos<br><br>
 
 <pre>
 var A1 = function()
 {
-	this.nome="Joao";
-	this.numero= 444;
+	this.nome = "Joao";
 }
 
-var B1 = function () {}
+var B1 = function () 
+{
+	this.numero = 555;
+}
 
-// B1 herdando de A1, não confundir com INSTÂNCIANDO A1
+// B1 herdando de A1, não confundir com INSTANCIANDO A1
 B1.prototype = new A1();
 
-// Mostrará "Joao"
+// Não mostrará NADA, pois B1 não possuí o ATRIBUTO "nome", caso fosse um OBJETO mostraria o nome.
+B1.nome
+
+// Mostrará "Joao", pois o mesmo é a propiedade "nome" da classe herdada.
 B1.prototype.nome
 </pre>
 
 <pre>
+// INTÂNCIANDO B1, logo C1 ficará com as propiedades/métodos de ambos A1 e B1 (Já que B1 herdou de A1).
+var C1 = new B1();
 
-C1 = new B1();
+// Mostrará "João"
+C1.nome
+
+// Mostrará 555
+C1.numero
 </pre>
