@@ -9,16 +9,16 @@ No c# é obrigatório declarar qual o tipo de variável você está criando. Log
 `(Tipo de Variável) + (Nome da Variável) = (Valor) ;`<br>
 `(Tipo de Variável) + (Nome da Variável) ;`<br>
 `(Tipo de Variável) + (Nome da Variável) , (Nome de outra Variável) , ... ;`<br><br>
+Conversão de variáveis:
 
 
 Tipos de Var | Significado | Exemplo
 ------------ | ----------- | --------
 string | Texto | "Cidade"
 int | Número inteiro **sem**<br> Casas Decimais | 50
-float | Número com Casas Decimais | 50.0
+float | Número com Casas Decimais | 50.55f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
-Vector3<br>(Unity3D) | Vetor em 3 Dimensões | (0, 10, 5) `x, y, z`
-GameObject<br>(Unity3D) | Objeto na Cena | Casa001
+double | Mesmo que o 'float', porém<br> tem mais casas decimais
 
 <br><br>
 ### Collections
