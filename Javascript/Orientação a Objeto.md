@@ -288,7 +288,7 @@ var A = function()
 	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 2;
-		return a;
+		console.log(a);
 	}
 }
 
@@ -299,7 +299,7 @@ var B = function()
 	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 10;
-		return a;
+		console.log(a);
 	}
 }
 
@@ -309,7 +309,7 @@ B.prototype = new A();
 <pre>
 var J = new B();
 
-// Irá retornar 50
+// Ira aparecer 50
 J.Calcular(5);
 </pre>
 
@@ -328,7 +328,7 @@ A.prototype.Calcular = function(_num1)
 }
 </pre>
 
-O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **pai**) , em outras linguagens como C# é chamado de 'base'
+O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **pai**) , em outras linguagens como C# é chamado de 'base'.
 
 <pre>
 var B = function() 
@@ -337,7 +337,8 @@ var B = function()
 	// Criando uma instância do Pai dentro da classe
 	this.super = A.prototype;
 
-	this.Calcular = function(_num1) {
+	this.Calcular = function(_num1) 
+	{
 	
 		a = _num1 * 10;
 		console.log(a);
