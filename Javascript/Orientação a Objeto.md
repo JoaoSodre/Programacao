@@ -19,6 +19,10 @@ Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma v
 * [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tco)
 * [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
 * [Herança](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#heran%C3%A7a)
+* [Polimorfismo](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#polimorfismo)
+<!-- * [Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#interface)
+* [Abstração]()
+* [Classe Singleton](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-singleton) -->
 
 <br>
 
@@ -256,3 +260,67 @@ C1.nome
 // Mostrará 555
 C1.numero
 </pre>
+
+# Polimorfismo
+
+É usado basicamente para sobreescrever métodos da classe pai na classe filho, economizando linhas e 
+
+Polimorfismo só funciona para reescrever **Métodos**.
+
+Syntax para **injetar** na classe: `().()`
+
+<pre>
+var A = function()
+{
+	this.Calcular = function(_num1)
+	{
+		a = _num1 * 2;
+		return a;
+	}
+}
+
+// Sobreescrevendo o método da classe pai ('A')
+var B = function()
+{
+	this.Calcular = function(_num1)
+	{
+		a = _num1 * 10;
+		return a;
+	}
+}
+
+B.prototype = new A();
+</pre>
+
+<pre>
+var J = new B();
+
+// Irá retornar 50
+J.Calcular(5);
+</pre>
+
+Caso eu queira retornar o método de ambas as classes, o seguinte vai ter que ser feito
+
+<pre>
+var A = function() { }
+
+// É necessário injetar o método na classe
+A.Calcular = function(_num1)
+{
+	a = _num1 * 2;
+	return a;
+}				
+
+var B = function()
+{
+	this.Calcular = function(_num1)
+	{
+		a = _num1 * 10;
+		return a;
+	}
+}
+</pre>
+
+<!-- # Interface 
+# Abstração 
+# Classe Singleton -->
