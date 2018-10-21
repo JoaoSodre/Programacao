@@ -3,6 +3,8 @@
 
 # C#
 
+<!-- Não esquecer de colocar get/set no obj do javascript-->
+
 ### Variáveis
 
 No c# é obrigatório declarar qual o tipo de variável você está criando. Logo a Syntax fica:<br><br>
