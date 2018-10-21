@@ -39,24 +39,28 @@ Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAt
 <br>
 
 <pre>
-var Clientes = function() // Objeto "Cliente"
-{
-    this.nome = ""; // Propiedade "nome"
-    this.Mostrar = function() // Método "Mostrar"
-    {
-        alert("Nome: " + this.nome);
-    }
+var Clientes = function() // Objeto "Cliente" 
+{ 
+	// Propiedade "nome"
+	this.nome = ""; 
+
+	// Método "Mostrar"
+	this.Mostrar = function() 
+	{
+		alert("Nome: " + this.nome);
+	}
 }
 
 
 // Outra forma de fazer
 function Clientes()
 {
-    this.nome = "";
-    this.Mostrar = function()
-    {
-        alert("Nome: " + this.nome);
-    }
+	this.nome = "";
+
+	this.Mostrar = function()
+	{
+		alert("Nome: " + this.nome);
+	}
 }
 </pre>
 
@@ -67,6 +71,7 @@ var A = new Clientes(); // Instanciando a classe "Cliente"
 <pre>
 A.nome = "João"; // Atribuindo valor ao atributo do objeto
 </pre>
+
 <br>
 <br>
 
@@ -77,13 +82,15 @@ São usados basicamente para economizar linhas de código, são acessados por de
 <pre>
 var Casas = function(_casa1, _casa2)
 {
-    this.casa1 = _casa1;
-    this.casa2 = _casa2;
+	this.casa1 = _casa1;
+	this.casa2 = _casa2;
 }
 </pre>
+
 <pre>
 var C = new Casas("Sobrado", "Triplex"); // Construtor 
 </pre>
+
 <br>
 <br>
 
@@ -94,15 +101,17 @@ O uso de hash pode facilitar ainda mais na organização, ele possibilita coloca
 <pre>
 var Casas = function(_casas, _tamanhos)
 {
-    this.casa1 = _casas.casa1;
-    this.casa2 = _casas.casa2;
-    this.tamanho1 = _tamanhos.tamanho1;
-    this.tamanho2 = _tamanhos.tamanho2;
+	this.casa1 = _casas.casa1;
+	this.casa2 = _casas.casa2;
+	this.tamanho1 = _tamanhos.tamanho1;
+	this.tamanho2 = _tamanhos.tamanho2;
 }
 </pre>
+
 <pre>
 var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tamanho2:"Pequena"});
 </pre>
+
 <br>
 <br>
 
@@ -113,7 +122,7 @@ São usados apenas para **UMA** instância.
 <pre>
 var A = function(_lugar)
 {
-    this.lugar = _lugar;
+	this.lugar = _lugar;
 }
 
 var B = new A("São Paulo");
@@ -140,6 +149,7 @@ var A = function(_lugar, _lugar2)
 {
 	this.lugar = _lugar;
 	this.lugar2 = _lugar2;
+	
 	this.ContarLugares = function()
 	{
 		A.quantidadeLugares.push({lugar1:this.lugar, lugar2:this.lugar2});
@@ -157,11 +167,11 @@ A.quantidadeIntancias = [];
 A.ListarLugares = function()
 {
 	for (var i = 0; i < A.quantidadeLugares.length; i++)
-    {
+	{
 		cliente = i + 1;
 		J = A.quantidadeLugares[i];
 		console.log("Cliente " + cliente + ": " + J.lugar1 + " e " + J.lugar2);
-    }
+	}
 }
 </pre>
 
@@ -207,13 +217,13 @@ var CalcularMedia = function(_nota1 , _nota2)
 	this.nota1 = _nota1;
 	this.nota2 = _nota2;
 
-    	// Atributo e Método PRIVADOS
+	// Atributo e Método PRIVADOS
 	var notas = [];
 	var Media = function()
 	{
 		console.log((_nota1 + _nota2)/notas.length)
 	}
-	
+
 	// Ações quando a classe for instanciada
 	notas.push(_nota1 , _nota2);
 	Media();
@@ -235,7 +245,7 @@ var A1 = function()
 	this.nome = "Joao";
 }
 
-var B1 = function () 
+var B1 = function ()
 {
 	this.numero = 555;
 }
@@ -261,18 +271,21 @@ C1.nome
 C1.numero
 </pre>
 
-## Polimorfismo
+## Polimorfismo  <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? -->
 
-É usado basicamente para sobreescrever métodos da classe pai na classe filho, economizando linhas e 
+> Nota: Polimorfismo não é muito utilizado em Javascript devido as limitações da linguagem.
 
-Polimorfismo só funciona para reescrever **Métodos**.
+É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
-Syntax para **injetar** na classe: `().()`
+Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
+
+Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`
 
 <pre>
-var A = function()
+var A = function() 
 {
-	this.Calcular = function(_num1)
+
+	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 2;
 		return a;
@@ -280,9 +293,10 @@ var A = function()
 }
 
 // Sobreescrevendo o método da classe pai ('A')
-var B = function()
+var B = function() 
 {
-	this.Calcular = function(_num1)
+
+	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 10;
 		return a;
@@ -299,26 +313,44 @@ var J = new B();
 J.Calcular(5);
 </pre>
 
-Caso eu queira retornar o método de ambas as classes, o seguinte vai ter que ser feito
+Em javascript para que tenha a possibilidade de chamar o método do **pai** sobrescrito na classe filha, é necessário **injetar** o método previamente, em outras linguagens isso pode ser diferente.
 
 <pre>
+// *Refazendo o método de cima*
 var A = function() { }
 
-// É necessário injetar o método na classe
-A.Calcular = function(_num1)
+// Injetando o método na classe pai
+A.prototype.Calcular = function(_num1) 
 {
-	a = _num1 * 2;
-	return a;
-}				
 
-var B = function()
+	a = _num1 * 2;
+	console.log(a);
+}
+</pre>
+
+O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **pai**) , em outras linguagens como C# é chamado de 'base'
+
+<pre>
+var B = function() 
 {
-	this.Calcular = function(_num1)
-	{
+
+	// Criando uma instância do Pai dentro da classe
+	this.super = A.prototype;
+
+	this.Calcular = function(_num1) {
+	
 		a = _num1 * 10;
-		return a;
+		console.log(a);
+
+		// Quando o método da classe filho for chamdo, ele vai executar a da classe pai também
+		this.super.Calcular(_num1);
 	}
 }
+
+var J = new B();
+
+// Ira aparecer 50 e 10
+J.Calcular(5)
 </pre>
 
 <!-- # Interface 
