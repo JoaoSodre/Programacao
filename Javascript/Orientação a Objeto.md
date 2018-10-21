@@ -124,7 +124,7 @@ O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 <br>
 <br>
 
-### Métodos/Atributos de Classe ou Estático
+## Métodos/Atributos de Classe ou Estático
 
 São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br><br>
 
@@ -187,7 +187,7 @@ A.ListarLugares();
 <br>
 <br>
 
-### Métodos/Atributos Públicos e Privados
+## Métodos/Atributos Públicos e Privados
 
 Privados: Apenas o **escopo** da classe vai usar-los, vão ser usados apenas dentro dele.<br>
 Público: Variáveis que podem ser usadas tanto na classe, quanto fora dela (Para expor ou para inserir dados).<br><br>
@@ -222,7 +222,7 @@ var CalcularMedia = function(_nota1 , _nota2)
 
 <br><br>
 
-### Herança
+## Herança
 
 Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herda atributos e métodos **PÚBLICOS**.<br><br>
 
@@ -261,7 +261,7 @@ C1.nome
 C1.numero
 </pre>
 
-# Polimorfismo
+## Polimorfismo
 
 É usado basicamente para sobreescrever métodos da classe pai na classe filho, economizando linhas e 
 
