@@ -19,7 +19,7 @@ Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma v
 * [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tco)
 * [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
 * [Herança](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#heran%C3%A7a)
-* [Polimorfismo](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#polimorfismo)
+* [Polimorfismo](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orientação%20a%20Objeto.md#polimorfismo)
 <!-- * [Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#interface)
 * [Abstração]()
 * [Classe Singleton](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-singleton) -->
@@ -271,14 +271,14 @@ C1.nome
 C1.numero
 </pre>
 
-## Polimorfismo  <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? -->
+## Polimorfismo 
 
 > Nota: Polimorfismo não é muito utilizado em Javascript devido as limitações da linguagem.
 
 É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
-
+<!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? -->
 Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`
 
 <pre>
