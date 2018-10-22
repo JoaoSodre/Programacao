@@ -14,7 +14,6 @@ Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma v
 
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#introdu%C3%A7%C3%A3o)
 * [Construtores](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#construtores)
-* [Hash nos Contrutores](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#hash-nos-contrutores)
 * [Métodos/Atributos de Instância](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-inst%C3%A2ncia)
 * [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tco)
 * [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
@@ -91,12 +90,7 @@ var Casas = function(_casa1, _casa2)
 var C = new Casas("Sobrado", "Triplex"); // Construtor 
 </pre>
 
-<br>
-<br>
-
-## Hash nos Contrutores
-
-O uso de hash pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
+O uso de **HASH** pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
 
 <pre>
 var Casas = function(_casas, _tamanhos)
@@ -139,7 +133,7 @@ São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** 
 
 Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 --- | ---
-`(NomeClasse).(NomeAtribulo) = (Valor)` | `(NomeClasse).(NomeAtribulo)`
+`(NomeClasse).(NomeAtribulo) = (Valor)` | `(NomeClasse).(NomeAtributo)`
 `(NomeClasse).(NomeMétodo) = function() {  }` | `(NomeClasse).(NomeMétodo)()`
 
 <br><br>
@@ -354,6 +348,8 @@ var J = new B();
 J.Calcular(5)
 </pre>
 
-<!-- # Interface 
+# Interface 
+ 
+<!--
 # Abstração 
 # Classe Singleton -->
