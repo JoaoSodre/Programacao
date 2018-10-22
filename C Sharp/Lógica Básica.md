@@ -20,7 +20,7 @@ string | Texto | "Cidade"
 int | Número inteiro **sem**<br> Casas Decimais | 50
 float | Número com Casas Decimais | 50.55f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
-double | Mesmo que o 'float', porém<br> tem mais casas decimais
+double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 <br><br>
 ### Collections
