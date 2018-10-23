@@ -141,18 +141,20 @@ Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 <pre>
 var A = function(_lugar, _lugar2)
 {
+	// Quando intanciar, jogar o objeto no atributo de classe
+	A.quantidadeIntancias.push(this);
+	
 	this.lugar = _lugar;
 	this.lugar2 = _lugar2;
 	
 	this.ContarLugares = function()
 	{
+		/* Quando chamar o método, jogar os atributos da intância para
+		   o atributo de CLASSE */
 		A.quantidadeLugares.push({lugar1:this.lugar, lugar2:this.lugar2});
 	}
-	A.quantidadeIntancias.push(this);
 }
-</pre>
 
-<pre>
 // Criando atributo de CLASSE
 A.quantidadeLugares = []; 
 A.quantidadeIntancias = [];
