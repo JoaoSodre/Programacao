@@ -19,9 +19,9 @@ Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma v
 * [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
 * [Herança](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#heran%C3%A7a)
 * [Polimorfismo](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orientação%20a%20Objeto.md#polimorfismo)
-<!-- * [Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#interface)
-* [Abstração]()
-* [Classe Singleton](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-singleton) -->
+* [Classe de Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#interface)
+* [Classe Abstrata]()
+* [Classe Singleton](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-singleton)
 
 <br>
 
@@ -337,7 +337,7 @@ var B = function()
 		a = _num1 * 10;
 		console.log(a);
 
-		// Quando o método da classe filho for chamdo, ele vai executar a da classe pai também
+		// Quando o método da classe filho for chamdo, ele vai executar o método do pai também
 		this.super.Calcular(_num1);
 	}
 }
@@ -348,8 +348,14 @@ var J = new B();
 J.Calcular(5)
 </pre>
 
-# Interface 
- 
-<!--
-# Abstração 
-# Classe Singleton -->
+# Classe de Interface 
+
+Interface não funciona em js, apens funciona em linguagens compiladas, pois é obrigatório a **implementação**
+
+Você não consegue gerar uma nova intância utilizando a classe de interface
+
+# Classe Abstrata
+
+
+
+# Classe Singleton
