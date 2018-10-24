@@ -275,7 +275,8 @@ C1.numero
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
 <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? -->
-Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`
+Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
+Syntax para instanciar a classe pai na classe filho: `this.super = (NomeClassePai).prototype;`
 
 <pre>
 var A = function() 
@@ -328,7 +329,7 @@ O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **p
 <pre>
 var B = function() 
 {
-	/* Criando uma instância do Pai dentro da classe, e jogando no 'super' */
+	// Criando uma instância do Pai dentro da classe Filho
 	this.super = A.prototype;
 
 	this.Calcular = function(_num1) 
@@ -336,7 +337,9 @@ var B = function()
 		a = _num1 * 10;
 		console.log(a);
 		
-		//
+		/* Chamando o método da classe pai 
+		(Método precisa estar injetado) */
+		
 		this.super.Calcular(_num1);
 	}
 }
@@ -354,7 +357,7 @@ J.Calcular(5)
 A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar de outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (*implementando*), já que em linguagens compiladas daria erro ao não fazer isso.
 
 > * Interface não funciona em js, apens funciona em linguagens compiladas pois é obrigatório a **implementação**.
-> * Por causa da obrigatoriedade da implementação, não é possivel gerar uma instância da classe de interface.
+> * Por causa da obrigadoriedade da implementação, não é possivel gerar uma instância da classe de interface.
 
 Exemplo em **C#**:
 
@@ -386,7 +389,9 @@ public class Base : IPessoa
 
 # Classe Abstrata
 
-Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela é usada para gerar ideias ou para reaproveitar métodos (e atributos) já existentes e também para disponibilizar métodos vazios (Que são **obrigatórios** de completar em linguagens compiladas). Assim como a interface, não é possivel intanciar a classe abstrata.
+Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela é usada para gerar ideias ou para reaproveitar métodos (e atributos) já existentes e também para disponibilizar métodos vazios (Que são **obrigatórios** de completar em linguagens compiladas). 
+
+> * Assim como a interface, não é possivel intanciar a classe abstrata.
 
 <pre>
 
