@@ -297,11 +297,10 @@ var B = function()
 		console.log(a);
 	}
 }
-
-B.prototype = new A();
 </pre>
 
 <pre>
+B.prototype = new A();
 var J = new B();
 
 // Ira aparecer 50
