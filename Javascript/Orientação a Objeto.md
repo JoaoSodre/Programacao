@@ -271,7 +271,6 @@ C1.numero
 
 ## Polimorfismo 
 
-
 É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
@@ -281,7 +280,6 @@ Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) 
 <pre>
 var A = function() 
 {
-
 	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 2;
@@ -292,7 +290,6 @@ var A = function()
 // Sobreescrevendo o método da classe pai ('A')
 var B = function() 
 {
-
 	this.Calcular = function(_num1) 
 	{
 		a = _num1 * 10;
@@ -313,13 +310,14 @@ J.Calcular(5);
 Em javascript para que tenha a possibilidade de chamar o método do **pai** sobrescrito na classe filha, é necessário **injetar** o método previamente, em outras linguagens isso pode ser diferente.
 
 <pre>
-// *Refazendo o método de cima*
 var A = function() { }
+
+// Injetando atributo na classe pai
+A.prototype.nome = "";
 
 // Injetando o método na classe pai
 A.prototype.Calcular = function(_num1) 
 {
-
 	a = _num1 * 2;
 	console.log(a);
 }
@@ -330,17 +328,15 @@ O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **p
 <pre>
 var B = function() 
 {
-
-	// Criando uma instância do Pai dentro da classe
+	/* Criando uma instância do Pai dentro da classe, e jogando no 'super' */
 	this.super = A.prototype;
 
 	this.Calcular = function(_num1) 
 	{
-	
 		a = _num1 * 10;
 		console.log(a);
-
-		// Quando o método da classe filho for chamdo, ele vai executar o método do pai também
+		
+		//
 		this.super.Calcular(_num1);
 	}
 }
