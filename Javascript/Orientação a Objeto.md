@@ -367,6 +367,7 @@ public interface IPessoa // Interface 'IPessoa'
 {
 	// Toda vez que for herdada, irá ter que reescrever esses métodos
 	void SetTelefone(string telefone)
+	
 	void Gravar()
 }
 
@@ -375,10 +376,12 @@ public class Base : IPessoa
 {
 	// Reescrevendo os métodos da interface
 	this.Telefone = telefone;
+	
 	void SetTelefone(string telefone) { this.Telefone = telefone; }
+	
 	public virtual void Gravar()
 	{
-		// *Algum código relacionado a banco de dados reescrito*
+		// *Algum código reescrito*
 	}
 }
 </pre>
