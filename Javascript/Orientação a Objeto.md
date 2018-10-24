@@ -329,7 +329,9 @@ O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **p
 <pre>
 var B = function() 
 {
-	// Criando uma instância do Pai dentro da classe Filho
+	/* Herda de tudo que estiver em 'prototype' que foi injetado
+	ou seja 'nome' e 'Calcular()' */
+	
 	this.super = A.prototype;
 
 	this.Calcular = function(_num1) 
@@ -394,9 +396,36 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 > * Assim como a interface, não é possivel intanciar a classe abstrata.
 
 <pre>
+var Abstracao = function ()
+{
+    // Proibindo de instanciar essa classe, atravez do construtor
+    if (this.constructor == Abstracao)
+    {
+     	throw new Error("Não pode instanciar classe abstrata, apenas herdar!")
+    }
+}
 
+Abstracao.prototype.nome = '";
+Abstracao.prototype.Gravar = function()
+{
+ // Irá dar erro caso não sobrescrever o método
+ throw new Error("Você precisa sobrescrever o método nas classes filhas")
+}
+</pre>
+
+Logo quando for herdar 'Abstracao', necessáriamente vai ter que sobrescrever 'Gravar()'.
+
+<pre>
+var Pessoa = function() {}
+
+// Herdando tudo que estiver no 'prototype', ou seja 'nome' e 'Gravar()'
+Pessoa.prototype = Abstracao.prototype;
+
+// Sobrescrita (Se o método original foi escrito em 'prototype', a sobrescrita também será)
+Pessoa.prototype.Gravar = function()  { // Algum código }
 </pre>
 
 <br><br>
 
 # Classe Singleton
+
