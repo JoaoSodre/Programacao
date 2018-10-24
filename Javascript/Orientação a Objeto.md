@@ -15,12 +15,12 @@ Instâncias -> Clones de classes (Objetos), que serão inseridas dentro de uma v
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#introdu%C3%A7%C3%A3o)
 * [Construtores](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#construtores)
 * [Métodos/Atributos de Instância](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-inst%C3%A2ncia)
-* [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tco)
+* [Métodos/Atributos de Classe ou Estático](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-de-classe-ou-est%C3%A1tico)
 * [Métodos/Atributos Públicos e Privados](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#m%C3%A9todosatributos-p%C3%BAblicos-e-privados)
 * [Herança](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#heran%C3%A7a)
 * [Polimorfismo](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orientação%20a%20Objeto.md#polimorfismo)
-* [Classe de Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#interface)
-* [Classe Abstrata]()
+* [Classe de Interface](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-de-interface)
+* [Classe Abstrata](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-abstrata)
 * [Classe Singleton](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#classe-singleton)
 
 <br>
@@ -267,9 +267,10 @@ C1.nome
 C1.numero
 </pre>
 
+<br><br>
+
 ## Polimorfismo 
 
-> Nota: Polimorfismo não é muito utilizado em Javascript devido as limitações da linguagem.
 
 É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
@@ -350,14 +351,48 @@ var J = new B();
 J.Calcular(5)
 </pre>
 
+<br><br>
+
 # Classe de Interface 
 
-Interface não funciona em js, apens funciona em linguagens compiladas, pois é obrigatório a **implementação**
+A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar de outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (*implementando*), já que em linguagens compiladas daria erro ao não fazer isso.
 
-Você não consegue gerar uma nova intância utilizando a classe de interface
+> * Interface não funciona em js, apens funciona em linguagens compiladas pois é obrigatório a **implementação**.
+> * Por causa da obrigatoriedade da implementação, não é possivel gerar uma instância da classe de interface.
+
+Exemplo em **C#**:
+
+<pre>
+public interface IPessoa // Interface 'IPessoa'
+{
+	// Toda vez que for herdada, irá ter que reescrever esses métodos
+	void SetTelefone(string telefone)
+	void Gravar()
+}
+
+// Classe 'Base' herdando de 'IPessoa'
+public class Base : IPessoa
+{
+	// Reescrevendo os métodos da interface
+	this.Telefone = telefone;
+	void SetTelefone(string telefone) { this.Telefone = telefone; }
+	public virtual void Gravar()
+	{
+		// *Algum código relacionado a banco de dados reescrito*
+	}
+}
+</pre>
+
+<br><br>
 
 # Classe Abstrata
 
+Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela é usada para gerar ideias ou para reaproveitar métodos (e atributos) já existentes e também para disponibilizar métodos vazios (Que são **obrigatórios** de completar em linguagens compiladas). Assim como a interface, não é possivel intanciar a classe abstrata.
 
+<pre>
+
+</pre>
+
+<br><br>
 
 # Classe Singleton
