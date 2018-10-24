@@ -398,18 +398,18 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 <pre>
 var Abstracao = function ()
 {
-    // Proibindo de instanciar essa classe, atravez do construtor
-    if (this.constructor == Abstracao)
-    {
-     	throw new Error("Não pode instanciar classe abstrata, apenas herdar!")
-    }
+	// Proibindo de instanciar essa classe, atravez do construtor
+	if (this.constructor == Abstracao)
+	{
+		throw new Error("Não pode instanciar classe abstrata, apenas herdar!")
+	}
 }
 
 Abstracao.prototype.nome = '";
 Abstracao.prototype.Gravar = function()
 {
- // Irá dar erro caso não sobrescrever o método
- throw new Error("Você precisa sobrescrever o método nas classes filhas")
+	// Irá dar erro caso não sobrescrever o método
+	throw new Error("Você precisa sobrescrever o método nas classes filhas")
 }
 </pre>
 
