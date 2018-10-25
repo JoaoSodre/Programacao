@@ -421,10 +421,68 @@ var Pessoa = function() {}
 Pessoa.prototype = Abstracao.prototype;
 
 // Sobrescrita (Se o método original foi escrito em 'prototype', a sobrescrita também será)
-Pessoa.prototype.Gravar = function()  { // Algum código }
+Pessoa.prototype.Gravar = function() {   // Algum código   }
 </pre>
 
 <br><br>
 
 # Classe Singleton
 
+Com a classe Singleton é possível criar uma **unica** instância atraves do seu contrutor.
+
+> Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
+
+Syntax: `var (NomeClasse) = { [Atributos]; [Método que vai criar a instância](); }`
+
+<pre>
+var Single =
+{
+	// Vai ser aqui que a instância única vai ficar armazenada
+	intancia0: null,
+	
+	// Método para criar a instância única
+	iniciar: function()
+	{
+		// Quando o 'iniciar' for chamado, ele vai criar essa classe 
+		function Sgln()
+		{
+			this.nome = "";
+		}
+		
+		/* O atributo 'intancia0' irá instanciar da classe 'Sgln' caso
+		não possuir nenhuma intância dentro dele */
+		
+		if (Single.intancia0 == null)
+		{
+			Single.intancia0 = new Sgln();
+		}
+		
+		/* Caso contrário ira retorna a instância que eu ja foi criado,
+		ou seja, ele nunca vai criar outras instâncias caso já existir uma */
+	}
+
+}
+</pre>
+
+<pre>
+// Chamando o método e atribuindo valor a intancia criada
+Single.iniciar();
+Single.instancia0.nome = "João";
+
+// Caso eu tente chamar método 'iniciar()' novamente, ele não mudará o atributo
+
+Single.iniciar();
+
+/* E continuará mostrando "João", ou seja ficará com 
+apenas uma instância unica para toda a aplicação */
+
+Single.instancia0.nome;
+</pre>
+
+Só é possível "Zerar" a classe singleton se o atributo 'intancia' for igual a null novamente, dessa forma o 'iniciar()' irá fazer todo o processo de classe e de intância novamente.
+
+<pre>
+Single.intancia0 = null;
+</pre>
+
+<br><br>
