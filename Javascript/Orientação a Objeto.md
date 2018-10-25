@@ -262,7 +262,9 @@ B1.prototype.nome
 </pre>
 
 <pre>
-// INSTANCIANDO 'B1', logo 'C1' ficará com as propiedades/métodos de ambos 'A1' e 'B1' (Já que 'B1' herdou de 'A1').
+/* INSTANCIANDO 'B1', logo 'C1' ficará com as propiedades/métodos
+de ambos 'A1' e 'B1' (Já que 'B1' herdou de 'A1'). */
+
 var C1 = new B1();
 
 // Mostrará "João"
@@ -436,7 +438,7 @@ Com a classe Singleton é possível criar uma **unica** instância atraves do se
 
 > Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
 
-Syntax: `var (NomeClasse) = { [Atributos]; [Método que vai criar a instância](); }`
+Syntax: `var (NomeClasse) = { [Atributos] [Método que vai criar a instância]() }`
 
 <pre>
 var Single =
