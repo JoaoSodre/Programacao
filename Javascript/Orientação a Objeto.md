@@ -1,3 +1,5 @@
+<!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? ## Polimorfismo -->
+
 # Orientação a Objeto
 
 É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) depois.<br><br>
@@ -32,8 +34,8 @@ Como: | Syntax
 Criar uma classe | `var + (NomeDaClasse) = function () {  }` 
 Criar uma Propiedade<br>(Dentro da Classe) | `this.(NomeDaPropiedade) = (Valor);` 
 Criar um Método<br>(Dentro da Classe) | `this.(NomeDoMétodo) = function () {  }` 
-Instanciar uma classe<br>(Criar um objeto) | `var + (NomeDaVariável) = new (NomeDaClasse)();` 
-Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAtributo) = (Valor);`
+Instanciar uma classe<br>(Criar um objeto) | `var + (NomeDaInstancia) = new (NomeDaClasse)();` 
+Atribuir valor aos<br> atributos das instancias<br>(Sem construtor) | `(NomeDaInstancia).(NomeDoAtributo) = (Valor);`
 
 <br>
 
@@ -141,23 +143,24 @@ Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 <pre>
 var A = function(_lugar, _lugar2)
 {
-	// Quando intanciar, jogar o objeto no atributo de classe
-	A.quantidadeIntancias.push(this);
+	// Quando instanciar, jogar o objeto no atributo de classe
+	A.quantidadeInstancias.push(this);
 	
 	this.lugar = _lugar;
 	this.lugar2 = _lugar2;
 	
 	this.ContarLugares = function()
 	{
-		/* Quando chamar o método, jogar os atributos da intância para
-		   o atributo de CLASSE */
+		/* Quando chamar o método, jogar os atributos
+		da instância para o atributo de CLASSE */
+		   
 		A.quantidadeLugares.push({lugar1:this.lugar, lugar2:this.lugar2});
 	}
 }
 
 // Criando atributo de CLASSE
 A.quantidadeLugares = []; 
-A.quantidadeIntancias = [];
+A.quantidadeInstancias = [];
 
 // Criando um Método de CLASSE
 A.ListarLugares = function()
@@ -181,7 +184,7 @@ C.ContarLugares();
 
 <pre>
 // Irá mostrar 2 objetos com seus atributos/metodos, e o nome da CLASSE que eles pertencem
-A.quantidadeIntancias;
+A.quantidadeInstancias;
 
 // Irá mostrar 4 Atributos
 A.quantidadeLugares;
@@ -246,10 +249,10 @@ var B1 = function ()
 	this.numero = 555;
 }
 
-// B1 herdando de A1, não confundir com INSTANCIANDO A1
+// 'B1' herdando de 'A1', não confundir com INSTANCIANDO A1
 B1.prototype = new A1();
 
-// Não mostrará NADA, pois B1 não possuí o ATRIBUTO "nome", caso fosse um OBJETO mostraria o nome.
+// Não mostrará NADA, pois 'B1' não possuí o ATRIBUTO "nome", caso fosse um OBJETO ai sim mostraria.
 B1.nome
 
 // Mostrará "Joao", pois o mesmo é a propiedade "nome" da classe herdada.
@@ -257,7 +260,7 @@ B1.prototype.nome
 </pre>
 
 <pre>
-// INTÂNCIANDO B1, logo C1 ficará com as propiedades/métodos de ambos A1 e B1 (Já que B1 herdou de A1).
+// INSTANCIANDO 'B1', logo 'C1' ficará com as propiedades/métodos de ambos 'A1' e 'B1' (Já que 'B1' herdou de 'A1').
 var C1 = new B1();
 
 // Mostrará "João"
@@ -274,7 +277,6 @@ C1.numero
 É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
-<!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? -->
 Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
 Syntax para instanciar a classe pai na classe filho: `this.super = (NomeClassePai).prototype;`
 
@@ -328,8 +330,8 @@ O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **p
 <pre>
 var B = function() 
 {
-	/* Herda de tudo que estiver em 'prototype' que foi injetado
-	ou seja 'nome' e 'Calcular()' */
+	/* Herda de tudo que estiver em 'prototype' que
+	foi injetado ou seja 'nome' e 'Calcular()' */
 	
 	this.super = A.prototype;
 
@@ -392,7 +394,7 @@ public class Base : IPessoa
 
 Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela é usada para gerar ideias ou para reaproveitar métodos (e atributos) já existentes e também para disponibilizar métodos vazios (Que são **obrigatórios** de completar em linguagens compiladas). 
 
-> * Assim como a interface, não é possivel intanciar a classe abstrata.
+> * Assim como a interface, não é possivel instanciar a classe abstrata.
 
 <pre>
 var Abstracao = function ()
@@ -438,7 +440,7 @@ Syntax: `var (NomeClasse) = { [Atributos]; [Método que vai criar a instância](
 var Single =
 {
 	// Vai ser aqui que a instância única vai ficar armazenada
-	intancia0: null,
+	instancia0: null,
 	
 	// Método para criar a instância única
 	iniciar: function()
@@ -449,12 +451,12 @@ var Single =
 			this.nome = "";
 		}
 		
-		/* O atributo 'intancia0' irá instanciar da classe 'Sgln' caso
-		não possuir nenhuma intância dentro dele */
+		/* O atributo 'instancia0' irá instanciar da classe 'Sgln' caso
+		não possuir nenhuma instância dentro dele */
 		
-		if (Single.intancia0 == null)
+		if (Single.instancia0 == null)
 		{
-			Single.intancia0 = new Sgln();
+			Single.instancia0 = new Sgln();
 		}
 		
 		/* Caso contrário ira retorna a instância que eu ja foi criado,
@@ -465,7 +467,7 @@ var Single =
 </pre>
 
 <pre>
-// Chamando o método e atribuindo valor a intancia criada
+// Chamando o método e atribuindo valor a instância criada
 Single.iniciar();
 Single.instancia0.nome = "João";
 
@@ -479,10 +481,10 @@ apenas uma instância unica para toda a aplicação */
 Single.instancia0.nome;
 </pre>
 
-Só é possível "Zerar" a classe singleton se o atributo 'intancia' for igual a null novamente, dessa forma o 'iniciar()' irá fazer todo o processo de classe e de intância novamente.
+Só é possível "Zerar" a classe singleton se o atributo 'instancia0' for igual a null novamente, dessa forma o 'iniciar()' irá fazer todo o processo de classe e de instância novamente.
 
 <pre>
-Single.intancia0 = null;
+Single.instancia0 = null;
 </pre>
 
 <br><br>
