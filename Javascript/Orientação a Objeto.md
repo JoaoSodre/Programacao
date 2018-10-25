@@ -32,7 +32,7 @@ Como: | Syntax
 Criar uma classe | `var + (NomeDaClasse) = function () {  }` 
 Criar uma Propiedade<br>(Dentro da Classe) | `this.(NomeDaPropiedade) = (Valor);` 
 Criar um Método<br>(Dentro da Classe) | `this.(NomeDoMétodo) = function () {  }` 
-Intanciar uma classe<br>(Criar um objeto) | `var + (NomeDaVariável) = new (NomeDaClasse)();` 
+Instanciar uma classe<br>(Criar um objeto) | `var + (NomeDaVariável) = new (NomeDaClasse)();` 
 Atribuir valor as instâncias<br>(Sem construtor) | `(NomeDaVariável).(NomeDoAtributo) = (Valor);`
 
 <br>
