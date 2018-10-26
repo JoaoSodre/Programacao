@@ -7,27 +7,49 @@
 
 ### Variáveis
 
-No c# é obrigatório declarar qual o tipo de variável você está criando. Logo a Syntax fica:<br><br>
-`(Tipo de Variável) + (Nome da Variável) = (Valor) ;`<br>
-`(Tipo de Variável) + (Nome da Variável) ;`<br>
-`(Tipo de Variável) + (Nome da Variável) , (Nome de outra Variável) , ... ;`<br><br>
-Conversão de variáveis:
+Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo a Syntax fica:<br><br>
+`(TipoVariável) + (NomeVariável) = (Valor);`<br>
+`(TipoVariável) + (NomeVariável);`<br>
+`(TipoVariável) + (NomeVariável) , (Nome de outra Variável) , ... ;`<br><br>
 
+> Nota: A partir da versão 4 (aproximadamente) do framework .NET , o C# começou a trabalhar com tipagem dinâmica, ou seja para declarar uma variável basta escrever `var (NomeVariável) = (Valor);`
 
-Tipos de Var | Significado | Exemplo
------------- | ----------- | --------
-string | Texto | "Cidade"
-int | Número inteiro **sem**<br> Casas Decimais | 50
-float | Número com Casas Decimais | 50.55f
-bool | Verdadeiro ou Falso | Lâmpada Acesa?
-double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
+Tipos de Var | Significado | Classe do .NET | Exemplo
+------------ | ----------- | -------- | ---------
+string | Texto | String | "Cidade"
+int | Número inteiro **sem**<br> Casas Decimais | Int32 | 50
+float | Número com Casas Decimais | Single | 50.55f
+bool | Verdadeiro ou Falso | Boolean | Lâmpada Acesa?
+double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | Double | 3123.44
+
+[Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
+
+Conversão de variáveis:<br>
+Conversão do tipo Cast: `(Var) = (ConverterPara) (ValorParaConverter)`;<br>
+Conversão Comum: `(Var) = Convert.To'TpoVarParaConverter'((Valor))`
+
+<pre>
+// Tipo Cast
+string A = "1";
+var B = (int) A;
+
+// Conversão Comum
+string A = "1";
+int B = Convert.ToInt(A);
+
+int C = 4;
+float J = Convert.ToFloat(J); 
+</pre>
 
 <br><br>
+
 ### Collections
 
 Hash
 Array
+
 <br><br>
+
 ### Loopings
 
 o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo if (a) {break;}<br>
@@ -37,4 +59,5 @@ while = enquanto tal condição, execute o bloco.<br>
 do..while = faça a operação primeiro e depois entra no looping.<br>
 for = já determina a quantidade de repetições.<br>
 foreach = para cada elemento de um array.
+
 <br><br>
