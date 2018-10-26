@@ -14,13 +14,13 @@ Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, 
 
 > Nota: A partir da versão 4 (aproximadamente) do framework .NET , o C# começou a trabalhar com tipagem dinâmica, ou seja para declarar uma variável basta escrever `var (NomeVariável) = (Valor);`
 
-Tipos de Var | Significado | Classe do .NET | Exemplo
------------- | ----------- | -------- | ---------
-string | Texto | String | "Cidade"
-int | Número inteiro **sem**<br> Casas Decimais | Int32 | 50
-float | Número com Casas Decimais | Single | 50.55f
-bool | Verdadeiro ou Falso | Boolean | Lâmpada Acesa?
-double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | Double | 3123.44
+Tipos de Var | Significado | Exemplo
+--- | --- | ---
+string | Texto | "Cidade"
+int | Número inteiro **sem**<br> Casas Decimais | 50
+float | Número com Casas Decimais | 50.55f
+bool | Verdadeiro ou Falso | Lâmpada Acesa?
+double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 [Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
 
