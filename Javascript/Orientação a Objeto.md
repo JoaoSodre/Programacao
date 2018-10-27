@@ -237,7 +237,7 @@ var CalcularMedia = function(_nota1 , _nota2)
 
 Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herdar atributos e métodos **PÚBLICOS**.<br><br>
 
-Syntax: `(NomeClasse).prototype = new (ClasseASerHerdada);`<br><br>
+Syntax: `(ClasseFilho).prototype = new (ClassePai);`<br><br>
 Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
 <pre>
@@ -281,8 +281,8 @@ C1.numero
 É usado basicamente para sobrescrever métodos da classe pai na classe filho, ou seja o mesmo método nas duas classes porém de formas diferentes.<br><br>
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
-Syntax para **injetar** na classe pai: `(NomeClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
-Syntax para instanciar a classe pai na classe filho: `this.super = (NomeClassePai).prototype;`
+Syntax para **injetar** na classe pai: `(ClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
+Syntax para instanciar a classe pai na classe filho: `this.super = (ClassePai).prototype;`
 
 <pre>
 var A = function() 
@@ -361,34 +361,30 @@ J.Calcular(5)
 
 # Classe de Interface 
 
-A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar de outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (*implementando*), já que em linguagens compiladas daria erro ao não fazer isso.
+A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar-los em outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (*implementação*), já que em linguagens compiladas dacontece erro ao não fazer isso.
 
 > * Interface não funciona em js, apens funciona em linguagens compiladas pois é obrigatório a **implementação**.
-> * Por causa da obrigadoriedade da implementação, não é possivel gerar uma instância da classe de interface.
+> * Por causa da obrigadoriedade da implementação, não é possivel gerar uma instância da interface.
 
 Exemplo em **C#**:
 
 <pre>
-public interface IPessoa // Interface 'IPessoa'
+// Interface 'IPessoa'
+public interface IPessoa
 {
 	// Toda vez que for herdada, irá ter que reescrever esses métodos
 	void SetTelefone(string telefone)
-	
 	void Gravar()
 }
 
 // Classe 'Base' herdando de 'IPessoa'
 public class Base : IPessoa
 {
-	// Reescrevendo os métodos da interface
 	this.Telefone = telefone;
 	
-	void SetTelefone(string telefone) { this.Telefone = telefone; }
-	
-	public virtual void Gravar()
-	{
-		// *Algum código reescrito*
-	}
+	// Reescrevendo os métodos da interface
+	void SetTelefone(string telefone) { this.Telefone = telefone; } 
+	public virtual void Gravar() { // *Algum código reescrito*}
 }
 </pre>
 
@@ -427,7 +423,7 @@ var Pessoa = function() {}
 Pessoa.prototype = Abstracao.prototype;
 
 // Sobrescrita (Se o método original foi escrito em 'prototype', a sobrescrita também será)
-Pessoa.prototype.Gravar = function() {   // Algum código   }
+Pessoa.prototype.Gravar = function() { // Algum código }
 </pre>
 
 <br><br>
