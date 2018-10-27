@@ -235,10 +235,10 @@ var CalcularMedia = function(_nota1 , _nota2)
 
 ## Herança
 
-Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herda atributos e métodos **PÚBLICOS**.<br><br>
+Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herdar atributos e métodos **PÚBLICOS**.<br><br>
 
 Syntax: `(NomeClasse).prototype = new (ClasseASerHerdada);`<br><br>
-Depois é apenas **instanciar** a classe filha, que o objeto ficará com ambos os atributos/métodos<br><br>
+Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
 <pre>
 var A1 = function()
