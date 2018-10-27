@@ -10,8 +10,31 @@ Exemplo (Javascript):<br>
 
 <pre>
 // Método que executa uma função depois de um intervalo de tempo (Milisegundo)
-setTimeout(function(){ alert ("Função1: Fui executado em primeiro!"); }, 4000); 
-setTimeout(function(){ alert ("Função2: Fui executado em segundo!"); }, 1000); 
+setTimeout(function(){ alert("Função1: Fui executado em primeiro!"); }, 4000); 
+setTimeout(function(){ alert("Função2: Fui executado em segundo!"); }, 1000); 
 </pre>
 
-Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido/ irá aparecer primeiro, isso é programação assíncrona
+Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido/ irá aparecer primeiro, isso é programação assíncrona.<br><br>
+
+Outro exemplo:
+
+<pre>
+function A(callback) {
+    callback.call (null, "Apareci em primeiro!");
+}
+
+function B(callback) {
+    callback.call(null, "Apareci em segundo!");
+}
+
+// A função B vai ser executada exetamente 1 segundo depois da A
+B(function(callback) { 
+    setTimeout(function(){ alert(callback); }, 2000);
+});
+
+A(function(callback) {
+    setTimeout(function(){ alert(callback); }, 1000);
+});
+</pre>
+
+Apesar da 'B()' ter sido chamada primeiro, foi a 'A()' quem apareceu antes, logo na programação assíncrona independente de quem foi executado primeiro, quem irá fazer o `callback` sempre será o mais rápido.
