@@ -2,7 +2,7 @@
 
 > Também pode ser referenciado como 'Programação Assíncrona'
 
-A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila), o controle de fluxo de programas orientados a evento são guiados por indicações externas, chamados de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez, na programação **assíncrona** ele executa vários comandos ao mesmo tempo, todos eles dando o **call back** quando finalizados.<br><br>
+A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila),  programas orientados a evento são guiados por indicações externas, chamados de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez (da maneira **blocantes**), na programação **assíncrona** ele executa vários comandos ao mesmo tempo, todos eles dando o **call back** quando finalizados.<br><br>
 
 Exemplo (Javascript):<br>
 
@@ -37,4 +37,4 @@ A(function(callback) {
 });
 </pre>
 
-Apesar da 'B()' ter sido chamada primeiro, foi a 'A()' quem apareceu antes, logo na programação assíncrona independente de quem foi executado primeiro, quem irá fazer o `callback` sempre será o mais rápido.
+Apesar da 'B()' ter sido chamada primeiro, foi a 'A()' quem apareceu antes, logo na programação assíncrona independente de quem foi executado primeiro, quem irá fazer o `call back` sempre será o mais rápido.
