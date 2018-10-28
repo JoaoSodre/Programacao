@@ -23,22 +23,16 @@ bool | Verdadeiro ou Falso | Lâmpada Acesa?
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 [Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
-
-Conversão de variáveis:<br>
-Conversão do tipo Cast: `(Var) = (ConverterPara) (ValorParaConverter)`;<br>
-Conversão Comum: `(Var) = Convert.To'TpoVarParaConverter'((Valor))`
+Conversão de variáveis<br>
+`({TipoVar}) Convert.to{TipoVar}()` = Usado para todas as variáveis primitivas.<br>
+`{TipoVar}.Parse()` = Irá converter uma **string** para o valor desejado.
 
 <pre>
-// Tipo Cast
-string A = "1";
-var B = (int) A;
+int A = 5;
+string B = "5444";
 
-// Conversão Comum
-string A = "1";
-int B = Convert.ToInt(A);
-
-int C = 4;
-float J = Convert.ToFloat(J); 
+double C = (double) Convert.ToDouble(A);
+double D = double.Parse(B);
 </pre>
 
 <br><br>
