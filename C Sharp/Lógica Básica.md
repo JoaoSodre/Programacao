@@ -18,14 +18,15 @@ Tipos de Var | Significado | Exemplo
 --- | --- | ---
 string | Texto | "Cidade"
 int | Número inteiro **sem**<br> Casas Decimais | 50
-float | Número com Casas Decimais | 50.55f
+float | Número com Casas Decimais<br>(Precisa do "f" no final) | 50.57845f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 [Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
 Conversão de variáveis<br>
 `({TipoVar}) Convert.to{TipoVar}()` = Usado para todas as variáveis primitivas.<br>
-`{TipoVar}.Parse()` = Irá converter uma **string** para o valor desejado.
+`{TipoVar}.Parse()` = Irá converter uma **string** para o valor desejado.<br>
+> Nota: Usa-se o ToSingle() para converter para float.
 
 <pre>
 int A = 5;
