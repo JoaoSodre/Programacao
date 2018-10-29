@@ -47,6 +47,8 @@ Array
 
 ### Loopings
 
+[Exemplos em Javascript (Quase mesma syntax)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/L%C3%B3gica%20B%C3%A1sica.md#loopings)
+
 o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo if (a) {break;}<br>
 o `continue` é usado para **pular** uma repetição
 
