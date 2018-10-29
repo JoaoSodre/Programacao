@@ -24,8 +24,8 @@ double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de nu
 
 [Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
 Conversão de variáveis<br>
-`({TipoVar}) Convert.to{TipoVar}()` = Usado para todas as variáveis primitivas.<br>
-`{TipoVar}.Parse()` = Irá converter uma **string** para o valor desejado.<br>
+`(Tipo) Convert.toTipo()` = Usado para todas as variáveis primitivas.<br>
+`Tipo.Parse()` = Irá converter uma **string** para o valor desejado.<br>
 > Nota: Usa-se o ToSingle() para converter para float.
 
 <pre>
@@ -40,8 +40,20 @@ double D = double.Parse(B);
 
 ### Collections
 
-Hash
-Array
+Tipo[] Nome = new Tipo[Quantidade];
+a[0] =
+a.Length;
+
+
+List<tipo> Nome = new List<Tipo>();
+A.Add("Joao")
+a.Count;
+
+
+
+<pre>
+a[0]
+</pre>
 
 <br><br>
 
