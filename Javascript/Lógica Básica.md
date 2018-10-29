@@ -24,6 +24,7 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 > Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
 
 ## Array
+
 <pre>
 var media = 8;
 var nota1 = 7;
@@ -34,19 +35,23 @@ w.push(5);   // Ficara no slot 0 do array.
 w.push(media); // Ficara no slot 1 do array.
 w.push(nota1); // Ficara no slot 2 do array.
 </pre>
+
 `alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
 
 ## Hash
+
 <pre>
 var g = {};
 g.nome = "joao";
 g.nota = 8;
 </pre>
+
 `alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria nesse caso pois é necessário definir o **atributo**.
 
 ## Loopings
 
-Calculo de Tabuada
+Calculo de Tabuada:
+
 <pre>
 var deQual = prompt("De qual número você quer saber a tabulada?");
 var deVezes = prompt("Até qual número você deseja repetir?");
@@ -63,10 +68,43 @@ for (var J = daBase; J <= deVezes; J++)
 </pre>
 
 Looping sem válvula de escape
+
 <pre>
 var A = 1;
 while (A < 2)
 {
     alert("Seu pc vai crashar");
+}
+</pre>
+
+Do...While
+<pre>
+a = 1;
+do 
+{
+    alert(a)
+    a++
+}
+while(a <= 5);
+</pre>
+
+Foreach (C#):
+
+<pre>
+int[] A = { 0, 2, 5, 8, 93 };
+
+// Para cada elemento de A (Ou seja os 5)
+foreach (int x in A)
+{
+    // Faça isso
+    Console.WriteLine("Olá");
+}
+
+------------- Outro exemplo -------------
+
+foreach (int x in A)
+{
+    // Irá Mostrar todos os números do Array
+    Console.WriteLine(x);
 }
 </pre>
