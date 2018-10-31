@@ -20,6 +20,10 @@
 `&lt;` = (<) <br>
 `&gt;` = (>) <br>
 
+### Atributos
+
+Tudo que adiciona nas tags é chamado de _atributo_ ex : `<b style="">(/)` (Aqui o `style` é o atributo)
+
 ### _Algumas_ Tags e Seus Significados
 > **Legenda:** <br>(/) = Precisa de outra tag para fechar (Ex: `<h1></h1>`) <br><  /> = Tag que tem fechamento em si mesmo (Ex: `<img src""/>`) <br>
 
@@ -27,21 +31,8 @@
 * `<hgroup>(/)` = Grupo de Títulos
 * `<header>(/)` = Cabeçalho
 * `<pre>(/)` = Todos os espaços e enters serão considerados nessa tag
-* `<div id="">(/)` &rarr; `div` = Dividir a página , `id` = identificação (Único nome do código **inteiro**) 
+* `<div>(/)` &rarr; `div` = Dividir a página , `id` = identificação (Único nome do código **inteiro**) 
 * `<img src=".png .jpg ..."      width=""/>` &rarr; `img` = Imagem , `src` = source (fonte), `width` = Ajustar o <br>Tamanho da Imagem (É recomendado diminui-lá no Photoshop para usar menos KB)
 * `<span style="">(/)` &rarr; `span` = Utilizado para formatar pequenos textos, `style` = Usado para estilizar o texto (CSS)
 * `<link/>` = Link para uma style sheet externa (não confundir com `<a>(/)`)
 * `<script src=".js">(/)` = Programação orientada a funções.
-
-# Css
-
-> **Nota**: Todo código css deve ser escrito dentro das tags `<style></style>` dentro do `<head></head>` no html
-`<script src="url do css">(/)`
-# _Algumas_ Css Properties
-
-[Lista de todos os propeties do Css com alguns tutoriais (W3Schools)](https://www.w3schools.com/cssref/default.asp)<br> 
-
-`text-align: justify;` = Deixa o texto alinhado nos 2 lados<br>
-`text-indent: 50px;` = Deixa uma margem na primeira linha do texto<br>
-`background-color: #xxx;` (#hexadecimal) = Muda cor do fundo do site<br>
-
