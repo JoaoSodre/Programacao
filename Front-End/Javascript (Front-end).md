@@ -1,6 +1,6 @@
 # Javascript (Front-end)
 
-* [Introdução]()
+* [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o)
 * [JQuery]()
 * [Node.js]()
 
@@ -10,13 +10,13 @@
 
 <pre>
 var A = document.getElementbyId("").innerHtml
-// o innerHtml é usado quando uma tag possuí diversos elementos em sua abertura e feichamento,
+// o innerHtml é usado quando uma tag possuí diversos elementos em sua abertura e fechamento,
 
 var B = document.getElementbyId("").value
 // o 'value' usado quando ...
 </pre>
 
-<!-- #### _Outros comandos importantes_ 
+#### _Outros comandos importantes_ 
 
 .fucus = foca o mouse em algum espaço em branco
 
