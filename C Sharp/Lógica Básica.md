@@ -2,13 +2,11 @@
 
 # C#
 
-* [Variáveis]()
-
-<!--
-## Collections 
-## Loopings 
-## Funções
--->
+* [Variáveis](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#vari%C3%A1veis)
+* [Collections](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#collections) 
+* [Loopings](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#loopings) 
+* [Funções](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#fun%C3%A7%C3%B5es)
+* [Funções Recurssdadsadasdivas]()
 
 ## Variáveis
 
@@ -30,7 +28,7 @@ float | Número com Casas Decimais<br>(Precisa do "f" no final) | 50.57845f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
-[Outros tipos de variáveis que existem](http://www.tutorialsteacher.com/csharp/csharp-data-types)<br>
+[Outros tipos de variáveis que existem](http://www.tutorialsteacher.com/csharp/csharp-data-types)<br><br>
 Conversão de variáveis:<br>
 ```csharp
 // Usado para todas as variáveis primitivas.
@@ -39,7 +37,9 @@ Conversão de variáveis:<br>
 //Usado para converter uma **string** para o valor desejado.
 Tipo.Parse()
 
+
 /* Nota: Usa-se o ToSingle() para converter para float. */
+
 
 int A = 5;
 string B = "5444";
@@ -71,10 +71,10 @@ a[0]
 
 ## Loopings
 
-[Exemplos em Javascript (Quase mesma syntax)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/L%C3%B3gica%20B%C3%A1sica.md#loopings)
+[Exemplos em Javascript (Muda poucas coisas na syntax)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/L%C3%B3gica%20B%C3%A1sica.md#loopings)
 
-o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo if (a) {break;}<br>
-o `continue` é usado para **pular** uma repetição
+o `break` é usado para encerar o looping e ir para o proximo comando do algoritmo.<br>
+o `continue` é usado para **pular** para o próximo passo da repetição.
 
 while = enquanto tal condição, execute o bloco.<br>
 do..while = faça a operação primeiro e depois entra no looping.<br>
@@ -83,4 +83,30 @@ foreach = para cada elemento de um array.
 
 <br><br>
 
-## Funções
+## Função
+
+<!--
+* O 'local' e se ela é 'estática', não é obrigatório quando for criar uma função
+
+Local static TipoRetorno nome (TipoVar NomeVar, TipoVar NomeVar, ...) {}
+-->
+
+```csharp
+int Calcular(int _num1, int _num2)
+{
+    return _num1 + _num2 ;
+}
+```
+<br><br>
+
+## Função recursiva
+
+Funções recursivas são basicamente funções que se chamam
+
+```csharp
+void Calcular()
+{
+    Console.WriteLine("Seu PC vai crashar");
+    Calcular();
+}
+```
