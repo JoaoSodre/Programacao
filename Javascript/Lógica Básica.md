@@ -2,8 +2,6 @@
 
 > Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
 
-> Em Html, para chamar os scripts de outros arquivos, basta eles estarem salvos em `.js` e serem referenciados atravez das tags `<script src="url"></script>`
-
 Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5;` <=> `k1 = 5`
