@@ -1,8 +1,5 @@
 <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? ## Polimorfismo -->
 
-```javascript
-```
-
 **Nota: Os exemplos foram feitos em sua grande maioria em Javascript, mas os conceitos se aplicam para qualquer linguagem que trabalha com orientação a objeto.**
 
 # Orientação a Objeto
@@ -44,7 +41,7 @@ Colocar valor nos<br> atributos das instancias<br>(Sem construtor) | `(NomeDaIns
 
 <br>
 
-<pre>
+```javascript
 var Clientes = function() // Objeto "Cliente" 
 { 
 	// Propiedade "nome"
@@ -57,8 +54,8 @@ var Clientes = function() // Objeto "Cliente"
 	}
 }
 
+------- Outra forma de fazer -------
 
-// Outra forma de fazer
 function Clientes()
 {
 	this.nome = "";
@@ -68,15 +65,15 @@ function Clientes()
 		alert("Nome: " + this.nome);
 	}
 }
-</pre>
+```
 
-<pre>
+```javascript
 var A = new Clientes(); // Instanciando a classe "Cliente"
-</pre>
+```
 
-<pre>
+```javascript
 A.nome = "João"; // Atribuindo valor ao atributo do objeto
-</pre>
+```
 
 <br>
 <br>
@@ -85,21 +82,21 @@ A.nome = "João"; // Atribuindo valor ao atributo do objeto
 
 São usados basicamente para economizar linhas de código, são acessados por deio dos parâmetros do objeto (previamente) e da instância.
 
-<pre>
+```javascript
 var Casas = function(_casa1, _casa2)
 {
 	this.casa1 = _casa1;
 	this.casa2 = _casa2;
 }
-</pre>
+```
 
-<pre>
+```javascript
 var C = new Casas("Sobrado", "Triplex"); // Construtor 
-</pre>
+```
 
 O uso de **HASH** pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
 
-<pre>
+```javascript
 var Casas = function(_casas, _tamanhos)
 {
 	this.casa1 = _casas.casa1;
@@ -107,11 +104,11 @@ var Casas = function(_casas, _tamanhos)
 	this.tamanho1 = _tamanhos.tamanho1;
 	this.tamanho2 = _tamanhos.tamanho2;
 }
-</pre>
+```
 
-<pre>
+```javascript
 var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tamanho2:"Pequena"});
-</pre>
+```
 
 <br>
 <br>
@@ -120,7 +117,7 @@ var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tam
 
 São usados apenas para **UMA** instância.
 
-<pre>
+```javascript
 var A = function(_lugar)
 {
 	this.lugar = _lugar;
@@ -128,7 +125,7 @@ var A = function(_lugar)
 
 var B = new A("São Paulo");
 var C = new A("Campinas");
-</pre>
+```
 
 O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 <br>
@@ -145,7 +142,7 @@ Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 
 <br><br>
 
-<pre>
+```javascript
 var A = function(_lugar, _lugar2)
 {
 	// Quando instanciar, jogar o objeto no atributo de classe
@@ -177,17 +174,17 @@ A.ListarLugares = function()
 		console.log("Cliente " + cliente + ": " + J.lugar1 + " e " + J.lugar2);
 	}
 }
-</pre>
+```
 
-<pre>
+```javascript
 var B = new A("Salvador" , "Sertãozinho");
 var C = new A("Rio Branco" , "Ribeirão");
 
 B.ContarLugares();
 C.ContarLugares();
-</pre>
+```
 
-<pre>
+```javascript
 // Irá mostrar 2 objetos com seus atributos/metodos, e o nome da CLASSE que eles pertencem
 A.quantidadeInstancias;
 
@@ -196,7 +193,7 @@ A.quantidadeLugares;
 
 // Irá monstrar no console os atributos dos objetos, usando o MÉTODO DE CLASSE para isso
 A.ListarLugares(); 
-</pre>
+```
 
 <br>
 <br>
@@ -214,7 +211,7 @@ Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
 
 <br><br>
 
-<pre>
+```javascript
 var CalcularMedia = function(_nota1 , _nota2)
 {
 	// Atributos Públicos
@@ -232,7 +229,7 @@ var CalcularMedia = function(_nota1 , _nota2)
 	notas.push(_nota1 , _nota2);
 	Media();
 }
-</pre>
+```
 
 <br><br>
 
@@ -243,7 +240,7 @@ Herança é usada para reaproveitar os atributos e métodos de uma classe já ex
 Syntax: `(ClasseFilho).prototype = new (ClassePai);`<br><br>
 Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
-<pre>
+```javascript
 var A1 = function()
 {
 	this.nome = "Joao";
@@ -262,9 +259,9 @@ B1.nome
 
 // Mostrará "Joao", pois o mesmo é a propiedade "nome" da classe herdada.
 B1.prototype.nome
-</pre>
+```
 
-<pre>
+```javascript
 /* INSTANCIANDO 'B1', logo 'C1' ficará com as propiedades/métodos
 de ambos 'A1' e 'B1' (Já que 'B1' herdou de 'A1'). */
 
@@ -275,7 +272,7 @@ C1.nome
 
 // Mostrará 555
 C1.numero
-</pre>
+```
 
 <br><br>
 
@@ -287,7 +284,7 @@ Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedad
 Syntax para **injetar** na classe pai: `(ClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
 Syntax para instanciar a classe pai na classe filho: `this.super = (ClassePai).prototype;`
 
-<pre>
+```javascript
 var A = function() 
 {
 	this.Calcular = function(_num1) 
@@ -306,19 +303,19 @@ var B = function()
 		console.log(a);
 	}
 }
-</pre>
+```
 
-<pre>
+```javascript
 B.prototype = new A();
 var J = new B();
 
 // Ira aparecer 50
 J.Calcular(5);
-</pre>
+```
 
 Em javascript para que tenha a possibilidade de chamar o método do **pai** sobrescrito na classe filha, é necessário **injetar** o método previamente, em outras linguagens isso pode ser diferente.
 
-<pre>
+```javascript
 var A = function() { }
 
 // Injetando atributo na classe pai
@@ -330,11 +327,11 @@ A.prototype.Calcular = function(_num1)
 	a = _num1 * 2;
 	console.log(a);
 }
-</pre>
+```
 
 O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **pai**) , em outras linguagens como C# é chamado de 'base'.
 
-<pre>
+```javascript
 var B = function() 
 {
 	/* Herda de tudo que estiver em 'prototype' que
@@ -358,7 +355,7 @@ var J = new B();
 
 // Ira aparecer 50 e 10
 J.Calcular(5)
-</pre>
+```
 
 <br><br>
 
@@ -387,7 +384,7 @@ public class Base : IPessoa
 	
 	// Reescrevendo os métodos da interface
 	void SetTelefone(string telefone) { this.Telefone = telefone; } 
-	public virtual void Gravar() { // *Algum código reescrito*}
+	public virtual void Gravar() { /* Algum código reescrito */ }
 }
 ```
 
