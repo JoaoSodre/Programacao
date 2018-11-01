@@ -1,15 +1,16 @@
-# C#
-
-* [Tutorials Teache - C# (Parecido com W3Schools)](http://www.tutorialsteacher.com/csharp/csharp-tutorials)
-
 <!-- Não esquecer de colocar get/set no obj do javascript-->
+
+# C#
 
 ## Variáveis
 
-Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo a Syntax fica:<br><br>
-`(TipoVariável) + (NomeVariável) = (Valor);`<br>
-`(TipoVariável) + (NomeVariável);`<br>
-`(TipoVariável) + (NomeVariável) , (Nome de outra Variável) , ... ;`<br><br>
+Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo para cria-la ficaria da seguinte forma:<br>
+
+```csharp
+(TipoVariável) (NomeVariável) = (Valor);
+(TipoVariável) (NomeVariável);
+(TipoVariável) (NomeVariável) , (Nome de outra Variável) , ... ;
+```
 
 > Nota: A partir da versão 4 (aproximadamente) do framework .NET , o C# começou a trabalhar com tipagem dinâmica, ou seja para declarar uma variável basta escrever `var (NomeVariável) = (Valor);`
 
@@ -21,13 +22,17 @@ float | Número com Casas Decimais<br>(Precisa do "f" no final) | 50.57845f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
-[Outros tipos de variáveis que existem]()<br><br>
-Conversão de variáveis<br>
-`(Tipo) Convert.toTipo()` = Usado para todas as variáveis primitivas.<br>
-`Tipo.Parse()` = Irá converter uma **string** para o valor desejado.<br>
-> Nota: Usa-se o ToSingle() para converter para float.
-
+[Outros tipos de variáveis que existem](http://www.tutorialsteacher.com/csharp/csharp-data-types)<br>
+Conversão de variáveis:<br>
 ```csharp
+// Usado para todas as variáveis primitivas.
+(Tipo) Convert.toTipo();
+
+//Usado para converter uma **string** para o valor desejado.
+Tipo.Parse()
+
+/* Nota: Usa-se o ToSingle() para converter para float. */
+
 int A = 5;
 string B = "5444";
 
