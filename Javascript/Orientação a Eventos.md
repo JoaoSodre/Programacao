@@ -8,17 +8,17 @@ Exemplos em Javascript
 
 > [Syntax do setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
-<pre>
+```javascript
 // Método que executa uma função depois de um intervalo de tempo (Milisegundo)
 setTimeout(function(){ alert("Função1: Fui executado em segundo!"); }, 4000); 
 setTimeout(function(){ alert("Função2: Fui executado em primeiro!"); }, 1000); 
-</pre>
+```
 
 Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido/ irá aparecer primeiro, isso é programação assíncrona.<br><br>
 
 Syntax para função que irá receber o CALLBACK: `(NomeFunção)(function() { ... } )`
 
-<pre>
+```javascript
 function A(callback) 
 {
     // Quando a resposta estiver pronta, ele vai dar o CALLBACK
@@ -43,6 +43,6 @@ A (function (callback)
 {
     setTimeout(function(){ alert(callback); }, 1000);
 });
-</pre>
+```
 
 Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada.
