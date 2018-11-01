@@ -18,11 +18,15 @@ Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&n
 Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (PPP == 10) {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Seu pc vai crashar!!!");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</pre><br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas.
 [Orientação Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | É usado basicamente para organização,<br> utilizando o método de classes, <br>encapsulamento e objetos.
 
-# Mais Exemplos e Syntaxes
+<br><br>
 
-> Lembrete: Em programação a contagem de collection começará em **0** na maioria das vezes
+# Mais Exemplos
+
+<br><br>
 
 ## Array
+
+>Lembrete: Em programação a contagem de collection começará em **0**
 
 ```javascript
 var media = 8;
@@ -37,6 +41,8 @@ w.push(nota1); // Ficara no slot 2 do array.
 
 `alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
 
+<br><br>
+
 ## Hash
 
 ```javascript
@@ -46,6 +52,8 @@ g.nota = 8;
 ```
 
 `alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria nesse caso pois é necessário definir o **atributo**.
+
+<br><br>
 
 ## Loopings
 
@@ -108,3 +116,5 @@ foreach (int x in A)
     Console.WriteLine(x);
 }
 ```
+
+<br><br>
