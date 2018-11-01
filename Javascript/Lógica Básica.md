@@ -13,9 +13,9 @@ Operadores Lógicos | ==, !=, >, <, && (e), >=, <= e &#124;&#124; (ou).
 Looping | While, For, Do..While e Foreach.
 Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
 Hash | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
-Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
-Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;var mmm = num1 + num2;<br>&nbsp;&nbsp;&nbsp;&nbsp;return mmm ;<br>}</pre> `a1 = calcular(3, 5);`,`a1`-> 8 
-Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (PPP == 10) {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Seu pc vai crashar!!!");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</pre><br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas.
+Função (Sem <br>parâmetro) | ```javascript function getName() {<br>    var a1 = prompt("Qual seu nome?");<br>    return a1;<br>}``` `var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
+Função (Com <br>parâmetro) | ```javascript function calcular(num1, num2) {<br>    var mmm = num1 + num2;<br>    return mmm ;<br>}``` `a1 = calcular(3, 5);`,`a1`-> 8 
+Função Recursiva<br>(Função que se chama) | ```javascript var PPP = 10;<br>function callItSelf() {<br>    if (PPP == 10) {<br>    alert("Seu pc vai crashar!!!");<br> callItSelf();<br>   }<br>}``` <br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas.
 [Orientação Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | É usado basicamente para organização,<br> utilizando o método de classes, <br>encapsulamento e objetos.
 
 
@@ -25,7 +25,7 @@ Função Recursiva<br>(Função que se chama) | <pre>var PPP = 10;<br>function c
 
 ## Array
 
-<pre>
+```javascript
 var media = 8;
 var nota1 = 7;
 
@@ -34,17 +34,17 @@ var w = []; // Criando o array sem atributos.
 w.push(5);   // Ficara no slot 0 do array.
 w.push(media); // Ficara no slot 1 do array.
 w.push(nota1); // Ficara no slot 2 do array.
-</pre>
+```
 
 `alert(w)` -> `5,8,7` (Posições dos valores no Array em ordem)
 
 ## Hash
 
-<pre>
+```javascript
 var g = {};
 g.nome = "joao";
 g.nota = 8;
-</pre>
+```
 
 `alert(g.nota + 10)` -> `18`   &nbsp;&nbsp;&nbsp;&nbsp;  alert(g) não funcionaria nesse caso pois é necessário definir o **atributo**.
 
@@ -52,7 +52,7 @@ g.nota = 8;
 
 Calculo de Tabuada:
 
-<pre>
+```javascript
 var deQual = prompt("De qual número você quer saber a tabulada?");
 var deVezes = prompt("Até qual número você deseja repetir?");
 var daBase = prompt("De qual número você deseja começar?");
@@ -65,20 +65,21 @@ for (var J = daBase; J <= deVezes; J++)
     resultados.push(multiplicacao);
     daBase++;
 }
-</pre>
+```
 
 Looping sem válvula de escape
 
-<pre>
+```javascript
 var A = 1;
 while (A < 2)
 {
     alert("Seu pc vai crashar");
 }
-</pre>
+```
 
 Do...While
-<pre>
+
+```javascript
 a = 1;
 do 
 {
@@ -86,14 +87,14 @@ do
     a++
 }
 while(a <= 5);
-</pre>
+```
 
-Foreach (C#):
+Foreach (Exemplo em **C#**):
 
-<pre>
+```csharp
 int[] A = { 0, 2, 5, 8, 93 };
 
-// Para cada elemento de A (Ou seja os 5)
+// Para cada **inteiro* de A (Ou seja os 5)
 foreach (int x in A)
 {
     // Faça isso
@@ -107,4 +108,4 @@ foreach (int x in A)
     // Irá Mostrar todos os números do Array
     Console.WriteLine(x);
 }
-</pre>
+```
