@@ -22,10 +22,10 @@ Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, 
 
 Tipos de Var | Significado | Exemplo
 --- | --- | ---
-string | Texto | "Cidade"
+string | Texto (Precisa estar entre aspas) | "Cidade"
 int | Número inteiro **sem**<br> Casas Decimais | 50
 float | Número com Casas Decimais<br>(Precisa do "f" no final) | 50.57845f
-bool | Verdadeiro ou Falso | Lâmpada Acesa?
+bool | Verdadeiro ou Falso | true/false
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 [Outros tipos de variáveis que existem](http://www.tutorialsteacher.com/csharp/csharp-data-types)<br><br>
