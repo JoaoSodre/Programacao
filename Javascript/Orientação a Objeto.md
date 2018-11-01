@@ -414,7 +414,7 @@ Abstracao.prototype.Gravar = function()
 }
 ```
 
-Logo quando for herdar 'Abstracao', necessáriamente vai ter que sobrescrever 'Gravar()'.
+Logo quando for herdar 'Abstracao', necessáriamente vai ter que sobrescrever 'Gravar( )'.
 
 ```javascript
 var Pessoa = function() {}
@@ -434,7 +434,7 @@ Com a classe Singleton é possível criar uma **unica** instância atraves do se
 
 > Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
 
-Syntax: ```javascript (NomeClasse) = { [Atributos] [Método que vai criar a instância]() } ```
+Syntax: `(NomeClasse) = { [Atributos] [Método que vai criar a instância]() } `
 
 ```javascript
 var Single =
