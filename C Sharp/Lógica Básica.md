@@ -5,8 +5,8 @@
 * [Variáveis](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#vari%C3%A1veis)
 * [Collections](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#collections) 
 * [Loopings](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#loopings) 
-* [Funções](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#fun%C3%A7%C3%B5es)
-* [Funções Recurssdadsadasdivas]()
+* [Função](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#fun%C3%A7%C3%A3o)
+* [Funções Recursivas](https://github.com/JoaoSodre/Programacao/blob/master/C%20Sharp/L%C3%B3gica%20B%C3%A1sica.md#fun%C3%A7%C3%A3o-recursiva)
 
 ## Variáveis
 
@@ -99,7 +99,7 @@ int Calcular(int _num1, int _num2)
 ```
 <br><br>
 
-## Função recursiva
+## Função Recursiva
 
 Funções recursivas são basicamente funções que se chamam
 
