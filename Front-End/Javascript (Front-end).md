@@ -6,6 +6,8 @@
 
 ## Introdução
 
+> Em Html, para chamar os scripts de outros arquivos, basta eles estarem salvos em `.js` e serem referenciados atravez das tags `<script src="url"></script>`
+
 [...] O Javascript (Em documentos html) pode ser interliga de tal forma:
 
 <pre>
@@ -17,7 +19,6 @@ var B = document.getElementbyId("").value
 </pre>
 
 <!-- #### _Outros comandos importantes_ 
-
 .fucus = foca o mouse em algum espaço em branco
 
 ## jQuery
@@ -26,4 +27,5 @@ var B = document.getElementbyId("").value
 
 ## Node.js
 
-[Site Original](https://nodejs.org/en/) -->
+[Site Original](https://nodejs.org/en/)
+-->
