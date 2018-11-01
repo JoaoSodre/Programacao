@@ -1,11 +1,10 @@
-* [Tutorials Teache - C# (Parecido com W3Schools)](http://www.tutorialsteacher.com/csharp/csharp-tutorials)
-* [Dotnetperls (Exemplos e exercícios de C#)](https://www.dotnetperls.com/)
-
 # C#
+
+* [Tutorials Teache - C# (Parecido com W3Schools)](http://www.tutorialsteacher.com/csharp/csharp-tutorials)
 
 <!-- Não esquecer de colocar get/set no obj do javascript-->
 
-### Variáveis
+## Variáveis
 
 Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo a Syntax fica:<br><br>
 `(TipoVariável) + (NomeVariável) = (Valor);`<br>
@@ -22,23 +21,23 @@ float | Número com Casas Decimais<br>(Precisa do "f" no final) | 50.57845f
 bool | Verdadeiro ou Falso | Lâmpada Acesa?
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
-[Outros tipos de variáveis que existem](https://docs.microsoft.com/pt-br/previous-versions/visualstudio/visual-studio-2008/ms228360(v=vs.90)#tipos-de-dados-internas)<br><br>
+[Outros tipos de variáveis que existem]()<br><br>
 Conversão de variáveis<br>
 `(Tipo) Convert.toTipo()` = Usado para todas as variáveis primitivas.<br>
 `Tipo.Parse()` = Irá converter uma **string** para o valor desejado.<br>
 > Nota: Usa-se o ToSingle() para converter para float.
 
-<pre>
+```csharp
 int A = 5;
 string B = "5444";
 
 double C = (double) Convert.ToDouble(A);
 double D = double.Parse(B);
-</pre>
+```
 
 <br><br>
 
-### Collections
+## Collections
 
 Tipo[] Nome = new Tipo[Quantidade];
 a[0] =
@@ -57,7 +56,7 @@ a[0]
 
 <br><br>
 
-### Loopings
+## Loopings
 
 [Exemplos em Javascript (Quase mesma syntax)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/L%C3%B3gica%20B%C3%A1sica.md#loopings)
 
