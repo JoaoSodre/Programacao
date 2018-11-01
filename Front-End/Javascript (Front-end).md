@@ -1,8 +1,8 @@
 # Javascript (Front-end)
 
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o)
-* [JQuery]()
-* [Node.js]()
+* [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
+* [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#nodejs)
 
 ## Introdução
 
@@ -16,11 +16,11 @@ var B = document.getElementbyId("").value
 // o 'value' usado quando ...
 </pre>
 
-#### _Outros comandos importantes_ 
+<!-- #### _Outros comandos importantes_ 
 
 .fucus = foca o mouse em algum espaço em branco
 
-## JQuery
+## jQuery
 
 [Site Original](https://jquery.com/)
 
