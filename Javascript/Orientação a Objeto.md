@@ -405,16 +405,15 @@ var Abstracao = function ()
 	// Proibindo de instanciar essa classe, atravez do construtor
 	if (this.constructor == Abstracao)
 	{
-		throw new Error("Não pode instanciar classe abstrata, apenas herdar!")
+		throw new Error("Não pode instanciar classe abstrata, apenas herdar!");
 	}
 }
 
-Abstracao.prototype.nome = '";
-
+Abstracao.prototype.nome = "";
 Abstracao.prototype.Gravar = function()
 {
-	// Irá dar erro caso não sobrescrever o método
-	throw new Error("Você precisa sobrescrever o método nas classes filhas")
+	// Irá dar erro caso NÃO sobrescrever o método
+	throw new Error("Você precisa sobrescrever o método nas classes filhas");
 }
 ```
 
@@ -438,7 +437,7 @@ Com a classe Singleton é possível criar uma **unica** instância atraves do se
 
 > Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
 
-Syntax: `var (NomeClasse) = { [Atributos] [Método que vai criar a instância]() }`
+Syntax: ```javascript (NomeClasse) = { [Atributos] [Método que vai criar a instância]() } ```
 
 ```javascript
 var Single =
