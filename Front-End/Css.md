@@ -1,36 +1,11 @@
 # Css
 
 Todo código css deve ser escrito dentro da tag `<style>` na área do `<head>` do html.<br><br>
-Para referênciar usa-se o: `<script src="url do css">(/)`
+Para referênciar usa-se o: ```css <script src="url do css">(/)```
 
 # Syntaxes
 
-Para referênciar uma tag:
-
-<pre>
-(NomeTag)	{
-  (NomedoAtributo) :	(Valor);
-  (NomeOutroAtributo) :	(Valor);
-            ...
-}
-</pre>
-
-Para refenciar pela **classe**:
-
-<pre>
-.(NomeClasse) {
-    ......
-}
-</pre>
-
-Para referenciar pelo **id**:
-
-<pre>
-#(NomeID) {
-     ...
-}
-
-</pre>
+[Selectors (Referenciar Tags, Ids, Classes, Etc)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Simple_selectors)
 
 # _Algumas_ Css Properties
 
