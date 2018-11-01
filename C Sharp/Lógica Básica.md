@@ -101,7 +101,9 @@ int Calcular(int _num1, int _num2)
 
 ## Função Recursiva
 
-Funções recursivas são basicamente funções que se chamam
+Funções recursivas são basicamente funções que se chamam.
+
+> Nota: Sempre pense numa válvula de escape quando estiver produzindo loopings e/ou funções recursivas.
 
 ```csharp
 void Calcular()
