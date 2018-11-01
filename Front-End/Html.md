@@ -1,5 +1,3 @@
-> Esse documento serve apenas como um pequeno lembrete
-
 # Html
 
 [W3Schools (Melhor site para aprender front-end)](https://www.w3schools.com/Html/default.asp)<br>
