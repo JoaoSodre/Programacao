@@ -2,6 +2,14 @@
 
 # C#
 
+* [Variáveis]()
+
+<!--
+## Collections 
+## Loopings 
+## Funções
+-->
+
 ## Variáveis
 
 Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo para cria-la ficaria da seguinte forma:<br>
@@ -74,3 +82,5 @@ for = já determina a quantidade de repetições.<br>
 foreach = para cada elemento de um array.
 
 <br><br>
+
+## Funções
