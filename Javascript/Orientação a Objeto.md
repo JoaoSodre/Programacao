@@ -1,5 +1,8 @@
 <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? ## Polimorfismo -->
 
+```javascript
+```
+
 **Nota: Os exemplos foram feitos em sua grande maioria em Javascript, mas os conceitos se aplicam para qualquer linguagem que trabalha com orientação a objeto.**
 
 # Orientação a Objeto
@@ -368,7 +371,7 @@ A interface seria basicamente uma classe sem conteúdo algum, apenas com as assi
 
 Exemplo em **C#**:
 
-<pre>
+```csharp
 // Interface 'IPessoa'
 public interface IPessoa
 {
@@ -386,7 +389,7 @@ public class Base : IPessoa
 	void SetTelefone(string telefone) { this.Telefone = telefone; } 
 	public virtual void Gravar() { // *Algum código reescrito*}
 }
-</pre>
+```
 
 <br><br>
 
@@ -396,7 +399,7 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 
 > * Assim como a interface, não é possivel instanciar a classe abstrata.
 
-<pre>
+```javascript
 var Abstracao = function ()
 {
 	// Proibindo de instanciar essa classe, atravez do construtor
@@ -407,16 +410,17 @@ var Abstracao = function ()
 }
 
 Abstracao.prototype.nome = '";
+
 Abstracao.prototype.Gravar = function()
 {
 	// Irá dar erro caso não sobrescrever o método
 	throw new Error("Você precisa sobrescrever o método nas classes filhas")
 }
-</pre>
+```
 
 Logo quando for herdar 'Abstracao', necessáriamente vai ter que sobrescrever 'Gravar()'.
 
-<pre>
+```javascript
 var Pessoa = function() {}
 
 // Herdando tudo que estiver no 'prototype', ou seja 'nome' e 'Gravar()'
@@ -424,7 +428,7 @@ Pessoa.prototype = Abstracao.prototype;
 
 // Sobrescrita (Se o método original foi escrito em 'prototype', a sobrescrita também será)
 Pessoa.prototype.Gravar = function() { // Algum código }
-</pre>
+```
 
 <br><br>
 
@@ -436,7 +440,7 @@ Com a classe Singleton é possível criar uma **unica** instância atraves do se
 
 Syntax: `var (NomeClasse) = { [Atributos] [Método que vai criar a instância]() }`
 
-<pre>
+```javascript
 var Single =
 {
 	// Vai ser aqui que a instância única vai ficar armazenada
@@ -464,9 +468,9 @@ var Single =
 	}
 
 }
-</pre>
+```
 
-<pre>
+```javascript
 // Chamando o método e atribuindo valor a instância criada
 Single.iniciar();
 Single.instancia0.nome = "João";
@@ -479,12 +483,12 @@ Single.iniciar();
 apenas uma instância unica para toda a aplicação */
 
 Single.instancia0.nome;
-</pre>
+```
 
 Só é possível "Zerar" a classe singleton se o atributo 'instancia0' for igual a null novamente, dessa forma o 'iniciar()' irá fazer todo o processo de classe e de instância novamente.
 
-<pre>
+```javascript
 Single.instancia0 = null;
-</pre>
+```
 
 <br><br>
