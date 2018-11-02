@@ -6,7 +6,7 @@
 
 ## Introdução
 
-> Em Html, para chamar os scripts de outros arquivos, basta eles estarem salvos em `.js` e serem referenciados atravez das tags `<script src="url"></script>`
+> Em Html, para chamar os scripts de outros arquivos, basta eles estarem salvos em `.js` e serem referenciados atravez das tags `<script src=".js"></script>`
 
 [...] O Javascript (Em documentos html) pode ser interliga de tal forma:
 
