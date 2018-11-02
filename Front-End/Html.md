@@ -13,5 +13,5 @@
 * [	&lt;div>(/)](https://www.w3schools.com/tags/tag_div.asp) = Dividir a página
 * [	&lt;span>(/)](https://www.w3schools.com/tags/tag_span.asp) = Utilizado para formatar pequenos textos.
 * [ &lt;link/>](https://www.w3schools.com/tags/tag_link.asp) = Link para uma style sheet externa (não confundir com `<a>(/)`)
-* [	&lt;script>(/)](https://www.w3schools.com/tags/tag_script.asp) = Usado para integrar o [Javascript](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md) com o HTML.
+* [	&lt;script>(/)](https://www.w3schools.com/tags/tag_script.asp) = Usado para integrar o [Javascript](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#javascript-front-end) ou o [Css](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#css) com o HTML.
 * [	&lt;img/>](https://www.w3schools.com/tags/tag_img.asp) = Imagem (Evite usar o atributo 'width' assim a imagem consumirá menos Kb).
