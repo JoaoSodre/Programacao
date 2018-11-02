@@ -2,13 +2,12 @@
 
 # Css
 
-[Todos atributos do Css](https://www.w3schools.com/cssref/default.asp) <br><br>
+[Todos atributos do Css](https://www.w3schools.com/cssref/default.asp)<br>
+[Todos os selectors](https://www.w3schools.com/cssref/css_selectors.asp)<br><br>
 
 <!-- * [Syntaxes e Selectors](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#syntaxes-e-selectors) -->
 
 ## Syntaxes e Selectors (Básicos)
-
-[**Todos** os selectors](https://www.w3schools.com/cssref/css_selectors.asp)
 
 Selecionar **todos** os elementos `<p>`.
 
@@ -161,6 +160,29 @@ div * {
 </div>
 
 <div> <h6> Também verde claro! </h6> </div>
+```
+
+<br>
+<br>
+
+Também funciona com classes.
+
+```css
+/* Dentro de alguem com a classe "menu", encontrar 
+o 'ul' e aplicar o style no 'li', e assim por diante
+caso ouvesse mais*/
+
+.menu ul li {
+        float: left;
+        margin-left: 70px;
+}
+
+<div class="menu">
+        <ul>
+                <li> Item 1 </li>
+                <li> Item 2 </li>
+        </ul>
+<div>
 ```
 
 <!-- ## Animações /// On mause hover /// links -->
