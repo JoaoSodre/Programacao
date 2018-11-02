@@ -60,7 +60,7 @@ Calculo de Tabuada:
 var deQual = prompt("De qual número você quer saber a tabulada?");
 var deVezes = prompt("Até qual número você deseja repetir?");
 var daBase = prompt("De qual número você deseja começar?");
-var resultados = []; // Caso precise, os resultados estaram aqui
+var resultados = []; // Caso precise, os resultados vão estar aqui
 
 for (var J = daBase; J <= deVezes; J++) 
 { 
