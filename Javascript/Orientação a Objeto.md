@@ -42,26 +42,24 @@ Colocar valor nos<br> atributos das instancias<br>(Sem construtor) | `(NomeDaIns
 <br>
 
 ```javascript
-var Clientes = function() // Objeto "Cliente" 
-{ 
+// Objeto "Cliente"
+var Clientes = function() {
+
 	// Propiedade "nome"
 	this.nome = ""; 
 
 	// Método "Mostrar"
-	this.Mostrar = function() 
-	{
+	this.Mostrar = function() {
 		alert("Nome: " + this.nome);
 	}
 }
 
 ------- Outra forma de fazer -------
 
-function Clientes()
-{
-	this.nome = "";
+function Clientes() {
 
-	this.Mostrar = function()
-	{
+	this.nome = "";
+	this.Mostrar = function() {
 		alert("Nome: " + this.nome);
 	}
 }
@@ -83,8 +81,8 @@ A.nome = "João"; // Atribuindo valor ao atributo do objeto
 São usados basicamente para economizar linhas de código, são acessados por deio dos parâmetros do objeto (previamente) e da instância.
 
 ```javascript
-var Casas = function(_casa1, _casa2)
-{
+var Casas = function(_casa1, _casa2) {
+
 	this.casa1 = _casa1;
 	this.casa2 = _casa2;
 }
@@ -97,8 +95,8 @@ var C = new Casas("Sobrado", "Triplex"); // Construtor
 O uso de **HASH** pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
 
 ```javascript
-var Casas = function(_casas, _tamanhos)
-{
+var Casas = function(_casas, _tamanhos) {
+
 	this.casa1 = _casas.casa1;
 	this.casa2 = _casas.casa2;
 	this.tamanho1 = _tamanhos.tamanho1;
@@ -118,8 +116,8 @@ var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tam
 São usados apenas para **UMA** instância.
 
 ```javascript
-var A = function(_lugar)
-{
+var A = function(_lugar) {
+
 	this.lugar = _lugar;
 }
 
@@ -127,7 +125,8 @@ var B = new A("São Paulo");
 var C = new A("Campinas");
 ```
 
-O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
+O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA.
+
 <br>
 <br>
 
@@ -143,16 +142,16 @@ Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 <br><br>
 
 ```javascript
-var A = function(_lugar, _lugar2)
-{
+var A = function(_lugar, _lugar2) {
+
 	// Quando instanciar, jogar o objeto no atributo de classe
 	A.quantidadeInstancias.push(this);
 	
 	this.lugar = _lugar;
 	this.lugar2 = _lugar2;
 	
-	this.ContarLugares = function()
-	{
+	this.ContarLugares = function() {
+	
 		/* Quando chamar o método, jogar os atributos
 		da instância para o atributo de CLASSE */
 		   
@@ -165,10 +164,10 @@ A.quantidadeLugares = [];
 A.quantidadeInstancias = [];
 
 // Criando um Método de CLASSE
-A.ListarLugares = function()
-{
-	for (var i = 0; i < A.quantidadeLugares.length; i++)
-	{
+A.ListarLugares = function() {
+
+	for (var i = 0; i < A.quantidadeLugares.length; i++) {
+	
 		cliente = i + 1;
 		J = A.quantidadeLugares[i];
 		console.log("Cliente " + cliente + ": " + J.lugar1 + " e " + J.lugar2);
@@ -212,16 +211,16 @@ Métodos: this.(Nome) = function( ){  } | var (Nome) = function( ){  }
 <br><br>
 
 ```javascript
-var CalcularMedia = function(_nota1 , _nota2)
-{
+var CalcularMedia = function(_nota1 , _nota2) {
+
 	// Atributos Públicos
 	this.nota1 = _nota1;
 	this.nota2 = _nota2;
 
 	// Atributo e Método PRIVADOS
 	var notas = [];
-	var Media = function()
-	{
+	var Media = function() {
+	
 		console.log((_nota1 + _nota2)/notas.length)
 	}
 
@@ -241,13 +240,11 @@ Syntax: `(ClasseFilho).prototype = new (ClassePai);`<br><br>
 Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
 ```javascript
-var A1 = function()
-{
+var A1 = function() {
 	this.nome = "Joao";
 }
 
-var B1 = function ()
-{
+var B1 = function () {
 	this.numero = 555;
 }
 
@@ -285,20 +282,18 @@ Syntax para **injetar** na classe pai: `(ClassePai).prototype.(NomeMétodo) = fu
 Syntax para instanciar a classe pai na classe filho: `this.super = (ClassePai).prototype;`
 
 ```javascript
-var A = function() 
-{
-	this.Calcular = function(_num1) 
-	{
+var A = function() {
+
+	this.Calcular = function(_num1) {
 		a = _num1 * 2;
 		console.log(a);
 	}
 }
 
 // Sobreescrevendo o método da classe pai ('A')
-var B = function() 
-{
-	this.Calcular = function(_num1) 
-	{
+var B = function() {
+
+	this.Calcular = function(_num1) {
 		a = _num1 * 10;
 		console.log(a);
 	}
@@ -322,8 +317,7 @@ var A = function() { }
 A.prototype.nome = "";
 
 // Injetando o método na classe pai
-A.prototype.Calcular = function(_num1) 
-{
+A.prototype.Calcular = function(_num1) {
 	a = _num1 * 2;
 	console.log(a);
 }
@@ -332,15 +326,14 @@ A.prototype.Calcular = function(_num1)
 O nome 'super' é como se fosse uma referência a algo 'superior' (Ou seja o **pai**) , em outras linguagens como C# é chamado de 'base'.
 
 ```javascript
-var B = function() 
-{
+var B = function() {
+
 	/* Herda de tudo que estiver em 'prototype' que
 	foi injetado ou seja 'nome' e 'Calcular()' */
 	
 	this.super = A.prototype;
 
-	this.Calcular = function(_num1) 
-	{
+	this.Calcular = function(_num1) {
 		a = _num1 * 10;
 		console.log(a);
 		
@@ -397,18 +390,18 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 > * Assim como a interface, não é possivel instanciar a classe abstrata.
 
 ```javascript
-var Abstracao = function ()
-{
+var Abstracao = function () {
+
 	// Proibindo de instanciar essa classe, atravez do construtor
-	if (this.constructor == Abstracao)
-	{
+	if (this.constructor == Abstracao) {
+	
 		throw new Error("Não pode instanciar classe abstrata, apenas herdar!");
 	}
 }
 
 Abstracao.prototype.nome = "";
-Abstracao.prototype.Gravar = function()
-{
+Abstracao.prototype.Gravar = function() {
+
 	// Irá dar erro caso NÃO sobrescrever o método
 	throw new Error("Você precisa sobrescrever o método nas classes filhas");
 }
@@ -443,19 +436,17 @@ var Single =
 	instancia0: null,
 	
 	// Método para criar a instância única
-	iniciar: function()
-	{
+	iniciar: function() {
+	
 		// Quando o 'iniciar' for chamado, ele vai criar essa classe 
-		function Sgln()
-		{
+		function Sgln() {
 			this.nome = "";
 		}
 		
 		/* O atributo 'instancia0' irá instanciar da classe 'Sgln' caso
 		não possuir nenhuma instância dentro dele */
 		
-		if (Single.instancia0 == null)
-		{
+		if (Single.instancia0 == null) {
 			Single.instancia0 = new Sgln();
 		}
 		
