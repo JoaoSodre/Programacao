@@ -1,3 +1,7 @@
+<!-- for="(ID do <INPUT> que você quer que foca, quando clicar no nome ESCRITO)" -> e também só pode ser inserido dentro da tag <label>(/)
+Atibuto 'title' = quando passa o mause ele mostra uma pequena caixinha com uma mensagem
+-->
+
 # Html
 
 [W3Schools (Melhor site para aprender front-end)](https://www.w3schools.com/Html/default.asp)<br>
@@ -15,3 +19,5 @@
 * [ &lt;link/>](https://www.w3schools.com/tags/tag_link.asp) = Link para uma style sheet externa (não confundir com `<a>(/)`)
 * [	&lt;script>(/)](https://www.w3schools.com/tags/tag_script.asp) = Usado para integrar o [Javascript](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#javascript-front-end) ou o [Css](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#css) com o HTML.
 * [	&lt;img/>](https://www.w3schools.com/tags/tag_img.asp) = Imagem (Evite usar o atributo 'width' assim a imagem consumirá menos Kb).
+* [	&lt;input>](https://www.w3schools.com/tags/tag_input.asp) = Especifica um campo onde o usuário pode colocar informação (Tag vazia, possui apenas atributos)
+* [	&lt;label>(/)](https://www.w3schools.com/tags/tag_label.asp) = Quando clicar em um nome, ele irá focar em algum lugar como caixas, botões, etc (Como o 	&lt;input>). (Precisa do Atributo 'for' para funcionar)
