@@ -6,9 +6,11 @@
 
 <!-- * [Syntaxes e Selectors](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#syntaxes-e-selectors) -->
 
-## Syntaxes e Selectors
+## Syntaxes e Selectors (Básicos)
 
-Selecionar **todas** as tags `<p>`.
+[**Todos** os selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+Selecionar **todos** os elementos `<p>`.
 
 ```css
 p {
@@ -21,6 +23,22 @@ p {
 
 <br>
 <br>
+
+Seleciona todos os elementos. (*)
+
+```css
+/* Nesse caso ele vai selecionar inclusive o <body> e o <head> */
+
+* {
+    color: lightblue;
+}
+
+<p> Azul Claro! </p>
+<h1> Azul Claro! </h1>
+<h2> Também azul claro! </h2>
+```
+
+<br><br>
 
 Seleciona a tag que possui esse id.
 
@@ -124,3 +142,25 @@ h1 {
 <h1> Sou amarelo com o fundo vermelho </h1>
 <h2> Sou apenas amarelo </h2>
 ```
+
+<br>
+<br>
+
+Para selecionar todos os elementos dentro de um elemento em específico, basta dar um espaço entre eles.
+
+```css
+/*Irá selecionar todos os elementos dentro de TODOS os <div> */
+div * {
+        color: lightgreen;
+}
+
+<div>
+        <p> Verde claro! </p>
+        <h1> Verde claro! </h1>
+        <h2> Verde claro! </h2>
+</div>
+
+<div> <h6> Também verde claro! </h6> </div>
+```
+
+<!-- ## Animações /// On mause hover /// links -->
