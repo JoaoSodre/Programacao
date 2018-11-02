@@ -1,7 +1,7 @@
 # Css
 
 Todo código css deve ser escrito dentro da tag `<style>` na área do `<head>` do html.<br><br>
-Para referênciar usa-se o: ```css <script src="url do css">(/)```
+Para referênciar usa-se o: `<script src=".css">(/)`
 
 # Syntaxes
 
