@@ -2,9 +2,9 @@
 
 # Css
 
-Todo código css deve ser escrito dentro da tag `<style>(/)` na área do `<head>(/)` do html. <br>
-Para referênciar de outro arquivo usa-se o: `<script src=".css">(/)` <br>
-[Todos Propeties do Css](https://www.w3schools.com/cssref/default.asp) <br><br>
+> Todo código css deve ser escrito dentro da tag `<style>(/)` na área do `<head>(/)` do html. <br>
+Para referênciar de outro arquivo usa-se o: `<script src=".css">(/)` <br><br>
+[Todos Propeties do Css](https://www.w3schools.com/cssref/default.asp) 
 
 * [Syntaxes e Selectors]()
 
