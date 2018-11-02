@@ -2,9 +2,9 @@
 
 # Css
 
-[Todos Propeties do Css](https://www.w3schools.com/cssref/default.asp) <br><br>
+[Todos atributos do Css](https://www.w3schools.com/cssref/default.asp) <br><br>
 
-* [Syntaxes e Selectors](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#syntaxes-e-selectors)
+<!-- * [Syntaxes e Selectors](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Css.md#syntaxes-e-selectors) -->
 
 ## Syntaxes e Selectors
 
