@@ -1,5 +1,6 @@
 <!-- for="(ID do <INPUT> que você quer que foca, quando clicar no nome ESCRITO)" -> e também só pode ser inserido dentro da tag <label>(/)
 Atibuto 'title' = quando passa o mause ele mostra uma pequena caixinha com uma mensagem
+input attr 'onclick' -> faz algo quando você clica ex: onclick:"funcao()"
 -->
 
 # Html
