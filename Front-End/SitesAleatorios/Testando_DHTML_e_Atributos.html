@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dhtml </title>
+
+  <!-- É recomendado usar javascript functions e css styles em arquivos separados -->
+  <script type="text/javascript">
+    
+    function LimparDados() {
+      document.getElementById("nome").value = "";
+      document.getElementById("sobrenome").value = "";
+      document.getElementById("endereco").value = "";
+    }
+
+    function Alertar() {
+      alert("Você deve preencher todos os campos");
+    }
+
+    function CadastrarPessoa() {
+      // Pegando os dados do usuário
+      var nome = document.getElementById("nome").value;
+      var sobrenome = document.getElementById("sobrenome").value; 
+      var endereco = document.getElementById("endereco").value;
+
+      if (nome == "" || sobrenome == "" || endereco == "") {
+        Alertar();
+      }
+
+      else {
+        // Variável que irá concatenar todos os dados junto com a syntax html 
+        var html = "<tr><td>" + nome + "</td><td>" + sobrenome + "</td><td>" + endereco + "</td></tr>"
+
+        // Adicionando na tabela do html
+        document.getElementById("registros").innerHTML += html;
+
+        // Limpando os campos
+        LimparDados();
+
+        // Irá focar no primeiro input
+        document.getElementById("nome").focus();
+    } 
+
+    }
+  </script>
+
+</head>
+
+<!-- Para evitar bugs a página irá limpar os campos automaticamente--> 
+<body onload="LimparDados()">
+  <h1 style="font-family: sans-serif;">Cadastro de pessoas em tempo de execução.</h1>
+
+  <!-- Tabela parte superior -->
+  <fieldset>
+    <legend>Cadastro de pessoas</legend>
+    <form>
+      <div>
+        <label for="nome"> Nome: </label> <input type="text" name="nome" id="nome" title="Coloque seu nome!" placeholder="Seu Nome" />
+      </div>
+
+      <div>
+        <label for="sobrenome"> Sobrenome: </label><input type="text" name="sobrenome" id="sobrenome" title="Coloque seu sobrenome!" placeholder="Seu Sobrenome" />
+      </div>
+
+      <div>
+        <label for="endereco"> Endereço: </label> <input type="text" name="endereco" id="endereco" title="Coloque seu endereço!" placeholder="Seu Endereço"/>
+      </div>
+    </form>
+  </fieldset>
+
+  <div>
+    <input onclick="CadastrarPessoa()" type="button" name="cadastro" value="Cadastrar" style="margin-top: 15px; margin-bottom: 15px">
+  </div>
+
+  <!-- Tabela da parte inferior -->
+  <fieldset>
+    <legend>Pessoas cadastradas</legend>
+      <table border="1" id="registros">
+        <tr>
+          <td> Nome </td>
+          <td> Sobrenome </td>
+          <td> Endereço </td>
+        </tr>
+      </table>
+  </fieldset>
+  </body>
+</html>
