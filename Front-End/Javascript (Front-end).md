@@ -23,7 +23,7 @@ Com esse método é possivel colocar numa variável e fazer alterações no Html
 Exemplo:
 
 ```html
-<table border="1" id="Par1">
+<table border="1" id="Tabela1">
   <tr>
     <td> Nome </td>
     <td> Sobrenome </td>
@@ -35,7 +35,7 @@ Exemplo:
 ```javascript
 // O 'innerHTML' irá retornar exatamente o que está dentro da tag, em forma de STRING.
 // Colocando o elemento na váriavel 'A'
-var A = document.getElementById("Par1").innerHTML;
+var A = document.getElementById("Tabela1").innerHTML;
 
 // Para checar, basta apenas usá-lo no console
 console.log(A);
@@ -44,15 +44,17 @@ console.log(A);
 Com isso é possível fazer as alterações desejadas.
 
 ```javascript
-document.getElementbyId("Par1").innerHtml += "<p> Olá </p>"
+document.getElementbyId("Tabela1").innerHtml += "<p> Olá </p>"
 
 // ou
+
 A += "<p> Olá </p>"
 ```
 
 ```html
 <!-- Enquanto isso no html -->
-<table border="1" id="Par1">
+
+<table border="1" id="Tabela1">
   <tr>
     <td> Nome </td>
     <td> Sobrenome </td>
@@ -61,20 +63,30 @@ A += "<p> Olá </p>"
 </table><p> Olá </p>
 ```
 
+ Já para um elemento que fecha em si mesmo, atributo `value` irá retornar o valor que está dentro do mesmo
 
+```html
+<input type="text" id="nome" placeholder="Coloque seu nome" /> <br>
+<input onclick="Cadastrar()" type="button" value="Me pressione!" />
+```
 
+```javascript
+// Console
+function Cadastrar() {
+  alert(document.getElementById("nome").value);
+}
+
+// Irá alertar o valor que está dentro do input com o id "nome"
+Cadastrar();
+```
+
+[Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHTML_e_Atributos.html)
 
 
 <!-- 
-#### _Outros comandos importantes_ 
-
-.fucus = foca o mouse em algum espaço em branco
-
 ## jQuery
-
 [Site Original](https://jquery.com/)
 
 ## Node.js
-
 [Site Original](https://nodejs.org/en/)
 -->
