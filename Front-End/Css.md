@@ -129,7 +129,7 @@ p.large2 {
 Syntax para caso exista 2 ou mais tags com os mesmos atributos, usada para economizar linhas de código.
 
 ```css
-h1, h2, {
+h1, h2 {
     text-align: center;
     color: yellow;
 }
@@ -185,4 +185,4 @@ caso ouvesse mais*/
 <div>
 ```
 
-<!-- ## Animações /// On mause hover /// links -->
+<!-- ## Animações /// On mause hover /// links //// display -->
