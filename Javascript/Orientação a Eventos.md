@@ -45,4 +45,14 @@ A (function (callback)
 });
 ```
 
-Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada.
+Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada. <br><br>
+
+Já quando for usar o `setInterval()` ele irá executar uma ação de tempos em tempos infinitamente, até que você pare ele.
+
+```javascript
+// Irá mostrar João no console a cada 2 segundos
+var joao = setInterval(function(){ console.log("João"); }, 2000);
+
+// É necessário colocar uma variável no 'clearInterval()' para ele parar o 'setInterval()'
+clearInterval(joao);
+```
