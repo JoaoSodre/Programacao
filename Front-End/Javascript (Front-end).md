@@ -4,17 +4,16 @@
 * [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
 * [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#nodejs)
 
-## Introdução
+## Introdução ao HTML DOM
 
-> Em Html, para chamar os scripts de outros arquivos, basta eles estarem salvos em `.js` e serem referenciados atravez das tags `<script src=".js"></script>`
+O HTML Dom é basicamente como se consegue, muda, adiciona ou deleta elementos HTML usando o Javascript.
 
-O javascript possui várias maneiras de se interligar com o Html, algumas delas são
+> [Referência para o HTML Dom](https://www.w3schools.com/js/js_htmldom_document.asp)
 
 ```javascript
 document.getElementbyId(""); // Procura um elemento pela tag
 document.getElementbyClass(""); // Procura um elemento pela class
 document.getElementbyName(""); // Procura um elemento pelo atributo name
-etc..
 ```
 
 <br>
@@ -81,7 +80,6 @@ Cadastrar();
 ```
 
 [Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHTML_e_Atributos.html)
-
 
 <!-- 
 ## jQuery
