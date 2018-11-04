@@ -1,8 +1,8 @@
 # Javascript (Front-end)
 
-* [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o)
+* [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o-ao-html-dom)
 * [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
-* [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#nodejs)
+<!-- * [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#nodejs) -->
 
 ## Introdução ao HTML DOM
 
@@ -81,10 +81,30 @@ Cadastrar();
 
 [Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHTML_e_Atributos.html)
 
-<!-- 
+<br><br>
+
 ## jQuery
+
 [Site Original](https://jquery.com/)
 
+O jQuery é um framework utilizado para     utilizando a escrita de css style para encontrar os elementos
+
+```javascript
+// Alem de facilitar na leitura e , ele retorna em um array os elementos 
+$("#nome") <=> document.getElementbyId("nome")
+$(".Par1") <=> document.getElementbyClass("Par1")
+
+// Todos os <input> do algoritmo
+$("input")
+```
+
+```javascript
+$("input").val("Olá 123")
+```
+
+
+
+<!--
 ## Node.js
 [Site Original](https://nodejs.org/en/)
 -->
