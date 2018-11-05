@@ -90,21 +90,19 @@ Cadastrar();
 O jQuery é um framework utilizado para     utilizando a escrita de css style para encontrar os elementos
 
 ```javascript
-// Alem de facilitar na leitura e , ele retorna em um array os elementos 
+// Alem de facilitar na leitura e , ele retorna em um a;rray os elementos 
 $("#nome") <=> document.getElementbyId("nome")
-$(".Par1") <=> document.getElementbyClass("Par1")
+$(".Par1") <=> document.getElementbyClass("Par1");
 
-// Todos os <input> do algoritmo
-$("input")
+// Todos os <input> do algoritmo (Também retorna em um array).
+$("input");
 ```
 
 ```javascript
-$("input").val("Olá 123")
+/* Para colocar um valor no input se usa o método 
+'.val( valor )' em vez da atribuição comum (=) */
+
+$("input").val("Olá 123");
+
+// Nota: TODOS os <input> ficaram com esse valor, inclusive os botões
 ```
-
-
-
-<!--
-## Node.js
-[Site Original](https://nodejs.org/en/)
--->
