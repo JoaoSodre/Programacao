@@ -1,12 +1,15 @@
 # Cmd
 
-> Nota: Não esquecer de colocar o tipo de arquivo (Como .txt, .exe, etc)
+> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .bat, etc)
 
-Entrar numa pasta : `cd desktop` <br>
-Listar todos os intens: `dir` <br>
-Criar um diretório: `mkdir pasta1`<br>
-Copiar um arquivo (Clonar): `copy (Arquivo1) (Arquivo2)`<br>
-Renomear: `move (NomeAntigo) (NomeNovo)`
-Criar um notepad: `notepad`
+| Comando | Exemplo |
+| --- | --- |
+| Entrar numa pasta  | `cd (Pasta)` |
+| Listar todos os intens<br>do diretório | `dir` |
+| Criar uma pasta | `mkdir (NomePasta)` |
+| Copiar um arquivo <br>(Clonar) | `copy (Arquivo1T) (Arquivo2T)` |
+| Renomear | `move (NomeAntigoT) (NomeNovoT)` |
+| Abrir um notepad | `notepad` |
+| Deletar | `del (ArquivoT)` |
 <br><br>
-Cancelar um comando: `ctrl + c`
+| Cancelar um comando | `ctrl + c` |
