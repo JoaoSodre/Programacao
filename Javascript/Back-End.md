@@ -14,7 +14,7 @@ Com o node instalado é possivel executar arquivos.js direto no computador, sem 
 
 ### Express
 
-É um framework a base de Node.js para aplicações web e para back-end. <br><br>
+É um framework a base de Node.js para aplicações web e para back-end. Com o Express é possível iniciar um servidor usando a própia máquina.<br><br>
 
 Para instalar o express basta seguir os passos abaixo:
 
@@ -36,5 +36,15 @@ npm install express-generator -g
 4. Depois para criar a aplicação backend (Com o template ejs) digite esse comando:
 
 ```cmd
-express install  --ejs (NomeDesejado)
+express install --ejs (NomeDesejado)
 ```
+
+<br>
+
+Agora, antes de tudo basta conferir o que ele pede no command-line e quando quiser iniciar o server simplesmente:
+
+```cmd
+npm start
+```
+
+Quando quiser parar: `^C`
