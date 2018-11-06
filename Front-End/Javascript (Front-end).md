@@ -2,6 +2,7 @@
 
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o-ao-html-dom)
 * [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
+  * [Ajax]()
 
 ## Introdução ao HTML DOM
 
@@ -87,10 +88,15 @@ Cadastrar();
 
 [Site Original](https://jquery.com/)
 
-O jQuery é um framework utilizado para     utilizando a escrita de css style para encontrar os elementos
+O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para encontrar os elementos
 
 ```javascript
-// Alem de facilitar na leitura e , ele retorna em um a;rray os elementos 
+/* Em vez de usar "document.getElementBy..." o jQuery substitui
+todos esses pelo simbolo de sifrão ($) onde ficaria esses comandos.
+
+É necessário declarar o parametro da mesma forma que no css, 
+ além do mais ele os retornará em um array os elementos */
+ 
 $("#nome") <=> document.getElementbyId("nome")
 $(".Par1") <=> document.getElementbyClass("Par1");
 
@@ -106,3 +112,5 @@ $("input").val("Olá 123");
 
 // Nota: TODOS os <input> ficaram com esse valor, inclusive os botões
 ```
+
+### Ajax
