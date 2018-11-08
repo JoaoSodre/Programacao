@@ -14,7 +14,7 @@ Com o node instalado é possivel executar arquivos.js direto no computador, sem 
 
 ### Express
 
-É um framework a base de Node.js para aplicações web e para back-end. Com o Express é possível iniciar um servidor usando a própia máquina.<br><br>
+É um framework que ajuda a criar aplicações back-end a base Node.js. Com o Express é possível iniciar um servidor usando a própia máquina.<br><br>
 
 Para instalar o express basta seguir os passos abaixo:
 
