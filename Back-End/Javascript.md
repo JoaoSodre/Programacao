@@ -45,10 +45,19 @@ express install --ejs (NomeDesejado)
 
 <br>
 
-Agora, antes de tudo basta conferir o que ele pede no command-line e quando quiser iniciar o server simplesmente:
+Agora, antes de tudo basta conferir o que se pede no command-line.
+
+<br>
+
+Quando quiser iniciar o server simplesmente:
+
+> Nota: É **necessário** estar na página onde foi instalado o express
 
 ```cmd
-npm start
+npm start   ou   node ./bin/www    
 ```
+
+Para entrar na página digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
+Por padrão o número é '3000'<br><br>
 
 Quando quiser parar: `^C`
