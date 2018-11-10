@@ -4,13 +4,17 @@
 
 [Site do Node.js](https://nodejs.org/en/)
 
-A primeira coisa a se fazer depois de ter instalado o Node.js é testar no command-line a versão dele. Caso aparecer a versão dele signifca que foi instalado com sucesso.
+Depois que instalado primeira coisa a se fazer depois é testar no command-line a versão dele. Caso aparecer a versão dele signifca que foi instalado com sucesso.
 
 ```cmd
 node --version
 ```
 
-Com o node instalado é possivel executar arquivos.js direto no computador, sem precisar usar o console do browser ou salvar dentro de tags html. 
+Com o node instalado também é possivel executar arquivos.js direto no computador, sem precisar usar o console do browser ou salvar dentro de tags html.
+
+```cmd
+node (Arquivo).js
+```
 
 ### Express
 
