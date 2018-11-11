@@ -74,7 +74,6 @@ Seleciona todas as tags `<p>` que possuem `centro` como valor de classe.
 
 ```css
 p.centro {
-    text-align: center;
     color: red;
 }
 
@@ -116,6 +115,7 @@ p.large1 {
     font-size: 50000%;
 }
 
+/* Vai ser esse quem vai aparecer*/
 p.large2 {
     font-size: 100%;
 }
@@ -130,7 +130,6 @@ Syntax para caso exista 2 ou mais tags com os mesmos atributos, usada para econo
 
 ```css
 h1, h2 {
-    text-align: center;
     color: yellow;
 }
 
