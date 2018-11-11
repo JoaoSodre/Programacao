@@ -2,7 +2,7 @@
 
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o-ao-html-dom)
 * [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
-  * [Ajax]()
+  * [Ajax](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#ajax)
 
 ## Introdução ao HTML DOM
 
@@ -83,19 +83,19 @@ Cadastrar();
 
 <br><br>
 
-
 ## jQuery
 
 [Site Original](https://jquery.com/)
 
-O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para encontrar os elementos
+O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para encontrar os elementos.<br><br>
+Syntax do jQuery: `$(SeletorCss).Ação()`
 
 ```javascript
-/* Em vez de usar "document.getElementBy..." o jQuery substitui
-todos esses pelo simbolo de sifrão ($) onde ficaria esses comandos.
+/* Em vez de usar "document.getElementBy..." o jQuery 
+substitui todos esses comandos pelo simbolo de sifrão ($).
 
-É necessário declarar o parametro da mesma forma que no css, 
- além do mais ele os retornará em um array os elementos */
+É necessário declarar o parâmetro da mesma forma que no css, 
+além do mais ele os retornará em um array os elementos */
  
 $("#nome") <=> document.getElementbyId("nome")
 $(".Par1") <=> document.getElementbyClass("Par1");
@@ -110,7 +110,10 @@ $("input");
 
 $("input").val("Olá 123");
 
-// Nota: TODOS os <input> ficaram com esse valor, inclusive os botões
+/* Nota: TODOS os <input> ficaram com esse valor,
+inclusive o que está escrito nos botões */
 ```
 
 ### Ajax
+
+Com o jQuery é possível fazer uma aplicação 'ajax', ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou envio de dados para o servidor.
