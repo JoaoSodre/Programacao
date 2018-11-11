@@ -79,7 +79,7 @@ function Cadastrar() {
 Cadastrar();
 ```
 
-[Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHTML_e_Atributos.html)
+[Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHtml.html)
 
 <br><br>
 
