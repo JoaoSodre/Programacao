@@ -87,22 +87,24 @@ Cadastrar();
 
 [Site Original](https://jquery.com/)
 
-O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para encontrar os elementos.<br><br>
-Syntax do jQuery: `$(SeletorCss).Ação()`
+O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para selecionar os elementos.<br><br>
+Syntax do jQuery: `$(Seletor).Ação();`
 
 ```javascript
 /* Em vez de usar "document.getElementBy..." o jQuery 
-substitui todos esses comandos pelo simbolo de sifrão ($).
+substitui todos esses comandos pelo simbolo de sifrão ($). */
 
-É necessário declarar o parâmetro da mesma forma que no css, 
+/* É necessário declarar o parâmetro da mesma forma que no css, 
 além do mais ele os retornará em um array os elementos */
  
-$("#nome") <=> document.getElementbyId("nome")
-$(".Par1") <=> document.getElementbyClass("Par1");
+$("#nome"); <=> document.getElementbyId("nome");
+$(".Par1"); <=> document.getElementbyClass("Par1");
 
 // Todos os <input> do algoritmo (Também retorna em um array).
 $("input");
 ```
+
+[Todos seletores do jQuery](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
 
 ```javascript
 /* Para colocar um valor no input se usa o método 
@@ -113,6 +115,8 @@ $("input").val("Olá 123");
 /* Nota: TODOS os <input> ficaram com esse valor,
 inclusive o que está escrito nos botões */
 ```
+
+[Todos os métodos (ações) do jQuery para Html/Css](https://www.w3schools.com/jquery/jquery_ref_html.asp)
 
 ### Ajax
 
