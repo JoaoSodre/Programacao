@@ -1,24 +1,25 @@
 # Cmd
 
 > Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .bat, etc).
-> Toda vez que um comando estiver `J[K]` significa o comando entre colchetes que faz a mesma coisa que o comando 'J'.
+
+> Toda vez que um comando estiver `J[K]` significa o comando entre colchetes que faz a mesma coisa que o comando fora dele, ou seja o 'J' é igual ao 'K'.
 
 | Comando | Exemplo |
 | --- | --- |
 | Listar todos os<br>comandos | `help` |
-| Saber mais sobre um<br> comando e seus **parâmetros** | `help (NomeComando)` ou<br> `(NomeComando) /?` |
+| Saber mais sobre um<br> comando e seus **parâmetros** | `help (NomeComando)` ou `(NomeComando) /?` |
 | Entrar numa pasta  | `cd (Pasta)` |
-| Listar todos os intens<br>do diretório | `dir` |
+| Listar todos os intens do<br> diretório ou de uma pasta | `dir` ou `dir (Pasta)\(SubPasta)` |
 | Limpar a tela | `cls` |
 | Criar uma pasta | `mkdir[md] (NomePasta)\(Subpasta)` |
-| Copiar um arquivo <br>(Clonar) | `copy (Arquivo1T) (Arquivo2T)` |
+| Copiar um arquivo <br>(Clonar) | `copy (ArquivoT) (ArquivoClonadoT)` |
 | Renomear | `rename[ren] (NomeAntigoT) (NomeNovoT)` |
 | Abrir um notepad<br>(Útil para criar arquivos) | `notepad` |
-| Abrir Sublime<br>(Diretório ou arquivo) | `subl .` ou<br> `subl (ArquivoT)` |
+| Abrir Sublime<br>(Diretório ou arquivo) | `subl .` ou `subl (ArquivoT)` |
 | Deletar Arquivo | `del (ArquivoT)` |
-| Deletar Diretório | `rmdir \s \q (NomePasta)` |
+| Deletar Diretório | `rmdir /S /Q (NomePasta)` |
 <br><br>
-| /s | Remove todos os arquivos<br> e subpastas além dela |
-| /q | Não pede confirmação para<br> o/cada arquivo |
+| /S | Remove todos os arquivos<br> e subpastas além dela |
+| /Q | Não pede confirmação para<br> o/cada arquivo |
 <br><br>
 | Cancelar um comando | `ctrl + c` |
