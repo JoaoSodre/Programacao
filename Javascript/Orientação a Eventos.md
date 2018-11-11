@@ -4,9 +4,9 @@
 
 A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila),  programas orientados a evento são guiados por indicações externas, chamados de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez (da maneira **blocantes**), na programação **assíncrona** ele executa vários comandos ao mesmo tempo, todos eles dando o **callback** quando finalizados.<br><br>
 
-Exemplos em Javascript
+Exemplos em Javascript:
 
-> [Syntax do setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+> [Syntax do setTimeout( )](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
 ```javascript
 // Método que executa uma função depois de um intervalo de tempo (Milisegundo)
@@ -19,14 +19,12 @@ Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, 
 Syntax para função que irá receber o CALLBACK: `(NomeFunção)(function() { ... } )`
 
 ```javascript
-function A(callback) 
-{
+function A(callback) {
     // Quando a resposta estiver pronta, ele vai dar o CALLBACK
     callback("Apareci em primeiro!");
 }
 
-function B(callback) 
-{
+function B(callback) {
     // *Mesmo caso que o de cima*
     callback("Apareci em segundo!");
 }
@@ -34,13 +32,11 @@ function B(callback)
 /* Solicitando algo para a função 'B', e quando ele
 receber o CALLBACK, irá executar outra função. */
 
-B (function (callback) 
-{
+B(function (callback) {
     setTimeout(function(){ alert(callback); }, 2000);
 });
 
-A (function (callback) 
-{
+A(function (callback) {
     setTimeout(function(){ alert(callback); }, 1000);
 });
 ```
