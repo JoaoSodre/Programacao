@@ -42,7 +42,8 @@ npm install express-generator -g
 <br>
 
 4. Depois escolha um template para seu projeto, aqui eu escolhi o 'ejs' e depois siga o próximo comando.<br>
-(Para saber os templates disponiveis, use o `express -h`)
+(Para saber os templates disponiveis, use o `express -h`)<br><br>
+[Site do ejs](https://ejs.co/)
 
 ```cmd
 > express install --ejs
@@ -50,7 +51,6 @@ npm install express-generator -g
 ```
 
 (O template 'ejs' nós possibilitar criar além de uma aplicação html, nós permite usar o javascript [dinâmico]())<br>
-[Site do ejs](https://ejs.co/)
 
 <br>
 
