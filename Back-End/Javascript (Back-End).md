@@ -22,13 +22,13 @@ node (Arquivo.js)
 
 ### Express
 
-É um framework que ajuda a criar aplicações back-end a base Node.js. Com o Express é possível iniciar um servidor usando a própia máquina.<br><br>
+É um framework que ajuda a criar aplicações web a base Node.js. Com o Express é possível iniciar um servidor para front-end usando a própia máquina.<br><br>
 
 Para instalar o express basta seguir os passos abaixo:
 
 1. Instale o Node.js
 
-2. Crie uma pasta onde você quer deixar os arquivos da sua **aplicação**  e entre nela atravez do CMD.<br>
+2. Crie uma pasta onde você quer deixar os arquivos da sua **aplicação**  e entre no diretório pelo CMD.<br>
 (Nome de aplicação de Exemplo: "Meu app")
 
 3. No cmd digite esse comando para instalar o express:
@@ -37,21 +37,23 @@ Para instalar o express basta seguir os passos abaixo:
 npm install express-generator -g
 ```
 
-(O comando 'npm' irá buscar via internet no própio site deles o framework para o download)
+(O comando 'npm' já vem junto com o node.js, ele irá buscar via internet no site npmjs.com (que é usado como um repositório para packages js) o framework 'express' para fazer o download)
 
 <br>
 
-4. Depois para criar a aplicação backend (Com o template ejs) digite esse comando:
+4. Depois escolha um template para seu projeto, aqui eu escolhi o 'ejs' e depois siga o próximo comando.<br>
+(Para saber os templates disponiveis, use o `express -h`)
 
 ```cmd
-express install --ejs (NomeDesejado)
+> express install --ejs
+> npm install
 ```
 
-(O teamplate ejs nós possibilitar criar um html com javascript [dinâmico]())
+(O template 'ejs' nós possibilitar criar além de uma aplicação html, nós permite usar o javascript [dinâmico]())<br>
+[Site do ejs](https://ejs.co/)
 
-<br><br>
+<br>
 
-Agora, antes de tudo basta conferir o que se pede no command-line que estará finalizada a aplicação!<br>
 Fonte: [Express application generator](https://expressjs.com/en/starter/generator.html)
 
 <br>
@@ -59,12 +61,12 @@ Fonte: [Express application generator](https://expressjs.com/en/starter/generato
 Quando quiser iniciar (Levantar) o servidor basta simplesmente:
 
 ```cmd
-npm start   ou   node ./bin/www    
+npm start ou node ./bin/www
 ```
 
-(Nota: É **necessário** estar no diretório onde está o arquivo **package.json**)<br><br>
+(Nota: É **necessário** estar no diretório onde se encontra o arquivo **package.json**)<br><br>
 
-Para entrar na página digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
-Por padrão o número é '3000'<br><br>
+Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
+(Por padrão o número é '3000')<br><br>
 
-Quando quiser desligar o servidor (Derrubar): `ctrl + c`
+Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
