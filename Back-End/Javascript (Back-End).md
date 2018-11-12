@@ -1,5 +1,9 @@
 # Javascript (Back-End)
 
+* [Node.js]()
+  * [Express]()
+  * [Aplicação backend com Express]()
+
 ## Node.js
 
 [Site do Node.js](https://nodejs.org/en/)
@@ -70,3 +74,10 @@ Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` 
 (Por padrão o número é '3000')<br><br>
 
 Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
+
+### Aplicação backend com Express
+
+Dentro dos vários diretórios que o Express criou, um deles foi o 'public' que vai ser tudo o que vai ser os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets e funções. Ela também vai ser a pasta referência para armazenar arquivos separados (Includes).<br>
+Ex: http://localhost:3000/stylesheets/style.css <br>
+Já a pasta 'views' é onde irá ficar o html de suas páginas como index, erros, rotas novas, etc.
+<br>
