@@ -2,13 +2,13 @@
 
 * [Node.js]()
   * [Express]()
-  * [Aplicação backend com Express]()
+  * [Aplicação Back-End com Express]()
 
 ## Node.js
 
 [Site do Node.js](https://nodejs.org/en/)
 
-O Node.Js foi desenvolvido para permitir usar a linguagem Javascript nos servers, ele desenvolve métodos como `request()` que facilita muito dos processos de back-end. Para instalar apenas siga os passos do instalador no site oficial.<br><br>
+O Node.Js foi basicamente desenvolvido para permitir usar a linguagem Javascript em servidores (Aplicações Back-End).<br><br>
 
 Depois que instalado primeira coisa a se fazer depois é testar no **command-line** a versão dele. Caso aparecer a versão dele signifca que foi instalado com sucesso.
 
@@ -75,7 +75,7 @@ Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` 
 
 Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
 
-### Aplicação backend com Express
+### Aplicação Back-End com Express
 
 Dentro dos vários diretórios que o Express criou, um deles foi o 'public' que vai ser tudo o que vai ser os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets e funções. Ela também vai ser a pasta referência para armazenar arquivos separados (Includes).<br>
 Ex: http://localhost:3000/stylesheets/style.css <br>

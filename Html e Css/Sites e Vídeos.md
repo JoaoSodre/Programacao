@@ -1,10 +1,10 @@
-* [Site aleatório (Estudar algumas funções)](https://www.sketchywebsite.net/)
+* [Site aleatório por ai (Estudar algumas funções)](https://www.sketchywebsite.net/)
 
 ### Referências, Tutoriais e Dicas
 
+* [Boas Práticas para identação Front-End](http://codeguide.co/)
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/)
 * [Html Dog](http://www.htmldog.com/)
-* [Tableless (Guia para iniciantes na área de web) (Pt-Br)](http://tableless.github.io/iniciantes/)
 * [Torque (Conselhos e Tutoriais)](https://torquemag.io/)
 * [Css Tricks](https://css-tricks.com/)
 

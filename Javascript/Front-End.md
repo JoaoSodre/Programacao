@@ -1,8 +1,8 @@
 # Javascript (Front-end)
 
-* [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#introdu%C3%A7%C3%A3o-ao-html-dom)
-* [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#jquery)
-  * [Ajax](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/Javascript%20(Front-end).md#ajax)
+* [Introdução]()
+* [jQuery]()
+  * [Ajax]()
 
 ## Introdução ao HTML DOM
 
@@ -79,7 +79,7 @@ function Cadastrar() {
 Cadastrar();
 ```
 
-[Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Front-End/SitesAleatorios/Testando_DHtml.html)
+[Exemplo de site usando o '.value' e '.innerHTML']()
 
 <br><br>
 
