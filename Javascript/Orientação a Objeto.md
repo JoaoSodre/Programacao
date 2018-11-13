@@ -1,10 +1,10 @@
 <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? ## Polimorfismo -->
 
-**Nota: Os exemplos foram feitos em sua grande maioria em Javascript, mas os conceitos se aplicam para qualquer linguagem que trabalha com orientação a objeto.**
-
 # Orientação a Objeto
 
-É usado para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) depois.<br><br>
+**Nota: Os exemplos foram feitos em sua grande maioria em Javascript, mas os conceitos se aplicam para qualquer linguagem que trabalha com orientação a objeto.**<br><br>
+
+A OO é usada para organizar variáveis e funções soltas no código-fonte e fora dele (Como Arquivos .js), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de uma varíavel para usa-la depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) depois.<br><br>
 Nomenclaturas:
 
 Código Estruturado | Orientação Objeto
