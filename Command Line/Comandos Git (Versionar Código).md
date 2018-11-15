@@ -12,3 +12,4 @@
 | Mudar de Branch | `git checkout (NomeBranch)` |
 | Criar um branch | `git checkout -b (NomeBranch)` |
 | Mostra os branches <br> do projeto | `git branch` |
+| Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (BranchComAlterações)` |
