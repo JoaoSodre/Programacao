@@ -11,5 +11,8 @@
 | Dar um push<br><br> Nota: Ele sempre pedirá o seu<br>usuário e senha, use o SSH<br> para evitar isso| `git push origin (NomeBranch)` |
 | Mudar de Branch | `git checkout (NomeBranch)` |
 | Criar um branch | `git checkout -b (NomeBranch)` |
-| Mostra os branches <br> do projeto | `git branch` |
+| Lista os branches <br> do projeto | `git branch` |
 | Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (BranchComAlterações)` |
+| Criar uma tag (Super <br>útil para marcar algo importante<br> na linha do tempo) | `git checkout (ShaId)`<br> depois `git tag (NomeTag)` |
+| Para acessar o commit<br> de uma tag | `git checkout (NomeTag)` |
+| Listar as tags | `git tag` |
