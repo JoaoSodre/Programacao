@@ -1,11 +1,18 @@
 # Node.js
 
-* [Node.js]()
-	* [Express]()
+* [Node.js]https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
+	* [Modules e require()](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
+	* [Built-in Modules]()
+		* [Module 'events']()
+		* [Module 'util']()
+		* [Module 'fs']()
+
 
 [Site do Node.js](https://nodejs.org/en/)<br>
 
-O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com [databases]().
+O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br><br>
+
+Para ter um bom entendimento sobre o Node.js, é necessário compreender a [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
 
 **Por que Node.js?**
 
@@ -33,7 +40,9 @@ Com o node instalado também é possivel executar arquivos.js direto no computad
 node (Arquivo.js)
 ```
 
-**Modules e require()**
+<br><br><br>
+
+## Modules e require()
 
 Quando nós escrevemos um código, normalmente nós deixamos partes do algoritmo em arquivos separados, esses arquivos em node são chamados de "Logical Modules", e fazem exatamente a mesma coisa que as tags  `<script scr="">` e `<link href="">` do Html.
 Basicamente vai ser o método `require()` quem vai referenciar esses arquivos.<br><br>
@@ -50,7 +59,8 @@ var ContarArray = function(arr) {
 module.exports = ContarArray;
 
 
-// --------------- Ou ---------------
+--------------- Ou ---------------
+
 
 module.exports = function(arr) {
 	return "Existem " + arr.length + " elementos nesse array";
@@ -71,6 +81,8 @@ var contar = require('./functions');
 // Usando a variável para chamar a função
 console.log(contar(["joao","daniel","fernando",13,"66",'555']))
 ```
+
+<br><br>
 
 **Require de vários Métodos/Propiedades**
 
@@ -95,8 +107,11 @@ module.exports.Somar = Somar;
 module.exports.pi = pi;
 
 
-// --------------- Ou ---------------
+
+--------------- Ou ---------------
  
+
+
 module.exports.Msg = function(msg) {
 	return msg;
 };
@@ -114,72 +129,102 @@ Enquanto isso no arquivo principal:
 // main.js
 var coisas = require('./coisas');
 
-// A injeção é muito usado na orientação a objeto também
 console.log(coisas.Somar(5,7));
 console.log(coisas.Msg("Minha Mensagem Aqui!"));
 
 console.log(coisas.Somar(coisas.pi, 5));
 ```
 
-[Exemplos na prática]()
+> Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são módulos que criamos a partir de uma necessidade, já os **Built-in modules** são módulos já criados e instalados pelo Node.js e não necessitam de um path.
+
+[Exemplos na prática](https://github.com/JoaoSodre/Programacao/tree/master/Javascript/ScriptsAleatorios/Nodejs)
+
+<br><br><br>
+
+## Built-in Modules
+
+[Lista com todos os built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
+
+Built-in Modules como já mencionado são módulos que o própio node cria e instala e não necessitam de um path, esse modules permitem solucionar as mais diversas necessidades.<br><br>
+
+#### **[Module 'events'](https://www.w3schools.com/nodejs/ref_events.asp)**
+
+O módulo 'events' nós permite criar eventos usando javascript, da mesma forma que na programação assíncrona.<br><br>
+
+Sintax do events: `intancia.ação('NomeEvento', function() {*Algum código*})`
+
+```javascript
+// Build-In Module
+var moduloEventsNode = require('events');
+
+// Todos os eventos são uma instância do objeto "EventEmitter".
+var meuEmissor = new moduloEventsNode.EventEmitter();
 
 
-## Express
+// Para declarar um evento se usa o método "on()"
+meuEmissor.on('Chamei', function(msg1, msg2) {
+	console.log(msg1 + ", e adicionei um " + msg2);
+});
 
-É um framework que ajuda a criar aplicações web a base Node.js. Com o Express é possível iniciar um servidor para front-end usando a própia máquina.<br><br>
+meuEmissor.on('TbmChameiEsse', function(msg1) {
+	console.log(msg1);
+});
 
-Para instalar o express basta seguir os passos abaixo:
+meuEmissor.on('Gritar', function() {
+	console.log("AAAAAAHHHHH!!!!");
+});
 
-1. Instale o Node.js
 
-2. Crie uma pasta onde você quer deixar os arquivos da sua **aplicação**  e entre no diretório pelo CMD.<br>
-(Nome de aplicação de Exemplo: "Meu app")
-
-3. No cmd digite esse comando para instalar o express:
-
-```cmd
-npm install express-generator -g
+// Para chamar um evento se usa o método "emit()"
+meuEmissor.emit('Chamei', "Chamei esse evento", "segundo parâmetro!");
+meuEmissor.emit('TbmChameiEsse', "Eu também chamei esse evento");
+meuEmissor.emit('Gritar');
 ```
 
-(O comando 'npm' já vem junto com o node.js, ele irá buscar via internet no site npmjs.com (que é usado como um repositório para packages js) o framework 'express' para fazer o download)
+<br><br>
 
-<br>
+#### **[Module 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
 
-4. Depois escolha um template para seu projeto, aqui eu escolhi o 'ejs' e depois siga o próximo comando.<br>
-(Para saber os templates disponiveis, use o `express -h`)<br><br>
-[Site do ejs](https://ejs.co/)
+Com o 'util' é possivel acessar algumas funções para coisas úteis, como por exemplo eu posso querer herdar o módulo 'events.EventEmitter()' toda vez que eu instanciar uma classe, sendo assim não precisarei criar várias variáveis com o mesmo `var (Nome) = new (Nome).EventEmitter()` para cada elemento que irei usar, economizando assim muitas linhas de código.
 
-```cmd
-> express install --ejs
-> npm install
+```javascript
+var eventos = require('events');
+var utilidades = require('util');
+
+var Pessoa = function(nome) {
+	this.nome = nome;
+}
+
+// Toda vez que 'Pessoa' for instanciada, 'herdarar' 'eventos.EventEmitter'
+utilidades.inherits(Pessoa, eventos.EventEmitter);
+
+// Note que 'eventos.EventEmitter' NÃO usa parenteses no final nesse caso
+
+
+var joao = new Pessoa("Joao");
+var fernando = new Pessoa("Fernando");
+var maria = new Pessoa("Maria");
+
+var pessoas = [joao, fernando, maria];
+
+// Para cada atributo em 'pessoas', coloque-as em 'A'
+pessoas.forEach(function(A){
+	
+	// Crie um evento chamado 'Falar', que faz algo quando for chamado
+	A.on('Falar', function(msg){
+
+		/* Já que são objetos, precisa colocar o atributo 'nome',
+		que foi passado pelo construtor */
+		console.log(A.nome + " falou: " + msg);
+	});
+});
+
+joao.emit('Falar', "Oi gente!");
+fernando.emit('Falar', "To perdido...");
+maria.emit('Falar', "Tenho vida agora rs");
+fernando.emit('Falar', "Estamos em que mundo?");
 ```
 
-(O template 'ejs' nós possibilitar criar além de uma aplicação html, nós permite usar o javascript [dinâmico]())<br>
+<br><br>
 
-<br>
-
-Fonte: [Express application generator](https://expressjs.com/en/starter/generator.html)
-
-<br>
-
-Quando quiser iniciar (Levantar) o servidor basta simplesmente:
-
-```cmd
-npm start ou node ./bin/www
-```
-
-(Nota: É **necessário** estar no diretório onde se encontra o arquivo **package.json**)<br><br>
-
-Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
-(Por padrão o número é '3000')<br><br>
-
-Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
-
-**Aplicação Back-End com Express**
-
-Dentro dos vários diretórios que o Express criou, um deles foi o "public" que são os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets e funções, ou seja os includes. <br><br>
-
-No endereço do browser é possivel ver esses includes. (Ex: http://localhost:3000/stylesheets/style.css) <br><br>
-
-Já a pasta 'views' é onde irá ficar o html de suas páginas como index, erros, **rotas** etc.
-<br>
+#### **[Module 'fs'](https://www.w3schools.com/nodejs/ref_fs.asp)**

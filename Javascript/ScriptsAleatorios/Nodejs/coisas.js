@@ -6,4 +6,4 @@ module.exports.Somar = function(a,b) {
 	return "A soma deu: " + (a+b) ;
 };
 
-module.exports.pi = 3.141;
+module.exports.pi = Math.PI;

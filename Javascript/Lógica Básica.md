@@ -1,3 +1,4 @@
+
 # Lógica Básica
 
 > Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
@@ -6,11 +7,11 @@ Conceito | Exemplo (Javascript)
 -------- | -----------
 Variável | `var k1 = 5;` <=> `k1 = 5`
 Constante (Var que <br>não muda) | `const pi = 3.1415;`
-Condicional | If, If Else, Else e Switch (ou case).
-Operadores Lógicos | ==, !=, >, <, && (e), >=, <= e &#124;&#124; (ou).
-Looping | While, For, Do..While e Foreach.
-Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
-Hash (Objeto) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
+[Condicionais](https://www.w3schools.com/jsref/jsref_statements.asp) | if, if else, else, switch, throw, etc.
+[Operadores Lógicos](https://www.w3schools.com/jsref/jsref_operators.asp) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e ===
+Looping | While, For, Do..While e For in.
+Array [(Métodos)](https://www.w3schools.com/jsref/jsref_obj_array.asp) | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
+Hash (JSON) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
 Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
 Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;var mmm = num1 + num2;<br>&nbsp;&nbsp;&nbsp;&nbsp;return mmm ;<br>}</pre> `a1 = calcular(3, 5);`,`a1`-> 8 
 | Utilizando funções<br> nos parametros | <pre>function One(A) {<br>&nbsp;&nbsp;&nbsp;&nbsp; A();<br>}<br>var Two = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp; console.log("Fui chamado de outra função");<br>}<br><br>One(Two);<br><br>É necessário seguir a sintaxe <br>`function expression` para funcionar </pre> |
@@ -42,7 +43,7 @@ notas.push(nota2); // Ficara no slot 1 do array.
 
 <br><br>
 
-## Hash
+## Hash (JSON)
 
 ```javascript
 var g = {};
@@ -95,23 +96,32 @@ do
 while(a <= 5);
 ```
 
-Foreach (Exemplo em **C#**):
+For...In
 
-```csharp
-int[] A = { 0, 2, 5, 8, 93 };
+```javascript
+var pessoa = ["Danilo", "Camões", 25]; 
 
-// Para cada 'inteiro' em A (Ou seja 5)
-foreach (int x in A)
-{
-    // Faça isso
-    Console.WriteLine("Olá");
+// Para cada elemento do objeto pessoa
+for (var x in pessoa) {
+
+    // Mostre os valores de 'pessoa'
+    console.log(pessoa[x])
+
+    /* Automáticamente x vai transformar em x++, e depois repete
+    o processo até terminar o array */
 }
+```
 
-------------- Outro exemplo -------------
+Nota: O Javascript reconhece automáticamente o valor de um atributo do hash, sem precisar de colocar o nome do mesmo.
 
-foreach (int x in A)
-{
-    // Irá Mostrar todos os números do Array
-    Console.WriteLine(x);
+```javascript
+var pessoa = {nome1:"Danilo", sobrenome:"Camões", idade:25}; 
+
+for (var x in pessoa) {
+
+    /* Irá funcionar da mesma forma que o array, sem precisar
+    explicificar o atributo, como 'idade' */
+
+    console.log(pessoa[x]);
 }
 ```

@@ -81,6 +81,25 @@ do..while = faça a operação primeiro e depois entra no looping.<br>
 for = já determina a quantidade de repetições.<br>
 foreach = para cada elemento de um array.
 
+<!--
+int[] A = { 0, 2, 5, 8, 93 };
+
+// Para cada 'inteiro' em A (Ou seja 5)
+foreach (int x in A)
+{
+    // Faça isso
+    Console.WriteLine("Olá");
+}
+
+------------- Outro exemplo -------------
+
+foreach (int x in A)
+{
+    // Irá Mostrar todos os números do Array
+    Console.WriteLine(x);
+}
+```
+-->
 <br><br>
 
 ## Função
