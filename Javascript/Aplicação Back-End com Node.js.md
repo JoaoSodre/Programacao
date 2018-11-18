@@ -38,7 +38,7 @@ npm install express-generator -g
 (Para saber os templates disponiveis, use o `express -h`)<br><br>
 
 ```cmd
-> express install --ejs
+> express (NomeAplicação) install --ejs
 > npm install
 ```
 

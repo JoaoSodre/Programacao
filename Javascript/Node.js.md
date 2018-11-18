@@ -1,11 +1,11 @@
 # Node.js
 
-* [Node.js]https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
+* [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
 	* [Modules e require()](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
-	* [Built-in Modules]()
-		* [Module 'events']()
-		* [Module 'util']()
-		* [Module 'fs']()
+	* [Built-in Modules](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#built-in-modules)
+		* [Module: 'events']()
+		* [Module: 'util']()
+		* [Module: 'fs']()
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
@@ -40,7 +40,7 @@ Com o node instalado também é possivel executar arquivos.js direto no computad
 node (Arquivo.js)
 ```
 
-<br><br><br>
+<br><br>
 
 ## Modules e require()
 
@@ -135,21 +135,25 @@ console.log(coisas.Msg("Minha Mensagem Aqui!"));
 console.log(coisas.Somar(coisas.pi, 5));
 ```
 
-> Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são módulos que criamos a partir de uma necessidade, já os **Built-in modules** são módulos já criados e instalados pelo Node.js e não necessitam de um path.
+Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são módulos que criamos a partir de uma necessidade, já os **Built-in modules** são módulos já criados e instalados pelo Node.js e não necessitam de um path.
+<br>
+[Exemplos de Custom Modules]()
 
-[Exemplos na prática](https://github.com/JoaoSodre/Programacao/tree/master/Javascript/ScriptsAleatorios/Nodejs)
+<br><br>
 
-<br><br><br>
 
 ## Built-in Modules
 
-[Lista com todos os built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
+[Lista com **todos** os Built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
 
-Built-in Modules como já mencionado são módulos que o própio node cria e instala e não necessitam de um path, esse modules permitem solucionar as mais diversas necessidades.<br><br>
+Built-in Modules como já mencionado são módulos que o própio node cria e instala e não necessitam de um path, esse modules permitem solucionar as mais diversas necessidades.<br>
+[Exemplos de Built Modules]()
+<br>
 
-#### **[Module 'events'](https://www.w3schools.com/nodejs/ref_events.asp)**
 
-O módulo 'events' nós permite criar eventos usando javascript, da mesma forma que na programação assíncrona.<br><br>
+#### **[Module: 'events'](https://www.w3schools.com/nodejs/ref_events.asp)**
+
+O módulo 'events' nós permite criar eventos usando javascript, da mesma forma que na programação assíncrona.<br>
 
 Sintax do events: `intancia.ação('NomeEvento', function() {*Algum código*})`
 
@@ -181,9 +185,9 @@ meuEmissor.emit('TbmChameiEsse', "Eu também chamei esse evento");
 meuEmissor.emit('Gritar');
 ```
 
-<br><br>
+<br>
 
-#### **[Module 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
+#### **[Module: 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
 
 Com o 'util' é possivel acessar algumas funções para coisas úteis, como por exemplo eu posso querer herdar o módulo 'events.EventEmitter()' toda vez que eu instanciar uma classe, sendo assim não precisarei criar várias variáveis com o mesmo `var (Nome) = new (Nome).EventEmitter()` para cada elemento que irei usar, economizando assim muitas linhas de código.
 
@@ -227,4 +231,4 @@ fernando.emit('Falar', "Estamos em que mundo?");
 
 <br><br>
 
-#### **[Module 'fs'](https://www.w3schools.com/nodejs/ref_fs.asp)**
+#### **[Module: 'fs'](https://www.w3schools.com/nodejs/ref_fs.asp)**

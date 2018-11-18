@@ -10,7 +10,7 @@
 
 ## Variáveis
 
-Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo para cria-la ficaria da seguinte forma:<br>
+Em C# é obrigatório declarar qual o tipo de variável que está sendo criada, logo para cria-la ficaria da seguinte forma:
 
 ```csharp
 (TipoVariável) (NomeVariável) = (Valor);
@@ -29,7 +29,9 @@ bool | Verdadeiro ou Falso | true/false
 double | Mesmo que o 'float', porém<br> tem capacidade para mais<br>casas de numeros | 3123.44
 
 [Outros tipos de variáveis que existem](http://www.tutorialsteacher.com/csharp/csharp-data-types)<br><br>
-Conversão de variáveis:<br>
+
+Conversão de variáveis:
+
 ```csharp
 // Usado para todas as variáveis primitivas.
 (Tipo) Convert.toTipo();
@@ -37,9 +39,7 @@ Conversão de variáveis:<br>
 //Usado para converter uma **string** para o valor desejado.
 Tipo.Parse()
 
-
-/* Nota: Usa-se o ToSingle() para converter para float. */
-
+// Nota: Usa-se o ToSingle() para converter para float.
 
 int A = 5;
 string B = "5444";
@@ -50,7 +50,7 @@ double D = double.Parse(B);
 
 <br><br>
 
-## Collections
+<!--## Collections
 
 Tipo[] Nome = new Tipo[Quantidade];
 a[0] =
@@ -68,6 +68,7 @@ a[0]
 </pre>
 
 <br><br>
+-->
 
 ## Loopings
 
@@ -127,7 +128,7 @@ Funções recursivas são basicamente funções que se chamam.
 ```csharp
 void Calcular()
 {
-    Console.WriteLine("Seu PC vai crashar");
+    Console.WriteLine("Cuidado com esse tipo de looping!");
     Calcular();
 }
 ```
