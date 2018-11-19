@@ -2,7 +2,7 @@
 
 [Site Original](https://jquery.com/)
 
-O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para selecionar os elementos.<br><br>
+O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua propia forma de syntax utilizando a escrita do css para selecionar os elementos.Para entender o jQuery é necessário ter um conhecimento breve sobre [DHtml]() <br><br>
 
 Syntax do jQuery: `$(Seletor).Ação();`<br><br>
 
