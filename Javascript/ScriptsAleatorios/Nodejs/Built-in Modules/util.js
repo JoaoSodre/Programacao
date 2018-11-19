@@ -1,13 +1,12 @@
 var eventos = require('events');
 var utilidades = require('util');
 
-var Pessoa = function(nome) {
-	this.nome = nome;
+var Pessoa = function(_nome) {
+	this.nome = _nome;
 }
 
 // Toda vez que 'Pessoa' for instanciada, 'herdarar' 'eventos.EventEmitter'
 utilidades.inherits(Pessoa, eventos.EventEmitter);
-
 // Note que 'eventos.EventEmitter' NÃO usa parenteses no final nesse caso
 
 

@@ -1,8 +1,5 @@
-var quantasVezes = prompt("Quantos lançamentos você vai querer?");
-
-CalcularCaraCoroa(quantasVezes);
-
-function CalcularCaraCoroa(quantasVezes) {  
+CalcularCaraCoroa(/* Coloque quantos lançamentos aqui */);
+function CalcularCaraCoroa(quantasVezes) {
 	
 	function Aleatorio() {
 		numAleat = Math.random() * 10;

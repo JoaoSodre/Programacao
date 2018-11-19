@@ -1,7 +1,8 @@
 var moduloEventsNode = require('events');
 
-// Todos os eventos são uma instância do objeto "EventEmitter".
+// Todos as ações dos eventos são uma instância do objeto "EventEmitter".
 var meuEmissor = new moduloEventsNode.EventEmitter();
+
 
 
 // Criando os eventos usando o método "on()"
@@ -16,6 +17,8 @@ meuEmissor.on('TbmChameiEsse', function(msg1) {
 meuEmissor.on('Gritar', function() {
 	console.log("AAAAAAHHHHH!!!!");
 });
+
+
 
 // Chamando os Eventos usando o método "emit()"
 meuEmissor.emit('Chamei', "Chamei esse evento", "segundo parâmetro!");

@@ -1,27 +1,55 @@
 
 # Lógica Básica
 
-> Toda vez que um texto `nesse estilo` significa **input** e o simbolo " -> " significa **output**
-
 Conceito | Exemplo (Javascript)
 -------- | -----------
-Variável | `var k1 = 5;` <=> `k1 = 5`
-Constante (Var que <br>não muda) | `const pi = 3.1415;`
-[Condicionais](https://www.w3schools.com/jsref/jsref_statements.asp) | if, if else, else, switch, throw, etc.
-[Operadores Lógicos](https://www.w3schools.com/jsref/jsref_operators.asp) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e ===
-Looping | While, For, Do..While e For in.
-Array [(Métodos)](https://www.w3schools.com/jsref/jsref_obj_array.asp) | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2.
-Hash (JSON) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp.
-Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar.
-Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;var mmm = num1 + num2;<br>&nbsp;&nbsp;&nbsp;&nbsp;return mmm ;<br>}</pre> `a1 = calcular(3, 5);`,`a1`-> 8 
-| Utilizando funções<br> nos parametros | <pre>function One(A) {<br>&nbsp;&nbsp;&nbsp;&nbsp; A();<br>}<br>var Two = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp; console.log("Fui chamado de outra função");<br>}<br><br>One(Two);<br><br>É necessário seguir a sintaxe <br>`function expression` para funcionar </pre> |
-Função Recursiva<br>(Função que se chama) | <pre>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Cuidado com essas funções");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</pre><br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas.<br><br>
-Orientação a Funções | Termo usado quando se da o ato de separar<br> várias funções em arquivos diferentes (.js)<br> com o objetivo de resolver um problema,<br> usando a OF faz o código ficar mais legivel<br> e organizado.
-[Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | Usado príncipalmente para organização<br> utilizando os conceitos de classes, <br>encapsulamento e objetos (instâncias).
+| Variável | `var k1 = 5;` <=> `k1 = 5` |
+| Constante (Var que <br>não muda) | `const pi = Math.PI;` |
+| [Condicionais](https://www.w3schools.com/jsref/jsref_statements.asp) | if, if else, else, switch, throw, etc. |
+| Looping | while, for, do..while e for..in. |
+| [Operadores Lógicos](https://www.w3schools.com/jsref/jsref_operators.asp) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
+| Ternário | Substitui a expressão `if()` para **variáveis booleanas**<pre>(Bool) ? (Caso for true):(Caso for false)<br>((Bool) && (Caso for true))<br>((Bool) &#124;&#124; (Caso for false)) </pre> |
+| Array <br>[(Métodos)](https://www.w3schools.com/jsref/jsref_obj_array.asp) | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2. |
+| Hash (Json) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp. |
+| Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar. |
+| Função (Com <br>parâmetro) | <pre>function calcular(num1, num2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return num1 + num2;<br>}</pre> `a1 = calcular(3, 5);` , `a1`-> 8 |
+| Utilizando funções<br> nos parametros | <pre>function One(A) {<br>&nbsp;&nbsp;&nbsp;&nbsp; A();<br>}<br>var Two = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp; console.log("Fui chamado de outra função");<br>}<br><br>One(Two);</pre>É necessário seguir a sintaxe `"function expression"` para funcionar |
+| Função Recursiva<br>(Função que se chama) | <pre>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Cuidado com essas funções");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</pre><br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas.<br><br> |
+| [Função IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (Declara<br>e em seguida executa) | <pre>(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Executado no mesmo momento") <br>})();   </pre> |
+| Orientação a Funções | Termo usado quando se da o ato de separar<br> várias funções em arquivos diferentes (.js)<br> com o objetivo de resolver um problema,<br> usando a OF faz o código ficar mais legivel<br> e organizado. |
+| [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | Usado príncipalmente para organização<br> utilizando os conceitos de classes, <br>encapsulamento e objetos (instâncias). |
 
 <br><br>
 
 ## Outros Exemplos
+
+## Função IIFE
+
+```javascript
+var identificacao = (function () { 
+    var name = "John"; 
+    return name; 
+})();
+
+/* Cria o output imediatamente, e também 
+não usa parenteses no final da variável */
+
+console.log(identificacao); // -> John
+```
+
+## Ternário
+
+```javascript
+function MesmoFooDeSempre(_nome) {
+    /* _nome vai ser igual ao do parâmetro,
+    caso contrário vai ser igual ao "James"*/
+    _nome = _nome || "James"
+    return _nome;
+}
+
+console.log(MesmoFooDeSempre()) // -> James
+console.log(MesmoFooDeSempre("Daniel")) // -> Daniel
+```
 
 ## Array
 

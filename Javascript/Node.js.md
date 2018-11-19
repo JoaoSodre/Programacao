@@ -3,9 +3,9 @@
 * [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
 	* [Modules e require()](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
 	* [Built-in Modules](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#built-in-modules)
-		* [Module: 'events']()
-		* [Module: 'util']()
-		* [Module: 'fs']()
+		* [Module: 'events'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-events)
+		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
+		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
@@ -136,10 +136,7 @@ console.log(coisas.Somar(coisas.pi, 5));
 ```
 
 Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são módulos que criamos a partir de uma necessidade, já os **Built-in modules** são módulos já criados e instalados pelo Node.js e não necessitam de um path.
-<br>
-[Exemplos de Custom Modules]()
-
-<br><br>
+<br><br><br>
 
 
 ## Built-in Modules
@@ -147,8 +144,7 @@ Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são m
 [Lista com **todos** os Built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
 
 Built-in Modules como já mencionado são módulos que o própio node cria e instala e não necessitam de um path, esse modules permitem solucionar as mais diversas necessidades.<br>
-[Exemplos de Built Modules]()
-<br>
+<br><br>
 
 
 #### **[Module: 'events'](https://www.w3schools.com/nodejs/ref_events.asp)**
@@ -185,7 +181,7 @@ meuEmissor.emit('TbmChameiEsse', "Eu também chamei esse evento");
 meuEmissor.emit('Gritar');
 ```
 
-<br>
+<br><br>
 
 #### **[Module: 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
 

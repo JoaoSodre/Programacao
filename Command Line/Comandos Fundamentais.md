@@ -16,7 +16,7 @@
 | Copiar um arquivo <br>(Clonar) | `copy (ArquivoT) (ArquivoClonadoT)` |
 | Renomear | `rename[ren] (NomeAntigoT) (NomeNovoT)` |
 | Abrir um notepad<br>(Útil para criar arquivos) | `notepad` |
-| Abrir Sublime<br>(Diretório ou arquivo) | `subl .` ou `subl (ArquivoT)` |
+| Abrir VS Code<br>(Diretório ou arquivo) | `code .` ou `code (ArquivoT)` |
 | Deletar Arquivo | `del (ArquivoT)` |
 | Deletar Diretório | `rmdir /S /Q (NomePasta)` |
 <br><br>
