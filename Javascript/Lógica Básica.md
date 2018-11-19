@@ -8,7 +8,7 @@ Conceito | Exemplo (Javascript)
 | [Condicionais](https://www.w3schools.com/jsref/jsref_statements.asp) | if, if else, else, switch, throw, etc. |
 | Looping | while, for, do..while e for..in. |
 | [Operadores Lógicos](https://www.w3schools.com/jsref/jsref_operators.asp) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
-| Ternário | Substitui a expressão `if()` para **variáveis booleanas**<pre>(Bool) ? (Caso for true):(Caso for false)<br>((Bool) && (Caso for true))<br>((Bool) &#124;&#124; (Caso for false)) </pre> |
+| Ternário | Substitui a expressão `if()` para apenas uma linha<pre>(Condição) ? (Faça caso for true):(Faça caso for false)<br>( (Se isso For true) && (Faça isso))<br>( (Se isso for false) &#124;&#124; (Faça isso)) </pre> |
 | Array <br>[(Métodos)](https://www.w3schools.com/jsref/jsref_obj_array.asp) | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2. |
 | Hash (Json) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp. |
 | Função (Sem <br>parâmetro) | <pre>function getName() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var a1 = prompt("Qual seu nome?");<br>&nbsp;&nbsp;&nbsp;&nbsp;return a1;<br>}</pre>`var nome = getName();` , `nome` -> Resultado. <br><br> **Nota**: É obrigatório usar o `return` <br> para uma função com **retorno** funcionar. |
@@ -40,15 +40,22 @@ console.log(identificacao); // -> John
 ## Ternário
 
 ```javascript
+var AAA = 55;
+// AAA é maior que 60? Caso sim : Caso não
+AAA > 60 ? AAA = "Sou maior" : AAA = "Sou menor";
+
+console.log(AAA);
+```
+
+```javascript
 function MesmoFooDeSempre(_nome) {
-    /* _nome vai ser igual ao do parâmetro,
-    caso contrário vai ser igual ao "James"*/
-    _nome = _nome || "James"
+    // _nome é igual a _nome ? caso não atribua "James"
+    _nome = _nome || "James";
     return _nome;
 }
 
-console.log(MesmoFooDeSempre()) // -> James
-console.log(MesmoFooDeSempre("Daniel")) // -> Daniel
+console.log(MesmoFooDeSempre()); // -> James
+console.log(MesmoFooDeSempre("Daniel")); // -> Daniel
 ```
 
 ## Array
