@@ -1,4 +1,5 @@
 <!-- Pq o 'return' n funcionaria no metodo da classe pai e do filho ao mesmo tempo? ## Polimorfismo -->
+<!-- PQ a classe singleton é a única que não tem "function" no nome? -->
 
 # Orientação a Objeto
 
