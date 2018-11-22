@@ -10,11 +10,11 @@ Exemplos em Javascript:
 
 ```javascript
 // Método que executa uma função depois de um intervalo de tempo (Milisegundo)
-setTimeout(function(){ alert("Função1: Fui executado em segundo!"); }, 4000); 
-setTimeout(function(){ alert("Função2: Fui executado em primeiro!"); }, 1000); 
+setTimeout(function(){ alert("Função1: Fui executado em primeiro!"); }, 4000); 
+setTimeout(function(){ alert("Função2: Fui executado em segundo!"); }, 1000); 
 ```
 
-Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido/ irá aparecer primeiro, isso é programação assíncrona.<br><br>
+Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido irá aparecer primeiro, isso é programação assíncrona.<br><br>
 
 Syntax para função que irá receber o CALLBACK: `(NomeFunção)(function() { ... } )`
 
@@ -25,12 +25,11 @@ function A(callback) {
 }
 
 function B(callback) {
-    // *Mesmo caso que o de cima*
     callback("Apareci em segundo!");
 }
 
-/* Solicitando algo para a função 'B', e quando ele
-receber o CALLBACK, irá executar outra função. */
+/* Chamando função 'B', e quando ele terminar, irá dar
+ o CALLBACK. Depois disso irá executar outra função. */
 
 B(function (callback) {
     setTimeout(function(){ alert(callback); }, 2000);
@@ -42,13 +41,3 @@ A(function (callback) {
 ```
 
 Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada. <br><br>
-
-Já quando for usar o `setInterval()` ele irá executar uma ação de tempos em tempos infinitamente, até que você pare ele.
-
-```javascript
-// Irá mostrar João no console a cada 2 segundos
-var joao = setInterval(function(){ console.log("João"); }, 2000);
-
-// É necessário colocar uma variável no 'clearInterval()' para ele parar o 'setInterval()'
-clearInterval(joao);
-```
