@@ -6,6 +6,7 @@
 		* [Module: 'events'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-events)
 		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
 		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
+		* [Module: 'http']()
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
@@ -323,3 +324,20 @@ fernando.emit('Falar', "Estamos em que mundo?");
 ```
 
 <br><br>
+
+#### **[Module: 'http'](https://www.w3schools.com/nodejs/nodejs_http.asp)**
+
+```javascript
+var http = require('http');
+
+http.createServer(function (req, res) {
+
+  // Response Header
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  res.write('Servidor Levantado com Sucesso!');
+  res.end();
+}).listen(8080);
+```
+
+Agora nós temos um servidor na porta 8080!

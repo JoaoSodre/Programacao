@@ -20,21 +20,9 @@ Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 **Response Header**
 
-Exemplo de aplicação usando Node.js:
 
-```javascript
-var http = require('http');
 
-http.createServer(function (req, res) {
-
-  // Response Header
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-
-  res.write('Servidor Levantado com Sucesso!');
-  res.end();
-}).listen(8080);
-```
-Agora nós temos um servidor na porta 8080! [(Referência para o Module 'http')](https://www.w3schools.com/nodejs/obj_http_serverresponse.asp)<br><br>
+<br><br>
 
 # NPM
 
