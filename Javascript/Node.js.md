@@ -12,7 +12,7 @@
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br><br>
 
-Para ter um bom entendimento sobre o Node.js, é necessário compreender a [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
+Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
 
 **Por que Node.js?**
 
@@ -228,11 +228,11 @@ var fs = require('fs');
 for (let i = 0; i < 10; i++) {
 
 	// Se o arquivo não existir, irá dar erro
-    var txt = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
-	txt += Math.E + " \n";
+	var txt = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
+	    txt += Math.E + " \n";
 
 	// Escrevendo no arquivo
-    fs.writeFileSync('./EscrevaAqui.txt' , txt);
+	fs.writeFileSync('./EscrevaAqui.txt' , txt);
 }
 ```
 
@@ -243,6 +243,8 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function() {
     console.log("Acabei de escrever no arquivo");
 })
 ```
+
+<br><br>
 
 **Adicionar ou remover diretórios e arquivos**
 

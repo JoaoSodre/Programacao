@@ -1,19 +1,40 @@
 # Aplicação Back-End com Node.js
 
-Antes de mais nada é preciso ter conhecimento de [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs) para entender a aplicação back-end usada aqui.<br><br>
+É preciso conhecer o [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs) para entender a aplicação back-end usada aqui.<br><br>
 
-Exemplo de Aplicação usando Node.js [(Referência para o Module 'http')](https://www.w3schools.com/nodejs/obj_http_serverresponse.asp):
+**Como os servers e clients funcionam?**
+
+Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedio) para o server num **socket** (caminho) e o server irá ter que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.
+
+**Como que fazem isso?**
+
+É aqui que os protocols "entrão em ação". O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
+
+O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.
+
+**Ports**
+
+Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele irá responder caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js. <br>
+
+Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
+
+**Response Header**
+
+Exemplo de aplicação usando Node.js:
 
 ```javascript
 var http = require('http');
 
-http.createServer(function (pedido, resposta) {
-  resposta.writeHead(200, {'Content-Type': 'text/plain'});
-  resposta.write('Servidor Levantado com Sucesso!');
-  resposta.end();
+http.createServer(function (req, res) {
+
+  // Response Header
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  res.write('Servidor Levantado com Sucesso!');
+  res.end();
 }).listen(8080);
 ```
-Agora nós temos um servidor na porta 8080!<br><br>
+Agora nós temos um servidor na porta 8080! [(Referência para o Module 'http')](https://www.w3schools.com/nodejs/obj_http_serverresponse.asp)<br><br>
 
 # NPM
 

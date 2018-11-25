@@ -26,7 +26,7 @@ $("input");
 
 $("input").val("Olá 123");
 
-/* Nota: TODOS os <input> ficaram com esse valor,
+/* Nota: TODOS os <input> ficarão com esse valor,
 inclusive o que está escrito nos botões */
 ```
 
