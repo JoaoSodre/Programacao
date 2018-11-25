@@ -20,18 +20,28 @@ console.log("Terminei de ler o arquivo, isto é o que estava nele: " + txt);
 
 for (let i = 0; i < 10; i++) {
 
-	// Se o arquivo não existir, irá dar ERRO
-    var write = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
-	write += Math.E + " \n";
+    try {
+        // Se o arquivo não existir, irá dar ERRO
+        var write = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
+        write += Math.E + "\n";
 
-	// Escrevendo no arquivo
-    fs.writeFileSync('./EscrevaAqui.txt' , write);
+        // Escrevendo no arquivo
+        fs.writeFileSync('./EscrevaAqui.txt' , write);
+    } 
+    
+    /* Caso der o erro ira criar o arquivo
+    e diminuir uma unidade no i */
+    catch (error) {
+        fs.writeFileSync('./EscrevaAqui.txt', "");
+        i--;
+    }
 }
 
 /* ----------- Modo Assíncrono ----------- */
 
+// Apenas substituir nos 'fs.writeFileSync()' acima
 fs.writeFile('./EscrevaAqui.txt' , write, function() {
-    console.log("Acabei de escrever no arquivo");
+    // *Algo para ele fazer, quando terminar*
 })
 
 

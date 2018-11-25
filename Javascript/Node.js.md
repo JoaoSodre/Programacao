@@ -220,19 +220,28 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 (Também funciona de modo assíncrono, assim como o read.File):
 
 ```javascript
-/* Cuidado! Dependendo de como estiver o código,
-e houver algo no arquivo, ele irá apagar e substituir */
+/* Cuidado! Dependendo dos comandos do código, 
+ele irá apagar e substituir os dados do arquivo */
 
 var fs = require('fs');
 
 for (let i = 0; i < 10; i++) {
 
-	// Se o arquivo não existir, irá dar erro
-	var txt = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
-	    txt += Math.E + " \n";
+    try {
+        // Se o arquivo não existir, irá dar ERRO
+        var write = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
+        write += Math.E + "\n";
 
-	// Escrevendo no arquivo
-	fs.writeFileSync('./EscrevaAqui.txt' , txt);
+        // Escrevendo no arquivo
+        fs.writeFileSync('./EscrevaAqui.txt' , write);
+    } 
+    
+	/* Caso der o erro irá criar o arquivo e 'resetar'
+	a contagem do 'i', diminuindo em uma unidade */
+    catch (error) {
+        fs.writeFileSync('./EscrevaAqui.txt', "");
+        i--;
+    }
 }
 ```
 
