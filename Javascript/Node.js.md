@@ -327,7 +327,7 @@ fernando.emit('Falar', "Estamos em que mundo?");
 
 #### **[Module: 'http'](https://www.w3schools.com/nodejs/nodejs_http.asp)**
 
-> Veja antes [Aplicações Back-End]() para conseguir entender o módulo. <br>
+> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md) para conseguir entender o módulo. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
 

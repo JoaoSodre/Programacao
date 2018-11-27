@@ -1,7 +1,5 @@
 # Aplicações Back-End (e Node.js)
 
-É preciso conhecer o [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs) para entender a aplicação back-end usada aqui.<br><br>
-
 **Como os servers e clients funcionam?**
 
 Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedio) para o server num **socket** (caminho) e o server irá ter que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.
@@ -29,6 +27,8 @@ Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 <br><br>
 
 # NPM (Node.js)
+
+> É preciso conhecer o [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs) para entender a aplicação back-end usada aqui.
 
 O NPM já vem instalado com o Node.js, ele é um gerenciador de packages ou módulos para o Node, ou seja com ele é possível fazer o download de milhares de libraries hospedadas do seu própio site (www.npmjs.com) para o seu computador, usando o command-line.<br><br>
 
