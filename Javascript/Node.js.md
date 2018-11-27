@@ -6,7 +6,7 @@
 		* [Module: 'events'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-events)
 		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
 		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
-		* [Module: 'http']()
+		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
@@ -327,6 +327,10 @@ fernando.emit('Falar', "Estamos em que mundo?");
 
 #### **[Module: 'http'](https://www.w3schools.com/nodejs/nodejs_http.asp)**
 
+> Veja antes [Aplicações Back-End]() para conseguir entender o módulo. <br>
+
+O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
+
 ```javascript
 var http = require('http');
 
@@ -334,10 +338,7 @@ http.createServer(function (req, res) {
 
   // Response Header
   res.writeHead(200, {'Content-Type': 'text/plain'});
-
   res.write('Servidor Levantado com Sucesso!');
   res.end();
-}).listen(8080);
+}).listen(8080); // Porta que ele vai escutar
 ```
-
-Agora nós temos um servidor na porta 8080!
