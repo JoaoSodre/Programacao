@@ -184,7 +184,7 @@ meuEmissor.emit('Gritar');
 
 Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante ou de forma [assícrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).<br><br>
 
-**Ler os dados de um arquivo**
+**Lendo os dados de um arquivo**
 
 ```javascript
 var fs = require('fs');
@@ -216,7 +216,7 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 
 <br><br>
 
-**Escrever dados num arquivo**
+**Escrevendo dados num arquivo (Armazenar)**
 
 (Também funciona de modo assíncrono, assim como o read.File):
 
@@ -256,7 +256,7 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function() {
 
 <br><br>
 
-**Adicionar ou remover diretórios e arquivos**
+**Adicionando ou removendo diretórios e arquivos**
 
 O node não consegue criar subdiretórios como no command-line, apenas uma pasta de cada vez.
 

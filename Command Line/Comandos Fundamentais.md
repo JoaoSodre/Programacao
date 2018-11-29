@@ -13,6 +13,7 @@
 | Abrir pasta atual na<br> janela do explorer | `start .` |
 | Limpar a tela | `cls` |
 | Criar uma pasta | `mkdir[md] (NomePasta)\(Subpasta)` |
+| Clonar uma Pasta | `xcopy (NomePastaCopiada) (NomePastaClone) /E` |
 | Copiar um arquivo <br>(Clonar) | `copy (ArquivoT) (ArquivoClonadoT)` |
 | Renomear | `rename[ren] (NomeAntigoT) (NomeNovoT)` |
 | Abrir um notepad<br>(Útil para criar arquivos) | `notepad` |
