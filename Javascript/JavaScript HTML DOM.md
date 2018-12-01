@@ -1,6 +1,6 @@
 # JavaScript HTML DOM
 
-**Introdução ao HTML DOM**
+#### Introdução ao HTML DOM
 
 Com o HTML DOM, o JavaScript consegue acessar e mudar todos os elementos de um documento HTML.
 

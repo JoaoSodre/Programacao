@@ -4,7 +4,7 @@
 
 [Todos atributos do Css](https://www.w3schools.com/cssref/default.asp)<br>
 [Todos os selectors](https://www.w3schools.com/cssref/css_selectors.asp)<br><br>
-[Framework Bootstrap (Excelênte para estilizar sites)](https://getbootstrap.com/docs/3.3/css/)<br>
+[Framework Bootstrap](https://getbootstrap.com/docs/3.3/css/)<br>
 
 ## Syntaxes e Selectors (Básicos)
 

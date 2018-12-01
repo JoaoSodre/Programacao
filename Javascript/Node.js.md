@@ -11,21 +11,21 @@
 
 [Site do Node.js](https://nodejs.org/en/)<br>
 
-O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br><br>
+O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
 Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
 
-**Por que Node.js?**
+ #### Por que Node.js?
 
 * Node.js útiliza a engine v8 do google (O que o deixa incrivelmente rápido).
 * Possuí um enorme ecosistema de packages open source (npm).
 * Muito bom para serviços em tempo real (Como chats).
 
-**V8 Engine**
+ #### V8 Engine
 
 Como já mencionado os computadores não entendem o Javascript (Apenas browsers) e para que isso aconteça é útilizado a v8 engine. Ou seja ele converte código javascript para código de máquina (Por isso é escrito com o C++).
 
-**Instalação**
+ #### Instalação
 
 Para instala-lo basta baixa a versão recente mais **instável** (ou seja a que tiver o LTS no nome), pois a outra versão apesar de possuír mais features, pode acabar tendo bugs e erros horríveis no seu algoritmo.<br>
 
@@ -184,7 +184,7 @@ meuEmissor.emit('Gritar');
 
 Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante ou de forma [assícrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).<br><br>
 
-**Lendo os dados de um arquivo**
+#### Lendo os dados de um arquivo
 
 ```javascript
 var fs = require('fs');
@@ -216,7 +216,7 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 
 <br><br>
 
-**Escrevendo dados num arquivo (Armazenar)**
+#### Escrevendo dados num arquivo (Armazenar)
 
 (Também funciona de modo assíncrono, assim como o read.File):
 
@@ -256,7 +256,7 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function() {
 
 <br><br>
 
-**Adicionando ou removendo diretórios e arquivos**
+#### Adicionando ou removendo diretórios e arquivos
 
 O node não consegue criar subdiretórios como no command-line, apenas uma pasta de cada vez.
 
@@ -334,11 +334,21 @@ O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo
 ```javascript
 var http = require('http');
 
+// Método do módulo para criar um server
 http.createServer(function (req, res) {
 
-  // Response Header
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('Servidor Levantado com Sucesso!');
-  res.end();
-}).listen(8080); // Porta que ele vai escutar
+	console.log("Um request foi feito: " + req.url);
+
+	/* Response Header com o tipo de informação que estamos 
+	passando (Uma string, por isso 'text'), e o STATUS html */
+
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.write('Servidor Levantado com Sucesso!');
+
+	// Termina os processos do response
+	res.end();
+}).listen(3001); // Porta que ele vai escutar
 ```
+
+[Response Header]()<br>
+[Status Html]()

@@ -1,4 +1,4 @@
-<!--Title = Quando passa o mause ele mostra uma pequena caixinha com uma mensagem.
+<!-- Title = Quando passa o mause ele mostra uma pequena caixinha com uma mensagem.
 Value = Nome Escrito no input.
 -->
 
@@ -7,7 +7,7 @@ Value = Nome Escrito no input.
 [Todas Tags](https://www.w3schools.com/tags/)<br>
 [Todos Atributos](https://www.w3schools.com/tags/ref_attributes.asp)
 
-## Lembrete de Tags Importantes
+## Tags Importantes
 
 > **Legenda:** <br> (/) = Precisa de outra tag para fechar, como `<h1></h1>`<br> < /> = Tag que tem fechamento em si mesmo, como `<img src""/>`
 

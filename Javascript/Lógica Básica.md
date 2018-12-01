@@ -24,7 +24,7 @@ Conceito | Exemplo (Javascript)
 
 ## Outros Exemplos
 
-## Função IIFE
+#### Função IIFE
 
 ```javascript
 var Identificacao = (function () { 
@@ -38,7 +38,7 @@ retorná para a variável */
 console.log(Identificacao); // -> John
 ```
 
-## Ternário
+#### Ternário
 
 ```javascript
 var AAA = 55;
@@ -59,7 +59,7 @@ console.log(MesmoFooDeSempre()); // -> James
 console.log(MesmoFooDeSempre("Daniel")); // -> Daniel
 ```
 
-## Array
+#### Array
 
 >Lembrete: Em programação a contagem de collections começará em **0**
 
@@ -79,7 +79,7 @@ notas.push(nota2); // Ficara no slot 1 do array.
 
 <br><br>
 
-## Hash (JSON)
+#### Hash (JSON)
 
 ```javascript
 var g = {};
@@ -91,7 +91,7 @@ g.nota = 8;
 
 <br><br>
 
-## Loopings
+#### Loopings
 
 Calculo de Tabuada:
 
