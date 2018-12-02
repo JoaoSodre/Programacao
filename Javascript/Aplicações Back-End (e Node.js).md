@@ -2,29 +2,45 @@
 
 #### Como os servers e clients funcionam?
 
-Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedio) para o server num **socket** (caminho) e o server irá ter que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.<br>
+Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server irá ter que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.<br><br>
 
 #### Como que fazem isso? (Protocols)
 
 É aqui que os protocols entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
 
-O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.<br>
+O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.<br><br>
 
 #### Ports
 
 Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele irá responder caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
 
-Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)<br>
+Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)<br><br>
 
 #### Response Header
 
-Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)<br>
+Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)<br><br>
+
+#### Buffers e Streams
+
+Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, isso é um **Buffer**.<br>
+
+Já a **Stream** é o caminho no qual os buffers vão percorrer ao longo do tempo, melhorando assim e muito o desempenho da aplicação (já que não é necessário esperar pelo processo inteiro de uma grande quantidade de dados).<br>
+
+Ambas as funções podem também serem usadas para lidar com requests e responses do cliente, também com o objetivo de melhorar o desempenho.<br>
+
+Tipos de Streams:
+
+* Writable Streams - Permite que o Node.js escreva dados a uma stream.
+* Readable Streams - Permite que o Node.js leia dados de uma stream.
+* Duplex - Consegue ler e escrever dados numa stream.
+
+<br><br>
 
 #### Métodos Post e Get
 
 
 
-<br><br>
+<br><br><br>
 
 # NPM (Node.js)
 

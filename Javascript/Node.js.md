@@ -8,7 +8,6 @@
 		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
 
-
 [Site do Node.js](https://nodejs.org/en/)<br>
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
@@ -350,5 +349,5 @@ http.createServer(function (req, res) {
 }).listen(3001); // Porta que ele vai escutar
 ```
 
-[Response Header]()<br>
-[Status Html]()
+[Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#response-header)<br>
+<!--[Status Html]()-->
