@@ -78,5 +78,3 @@ function Cadastrar() {
 // Irá alertar o valor que está dentro do input com o id "nome"
 Cadastrar();
 ```
-
-[Exemplo de site usando o '.value' e '.innerHTML'](https://github.com/JoaoSodre/Programacao/blob/master/Html%20e%20Css/SitesAleatorios/Testando_DHtml.html)

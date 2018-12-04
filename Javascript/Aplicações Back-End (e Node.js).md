@@ -20,6 +20,28 @@ Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)<br><br>
 
+#### Métodos Post e Get
+
+Em uma página html para que seja possível passar dados pegos do usuário e mandar ao servidor, são utilizados os chamados métodos **post** e **get**. Diferenças entre os dois:<br>
+
+Método Get:
+
+* Parâmetros ficam na Url.
+* Usado para fazer buscas no documento (Ex: falar em qual página estamos, se existe algum dado nele).
+* Já que ficam na url, sua largura máxima é limitada (Cerca de 2000 caracteres).
+* Posse ser "cacheado" (Salva muito esforço das máquinas caso a página não foi mudada).
+* Não deverá mudar o server.
+
+Método Post:
+
+* Parâmetros ficam no body.
+* Usado para fazer mudanças em dados.
+* Não possui limite de largura (O server pode ser configurado para suportar mais quando necessário).
+* Quase nunca são cacheados (Isso por causa que provavelmente está-se alterando algum dado do server com ele).
+* Poderar mudar o server.
+
+ <br><br>
+
 #### Buffers e Streams
 
 Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, isso é um **Buffer**.<br>
@@ -30,14 +52,15 @@ Ambas as funções podem também serem usadas para lidar com requests e response
 
 Tipos de Streams:
 
-* Writable Streams - Permite que o Node.js escreva dados a uma stream.
+* writable Streams - Permite que o Node.js escreva dados a uma stream.
 * Readable Streams - Permite que o Node.js leia dados de uma stream.
 * Duplex - Consegue ler e escrever dados numa stream.
 
 <br><br>
 
-#### Métodos Post e Get
+#### Pipes
 
+Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `RStream.pipe(destino);`
 
 
 <br><br><br>

@@ -67,3 +67,47 @@ fs.mkdir('./pasta1', function() {
         });
     });
 });
+
+
+
+
+// Criando Readable Streams
+
+// Criando uma stream que irá ler os buffers
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+// __dirname = Caminho até a pasta atual, ou seja, o mesmo que o ponto (.)
+// É possível usar o 'utf8' como segundo parâmetro para os caracteres serem renderizados depois
+
+// Toda vez que um buffer passar pela stream ele irá acionar o evento 'data', com ele é possível ver os chunks sendo passados
+minhaReadStream.on('data', function(dados){
+    console.log(dados);
+});
+
+
+
+
+// Criando Writable Streams
+
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt')
+
+// Toda vez que receber um pedaço dos dados... 
+minhaReadStream.on('data', function(data){
+
+    console.log("Novo pedaço de data recebido");
+
+    // Escreva-os num arquivo da WriteStream
+    meuWriteStream.write(data);
+    // Método 'write()' da stream funciona da mesma forma que o 'fs.writeFile()'
+});
+
+
+
+
+// Pipes
+
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt');
+
+// Syntax: ReadStream.pipe(WriteStream)
+minhaReadStream.pipe(meuWriteStream);

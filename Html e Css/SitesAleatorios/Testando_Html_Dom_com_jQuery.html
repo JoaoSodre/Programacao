@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> TestandoDynamicHtml </title>
+  <title> Html Dom com jQuery </title>
+
+  <!-- Include do jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
   <!-- É recomendado usar javascript functions e css styles em arquivos separados -->
   <script type="text/javascript">
     
     function LimparDados() {
-      document.getElementById("nome").value = "";
-      document.getElementById("sobrenome").value = "";
-      document.getElementById("endereco").value = "";
+
+      // Limpa os campos
+      $(".dados").val("");
     }
 
     function Alertar() {
+
+      // Alerta caso falte um campo
       alert("Você deve preencher todos os campos");
     }
 
     function CadastrarPessoa() {
-      // Pegando os dados do usuário
-      var nome = document.getElementById("nome").value;
-      var sobrenome = document.getElementById("sobrenome").value; 
-      var endereco = document.getElementById("endereco").value;
+
+      // Pegando dados do usuário
+      var nome = $("#nome").val();
+      var sobrenome = $("#sobrenome").val(); 
+      var endereco = $("#endereco").val();
+
+      // Pegando dados da situação da tabela atual
+      var registros = $("#registros").html();
 
       if (nome == "" || sobrenome == "" || endereco == "") {
         Alertar();
       }
 
       else {
+
         // Variável que irá concatenar todos os dados junto com a syntax html 
-        var html = "<tr><td>" + nome + "</td><td>" + sobrenome + "</td><td>" + endereco + "</td></tr>"
+        var html0 = "<tr><td>" + nome + "</td><td>" + sobrenome + "</td><td>" + endereco + "</td></tr>"
 
         // Adicionando na tabela do html
-        document.getElementById("registros").innerHTML += html;
+        $("#registros").html(registros + html0);
 
-        // Limpando os campos
         LimparDados();
 
         // Irá focar no primeiro input
-        document.getElementById("nome").focus();
-    } 
+        $("#nome").focus();
+      } 
 
     }
   </script>
@@ -54,15 +63,15 @@
     <legend>Cadastro de pessoas</legend>
     <form>
       <div>
-        <label for="nome"> Nome: </label> <input type="text" name="nome" id="nome" title="Coloque seu nome!" placeholder="Seu Nome" />
+        <label for="nome"> Nome: </label> <input class="dados" type="text" name="nome" id="nome" title="Coloque seu nome!" placeholder="Seu Nome" />
       </div>
 
       <div>
-        <label for="sobrenome"> Sobrenome: </label><input type="text" name="sobrenome" id="sobrenome" title="Coloque seu sobrenome!" placeholder="Seu Sobrenome" />
+        <label for="sobrenome"> Sobrenome: </label><input class="dados" type="text" name="sobrenome" id="sobrenome" title="Coloque seu sobrenome!" placeholder="Seu Sobrenome" />
       </div>
 
       <div>
-        <label for="endereco"> Endereço: </label> <input type="text" name="endereco" id="endereco" title="Coloque seu endereço!" placeholder="Seu Endereço"/>
+        <label for="endereco"> Endereço: </label> <input class="dados" type="text" name="endereco" id="endereco" title="Coloque seu endereço!" placeholder="Seu Endereço"/>
       </div>
     </form>
   </fieldset>

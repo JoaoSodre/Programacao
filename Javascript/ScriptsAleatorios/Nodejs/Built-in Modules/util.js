@@ -17,10 +17,10 @@ var maria = new Pessoa("Maria");
 var pessoas = [joao, fernando, maria];
 
 // Para cada atributo em 'pessoas', coloque-as em 'A'
-pessoas.forEach(function(A){
+pessoas.forEach(function(A) {
 	
 	// Crie um evento chamado 'Falar', que faz algo quando for chamado
-	A.on('Falar', function(msg){
+	A.on('Falar', function(msg) {
 
 		/* Já que são objetos, precisa colocar o atributo 'nome',
 		que foi passado pelo construtor */

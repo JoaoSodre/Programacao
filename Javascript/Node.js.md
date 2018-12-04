@@ -183,7 +183,7 @@ meuEmissor.emit('Gritar');
 
 Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante ou de forma [assícrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).<br><br>
 
-#### Lendo os dados de um arquivo
+##### Lendo os dados de um arquivo
 
 ```javascript
 var fs = require('fs');
@@ -215,7 +215,7 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 
 <br><br>
 
-#### Escrevendo dados num arquivo (Armazenar)
+##### Escrevendo dados num arquivo (Armazenar)
 
 (Também funciona de modo assíncrono, assim como o read.File):
 
@@ -255,7 +255,7 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function() {
 
 <br><br>
 
-#### Adicionando ou removendo diretórios e arquivos
+##### Adicionando ou removendo diretórios e arquivos
 
 O node não consegue criar subdiretórios como no command-line, apenas uma pasta de cada vez.
 
@@ -280,6 +280,62 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
+##### Criando [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#buffers-e-streams)
+
+A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.
+
+```javascript
+var fs = require('fs');
+
+// Criando uma stream que le os buffers
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+// __dirname = Caminho até a pasta atual, ou seja, o mesmo que o ponto (.)
+// É possível usar o 'utf8' como segundo parâmetro para os caracteres serem renderizados depois
+
+// Toda vez que um buffer passar pela stream ele irá emitir o evento 'data', com ele é possível ver os chunks sendo passados
+minhaReadStream.on('data', function(dados){
+    console.log(dados);
+});
+```
+
+Nota: O módulo fs já herda a classe 'EventEmmiter' do 'events', por isso é possivel usar o método 'on()'<br><br>
+
+##### Criando Writable Streams
+
+```javascript
+var fs = require('fs');
+
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt')
+
+// Toda vez que receber um pedaço dos dados... 
+minhaReadStream.on('data', function(data){
+
+    console.log("Novo pedaço de data recebido");
+
+    // Escreva-os num arquivo da WriteStream
+    meuWriteStream.write(data);
+    // Método 'write()' da stream funciona da mesma forma que o 'fs.writeFile()'
+});
+```
+
+<br><br>
+
+##### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#pipes)
+
+O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.
+
+```javascript
+var fs = require('fs');
+
+var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt');
+
+// Syntax: ReadStream.pipe(WriteStream)
+minhaReadStream.pipe(meuWriteStream);
+```
+
+
 #### **[Module: 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
 
 Com o 'util' é possivel acessar algumas funções para coisas úteis, como por exemplo eu posso querer herdar o módulo 'events.EventEmitter()' toda vez que eu instanciar uma classe, sendo assim não precisarei criar várias variáveis com o mesmo `var (Nome) = new (Nome).EventEmitter()` para cada elemento que irei usar, economizando assim muitas linhas de código.
@@ -299,10 +355,10 @@ util.inherits(Pessoa, events.EventEmitter);
 
 
 var joao = new Pessoa("Joao");
-var fernando = new Pessoa("Fernando");
+var Димитрис = new Pessoa("Димитрис");
 var maria = new Pessoa("Maria");
 
-var pessoas = [joao, fernando, maria];
+var pessoas = [joao, Димитрис, maria];
 
 // Para cada atributo em 'pessoas', coloque-as em 'A'
 pessoas.forEach(function(A){
@@ -316,10 +372,10 @@ pessoas.forEach(function(A){
 	});
 });
 
-joao.emit('Falar', "Oi gente!");
-fernando.emit('Falar', "To perdido...");
-maria.emit('Falar', "Tenho vida agora rs");
-fernando.emit('Falar', "Estamos em que mundo?");
+joao.emit('Falar', "Alo?!");
+Димитрис.emit('Falar', "????????");
+maria.emit('Falar', "Tenho vida agora!!");
+Димитрис.emit('Falar', "что это такое?");
 ```
 
 <br><br>
@@ -328,6 +384,8 @@ fernando.emit('Falar', "Estamos em que mundo?");
 
 > Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md) para conseguir entender o módulo. <br>
 
+##### Criando um server com a própia máquina
+
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
 
 ```javascript
@@ -335,8 +393,7 @@ var http = require('http');
 
 // Método do módulo para criar um server
 http.createServer(function (req, res) {
-
-	console.log("Um request foi feito: " + req.url);
+	console.log("Um request foi feito em: http://localhost:8080" + req.url);
 
 	/* Response Header com o tipo de informação que estamos 
 	passando (Uma string, por isso 'text'), e o STATUS html */
@@ -344,10 +401,32 @@ http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 	res.write('Servidor Levantado com Sucesso!');
 
-	// Termina os processos do response
+	// Finalizar os processos do response, se não a página não consegue renderizar (Ele não sabe quando parar)
 	res.end();
-}).listen(3001); // Porta que ele vai escutar
+}).listen(8080); // Porta que ele vai escutar
 ```
 
 [Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#response-header)<br>
 <!--[Status Html]()-->
+
+<br><br>
+
+##### Enviando dados via Streams
+
+```javascript
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function (req, res) {
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+
+	// Criando readable stream
+	var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+
+	// Usando pipe para mandar os dados e renderizar na página
+	minhaReadStream.pipe(res);
+
+	// Não é mais necessário o res.end() pois o pipe() faz exatamente a mesma coisa
+
+}).listen(8080);
+```
