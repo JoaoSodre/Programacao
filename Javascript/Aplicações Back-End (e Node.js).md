@@ -26,11 +26,12 @@ Em uma página html para que seja possível passar dados pegos do usuário e man
 
 Método Get:
 
-* Parâmetros ficam na Url.
+* Parâmetros ficam na Url (Chamados "Query String").
 * Usado para fazer buscas no documento (Ex: falar em qual página estamos, se existe algum dado nele).
 * Já que ficam na url, sua largura máxima é limitada (Cerca de 2000 caracteres).
 * Posse ser "cacheado" (Salva muito esforço das máquinas caso a página não foi mudada).
-* Não deverá mudar o server.
+* Já que os parâmetros ficam na Url, é possível fazer os requests por lá em vez nos inputs.
+* Não consegue mudar o server.
 
 Método Post:
 
@@ -38,7 +39,14 @@ Método Post:
 * Usado para fazer mudanças em dados.
 * Não possui limite de largura (O server pode ser configurado para suportar mais quando necessário).
 * Quase nunca são cacheados (Isso por causa que provavelmente está-se alterando algum dado do server com ele).
-* Poderar mudar o server.
+* Consegue mudar algo no server.
+
+Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método POST é quando se queira pegar algum dado da aplicação e usar na mesma e o método POST e quando se queira pegar algum dado e mandar para o server.<br>
+
+Syntax para pegar os dados via métodos GET ou POST (Node.js):
+
+GET: `request.query.(nomeParâmetro)`.<br>
+POST: `request.body.(nomeParâmetro)`.
 
  <br><br>
 
