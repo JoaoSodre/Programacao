@@ -1,6 +1,6 @@
 # jQuery
 
-[Site Original](https://jquery.com/)
+[Site do jQuery](https://jquery.com/)
 
 O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua própia forma de syntax utilizando a escrita do css para selecionar os elementos. Para entender o jQuery é necessário ter conhecimento sobre [JavaScript HTML DOM](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JavaScript%20HTML%20DOM.md#javascript-html-dom) <br><br>
 

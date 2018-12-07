@@ -1,4 +1,5 @@
 * [Site aleatório por ai (Estudar algumas funções)](https://www.sketchywebsite.net/)
+* [Site aleatório - 2](https://www.yyyyyyy.info/)
 
 ### Referências, Tutoriais e Dicas
 

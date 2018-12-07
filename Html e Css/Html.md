@@ -18,4 +18,4 @@ Value = Nome Escrito no input.
 * [	&lt;span>(/)](https://www.w3schools.com/tags/tag_span.asp) = Utilizado para formatar pequenos textos.
 * [	&lt;img/>](https://www.w3schools.com/tags/tag_img.asp) = Imagem (Evite usar o atributo 'width' assim a imagem consumirá menos Kb).
 * [	&lt;input>](https://www.w3schools.com/tags/tag_input.asp) = Especifica um campo onde o usuário pode colocar informação (Tag vazia, possui apenas atributos)
-* [	&lt;label>(/)](https://www.w3schools.com/tags/tag_label.asp) = Quando clicar em um nome, ele irá focar em algum lugar como caixas, botões, etc (Como o 	&lt;input>). (Utilize métodos do [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Front-End.md#jquery) para isso)
+* [	&lt;label>(/)](https://www.w3schools.com/tags/tag_label.asp) = Quando clicar em um nome, ele irá focar em algum lugar como caixas, botões, etc (Como o 	&lt;input>). (Utilize métodos do [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#jquery) para isso)

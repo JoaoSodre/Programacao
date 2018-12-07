@@ -8,8 +8,6 @@ Exemplos em Javascript:
 
 O método 'setTimeout()' é uma das funções assíncronas do javascript, por isso é possível passar uma função como parâmetro (callback).
 
-> [Syntax do setTimeout( )](https://www.w3schools.com/jsref/met_win_settimeout.asp)
-
 ```javascript
 setTimeout(function(){ alert("Função1: Fui executado em primeiro!"); }, 4000); 
 setTimeout(function(){ alert("Função2: Fui executado em segundo!"); }, 1000); 

@@ -7,6 +7,10 @@
 		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
 		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
+	* [Npm]()
+		* [Express]()
+		* [Outros Packages]()
+
 
 [Site do Node.js](https://nodejs.org/en/)<br>
 
@@ -143,7 +147,7 @@ Built-in Modules assim como os Custom, são como libraries e não necessitam de 
 
 
 
-#### **[Module: 'events'](https://www.w3schools.com/nodejs/ref_events.asp)**
+#### **Module: 'events'**
 
 O módulo 'events' nós permite criar eventos usando javascript, da mesma forma que na programação assíncrona.<br>
 
@@ -179,9 +183,9 @@ meuEmissor.emit('Gritar');
 
 <br><br>
 
-#### **[Module: 'fs'](https://www.w3schools.com/nodejs/ref_fs.asp)**
+#### **Module: 'fs'**
 
-Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante ou de forma [assícrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).<br><br>
+Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante como de forma **assícrona**.<br><br>
 
 ##### Lendo os dados de um arquivo
 
@@ -223,33 +227,29 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 /* Cuidado! Dependendo dos comandos do código, 
 ele irá apagar e substituir os dados do arquivo */
 
-var fs = require('fs');
-
 for (let i = 0; i < 10; i++) {
 
-    try {
-        // Se o arquivo não existir, irá dar ERRO
-        var write = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
-        write += Math.E + "\n";
+	fs.readFile('./EscrevaAqui.txt', 'utf8', function(err, data) {
 
-        // Escrevendo no arquivo
-        fs.writeFileSync('./EscrevaAqui.txt' , write);
-    } 
-    
-	/* Caso der o erro irá criar o arquivo e 'resetar'
-	a contagem do 'i', diminuindo em uma unidade */
-    catch (error) {
-        fs.writeFileSync('./EscrevaAqui.txt', "");
-        i--;
-    }
+		// Se o arquivo não existir, irá dar ERRO
+		if (err) {
+			fs.writeFileSync('./EscrevaAqui.txt', "");
+			i--;
+		}
+		else {
+			data += Math.E + "\n";
+			fs.writeFileSync('./EscrevaAqui.txt' , data);
+		}
+	});
 }
 ```
 
 ----------- Modo Assíncrono -----------
 
 ```javascript
-fs.writeFile('./EscrevaAqui.txt' , txt, function() {
-    console.log("Acabei de escrever no arquivo");
+fs.writeFile('./EscrevaAqui.txt' , txt, function(err) {
+    if (err) { console.log(err); }
+	console.log("Acabei de escrever no arquivo");
 })
 ```
 
@@ -260,8 +260,6 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function() {
 O node não consegue criar subdiretórios como no command-line, apenas uma pasta de cada vez.
 
 ```javascript
-var fs = require('fs');
-
 // mkdir = make directory
 fs.mkdirSync('./pasta1');
 
@@ -280,19 +278,21 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
-##### Criando [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#buffers-e-streams)
+##### Criando uma [Readable Streams]()
 
 A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.
 
 ```javascript
-var fs = require('fs');
 
 // Criando uma stream que le os buffers
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
+
 // __dirname = Caminho até a pasta atual, ou seja, o mesmo que o ponto (.)
+
 // É possível usar o 'utf8' como segundo parâmetro para os caracteres serem renderizados depois
 
 // Toda vez que um buffer passar pela stream ele irá emitir o evento 'data', com ele é possível ver os chunks sendo passados
+
 minhaReadStream.on('data', function(dados){
     console.log(dados);
 });
@@ -303,8 +303,6 @@ Nota: O módulo fs já herda a classe 'EventEmmiter' do 'events', por isso é po
 ##### Criando Writable Streams
 
 ```javascript
-var fs = require('fs');
-
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt')
 
@@ -321,7 +319,7 @@ minhaReadStream.on('data', function(data){
 
 <br><br>
 
-##### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#pipes)
+##### [Pipes]()
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.
 
@@ -336,7 +334,7 @@ minhaReadStream.pipe(meuWriteStream);
 ```
 
 
-#### **[Module: 'util'](https://www.w3schools.com/nodejs/ref_util.asp)**
+#### **Module: 'util'**
 
 Com o 'util' é possivel acessar algumas funções para coisas úteis, como por exemplo eu posso querer herdar o módulo 'events.EventEmitter()' toda vez que eu instanciar uma classe, sendo assim não precisarei criar várias variáveis com o mesmo `var (Nome) = new (Nome).EventEmitter()` para cada elemento que irei usar, economizando assim muitas linhas de código.
 
@@ -380,18 +378,17 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 <br><br>
 
-#### **[Module: 'http'](https://www.w3schools.com/nodejs/nodejs_http.asp)**
+#### **Module: 'http'**
 
-> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md) para conseguir entender o módulo. <br>
-
-##### Criando um server com a própia máquina
+> Veja antes [Aplicações Back-End]() para conseguir entender o módulo e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
+
+##### Criando um server com a própia máquina
 
 ```javascript
 var http = require('http');
 
-// Método do módulo para criar um server
 http.createServer(function (req, res) {
 	console.log("Um request foi feito em: http://localhost:8080" + req.url);
 
@@ -403,10 +400,13 @@ http.createServer(function (req, res) {
 
 	// Finalizar os processos do response, se não a página não consegue renderizar (Ele não sabe quando parar)
 	res.end();
+
+	// o .end() também SEMPRE espera um buffer ou uma string
+
 }).listen(8080); // Porta que ele vai escutar
 ```
 
-[Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End%20(e%20Node.js).md#response-header)<br>
+[Response Header]()<br>
 <!--[Status Html]()-->
 
 <br><br>
@@ -414,13 +414,8 @@ http.createServer(function (req, res) {
 ##### Enviando dados via Streams
 
 ```javascript
-var http = require('http');
-var fs = require('fs');
-
 http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
-
-	// Criando readable stream
 	var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 
 	// Usando pipe para mandar os dados e renderizar na página
@@ -430,3 +425,75 @@ http.createServer(function (req, res) {
 
 }).listen(8080);
 ```
+
+##### Enviando outros tipos de dados
+
+```javascript
+	// Html
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	fs.createReadStream(__dirname + '/index.html');
+	RStream.pipe(res);
+	
+	// Json
+	res.writeHead(200, {'Content-Type': 'application/json'});
+	res.end(JSON.stringify(algumObj)) 
+```
+
+##### Criando e Definindo Rotas
+
+```javascript
+
+```
+<br><br><br>
+
+## Npm
+
+O NPM (Node Package Manager) já vem instalado com o Node.js, ele é um gerenciador de packages ou módulos para o Node, ou seja com ele é possível fazer o download de milhares de libraries hospedadas do seu própio site (www.npmjs.com) para o seu computador, usando o command-line.<br><br>
+
+### Express
+
+Express é um dos packages do npm, ele fornece e auxilia vários features na criação de aplicações web e mobile, como a criação de rotas, uso de javascript dinâmico, lidar com POSTS e GETS, etc. <br><br>
+
+Para instalar o express basta seguir os passos desta página: [Express application generator](https://expressjs.com/en/starter/generator.html)<br><br>
+
+**O Arquivo package.json**
+
+Suponhamos que o código precisa ser compartilhado, como ele iria saber as **dependências** do projeto? É para isso que serve o package.json, é nesse que vai estar todas as informações sobre a aplicação para que funcione corretamente.<br>
+
+Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` também)<br>
+
+Para alterar/atualizar o conteúdo do package, digite no cmd `npm init`, ele irá fazer uma série de perguntas para completar os dados do arquivo.<br>
+
+Sempre quando for instalar um package, use o commando `-save` para que a versão dele fique no package.json.<br><br>
+
+**Levantando e Derrubando o Server**
+
+Dentro dos arquivos onde foi instalado o express, é possível iniciar (Levantar) um servidor, usando o comando:
+
+```cmd
+npm start 
+
+--- ou --- 
+
+node ./bin/www
+```
+
+Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no "package.json"<br><br>
+
+Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
+(Por padrão o número é '3000')<br><br>
+
+Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
+
+**Arquivos e pastas da aplicação**
+
+Nota-se que uma das pastas que o ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
+
+No endereço do browser é possivel ver esses includes. (Ex: http://localhost:3000/stylesheets/style.css) <br><br>
+
+A pasta 'views' é onde irá ficar o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação, etc.
+
+### Outros Packages
+
+* [Nodemon (Atualizar página sem derrubar e levantar o server)](https://www.npmjs.com/package/nodemon)
+* [Moment (Formatar e manipular datas e horários)](https://www.npmjs.com/package/moment)
