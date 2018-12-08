@@ -36,3 +36,30 @@ http.createServer(function (req, res) {
 	// Não é mais necessário o res.end() pois o pipe() faz exatamente a mesma coisa
 
 }).listen(8080);
+
+
+
+
+// Enviando outros tipos de dados
+
+// Html
+res.writeHead(200, {'Content-Type': 'text/html'});
+fs.createReadStream(__dirname + '/index.html');
+RStream.pipe(res);
+
+// Json
+res.writeHead(200, {'Content-Type': 'application/json'});
+res.end(JSON.stringify(algumObj));
+
+
+
+
+// Criando e Definindo Rotas
+
+if (req.url === '/index') {
+	// renderize o documento .html 'index'
+} else if (req.url === '/contact') {
+	// rederize o documento .html 'contact'
+} else {
+	// renderize a página 'erro 404'
+}

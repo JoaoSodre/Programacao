@@ -20,7 +20,7 @@ Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)<br><br>
 
-#### Métodos Post e Get
+#### Métodos HTML (Post, Get, Delete e Put)
 
 Em uma página html para que seja possível passar dados pegos do usuário e mandar ao servidor, são utilizados os chamados métodos **post** e **get**. Diferenças entre os dois:<br>
 

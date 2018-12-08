@@ -5,11 +5,11 @@
 	* [Built-in Modules](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#built-in-modules)
 		* [Module: 'events'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-events)
 		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
-		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
+		* [Module: 'util']//(https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
-	* [Npm]()
-		* [Express]()
-		* [Outros Packages]()
+	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
+		* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#express)
+		* [Outros Packages](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-packages)
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
@@ -278,7 +278,7 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
-##### Criando uma [Readable Streams]()
+##### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
 
 A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.
 
@@ -319,7 +319,7 @@ minhaReadStream.on('data', function(data){
 
 <br><br>
 
-##### [Pipes]()
+##### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.
 
@@ -380,7 +380,7 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 #### **Module: 'http'**
 
-> Veja antes [Aplicações Back-End]() para conseguir entender o módulo e o Express. <br>
+> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
 
@@ -406,7 +406,7 @@ http.createServer(function (req, res) {
 }).listen(8080); // Porta que ele vai escutar
 ```
 
-[Response Header]()<br>
+[Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#response-header)<br>
 <!--[Status Html]()-->
 
 <br><br>
@@ -426,6 +426,8 @@ http.createServer(function (req, res) {
 }).listen(8080);
 ```
 
+<br><br>
+
 ##### Enviando outros tipos de dados
 
 ```javascript
@@ -439,10 +441,18 @@ http.createServer(function (req, res) {
 	res.end(JSON.stringify(algumObj)) 
 ```
 
+<br><br>
+
 ##### Criando e Definindo Rotas
 
 ```javascript
-
+if (req.url === '/index') {
+	// renderize o documento .html 'index'
+} else if (req.url === '/contact') {
+	// rederize o documento .html 'contact'
+} else {
+	// renderize a página 'erro 404'
+}
 ```
 <br><br><br>
 
