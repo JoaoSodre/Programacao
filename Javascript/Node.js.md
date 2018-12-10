@@ -282,7 +282,9 @@ fs.mkdir('./pasta1', function() {
 
 ##### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
 
-A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.
+A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.<br>
+
+As streams só funciona com caminhos absolutos, ou seja é obrigatório usar o `__dirname`.
 
 ```javascript
 
@@ -503,6 +505,8 @@ app.listen(3000);
 
 <br><br>
 
+**Lidando com requests**
+
 Usando express e node é muito fácil analizar qualquer tipo de request, basta apenas usar um desses métodos que estão na variável 'app'.
 
 ```javascript
@@ -530,9 +534,33 @@ app.get('/users/:id', function(req, res){
 
 `req.params` é apenas um objeto que mostra o parâmetros da rota (Aqui no caso foi 'id').<br><br>
 
+**Mandando Arquivos**
+
+Enviando uma página Html.
+
+```javascript
+// Não funcionará se existir res.send() na mesmo escopo
+app.get('/:anything', function(req, res){
+    res.sendFile(__dirname + '/Error404.html');
+});
+```
+
+<br><br>
+
+
+
+
+
 ### Templates do Express
 
 <br><br><br>
+
+
+
+
+
+
+
 
 > Por padrão o número da porta é 3000.
 
@@ -544,15 +572,16 @@ npm start
 node ./bin/www
 ```
 
-Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no "package.json"<br><br>
+Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no "package.json".<br><br>
 
 **Arquivos e pastas do template**
 
 Nota-se que uma das pastas que o ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
 
-No endereço do browser é possivel ver esses includes. (Ex: http://localhost:3000/stylesheets/style.css) <br><br>
+No endereço do browser é possivel ver esses includes.<br>
+Ex: http://localhost:3000/stylesheets/style.css<br><br>
 
-A pasta 'views' é onde ficará o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação, etc.
+A pasta 'views' é onde ficará o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação.
 
 <br><br>
 

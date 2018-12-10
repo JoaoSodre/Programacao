@@ -1,26 +1,27 @@
-var eventos = require('events');
-var utilidades = require('util');
+var events = require('events');
+var util = require('util');
 
-var Pessoa = function(_nome) {
-	this.nome = _nome;
+var Pessoa = function(nome) {
+	this.nome = nome;
 }
 
-// Toda vez que 'Pessoa' for instanciada, 'herdarar' 'eventos.EventEmitter'
-utilidades.inherits(Pessoa, eventos.EventEmitter);
-// Note que 'eventos.EventEmitter' NÃO usa parenteses no final nesse caso
+// Toda vez que 'Pessoa' for instanciada, 'herdarar' 'events.EventEmitter'
+util.inherits(Pessoa, events.EventEmitter);
+
+// Note que 'events.EventEmitter' NÃO usa parenteses no final nesse caso
 
 
 var joao = new Pessoa("Joao");
-var fernando = new Pessoa("Fernando");
+var Димитрис = new Pessoa("Димитрис");
 var maria = new Pessoa("Maria");
 
-var pessoas = [joao, fernando, maria];
+var pessoas = [joao, Димитрис, maria];
 
 // Para cada atributo em 'pessoas', coloque-as em 'A'
-pessoas.forEach(function(A) {
+pessoas.forEach(function(A){
 	
 	// Crie um evento chamado 'Falar', que faz algo quando for chamado
-	A.on('Falar', function(msg) {
+	A.on('Falar', function(msg){
 
 		/* Já que são objetos, precisa colocar o atributo 'nome',
 		que foi passado pelo construtor */
@@ -28,7 +29,7 @@ pessoas.forEach(function(A) {
 	});
 });
 
-joao.emit('Falar', "Oi gente!");
-fernando.emit('Falar', "To perdido...");
-maria.emit('Falar', "Tenho vida agora rs");
-fernando.emit('Falar', "Estamos em que mundo?");
+joao.emit('Falar', "Alo?!");
+Димитрис.emit('Falar', "????????");
+maria.emit('Falar', "Tenho vida agora!!");
+Димитрис.emit('Falar', "что это такое?");

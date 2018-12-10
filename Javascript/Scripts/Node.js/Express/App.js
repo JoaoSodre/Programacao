@@ -1,4 +1,4 @@
-// Necessário instalar o express localmente para funcionar
+/* Necessário instalar o express localmente para funcionar */
 var express = require('express');
 var app = express();
 
@@ -20,9 +20,9 @@ app.get('/users/:id', function(req, res) {
 
 
 
-// Rota inexistente
+// Enviando uma página Html (Não funciona se existir res.send() no mesma rota)
 app.get('/:anything', function(req, res){
-    res.send('Error 404: Essa página não existe.');
+    res.sendFile(__dirname + '/Error404.html');
 });
 
 

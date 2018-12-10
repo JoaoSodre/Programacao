@@ -5,14 +5,13 @@ var fs = require('fs');
 //Ler os dados de um arquivo
 
 var txt = fs.readFileSync('./BaseDados.txt', 'utf8');
-console.log("Terminei de ler o arquivo, isto é o que estava nele: " + txt);
+console.log(txt);
 
 /* ----------- Modo Assíncrono ----------- */
 
-/*fs.readFile('./BaseDados.txt' , 'utf8', function(err, txt) {
-    console.log("Terminei de ler o arquivo, isto é o que estava nele: " + txt);
-})
-*/
+fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
+    console.log("Terminei de ler o arquivo: " + txt);
+});
 
 
 

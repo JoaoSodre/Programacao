@@ -1,3 +1,4 @@
+// Build-In Module
 var events = require('events');
 
 // Todos os eventos são uma instância do objeto "EventEmitter".
