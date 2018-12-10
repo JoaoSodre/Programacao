@@ -7,11 +7,11 @@
 | Descrição | Comando |
 | --- | --- |
 | Listar todos os<br>comandos | `help` |
-| Saber mais sobre um<br> comando e seus **parâmetros** | `help (NomeComando)` ou `(NomeComando) /?` |
+| Saber mais sobre um<br>comando e seus **parâmetros** | `help (NomeComando)` ou `(NomeComando) /?` |
 | Entrar numa pasta  | `cd (Pasta)` |
-| Listar todos os intens do<br> diretório ou de uma pasta | `dir` ou `dir (Pasta)\(SubPasta)` |
-| Vários comandos na<br>mesma linha | `(comando1) & (comando2)` <br> use '&&' para um em seguida do outro. |
-| Abrir pasta atual na<br> janela do explorer | `start .` |
+| Listar todos os intens do<br>diretório ou de uma pasta | `dir` ou `dir (Pasta)\(SubPasta)` |
+| Vários comandos na<br>mesma linha | `(comando1) & (comando2)` <br>use '&&' para um em seguida do outro. |
+| Abrir pasta atual na<br>janela do explorer | `start .` |
 | Limpar a tela | `cls` |
 | Criar uma pasta | `mkdir[md] (NomePasta)\(Subpasta)` |
 | Clonar uma Pasta | `xcopy (NomePastaCopiada) (NomePastaClone) /E` |
@@ -20,9 +20,9 @@
 | Abrir um notepad<br>(Útil para criar arquivos) | `notepad` |
 | Abrir VS Code<br>(Diretório ou arquivo) | `code .` ou `code (ArquivoT)` |
 | Deletar Arquivo | `del (ArquivoT)` |
-| Deletar Diretório | `rmdir /S /Q (NomePasta)` |
+| Deletar Diretório | `rmdir (NomePasta) /S /Q` |
 <br><br>
-| /S | Remove todos os arquivos<br> e subpastas além dela |
-| /Q | Não pede confirmação para<br> o/cada arquivo |
+| /S | Remove todos os arquivos<br>subpastas além dela |
+| /Q | Não pede confirmação para<br>cada arquivo |
 <br><br>
 | Cancelar um comando | `ctrl + c` |

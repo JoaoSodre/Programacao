@@ -32,7 +32,7 @@ Exemplo:
 ```javascript
 /* Javascript */
 
-// O 'innerHTML' irá retornar exatamente o que está dentro da tag, em forma de STRING.
+// O 'innerHTML' retornará exatamente o que está dentro da tag, em forma de STRING.
 // Colocando o elemento na váriavel 'A'
 var A = document.getElementById("Tabela1").innerHTML;
 
@@ -62,7 +62,7 @@ A += "<p> Olá </p>"
 </table><p> Olá </p>
 ```
 
- Já para um elemento que fecha em si mesmo, atributo `value` irá retornar o valor que está dentro do mesmo
+ Já para um elemento que fecha em si mesmo, atributo `value` retornará o valor que está dentro do mesmo
 
 ```html
 <input type="text" id="nome" placeholder="Coloque seu nome" /> <br>
@@ -75,6 +75,6 @@ function Cadastrar() {
   alert(document.getElementById("nome").value);
 }
 
-// Irá alertar o valor que está dentro do input com o id "nome"
+// Alertará o valor que está dentro do input com o id "nome"
 Cadastrar();
 ```

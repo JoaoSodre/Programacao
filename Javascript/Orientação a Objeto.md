@@ -182,13 +182,13 @@ C.ContarLugares();
 ```
 
 ```javascript
-// Irá mostrar 2 objetos com seus atributos/metodos, e o nome da CLASSE que eles pertencem
+// Mostrará 2 objetos com seus atributos/metodos, e o nome da CLASSE que eles pertencem
 A.quantidadeInstancias;
 
-// Irá mostrar 4 Atributos
+// Mostrará 4 Atributos
 A.quantidadeLugares;
 
-// Irá monstrar no console os atributos dos objetos, usando o MÉTODO DE CLASSE para isso
+// Monstrará no console os atributos dos objetos, usando o MÉTODO DE CLASSE para isso
 A.ListarLugares(); 
 ```
 
@@ -234,7 +234,7 @@ var CalcularMedia = function(_nota1 , _nota2) {
 
 Herança é usada para reaproveitar os atributos e métodos de uma classe já existente, colocando-los dentro de outra CLASSE, evitando assim ter que copiar os mesmos códigos quando eles já estão escritos. <br><br>A herança **APENAS** herdar atributos e métodos **PÚBLICOS**.<br><br>
 
-Syntax: `(ClasseFilho).prototype = new (ClassePai);`<br><br>
+Syntax (Inherit Class): `(ClasseFilho).prototype = new (ClassePai);`<br><br>
 Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
 ```javascript
@@ -277,7 +277,7 @@ C1.numero
 
 Polimorfismo só funciona para reescrever **Métodos**, em atributos e propiedades não é possível.<br><br>
 Syntax para **injetar** na classe pai: `(ClassePai).prototype.(NomeMétodo) = function ( ) { ... }`<br>
-Syntax para instanciar a classe pai na classe filho: `this.super = (ClassePai).prototype;`
+Syntax (instanciar classe pai na classe filha): `this.super = (ClassePai).prototype;`
 
 ```javascript
 var A = function() {
@@ -302,7 +302,7 @@ var B = function() {
 B.prototype = new A();
 var J = new B();
 
-// Ira aparecer 50
+// -> 50
 J.Calcular(5);
 ```
 
@@ -344,7 +344,7 @@ var B = function() {
 
 var J = new B();
 
-// Ira aparecer 50 e 10
+// -> 50 e 10
 J.Calcular(5)
 ```
 
@@ -363,7 +363,7 @@ Exemplo em **C#**:
 // Interface 'IPessoa'
 public interface IPessoa
 {
-	// Toda vez que for herdada, irá ter que reescrever esses métodos
+	// Toda vez que for herdada, irar reescrever esses métodos
 	void SetTelefone(string telefone)
 	void Gravar()
 }
@@ -390,7 +390,7 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 ```javascript
 var Abstracao = function () {
 
-	// Proibindo de instanciar essa classe, atravez do construtor
+	// Proibindo de instanciar essa classe atravez do construtor
 	if (this.constructor == Abstracao) {
 	
 		throw new Error("Não pode instanciar classe abstrata, apenas herdar!");
@@ -400,7 +400,7 @@ var Abstracao = function () {
 Abstracao.prototype.nome = "";
 Abstracao.prototype.Gravar = function() {
 
-	// Irá dar erro caso NÃO sobrescrever o método
+	// Erro caso NÃO sobrescrever o método
 	throw new Error("Você precisa sobrescrever o método nas classes filhas");
 }
 ```
@@ -441,14 +441,14 @@ var Single =
 			this.nome = "";
 		}
 		
-		/* O atributo 'instancia0' irá instanciar da classe 'Sgln' caso
+		/* O atributo 'instancia0' instanciará a classe 'Sgln' caso
 		não possuir nenhuma instância dentro dele */
 		
 		if (Single.instancia0 == null) {
 			Single.instancia0 = new Sgln();
 		}
 		
-		/* Caso contrário ira retorna a instância que eu ja foi criado,
+		/* Caso contrário retornará a instância que eu ja foi criado,
 		ou seja, ele nunca vai criar outras instâncias caso já existir uma */
 	}
 
@@ -470,7 +470,7 @@ apenas uma instância unica para toda a aplicação */
 Single.instancia0.nome;
 ```
 
-Só é possível "Zerar" a classe singleton se o atributo 'instancia0' for igual a null novamente, dessa forma o 'iniciar()' irá fazer todo o processo de classe e de instância novamente.
+Só é possível "Zerar" a classe singleton se o atributo 'instancia0' for igual a null novamente, dessa forma o 'iniciar()' fazerá todo o processo de classe e de instância novamente.
 
 ```javascript
 Single.instancia0 = null;

@@ -155,7 +155,7 @@ var pessoa = {nome1:"Danilo", sobrenome:"Camões", idade:25};
 
 for (var x in pessoa) {
 
-    /* Irá funcionar da mesma forma que o array, sem precisar
+    /* Funcionará da mesma forma que o array, sem precisar
     explicificar o atributo, como 'idade' */
 
     console.log(pessoa[x]);

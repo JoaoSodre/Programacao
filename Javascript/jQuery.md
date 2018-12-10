@@ -8,7 +8,7 @@ Syntax do jQuery: `$(Seletor).Ação();`<br><br>
 
 $ = Em vez de usar "document.getElementBy..." o jQuery substitui todos esses comandos pelo simbolo de sifrão ($)<br>
 Seletor = Mesmos seletores que o Css utiliza para os elementos Html<br>
-Ação() = Método que ele irá utilizar.
+Ação() = Método que ele utilizará.
 
 ```javascript
 $("#nome"); <=> document.getElementbyId("nome");

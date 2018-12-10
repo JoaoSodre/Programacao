@@ -5,10 +5,12 @@
 	* [Built-in Modules](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#built-in-modules)
 		* [Module: 'events'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-events)
 		* [Module: 'fs'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-fs)
-		* [Module: 'util']//(https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
+		* [Module: 'util'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-util)
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
 	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
 		* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#express)
+			* [O Módulo Express]()
+			* [Templates do Express]()
 		* [Outros Packages](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-packages)
 
 
@@ -73,7 +75,7 @@ module.exports = function(arr) {
 
 O que o `module.exports` faz é nos retornar o que nós colocarmos como valor, nesse caso o `ContarArray` foi exportado e para que ele consiga usar, obrigatoriamente devemos a **injetar** em uma variável.<br><br>
 
-Syntax require(): `var (Nome) = require('String com o path');`<br>
+Syntax require(): `var (Nome) = require('Módulo');`<br>
 Nota: o path usa de referência o arquivo em que está sendo usado o require().
 
 ```javascript
@@ -214,7 +216,7 @@ erro e outro que vai ser os dados do arquivo */
 
 fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
     console.log("Terminei de ler o arquivo: " + txt);
-})
+});
 ```
 
 <br><br>
@@ -225,13 +227,13 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 
 ```javascript
 /* Cuidado! Dependendo dos comandos do código, 
-ele irá apagar e substituir os dados do arquivo */
+ele vai apagar e substituir os dados do arquivo */
 
 for (let i = 0; i < 10; i++) {
 
 	fs.readFile('./EscrevaAqui.txt', 'utf8', function(err, data) {
 
-		// Se o arquivo não existir, irá dar ERRO
+		// Se o arquivo não existir, dará ERRO
 		if (err) {
 			fs.writeFileSync('./EscrevaAqui.txt', "");
 			i--;
@@ -250,7 +252,7 @@ for (let i = 0; i < 10; i++) {
 fs.writeFile('./EscrevaAqui.txt' , txt, function(err) {
     if (err) { console.log(err); }
 	console.log("Acabei de escrever no arquivo");
-})
+});
 ```
 
 <br><br>
@@ -289,9 +291,11 @@ var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 
 // __dirname = Caminho até a pasta atual, ou seja, o mesmo que o ponto (.)
 
-// É possível usar o 'utf8' como segundo parâmetro para os caracteres serem renderizados depois
+/* É possível usar o 'utf8' como segundo parâmetro 
+para os caracteres serem renderizados depois */
 
-// Toda vez que um buffer passar pela stream ele irá emitir o evento 'data', com ele é possível ver os chunks sendo passados
+/*/ *Toda vez que um buffer passar pela stream ele emitirá o evento 
+'data', com ele é possível ver os chunks sendo passados */
 
 minhaReadStream.on('data', function(dados){
     console.log(dados);
@@ -321,7 +325,10 @@ minhaReadStream.on('data', function(data){
 
 ##### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
 
-O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.
+O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.<br>
+
+Syntax (Pipe): `(ReadStream).pipe(WriteStream)`
+
 
 ```javascript
 var fs = require('fs');
@@ -329,7 +336,6 @@ var fs = require('fs');
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt');
 
-// Syntax: ReadStream.pipe(WriteStream)
 minhaReadStream.pipe(meuWriteStream);
 ```
 
@@ -380,11 +386,15 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 #### **Module: 'http'**
 
-> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo e o Express. <br>
+> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo Http e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
 
 ##### Criando um server com a própia máquina
+
+Comando para levantar o server (cmd): `node (arquivo.js)`.<br>
+Comando para derrubar o server (cmd): `ctrl + c`.<br>
+Entrando na porta que o server está escutando (browser): `localhost:(NúmeroPorta)` ou `127.0.0.1:(NúmeroPorta)`<br>
 
 ```javascript
 var http = require('http');
@@ -398,7 +408,8 @@ http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 	res.write('Servidor Levantado com Sucesso!');
 
-	// Finalizar os processos do response, se não a página não consegue renderizar (Ele não sabe quando parar)
+	/* Finalizar os processos do response, se não a página 
+	não consegue renderizar (Ele não sabe quando parar) */
 	res.end();
 
 	// o .end() também SEMPRE espera um buffer ou uma string
@@ -431,14 +442,14 @@ http.createServer(function (req, res) {
 ##### Enviando outros tipos de dados
 
 ```javascript
-	// Html
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	fs.createReadStream(__dirname + '/index.html');
-	RStream.pipe(res);
-	
-	// Json
-	res.writeHead(200, {'Content-Type': 'application/json'});
-	res.end(JSON.stringify(algumObj)) 
+// Html
+res.writeHead(200, {'Content-Type': 'text/html'});
+fs.createReadStream(__dirname + '/index.html');
+RStream.pipe(res);
+
+// Json
+res.writeHead(200, {'Content-Type': 'application/json'});
+res.end(JSON.stringify(algumObj)) 
 ```
 
 <br><br>
@@ -446,7 +457,7 @@ http.createServer(function (req, res) {
 ##### Criando e Definindo Rotas
 
 ```javascript
-if (req.url === '/index') {
+if (req.url === '/') {
 	// renderize o documento .html 'index'
 } else if (req.url === '/contact') {
 	// rederize o documento .html 'contact'
@@ -454,17 +465,12 @@ if (req.url === '/index') {
 	// renderize a página 'erro 404'
 }
 ```
+
 <br><br><br>
 
 ## Npm
 
 O NPM (Node Package Manager) já vem instalado com o Node.js, ele é um gerenciador de packages ou módulos para o Node, ou seja com ele é possível fazer o download de milhares de libraries hospedadas do seu própio site (www.npmjs.com) para o seu computador, usando o command-line.<br><br>
-
-### Express
-
-Express é um dos packages do npm, ele fornece e auxilia vários features na criação de aplicações web e mobile, como a criação de rotas, uso de javascript dinâmico, lidar com POSTS e GETS, etc. <br><br>
-
-Para instalar o express basta seguir os passos desta página: [Express application generator](https://expressjs.com/en/starter/generator.html)<br><br>
 
 **O Arquivo package.json**
 
@@ -472,13 +478,63 @@ Suponhamos que o código precisa ser compartilhado, como ele iria saber as **dep
 
 Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` também)<br>
 
-Para alterar/atualizar o conteúdo do package, digite no cmd `npm init`, ele irá fazer uma série de perguntas para completar os dados do arquivo.<br>
+Para alterar/atualizar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
 
 Sempre quando for instalar um package, use o commando `-save` para que a versão dele fique no package.json.<br><br>
 
-**Levantando e Derrubando o Server**
+### Express
 
-Dentro dos arquivos onde foi instalado o express, é possível iniciar (Levantar) um servidor, usando o comando:
+Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, uso de javascript dinâmico (com templates), lidar com requests POST e GET, útil como um middleware (Ponte entre back e front-end ou entre duas aplicações), etc. <br>
+
+Instalação do express: [Express application generator](https://expressjs.com/en/starter/generator.html)<br><br>
+
+#### O Módulo Express
+
+```javascript
+var express = require('express');
+
+/* A variável 'express' foi importada como uma função,
+chamando ela nós da acesso a mais métodos  */
+var app = express();
+
+// Escutar a porta '3000'
+app.listen(3000);
+```
+
+<br><br>
+
+Usando express e node é muito fácil analizar qualquer tipo de request, basta apenas usar um desses métodos que estão na variável 'app'.
+
+```javascript
+/* Para responder um request, usamos a rota em que se encontra o user e uma
+função que disparará quando ele for chamado, e o mesmo para os outros */
+
+app.get('/rota', function(){...});
+app.post('/rota', function(){...});
+app.delete('/rota', function(){...});
+```
+
+O método '.get()' também consegue responder aos requests de forma **dinâmica**, isso significa que toda vez que por exemplo algum usuário for criar uma conta no site, ele não precisará de criar uma rota única e especifica para aquela pessoa.<br> 
+
+Syntax (Response Dinâmico): `:(NomeParâmetro)`<br>
+Syntax (Página do Usuário): `req.params.(NomeParâmetro)`
+
+```javascript
+app.get('/users/:id', function(req, res){
+	/* O id pode ter o mesmo nome uma série de dados em 
+	um database que injetará os dados na página html */
+
+	res.send('Você fez um request para ver a página do usuário: ' + req.params.id);
+});
+```
+
+`req.params` é apenas um objeto que mostra o parâmetros da rota (Aqui no caso foi 'id').<br><br>
+
+### Templates do Express
+
+<br><br><br>
+
+> Por padrão o número da porta é 3000.
 
 ```cmd
 npm start 
@@ -490,18 +546,15 @@ node ./bin/www
 
 Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no "package.json"<br><br>
 
-Para entrar na página, digite no browser: `http://localhost:(NúmeroDaPorta)/` ou `http://127.0.0.1:(NúmeroDaPorta)/`<br>
-(Por padrão o número é '3000')<br><br>
-
-Quando quiser desligar o servidor (Derrubar): `ctrl + c`<br><br>
-
-**Arquivos e pastas da aplicação**
+**Arquivos e pastas do template**
 
 Nota-se que uma das pastas que o ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
 
 No endereço do browser é possivel ver esses includes. (Ex: http://localhost:3000/stylesheets/style.css) <br><br>
 
-A pasta 'views' é onde irá ficar o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação, etc.
+A pasta 'views' é onde ficará o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação, etc.
+
+<br><br>
 
 ### Outros Packages
 

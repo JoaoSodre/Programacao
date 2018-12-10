@@ -21,7 +21,7 @@ console.log("Terminei de ler o arquivo, isto é o que estava nele: " + txt);
 for (let i = 0; i < 10; i++) {
 
     try {
-        // Se o arquivo não existir, irá dar ERRO
+        // Se o arquivo não existir, dar ERRO
         var write = fs.readFileSync('./EscrevaAqui.txt', 'utf8');
         write += Math.E + "\n";
 
@@ -73,12 +73,12 @@ fs.mkdir('./pasta1', function() {
 
 // Criando Readable Streams
 
-// Criando uma stream que irá ler os buffers
+// Criando uma stream que ler os buffers
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 // __dirname = Caminho até a pasta atual, ou seja, o mesmo que o ponto (.)
 // É possível usar o 'utf8' como segundo parâmetro para os caracteres serem renderizados depois
 
-// Toda vez que um buffer passar pela stream ele irá acionar o evento 'data', com ele é possível ver os chunks sendo passados
+// Toda vez que um buffer passar pela stream ele acionar o evento 'data', com ele é possível ver os chunks sendo passados
 minhaReadStream.on('data', function(dados){
     console.log(dados);
 });

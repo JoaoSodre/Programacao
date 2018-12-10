@@ -96,7 +96,7 @@ foreach (int x in A)
 
 foreach (int x in A)
 {
-    // Irá Mostrar todos os números do Array
+    // Mostrará todos os números do Array
     Console.WriteLine(x);
 }
 ```

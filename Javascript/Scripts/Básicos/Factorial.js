@@ -4,7 +4,7 @@ function fatorial(n) {
         return 1;
     }
 
-    // Caso for um número negativo, não irá funcionar
+    // Caso for um número negativo, não funcionará
     else if (n < 0) {
         return "Não é possível achar um fatorial de número negativo";
     }

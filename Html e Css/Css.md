@@ -103,7 +103,7 @@ As tags podem receber várias classes ao mesmo tempo, basta dar um espaço entre
 <br>
 <br>
 
-Se dois blocos de **classes** possuirem os mesmos atributos para a **mesma tag**, o bloco que estiver mais ao final do algoritmo irá ser quem vai aparecer.
+Se dois blocos de **classes** possuirem os mesmos atributos para a **mesma tag**, o bloco que estiver mais ao final do algoritmo será quem vai aparecer.
 
 ```css
 p.large3 {

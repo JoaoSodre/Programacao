@@ -2,27 +2,35 @@
 
 #### Como os servers e clients funcionam?
 
-Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server irá ter que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.<br><br>
+Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server terá que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.
+
+<br><br>
 
 #### Como que fazem isso? (Protocols)
 
 É aqui que os protocols entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
 
-O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.<br><br>
+O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.
+
+<br><br>
 
 #### Ports
 
-Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele irá responder caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
+Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele responderá caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
 
-Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)<br><br>
+Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
+
+<br><br>
 
 #### Response Header
 
-Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)<br><br>
+Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)
 
-#### Métodos HTML (Post, Get, Delete e Put)
+<br><br>
 
-Em uma página html para que seja possível passar dados pegos do usuário e mandar ao servidor, são utilizados os chamados métodos **post** e **get**. Diferenças entre os dois:<br>
+#### Métodos HTTP.
+
+Em uma página html existem diferentes tipos de requests para lidar com a necessidade da aplicação, são chamados de métodos (ou verbos) HTTP, são eles: **Post, Get, Delete e Put**. Esses requests são enviados para o server que vai analisar o tipo de cada um e trata-los de uma certa forma.
 
 Método Get:
 
@@ -45,10 +53,11 @@ Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método
 
 Syntax para pegar os dados via métodos GET ou POST (Node.js):
 
-GET: `request.query.(nomeParâmetro)`.<br>
-POST: `request.body.(nomeParâmetro)`.
+GET: `request.query.(NomeParâmetro)`.<br>
+POST: `request.body.(NomeParâmetro)`.
 
- <br><br>
+<br><br>
+
 
 #### Buffers e Streams
 
@@ -68,4 +77,6 @@ Tipos de Streams:
 
 #### Pipes
 
-Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `RStream.pipe(destino);`
+Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(destino);`
+
+<br><br>

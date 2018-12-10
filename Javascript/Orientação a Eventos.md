@@ -13,9 +13,9 @@ setTimeout(function(){ alert("Função1: Fui executado em primeiro!"); }, 4000);
 setTimeout(function(){ alert("Função2: Fui executado em segundo!"); }, 1000); 
 ```
 
-Mesmo a Função1 seja executada antes, a Função2 que irá aparecer primeiro, ou seja quem for mais rápido irá aparecer primeiro, isso é programação assíncrona.<br><br>
+Mesmo a Função1 seja executada antes, a Função2 que aparecerá primeiro, ou seja quem for mais rápido aparecerá primeiro, isso é programação assíncrona.<br><br>
 
-Syntax para função que irá receber o CALLBACK: `(NomeFunção)(function() { ... } )`
+Syntax para função que receberá o CALLBACK: `(NomeFunção)(function() { ... } )`
 
 ```javascript
 function A(callback) {
@@ -28,7 +28,7 @@ function B(callback) {
 }
 
 B(function (callback) {
-    // Quando estiver pronto, irá executar o "alert()"
+    // Quando estiver pronto, executará o "alert()"
     setTimeout(function(){ alert(callback); }, 2000);
 });
 
