@@ -9,8 +9,8 @@
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
 	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
 		* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#express)
-			* [O Módulo Express]()
-			* [Templates do Express]()
+			* [O Módulo Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#o-m%C3%B3dulo-express)
+			* [Templates do Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#templates-do-express)
 		* [Outros Packages](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-packages)
 
 
@@ -327,8 +327,7 @@ minhaReadStream.on('data', function(data){
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.<br>
 
-Syntax (Pipe): `(ReadStream).pipe(WriteStream)`
-
+Syntax (Pipe): `(ReadStream).pipe(WriteStream)`.
 
 ```javascript
 var fs = require('fs');
@@ -339,6 +338,7 @@ var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt');
 minhaReadStream.pipe(meuWriteStream);
 ```
 
+<br><br>
 
 #### **Module: 'util'**
 
@@ -388,7 +388,7 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 > Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo Http e o Express. <br>
 
-O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.
+O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.<br><br>
 
 ##### Criando um server com a própia máquina
 

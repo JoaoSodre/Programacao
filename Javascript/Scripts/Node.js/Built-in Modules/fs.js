@@ -109,5 +109,4 @@ minhaReadStream.on('data', function(data){
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 var meuWriteStream = fs.createWriteStream(__dirname + '/escrevaAqui.txt');
 
-// Syntax: ReadStream.pipe(WriteStream)
 minhaReadStream.pipe(meuWriteStream);
