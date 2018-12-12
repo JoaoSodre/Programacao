@@ -2,6 +2,13 @@
 var express = require('express');
 var app = express();
 
+
+
+// Método 'set()', usado para configurar eventos e outros features do express
+app.set('view engine','ejs');
+
+
+
 // Quando entrar numa das rotas, ativará a função
 app.get('/', function(req, res) {
     res.send('Essa é a home page!');

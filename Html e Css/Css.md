@@ -146,7 +146,7 @@ h1 {
 Para selecionar todos os elementos dentro de um elemento em específico, basta dar um espaço entre eles.
 
 ```css
-/*Irá selecionar todos os elementos dentro de TODOS os <div> */
+/* Selecionará todos os elementos dentro de TODOS os <div> */
 div * {
         color: lightgreen;
 }

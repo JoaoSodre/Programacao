@@ -12,7 +12,7 @@
 | Mudar de Branch | `git checkout (NomeBranch)` |
 | Criar um branch | `git branch (NomeBranch)` |
 | Deletar um branch | `git branch -d (NomeBranch)` |
-| Lista os branches <br> do projeto | `git branch` |
+| Listar os branches <br> do projeto | `git branch` |
 | Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (BranchComAlterações)` |
 | Criar uma tag (Super <br>útil para marcar algo importante<br> na linha do tempo) | `git checkout (ShaId)` depois `git tag (NomeTag)` |
 | Para acessar o commit<br> de uma tag | `git checkout (NomeTag)` |

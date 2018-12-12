@@ -10,7 +10,7 @@
 	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
 		* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#express)
 			* [O Módulo Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#o-m%C3%B3dulo-express)
-			* [Templates do Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#templates-do-express)
+			* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#ejs)
 		* [Outros Packages](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-packages)
 
 
@@ -143,9 +143,9 @@ Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são m
 
 ## Built-in Modules
 
-[Lista com **todos** os Built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
+[**Todos** os Built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
 
-Built-in Modules assim como os Custom, são como libraries e não necessitam de um path para dar o include como os Custom Modules, apenas seu nome.<br><br><br>
+Built-in Modules assim como os Custom, são como libraries e não necessitam de um path para dar o include como os Custom Modules, apenas seu nome.<br><br>
 
 
 
@@ -159,7 +159,7 @@ Sintax do events: `intancia.ação('NomeEvento', function() {*Algum código*})`<
 // Build-In Module
 var events = require('events');
 
-// Todos os eventos são uma instância do objeto "EventEmitter".
+// Todos os eventos são uma instância do objeto 'EventEmitter'.
 var meuEmissor = new events.EventEmitter();
 
 
@@ -486,9 +486,11 @@ Sempre quando for instalar um package, use o commando `-save` para que a versão
 
 ### Express
 
-Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, uso de javascript dinâmico (com templates), lidar com requests POST e GET, útil como um middleware (Ponte entre back e front-end ou entre duas aplicações), etc. <br>
+Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Ponte entre back e front-end ou entre duas aplicações), etc.<br>
 
-Instalação do express: [Express application generator](https://expressjs.com/en/starter/generator.html)<br><br>
+Basicamente o Express reorganiza o node para que fique muito mais intuítivo e fácil de usar.<br>
+
+Instalação do Express: [Npm - Express](https://www.npmjs.com/package/express#installation)<br><br>
 
 #### O Módulo Express
 
@@ -507,7 +509,7 @@ app.listen(3000);
 
 **Lidando com requests**
 
-Usando express e node é muito fácil analizar qualquer tipo de request, basta apenas usar um desses métodos que estão na variável 'app'.
+Usando Express e node é muito fácil analizar qualquer tipo de request, basta apenas usar um desses métodos que estão na variável 'app'.
 
 ```javascript
 /* Para responder um request, usamos a rota em que se encontra o user e uma
@@ -525,8 +527,8 @@ Syntax (Página do Usuário): `req.params.(NomeParâmetro)`
 
 ```javascript
 app.get('/users/:id', function(req, res){
-	/* O id pode ter o mesmo nome uma série de dados em 
-	um database que injetará os dados na página html */
+	/* O id pode ter o mesmo nome uma série de dados em um database que
+	injetará os dados na página html usando javascript dinâmico */
 
 	res.send('Você fez um request para ver a página do usuário: ' + req.params.id);
 });
@@ -539,7 +541,7 @@ app.get('/users/:id', function(req, res){
 Enviando uma página Html.
 
 ```javascript
-// Não funcionará se existir res.send() na mesmo escopo
+/* Não funcionará se existir res.send() na mesmo escopo */
 app.get('/:anything', function(req, res){
     res.sendFile(__dirname + '/Error404.html');
 });
@@ -547,45 +549,95 @@ app.get('/:anything', function(req, res){
 
 <br><br>
 
+#### Ejs
 
+Ejs é um dos packages do Node e com ele é possível basicamente implementar o javascript dinâmico em uma página html.<br>
 
+Com esse tipo de ferramenta não é preciso criar uma página que contém os mesmos aspectos para cada usuário, apenas um modelo servirá.<br>
 
+Instalação do Ejs: [Npm - Ejs](https://www.npmjs.com/package/ejs#installation)<br>
 
-### Templates do Express
+Ativando o Ejs atravez Express:
 
-<br><br><br>
-
-
-
-
-
-
-
-
-> Por padrão o número da porta é 3000.
-
-```cmd
-npm start 
-
---- ou --- 
-
-node ./bin/www
+```javascript
+// O método '.set()' funciona da mesma forma que um EventEmmiter
+app.set('view engine','ejs');
 ```
 
-Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no "package.json".<br><br>
+Quando setamos um view engine (templates) o Express por padrão irá olhar na pasta '/views' e vai ser nela em que os arquivos `.ejs` irão ficar. Esses arquivos fazem **exatamente** o mesmo que o documento html, porém adicionando o js dinâmico. É nesta pasta que vai ficar os modelos como o index, páginas de erros, páginas de usuários, rotas para outras partes da aplicação, etc.<br><br>
 
-**Arquivos e pastas do template**
+**Usando o Ejs**
 
-Nota-se que uma das pastas que o ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
+[Todos os tipos de tags do Ejs](https://www.npmjs.com/package/ejs#tags)
 
-No endereço do browser é possivel ver esses includes.<br>
-Ex: http://localhost:3000/stylesheets/style.css<br><br>
+Para usar o Ejs em um documento se usa um tipo de especial de tag que irá no documento html, dentro dele irá o nome do parâmetro que foi enviado via documento .js.<br>
 
-A pasta 'views' é onde ficará o html de suas páginas como o index, páginas de erros, rotas para outras partes da aplicação.
+Syntax (Enviar Dados via Ejs): `res.render((NomeTemplate), {Parâmetro : valor, ... })`
+
+```javascript
+/*  /App.js  */
+
+app.get('/users/:nome', function(req,res){
+
+	/* Renderizá o 'perfilUsuario.ejs' e 
+	adicionará os parâmetros do objeto): */
+	res.render('perfilUsuario', { pessoa: req.params.nome });
+});
+```
+
+(Não esquecer de colocar o template na pasta views)
+
+```html
+<!--  /views/perfilUsuario.ejs  -->
+<h1>Olá <%= pessoa %>, bem vindo a sua página!</h1>
+```
+
+Essa é apenas uma das formas que é possível integrar o Ejs com o html, outra forma seria com
+condicionais no html.
+
+```html
+<% for(i = 0 ; i < pessoas.length ; i++) { %>
+	<tr>
+		<td><%= pessoas[i].nome %></td>
+	</tr>
+<% } %>
+```
+
+```javascript
+app.get('/users/:nome', function(req,res){
+	res.render('perfilUsuario', {pessoa: [ req.params.nome, "Eduardo", "Gabriel" ]});
+});
+```
 
 <br><br>
 
-### Outros Packages
+### Outros Packages Úteis
 
 * [Nodemon (Atualizar página sem derrubar e levantar o server)](https://www.npmjs.com/package/nodemon)
 * [Moment (Formatar e manipular datas e horários)](https://www.npmjs.com/package/moment)
+
+
+
+
+<!-- 
+	> Por padrão o número da porta é 3000.
+
+	```cmd
+	npm start 
+
+	--- ou --- 
+
+	node ./bin/www
+	```
+
+	Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no package.json <br><br>
+
+	**Arquivos e pastas do template**
+
+	Nota-se que uma das pastas que o Ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
+
+	No endereço do browser é possivel ver esses includes.<br>
+	Ex: http://localhost:3000/stylesheets/style.css<br><br>
+
+	<br><br>
+-->

@@ -18,7 +18,7 @@ O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol
 
 Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele responderá caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
 
-Uma porta irá se parecer com isso num número de IP: (NúmeroIP):(NúmeroPorta)
+Uma porta se parece com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 <br><br>
 
