@@ -20,17 +20,17 @@ O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript inte
 
 Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
 
- #### Por que Node.js?
+ ### Por que Node.js?
 
 * Node.js útiliza a engine v8 do google (O que o deixa incrivelmente rápido).
 * Possuí um enorme ecosistema de packages open source (npm).
 * Muito bom para serviços em tempo real (Como chats).
 
- #### V8 Engine
+ ### V8 Engine
 
 Como já mencionado os computadores não entendem o Javascript (Apenas browsers) e para que isso aconteça é útilizado a v8 engine. Ou seja ele converte código javascript para código de máquina (Por isso é escrito com o C++).
 
- #### Instalação
+ ### Instalação
 
 Para instala-lo basta baixa a versão recente mais **instável** (ou seja a que tiver o LTS no nome), pois a outra versão apesar de possuír mais features, pode acabar tendo bugs e erros horríveis no seu algoritmo.<br>
 
@@ -59,7 +59,7 @@ Porém em Node.js nós precisamos explicificar exatamente quais elementos estamo
 // functions.js
 var ContarArray = function(arr) {
 	return "Existem " + arr.length + " elementos nesse array";
-};
+}
 
 // Elementos que queremos exportar
 module.exports = ContarArray;
@@ -70,7 +70,7 @@ module.exports = ContarArray;
 ```javascript
 module.exports = function(arr) {
 	return "Existem " + arr.length + " elementos nesse array";
-};
+}
 ```
 
 O que o `module.exports` faz é nos retornar o que nós colocarmos como valor, nesse caso o `ContarArray` foi exportado e para que ele consiga usar, obrigatoriamente devemos a **injetar** em uma variável.<br><br>
@@ -99,11 +99,11 @@ Para dar require de vários elementos, basicamente adicione uma propiedade ao `m
 
 var Msg = function(msg) {
 	return msg;
-};
+}
 
 var Somar = function(a,b) {
 	return "A soma deu: " + (a+b);
-};
+}
 
 var pi = Math.PI;
 
@@ -118,11 +118,11 @@ module.exports.pi = pi;
 ```javascript
 module.exports.Msg = function(msg) {
 	return msg;
-};
+}
 
 module.exports.Somar = function(a,b) {
 	return "A soma deu: " + (a+b);
-};
+}
 
 module.exports.pi = Math.PI;
 ```
@@ -149,7 +149,7 @@ Built-in Modules assim como os Custom, são como libraries e não necessitam de 
 
 
 
-#### **Module: 'events'**
+### **Module: 'events'**
 
 O módulo 'events' nós permite criar eventos usando javascript, da mesma forma que na programação assíncrona.<br>
 
@@ -185,11 +185,11 @@ meuEmissor.emit('Gritar');
 
 <br><br>
 
-#### **Module: 'fs'**
+### **Module: 'fs'**
 
 Com esse módulo é possível gerenciar arquivos do sistema, como escrever em .txt (útil para databases) ou deletar arquivos e diretórios. O módulo 'fs' pode tanto funcionar de forma blocante como de forma **assícrona**.<br><br>
 
-##### Lendo os dados de um arquivo
+#### Lendo os dados de um arquivo
 
 ```javascript
 var fs = require('fs');
@@ -221,7 +221,7 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 
 <br><br>
 
-##### Escrevendo dados num arquivo (Armazenar)
+#### Escrevendo dados num arquivo (Armazenar)
 
 (Também funciona de modo assíncrono, assim como o read.File):
 
@@ -257,7 +257,7 @@ fs.writeFile('./EscrevaAqui.txt' , txt, function(err) {
 
 <br><br>
 
-##### Adicionando ou removendo diretórios e arquivos
+#### Adicionando ou removendo diretórios e arquivos
 
 O node não consegue criar subdiretórios como no command-line, apenas uma pasta de cada vez.
 
@@ -280,7 +280,7 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
-##### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
+#### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
 
 A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.<br>
 
@@ -306,7 +306,7 @@ minhaReadStream.on('data', function(dados){
 
 Nota: O módulo fs já herda a classe 'EventEmmiter' do 'events', por isso é possivel usar o método 'on()'<br><br>
 
-##### Criando Writable Streams
+#### Criando Writable Streams
 
 ```javascript
 var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
@@ -325,7 +325,7 @@ minhaReadStream.on('data', function(data){
 
 <br><br>
 
-##### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
+#### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.<br>
 
@@ -342,7 +342,7 @@ minhaReadStream.pipe(meuWriteStream);
 
 <br><br>
 
-#### **Module: 'util'**
+### **Module: 'util'**
 
 Com o 'util' é possivel acessar algumas funções para coisas úteis, como por exemplo eu posso querer herdar o módulo 'events.EventEmitter()' toda vez que eu instanciar uma classe, sendo assim não precisarei criar várias variáveis com o mesmo `var (Nome) = new (Nome).EventEmitter()` para cada elemento que irei usar, economizando assim muitas linhas de código.
 
@@ -386,13 +386,13 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 <br><br>
 
-#### **Module: 'http'**
+### **Module: 'http'**
 
 > Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo Http e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.<br><br>
 
-##### Criando um server com a própia máquina
+#### Criando um server com a própia máquina
 
 Comando para levantar o server (cmd): `node (arquivo.js)`.<br>
 Comando para derrubar o server (cmd): `ctrl + c`.<br>
@@ -424,7 +424,7 @@ http.createServer(function (req, res) {
 
 <br><br>
 
-##### Enviando dados via Streams
+#### Enviando dados via Streams
 
 ```javascript
 http.createServer(function (req, res) {
@@ -441,7 +441,7 @@ http.createServer(function (req, res) {
 
 <br><br>
 
-##### Enviando outros tipos de dados
+#### Enviando outros tipos de dados
 
 ```javascript
 // Html
@@ -456,7 +456,7 @@ res.end(JSON.stringify(algumObj))
 
 <br><br>
 
-##### Criando e Definindo Rotas
+#### Criando e Definindo Rotas
 
 ```javascript
 if (req.url === '/') {
@@ -480,19 +480,19 @@ Suponhamos que o código precisa ser compartilhado, como ele iria saber as **dep
 
 Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` também)<br>
 
-Para alterar/atualizar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
+Para criar/alterar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
 
-Sempre quando for instalar um package, use o commando `-save` para que a versão dele fique no package.json.<br><br>
+Sempre quando for instalar um package, use o commando `-save` para que a versão dele fique no package.json. (Ex: `npm install express -save`)<br><br>
 
 ### Express
 
-Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Ponte entre back e front-end ou entre duas aplicações), etc.<br>
+Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Espécie de ponte (código) que está back-end e front-end ou entre duas aplicações, ou seja entre o request e o response), etc.<br>
 
 Basicamente o Express reorganiza o node para que fique muito mais intuítivo e fácil de usar.<br>
 
 Instalação do Express: [Npm - Express](https://www.npmjs.com/package/express#installation)<br><br>
 
-#### O Módulo Express
+### O Módulo Express
 
 ```javascript
 var express = require('express');
@@ -522,8 +522,8 @@ app.delete('/rota', function(){...});
 
 O método '.get()' também consegue responder aos requests de forma **dinâmica**, isso significa que toda vez que por exemplo algum usuário for criar uma conta no site, ele não precisará de criar uma rota única e especifica para aquela pessoa.<br> 
 
-Syntax (Response Dinâmico): `:(NomeParâmetro)`<br>
-Syntax (Página do Usuário): `req.params.(NomeParâmetro)`
+Syntax (Permitir Requests pela Url): `:(NomeParâmetro)`<br>
+Syntax (Acessar Parâmetro do Usuário): `req.params.(NomeParâmetro)`
 
 ```javascript
 app.get('/users/:id', function(req, res){
@@ -534,7 +534,7 @@ app.get('/users/:id', function(req, res){
 });
 ```
 
-`req.params` é apenas um objeto que mostra o parâmetros da rota (Aqui no caso foi 'id').<br><br>
+`req.params` é um objeto que mostra o parâmetros da rota (Aqui no caso foi 'id').<br><br>
 
 **Mandando Arquivos**
 
@@ -547,9 +547,21 @@ app.get('/:anything', function(req, res){
 });
 ```
 
+**Lidando com Arquivos Estáticos (Middleware)**
+
+Quando você separa um arquivo para dar include depois como um stylesheet o express não conseguirá entender o request das páginas para esse arquivo, por isso ele possuí uma função especial para lidar com esse tipo de situação.
+
+```javascript
+/* Toda vez que alguem entrar em qualquer página ('/') ele irá converter
+o request dos includes para o browser conseguir entender */
+app.use('/', express.estatic('NomePastaDosIncludes'));
+```
+
+Essa ações que acontecem entre entre um request e um response são chamadas de "Middleware" pois estão ali no meio dos dois métodos http.
+
 <br><br>
 
-#### Ejs
+### Ejs
 
 Ejs é um dos packages do Node e com ele é possível basicamente implementar o javascript dinâmico em uma página html.<br>
 
@@ -585,15 +597,28 @@ app.get('/users/:nome', function(req,res){
 });
 ```
 
-(Não esquecer de colocar o template na pasta views)
-
 ```html
 <!--  /views/perfilUsuario.ejs  -->
+
 <h1>Olá <%= pessoa %>, bem vindo a sua página!</h1>
 ```
 
+Com ele também é possível renderizar outros templates quando um POST for feito.
+
+```javascript
+app.post('/cadastro', function(req,res){
+
+	/* Quando um post for feito na rota '/cadastro', 
+	irá renderizar esse template */
+
+	res.render('cadastro-sucesso');
+});
+```
+
+<br><br>
+
 Essa é apenas uma das formas que é possível integrar o Ejs com o html, outra forma seria com
-condicionais no html.
+condicionais/loopings no html.
 
 ```html
 <% for(i = 0 ; i < pessoas.length ; i++) { %>
@@ -605,9 +630,51 @@ condicionais no html.
 
 ```javascript
 app.get('/users/:nome', function(req,res){
-	res.render('perfilUsuario', {pessoa: [ req.params.nome, "Eduardo", "Gabriel" ]});
+	res.render('perfilUsuario', { pessoa: [ req.params.nome, "Eduardo", "Gabriel" ]});
 });
 ```
+
+Também funcionam dentro de atributos nas tags html.
+
+```html
+<input type="text" title="<%= value %>"/>
+```
+
+<br><br>
+
+**Partial Views**
+
+Partial Views são partes códigos em arquivos separados para serem usados toda vez que derem o include neles, logo você não precisa fazer o mesmo código para todos os seus templates (O que é pêssimo pois se precisar fazer uma pequena mudança, terá que se fazer em todos os arquivos), apenas uma vez com o include já fará a mudança em todos os templates.
+
+```html
+<!--  partials/nav.ejs  -->
+<nav>
+	<ul>
+		<li><a href="/"> Home </li>
+		<li><a href="/contatos"> Contatos </li>
+	</ul>
+</nav>
+```
+
+Fazendo o include em diversos arquivos. O path deve ser relativo ao arquivo que está fazendo-o.
+
+```html
+<!--  Home.ejs  -->
+
+<% include partials/nav.ejs %>
+<h1>Bem vindo ao site!</h1>
+
+<!-- *Conteúdo Home page* -->
+```
+
+```html
+<!--  Contatos.ejs  -->
+
+<% include partials/nav.ejs %>
+<h1>Contatos Abaixo:</h1>
+```
+
+Agora quando renderizar tanto a home quanto a página de contatos, ambas vão estar com o mesmo painel de navegação, não precisou-se de reescrever o mesmo código para as duas, apenas um include.
 
 <br><br>
 
@@ -615,29 +682,4 @@ app.get('/users/:nome', function(req,res){
 
 * [Nodemon (Atualizar página sem derrubar e levantar o server)](https://www.npmjs.com/package/nodemon)
 * [Moment (Formatar e manipular datas e horários)](https://www.npmjs.com/package/moment)
-
-
-
-
-<!-- 
-	> Por padrão o número da porta é 3000.
-
-	```cmd
-	npm start 
-
-	--- ou --- 
-
-	node ./bin/www
-	```
-
-	Nota: Ambos os comandos executam o arquivo www, porém um deles útiliza o atalho que se encontra no package.json <br><br>
-
-	**Arquivos e pastas do template**
-
-	Nota-se que uma das pastas que o Ejs criou foi a 'public', é nela que vai ficar os arquivos **estáticos** que serão exibidos no site, ou seja arquivos como imagens, stylesheets, funções e comandos javascript (ou seja os includes), etc.<br><br> 
-
-	No endereço do browser é possivel ver esses includes.<br>
-	Ex: http://localhost:3000/stylesheets/style.css<br><br>
-
-	<br><br>
--->
+* [Body-Parser (POST requests passam por um middleware antes de irem para o `req.body`)](https://www.npmjs.com/package/body-parser)

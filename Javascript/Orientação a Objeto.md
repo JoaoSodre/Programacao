@@ -40,7 +40,7 @@ Colocar valor nos<br> atributos das instancias<br>(Sem construtor) | `(NomeDaIns
 <br>
 
 ```javascript
-// Objeto "Cliente"
+// Classe "Cliente"
 var Clientes = function() {
 
 	// Propiedade "nome"
@@ -68,7 +68,7 @@ var A = new Clientes(); // Instanciando a classe "Cliente"
 ```
 
 ```javascript
-A.nome = "João"; // Atribuindo valor ao atributo do objeto
+A.nome = "João"; // Atribuindo valor ao objeto
 ```
 
 <br>
@@ -130,7 +130,7 @@ O atributo só serviu para cada uma das instâncias, logo atributo de INSTÂNCIA
 
 ## Métodos/Atributos de Classe ou Estático
 
-São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br><br>
+São usados quando precisa de algum atributo/metódo que vai englobar **TODAS** as instâncias.<br>
 
 Syntax para criação<br>(FORA da Classe) | Syntax para chamar
 --- | ---
@@ -197,8 +197,10 @@ A.ListarLugares();
 
 ## Métodos/Atributos Públicos e Privados
 
-Privados: Apenas o **escopo** da classe vai usar-los, vão ser usados apenas dentro dele.<br>
-Público: Variáveis que podem ser usadas tanto na classe, quanto fora dela (Para expor ou para inserir dados).<br><br>
+Privados: Apenas o **escopo** da classe vai usar-los, quando instânciados não poderão ser usados.<br>
+
+Público: Variáveis que podem ser usadas tanto na classe, quanto fora dela (Para expor ou para inserir dados).<br>
+
 Syntax (Dentro da classe):<br><br>
 
 Públicos | Privados
@@ -238,35 +240,35 @@ Syntax (Inherit Class): `(ClasseFilho).prototype = new (ClassePai);`<br><br>
 Depois basta apenas **instanciar** a classe filha, que o objeto ficará com os atributos/métodos da classe pai E classe filho.<br><br>
 
 ```javascript
-var A1 = function() {
-	this.nome = "Joao";
+var A = function() {
+	this.nome = "Diego";
 }
 
-var B1 = function () {
+var B = function () {
 	this.numero = 555;
 }
 
-// 'B1' herdando de 'A1', não confundir com INSTANCIANDO A1
-B1.prototype = new A1();
+// 'B' herdando de 'A', não confundir com INSTANCIANDO A
+B.prototype = new A();
 
-// Não mostrará NADA, pois 'B1' não possuí o ATRIBUTO "nome", caso fosse um OBJETO ai sim mostraria.
-B1.nome
+// Não mostrará NADA, pois 'B' não possuí o ATRIBUTO "nome", caso fosse um OBJETO ai sim mostraria.
+B.nome
 
 // Mostrará "Joao", pois o mesmo é a propiedade "nome" da classe herdada.
-B1.prototype.nome
+B.prototype.nome
 ```
 
 ```javascript
-/* INSTANCIANDO 'B1', logo 'C1' ficará com as propiedades/métodos
-de ambos 'A1' e 'B1' (Já que 'B1' herdou de 'A1'). */
+/* INSTANCIANDO 'B', logo 'C' ficará com as propiedades/métodos
+de ambos 'A' e 'B' (Já que 'B' herdou de 'A'). */
 
-var C1 = new B1();
+var C = new B();
 
 // Mostrará "João"
-C1.nome
+C.nome
 
 // Mostrará 555
-C1.numero
+C.numero
 ```
 
 <br><br>
@@ -364,8 +366,8 @@ Exemplo em **C#**:
 public interface IPessoa
 {
 	// Toda vez que for herdada, irar reescrever esses métodos
-	void SetTelefone(string telefone)
-	void Gravar()
+	void SetTelefone(string telefone);
+	void Gravar();
 }
 
 // Classe 'Base' herdando de 'IPessoa'

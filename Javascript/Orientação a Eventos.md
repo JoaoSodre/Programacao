@@ -18,23 +18,23 @@ Mesmo a Função1 seja executada antes, a Função2 que aparecerá primeiro, ou 
 Syntax para função que receberá o CALLBACK: `(NomeFunção)(function() { ... } )`
 
 ```javascript
-function A(callback) {
-    // Quando a resposta estiver pronta, ele vai dar esse CALLBACK
-    callback("Apareci em primeiro!");
+function A(dados) {
+    /* Quando terminar os comandos da função, 
+    ele vai mandar a string como return */
+    dados("Escolha o que você vai mandar de volta aqui");
 }
 
-function B(callback) {
-    callback("Apareci em segundo!");
-}
+function B() {}
 
-B(function (callback) {
-    // Quando estiver pronto, executará o "alert()"
-    setTimeout(function(){ alert(callback); }, 2000);
+/* Executando a função, quando ele finalizar
+irá executar o que está dentro do parâmetro */
+
+// A string será recebida na variável 'dados'
+A(function (dados) {
+    setTimeout(function(){ console.log(dados); }, 2000);
 });
 
-A(function (callback) {
-    setTimeout(function(){ alert(callback); }, 1000);
-});
+B(console.log("Finalizei em Primeiro"));
 ```
 
 Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada. <br><br>

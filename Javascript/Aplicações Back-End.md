@@ -53,8 +53,10 @@ Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método
 
 Syntax para pegar os dados via métodos GET ou POST (Node.js):
 
-GET: `request.query.(NomeParâmetro)`.<br>
-POST: `request.body.(NomeParâmetro)`.
+GET: `request.query`.<br>
+POST: `request.body`.<br>
+
+(Ambos são objetos)
 
 <br><br>
 
