@@ -10,7 +10,8 @@
 	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
 		* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#express)
 			* [O Módulo Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#o-m%C3%B3dulo-express)
-			* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#ejs)
+		* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#ejs)
+		* [Body-Parser](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#body-parser)
 		* [Outros Packages](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-packages)
 
 
@@ -672,14 +673,36 @@ Fazendo o include em diversos arquivos. O path deve ser relativo ao arquivo que 
 
 <% include partials/nav.ejs %>
 <h1>Contatos Abaixo:</h1>
+
+<!-- *Conteúdo Contatos page* -->
 ```
 
 Agora quando renderizar tanto a home quanto a página de contatos, ambas vão estar com o mesmo painel de navegação, não precisou-se de reescrever o mesmo código para as duas, apenas um include.
 
 <br><br>
 
+### Body-Parser
+
+Muitas das vezes quando se lida com um POST de um OBJETO o node simplesmente não irá conseguir lidar com eles de forma correta, muitas das eles vezes irão renderizar como [object Object], undefined, null, e o 'toString()' não conseguirá também dar certo com esses dados.<br>
+
+É aqui que o Body-Parser entra, ele faz com que os POSTS renderizem de forma correta antes de irem para o objeto 'req.body'
+
+```javascript
+var bodyParser = require('body-parser');
+
+// Middleware que lida com os problemas de objetos
+var url = bodyParser.urlencoded({ extended: false })
+
+app.post('/', url, function(req,res){
+	console.log(req.body);
+	res.render('index');
+});
+```
+
+<br><br>
+
 ### Outros Packages Úteis
 
-* [Nodemon (Atualizar página sem derrubar e levantar o server)](https://www.npmjs.com/package/nodemon)
+* [Nodemon (Atualizar o server toda vez que salvar um arquivo)](https://www.npmjs.com/package/nodemon)
+* [Reload (Atualiza o browser toda vez que salvar um arquivo)](https://www.npmjs.com/package/reload)
 * [Moment (Formatar e manipular datas e horários)](https://www.npmjs.com/package/moment)
-* [Body-Parser (POST requests passam por um middleware antes de irem para o `req.body`)](https://www.npmjs.com/package/body-parser)

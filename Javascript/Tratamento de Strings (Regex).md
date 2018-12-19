@@ -1,4 +1,4 @@
-# Tratamento de Strings (Regex)
+# Tratamento de Strings (ReGex)
 
 Comparar duas palavras com case sensitive: 
 

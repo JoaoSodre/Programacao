@@ -354,7 +354,7 @@ J.Calcular(5)
 
 # Classe de Interface 
 
-A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar-los em outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (*implementação*), já que em linguagens compiladas dacontece erro ao não fazer isso.
+A interface seria basicamente uma classe sem conteúdo algum, apenas com as assinaturas (nomes) dos métodos para que você coloque dados neles quando for herdar-los em outra classe. Logo você obriga a classe filho a sobrescrever a classe pai (chamada de *implementação*), já que em linguagens compiladas irá dar erro ao não fazer isso.
 
 > * Interface não funciona em js, apens funciona em linguagens compiladas pois é obrigatório a **implementação**.
 > * Por causa da obrigadoriedade da implementação, não é possivel gerar uma instância da interface.
@@ -367,7 +367,7 @@ public interface IPessoa
 {
 	// Toda vez que for herdada, irar reescrever esses métodos
 	void SetTelefone(string telefone);
-	void Gravar();
+	void Gravar() {};
 }
 
 // Classe 'Base' herdando de 'IPessoa'

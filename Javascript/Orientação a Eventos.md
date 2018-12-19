@@ -19,8 +19,8 @@ Syntax para função que receberá o CALLBACK: `(NomeFunção)(function() { ... 
 
 ```javascript
 function A(dados) {
-    /* Quando terminar os comandos da função, 
-    ele vai mandar a string como return */
+    /* Quando terminar os comandos da função, ele 
+    vai mandar a string como se fosse um return */
     dados("Escolha o que você vai mandar de volta aqui");
 }
 

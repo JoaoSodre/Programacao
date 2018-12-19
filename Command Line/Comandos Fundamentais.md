@@ -21,8 +21,8 @@
 | Abrir VS Code<br>(Diretório ou arquivo) | `code .` ou `code (ArquivoT)` |
 | Deletar Arquivo | `del (ArquivoT)` |
 | Deletar Diretório | `rmdir (NomePasta) /S /Q` |
-<br><br>
+| <br><br> |  |
 | /S | Remove todos os arquivos<br>subpastas além dela |
 | /Q | Não pede confirmação para<br>cada arquivo |
-<br><br>
+| <br><br> |  |
 | Cancelar um comando | `ctrl + c` |

@@ -1,12 +1,16 @@
-<!-- text-ident:justify -->
-
 # Css
 
+* [Selectors]()
+* [Usando <div> para estruturar a página]()
+
+O css é a forma de como se estiliza páginas html [...]
+
 [Todos atributos do Css](https://www.w3schools.com/cssref/default.asp)<br>
-[Todos os selectors](https://www.w3schools.com/cssref/css_selectors.asp)<br><br>
 [Framework Bootstrap](https://getbootstrap.com/docs/3.3/css/)<br>
 
-## Syntaxes e Selectors (Básicos)
+## Selectors
+
+* [Todos os selectors](https://www.w3schools.com/cssref/css_selectors.asp)
 
 Selecionar **todos** os elementos `<p>`.
 
@@ -17,23 +21,6 @@ p {
 }
 
 <p> Olá! </p>
-```
-
-<br>
-<br>
-
-Seleciona todos os elementos. (*)
-
-```css
-/* Nesse caso ele vai selecionar inclusive o <body> e o <head> */
-
-* {
-    color: lightblue;
-}
-
-<p> Azul Claro! </p>
-<h1> Azul Claro! </h1>
-<h2> Também azul claro! </h2>
 ```
 
 <br><br>
@@ -183,4 +170,4 @@ caso ouvesse mais*/
 <div>
 ```
 
-<!-- ## Animações /// On mause hover /// links //// display -->
+<!-- ## Animações /// On mause hover /// links //// display /// demarcando páginas com <div>-->

@@ -1,20 +1,21 @@
 # Aplicações Back-End
 
-#### Como os servers e clients funcionam?
+
+## Como os servers e clients funcionam?
 
 Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server terá que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.
 
 <br><br>
 
-#### Como que fazem isso? (Protocols)
+## Como que fazem isso? (Protocols)
 
 É aqui que os protocols entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
 
-O Node.js possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses para os requests do cliente via javascript.
+O Node.js por exemplo possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses ou requests para o cliente.
 
 <br><br>
 
-#### Ports
+## Ports
 
 Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele responderá caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
 
@@ -22,13 +23,13 @@ Uma porta se parece com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 <br><br>
 
-#### Response Header
+## Response Header
 
 Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)
 
 <br><br>
 
-#### Métodos HTTP.
+## Métodos HTTP.
 
 Em uma página html existem diferentes tipos de requests para lidar com a necessidade da aplicação, são chamados de métodos (ou verbos) HTTP, são eles: **Post, Get, Delete e Put**. Esses requests são enviados para o server que vai analisar o tipo de cada um e trata-los de uma certa forma.
 
@@ -60,8 +61,11 @@ POST: `request.body`.<br>
 
 <br><br>
 
+## Status HTTP
 
-#### Buffers e Streams
+<br><br>
+
+## Buffers e Streams
 
 Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, isso é um **Buffer**.<br>
 
@@ -77,8 +81,10 @@ Tipos de Streams:
 
 <br><br>
 
-#### Pipes
+## Pipes
 
 Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(destino);`
 
 <br><br>
+
+## Arquitetura MVC (Design Pattern)
