@@ -71,7 +71,7 @@ Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o 
 
 Já a **Stream** é o caminho no qual os buffers vão percorrer ao longo do tempo, melhorando assim e muito o desempenho da aplicação (já que não é necessário esperar pelo processo inteiro de uma grande quantidade de dados).<br>
 
-Ambas as funções podem também serem usadas para lidar com requests e responses do cliente, também com o objetivo de melhorar o desempenho.<br>
+Ambas as funções podem também serem usadas para lidar com requests e responses do cliente, também com o objetivo de **melhorar o desempenho do CPU**.<br>
 
 Tipos de Streams:
 

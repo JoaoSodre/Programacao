@@ -1,6 +1,6 @@
 # Cmd
 
-> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .bat, etc).
+> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .js, etc).
 
 > Toda vez que um comando estiver `J[K]` significa o comando entre colchetes que faz a mesma coisa que o comando fora dele, ou seja o 'J' é igual ao 'K'.
 
@@ -15,9 +15,9 @@
 | Limpar a tela | `cls` |
 | Criar uma pasta | `mkdir[md] (NomePasta)\(Subpasta)` |
 | Clonar uma Pasta | `xcopy (NomePastaCopiada) (NomePastaClone) /E` |
+| Criar um Arquivo | `touch (NomeArquivoT)` |
 | Copiar um arquivo <br>(Clonar) | `copy (ArquivoT) (ArquivoClonadoT)` |
 | Renomear | `rename[ren] (NomeAntigoT) (NomeNovoT)` |
-| Abrir um notepad<br>(Útil para criar arquivos) | `notepad` |
 | Abrir VS Code<br>(Diretório ou arquivo) | `code .` ou `code (ArquivoT)` |
 | Deletar Arquivo | `del (ArquivoT)` |
 | Deletar Diretório | `rmdir (NomePasta) /S /Q` |
