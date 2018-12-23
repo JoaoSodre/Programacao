@@ -13,13 +13,15 @@
 | Remover algum arquivo<br> (Antes de dar commit) | `git rm --cached (ArquivoT)` |
 | Configurar email ou name<br> para identificar commits | `git config --global user.(email/nome) = "(Email/Nome)"` |
 | Dar um commit<br>(Mensagem é obrigatório) | `git commit -m "(Mensagem)"` |
-| Dar um push<br><br> Nota: Ele sempre pedirá o seu<br>usuário e senha, use o SSH<br> para evitar isso| `git push origin (NomeBranch)` |
-| Volta para uma versão<br> no passado (MUITO CUIDADO COM<br>ESSE COMANDO) | `git checkout (HashDoCommit)`|
-| Criar um branch | `git branch (NomeBranch)` |
+| Volta para uma versão<br> no passado (MUITO CUIDADO COM<br>ESSE COMANDO) | `git checkout (ShaId)`|
+| Criar um branch<br>(Commit Atual) | `git branch (NomeBranch)` |
 | Mudar de Branch | `git checkout (NomeBranch)` |
-| Deletar um branch | `git branch -d (NomeBranch)` |
 | Listar os branches <br> do projeto | `git branch` |
-| Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (BranchComAlterações)` |
-| Criar uma tag (Super <br>útil para marcar algo importante<br> na linha do tempo) | `git checkout (ShaId)` depois `git tag (NomeTag)` |
+| Deletar um branch | `git branch -d (NomeBranch)` |
+| Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (Branch)` |
+| Dar um push<br><br> Nota: Ele sempre pedirá o seu<br>usuário e senha, use o SSH<br> para evitar isso| `git push origin (NomeBranch)` |
+| Criar uma tag (Super <br>útil para marcar algo importante<br> na linha do tempo) | `git tag (NomeTag)` |
+| Adicionando comentário a<br>uma tag | `git tag -a (NomeTag) -m "Versão 2.0.0"` |
+| Associar uma tag à um commit<br> passado |  `git tag -a (NomeTag) (ShaId)`|
 | Para acessar o commit<br> de uma tag | `git checkout (NomeTag)` |
 | Listar as tags | `git tag` |
