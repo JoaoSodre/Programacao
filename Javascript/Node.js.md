@@ -20,7 +20,7 @@
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
-> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos e AJAX (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos%20e%20AJAX.md#orienta%C3%A7%C3%A3o-a-eventos).
+> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto]() e [AJAX (Programação Assíncrona)]().
 
  ### Por que Node.js?
 
@@ -282,7 +282,7 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
-#### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
+#### Criando uma [Readable Streams]()
 
 A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.<br>
 
@@ -327,7 +327,7 @@ minhaReadStream.on('data', function(data){
 
 <br><br>
 
-#### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
+#### [Pipes]()
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.<br>
 
@@ -390,7 +390,7 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 ### **Module: 'http'**
 
-> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo Http e o Express. <br>
+> Veja antes [Aplicações Back-End]() para conseguir entender o módulo Http e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.<br><br>
 
@@ -421,7 +421,7 @@ http.createServer(function (req, res) {
 }).listen(8080); // Porta que ele vai escutar
 ```
 
-> [Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Aplica%C3%A7%C3%B5es%20Back-End.md#response-header)
+> [Response Header]()
 <!--[Status Html]()-->
 
 <br><br>

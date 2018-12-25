@@ -34,4 +34,4 @@ inclusive o que está escrito nos botões */
 
 ## AJAX com jQuery
 
-Com o jQuery é possível fazer uma aplicação [Assíncrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou o envio de dados para o servidor.
+Com o jQuery é possível fazer uma aplicação [AJAX](), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou o envio de dados para o servidor.

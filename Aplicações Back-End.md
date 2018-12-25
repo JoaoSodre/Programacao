@@ -1,5 +1,15 @@
 # Aplicações Back-End
 
+Conteúdo dessa página:
+
+* Como os servers e clients funcionam?
+* Como que fazem isso? (Protocols)
+* Ports
+* Response Header
+* Métodos HTTP
+* Status HTTP
+* Buffers e Streams
+* Pipes
 
 ## Como os servers e clients funcionam?
 
@@ -29,7 +39,7 @@ Quando nós fazemos um request ou response para um server, além dos dados, nós
 
 <br><br>
 
-## Métodos HTTP.
+## Métodos HTTP
 
 Em uma página html existem diferentes tipos de requests para lidar com a necessidade da aplicação, são chamados de métodos (ou verbos) HTTP, são eles: **Post, Get, Delete e Put**. Esses requests são enviados para o server que vai analisar o tipo de cada um e trata-los de uma certa forma.
 
@@ -83,8 +93,4 @@ Tipos de Streams:
 
 ## Pipes
 
-Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(destino);`
-
-<br><br>
-
-## Arquitetura MVC (Design Pattern)
+Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(WriteStream);`

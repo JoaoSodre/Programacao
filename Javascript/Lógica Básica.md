@@ -17,8 +17,8 @@ Conceito | Exemplo (Javascript)
 | Função Recursiva<br>(Função que se chama) | <pre>function callItSelf() {<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Cuidado com essas funções");<br>&nbsp;&nbsp;&nbsp;&nbsp;callItSelf();<br>}</pre><br> **Nota**: Sempre pense numa válvula de escape<br> quando estiver produzindo loopings e/ou <br>funções recursivas. <br><br> |
 | [Função IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) | <pre>(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Executado no mesmo momento") <br>})();   </pre><br>Esse tipo de função é usado para ser executado<br> apenas uma vez no exato momento em que é<br> declarada. É possível colocar o retorno numa<br> variável mas não é possível chama-lá de volta.<br><br> |
 | Orientação a Funções | Termo usado quando se da o ato de separar<br> várias funções em arquivos diferentes (.js)<br> com o objetivo de resolver um problema,<br> usando a OF faz o código ficar mais legivel<br> e organizado. <br><br> |
-| [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | Usado príncipalmente para organização<br> utilizando os conceitos de classes, <br>encapsulamento e objetos (instâncias). <br><br> |
-| [Orientação a Eventos e AJAX](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos%20e%20AJAX.md#orienta%C3%A7%C3%A3o-a-eventos) | Termo usado para quando o agoritmo<br>não usa a forma síncrona (um de cada vez)<br> para executar os comandos do algoritmo,<br> ou seja de forma **assícrona**. <br><br> |
+| [Orientação a Objeto]() | Usado príncipalmente para organização<br> utilizando os conceitos de classes, <br>encapsulamento e objetos (instâncias). <br><br> |
+| [AJAX<br> (Programação Assíncrona)]() | Termo usado para quando o agoritmo<br>não usa a forma síncrona (um de cada vez)<br> para executar os comandos do algoritmo,<br> ou seja de forma **assícrona**. <br><br> |
 
 <br><br>
 
@@ -50,12 +50,12 @@ console.log(AAA);
 
 ```javascript
 function MesmoFooDeSempre(_nome) {
-    // _nome é igual a _nome ? caso não atribua "James"
-    _nome = _nome || "James";
+    // _nome é igual a _nome ? caso não atribua "Carlos"
+    _nome = _nome || "Carlos";
     return _nome;
 }
 
-console.log(MesmoFooDeSempre()); // -> James
+console.log(MesmoFooDeSempre()); // -> Carlos
 console.log(MesmoFooDeSempre("Daniel")); // -> Daniel
 ```
 
