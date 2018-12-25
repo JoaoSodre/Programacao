@@ -2,7 +2,7 @@
 
 [Site do jQuery](https://jquery.com/)
 
-O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua própia forma de syntax utilizando a escrita do css para selecionar os elementos. Para entender o jQuery é necessário ter conhecimento sobre [JavaScript HTML DOM](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JavaScript%20HTML%20DOM.md#javascript-html-dom) <br><br>
+O jQuery é um framework utilizado para primariamente corrigir incompatibilidades dos browsers com comandos javascript. Alem disso ele criou sua própia forma de syntax utilizando a escrita do css para selecionar os elementos. Para entender o jQuery é necessário ter conhecimento sobre [JavaScript DOM]() <br><br>
 
 Syntax do jQuery: `$(Seletor).Ação();`<br><br>
 
@@ -32,6 +32,6 @@ inclusive o que está escrito nos botões */
 
 [Todos os métodos (ações) do jQuery para Html/Css](https://www.w3schools.com/jquery/jquery_ref_html.asp)
 
-## Ajax
+## AJAX com jQuery
 
-Com o jQuery é possível fazer uma aplicação [Assíncrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou envio de dados para o servidor.
+Com o jQuery é possível fazer uma aplicação [Assíncrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou o envio de dados para o servidor.

@@ -9,9 +9,11 @@ Exemplos em Javascript:
 O método 'setTimeout()' é uma das funções assíncronas do javascript, por isso é possível passar uma função como parâmetro (callback).
 
 ```javascript
-setTimeout(function(){ alert("Função1: Fui executado em primeiro!"); }, 4000); 
-setTimeout(function(){ alert("Função2: Fui executado em segundo!"); }, 1000); 
+setTimeout(() => {alert("Função1: Fui executado em primeiro!"); }, 4000); 
+setTimeout(() => {alert("Função2: Fui executado em segundo!"); }, 1000); 
 ```
+
+> O símbolo "=>" é uma arrow function, mais detalhes aqui: [Arrow Functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
 
 Mesmo a Função1 seja executada antes, a Função2 que aparecerá primeiro, ou seja quem for mais rápido aparecerá primeiro, isso é programação assíncrona.<br><br>
 
@@ -30,11 +32,13 @@ function B() {}
 irá executar o que está dentro do parâmetro */
 
 // A string será recebida na variável 'dados'
-A(function (dados) {
-    setTimeout(function(){ console.log(dados); }, 2000);
+A((dados) => {
+    setTimeout(() => { console.log(dados); }, 2000);
 });
 
 B(console.log("Finalizei em Primeiro"));
 ```
 
 Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada. <br><br>
+
+## AJAX

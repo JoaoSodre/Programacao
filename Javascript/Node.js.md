@@ -20,7 +20,7 @@
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
-> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos).
+> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md) e a [Orientação a Eventos e AJAX (Programação Assíncrona)]().
 
  ### Por que Node.js?
 
@@ -480,13 +480,17 @@ O NPM (Node Package Manager) já vem instalado com o Node.js, ele é um gerencia
 
 Suponhamos que o código precisa ser compartilhado, como ele iria saber as **dependências** do projeto? É para isso que serve o package.json, é nesse que vai estar todas as informações sobre a aplicação para que funcione corretamente.<br>
 
-Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` também). Caso não queira uma dependência específica basta usar o comando `npm uninstall (package)` para que ele remova do projeto e do package.json.<br>
+Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` ou `npm run (comando)` também). Caso não queira uma dependência específica basta usar o comando `npm uninstall (package) (-g)` para que ele remova do projeto e do package.json.<br>
 
 Para criar/alterar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
 
 Sempre quando for instalar um package, use o commando `--save` para que a versão dele fique no package.json. (Ex: `npm install express --save`)<br>
 
-No caso de que exista uma dependência que não seja necessária na aplicação mas que gostaria-se de usar-lá, usa-se o comando `--save-dev` pois ela é apenas um feature a mais no projeto.<br><br>
+No caso de que exista uma dependência que não seja necessária na aplicação mas que gostaria-se de usar-lá, usa-se o comando `--save-dev` pois ela é apenas um feature a mais no projeto.
+
+[Outros Comandos Npm](https://gist.githubusercontent.com/bradtraversy/09177818de0f43a6e74e2cd05d1fe596/raw/26f908bfad766f7c5156de7d6d4d1c0a510e1a1a/npmcrashcourse.txt)
+
+<br><br>
 
 ### Express
 
@@ -708,6 +712,7 @@ app.post('/', url, function(req,res){
 
 * [Markdown-It (Converte .md em html)](https://www.npmjs.com/package/markdown-it)
 * [Cheerio (Permite usar jQuery no server)](https://cheerio.js.org/)
+* [Lodash (Muitas funções e ferramentas úteis para arrays, objetos, etc)](https://lodash.com/)
 * [Node-Inspector (Debbuger para o Node)](https://www.npmjs.com/package/node-inspector)
 * [Nodemon (Atualizar o server toda vez que salvar um arquivo)](https://www.npmjs.com/package/nodemon)
 * [Reload (Atualiza o browser toda vez que salvar um arquivo)](https://www.npmjs.com/package/reload)
