@@ -2,7 +2,7 @@
 
 **O que é JSON?**
 
-JSON (JavaScript Object Notation) é um leve tipo de formato de dados e que é usado para enviar e receber dados para o server como texto é baseado nos objetos do Javascript. Ele também é facil de ler e escrever e pode ser usado com o [AJAX]().
+JSON (JavaScript Object Notation) é um leve tipo de formato de dados e que é usado para enviar e receber dados para o server como texto é baseado nos objetos do Javascript. Ele também é facil de ler e escrever e pode ser usado com o [AJAX](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax).
 
 **Tipos de dados que podem ser usados com JSON**
 

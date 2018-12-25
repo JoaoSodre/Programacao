@@ -93,4 +93,4 @@ Tipos de Streams:
 
 ## Pipes
 
-Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o ***Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(WriteStream);`
+Pelo fato das streams lerem muitos dados e escreve-los em outros lugares, o **Pipe** foi criado para basicamente agilizar esse processo, sem precisar de manualmente configurar a writable stream para que pegue cada buffer envie para algum lugar, com o pipe faz isso fica mais fácil de ler e economiza muitas linha de código. Exemplo: `(ReadStream).pipe(WriteStream);`

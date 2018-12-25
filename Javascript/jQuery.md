@@ -34,4 +34,4 @@ inclusive o que está escrito nos botões */
 
 ## AJAX com jQuery
 
-Com o jQuery é possível fazer uma aplicação [AJAX](), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou o envio de dados para o servidor.
+Com o jQuery é possível fazer uma aplicação [AJAX](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax), ou seja a página não precisará recarregar toda vez que tiver uma solicitação ou o envio de dados para o servidor.

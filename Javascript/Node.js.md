@@ -20,7 +20,7 @@
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
-> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto]() e [AJAX (Programação Assíncrona)]().
+> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) e [AJAX (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax).
 
  ### Por que Node.js?
 
@@ -145,7 +145,7 @@ Nota: Tanto o "funtions.js" e "contar.js" são **Custom modules** ou seja são m
 
 ## Built-in Modules
 
-[**Todos** os Built-in modules do Node.js (Sem intalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
+[**Todos** os Built-in modules do Node.js (Sem instalações adicionais)](https://www.w3schools.com/nodejs/ref_modules.asp)<br>
 
 Built-in Modules assim como os Custom, são como libraries e não necessitam de um path para dar o include como os Custom Modules, apenas seu nome.<br><br>
 
@@ -282,7 +282,7 @@ fs.mkdir('./pasta1', function() {
 
 <br><br>
 
-#### Criando uma [Readable Streams]()
+#### Criando uma [Readable Streams](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#buffers-e-streams)
 
 A diferença de usar Readable e Writable streams para escrever ou ler dados de arquivos, é que as streams separam eles em pequenos pedaços de dados (buffers) e mandando assim que estiverem completos, fazendo assim com que a aplicação melhore seu desempenho.<br>
 
@@ -327,7 +327,7 @@ minhaReadStream.on('data', function(data){
 
 <br><br>
 
-#### [Pipes]()
+#### [Pipes](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#pipes)
 
 O pipe ajuda a economizar linhas de código já que essa prática é bastante comum em Node.js.<br>
 
@@ -390,7 +390,7 @@ maria.emit('Falar', "Tenho vida agora!!");
 
 ### **Module: 'http'**
 
-> Veja antes [Aplicações Back-End]() para conseguir entender o módulo Http e o Express. <br>
+> Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o módulo Http e o Express. <br>
 
 O módulo 'http' permite que o Node.js possa fazer transferências de dados pelo protocolo HTTP, ou seja, com ele é possível criar um server para web.<br><br>
 
@@ -421,8 +421,8 @@ http.createServer(function (req, res) {
 }).listen(8080); // Porta que ele vai escutar
 ```
 
-> [Response Header]()
-<!--[Status Html]()-->
+> [Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#response-header)
+> [Status Html](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#status-http)
 
 <br><br>
 
