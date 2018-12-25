@@ -19,9 +19,10 @@
 | Listar os branches <br> do projeto | `git branch` |
 | Deletar um branch | `git branch -d (NomeBranch)` |
 | Juntar as alterações <br>de um branch com o<br>que você está <br>atualmente | `git merge (Branch)` |
-| Dar um push<br><br> Nota: Ele sempre pedirá o seu<br>usuário e senha, use o SSH<br> para evitar isso| `git push origin (NomeBranch)` |
+| Dar um push<br><br> Nota: Ele sempre pedirá o <br>seu usuário e senha | `git push origin (NomeBranch)` |
+| "Puxar" os arquivos do<br> repositório (Podem haver conflitos) | `git pull` |
 | Criar uma tag (Super <br>útil para marcar algo importante<br> na linha do tempo) | `git tag (NomeTag)` |
-| Adicionando comentário à tag | `git tag -a (NomeTag) -m "Versão 2.0.0"` |
+| Adicionando comentário à tag | `git tag -a (NomeTag) -m "Version 2.0.0"` |
 | Associar a tag à um commit<br> feito no passado |  `git tag -a (NomeTag) (ShaId)`|
 | Para acessar o commit<br> de uma tag | `git checkout (NomeTag)` |
 | Listar as tags | `git tag` |

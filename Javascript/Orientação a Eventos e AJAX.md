@@ -4,16 +4,20 @@
 
 A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila),  programas orientados a evento são guiados por indicações externas, chamados de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez (da maneira **blocante**), na programação assíncrona ele executa vários comandos ao mesmo tempo, todos eles dando um **callback** (Ação) quando finalizados.<br><br>
 
-Exemplos em Javascript:
+## AJAX
 
-O método 'setTimeout()' é uma das funções assíncronas do javascript, por isso é possível passar uma função como parâmetro (callback).
+AJAX (Asynchronous JavaScript & XML) é um conjunto de tecnologias do própio Javascript comum que é usado para enviar e receber dados de maneira **assíncrona**, ele não interfere com o conteúdo da página web atual. Apesar de XML está includo no nome, ele é bastante raro de se usado. Na maior parte das aplicações irá ser usado [JSON](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) no lugar do XML.
+
+Exemplos:
+
+> O método 'setTimeout()' é uma das funções assíncronas do javascript, por isso é possível passar uma função como parâmetro (callback).
+
+> O símbolo "=>" é uma arrow function, mais detalhes aqui: [Arrow Functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
 
 ```javascript
 setTimeout(() => {alert("Função1: Fui executado em primeiro!"); }, 4000); 
 setTimeout(() => {alert("Função2: Fui executado em segundo!"); }, 1000); 
 ```
-
-> O símbolo "=>" é uma arrow function, mais detalhes aqui: [Arrow Functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
 
 Mesmo a Função1 seja executada antes, a Função2 que aparecerá primeiro, ou seja quem for mais rápido aparecerá primeiro, isso é programação assíncrona.<br><br>
 
@@ -40,5 +44,3 @@ B(console.log("Finalizei em Primeiro"));
 ```
 
 Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada. <br><br>
-
-## AJAX

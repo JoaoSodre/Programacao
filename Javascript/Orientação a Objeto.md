@@ -427,7 +427,7 @@ Com a classe Singleton é possível criar uma **unica** instância atraves do se
 
 > Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
 
-Syntax: `(NomeClasse) = { [Atributos] [Método que vai criar a instância]() } `
+Syntax: `(NomeClasse) = {(Atributos) (Método que vai criar a instância)()} `
 
 ```javascript
 var Single =

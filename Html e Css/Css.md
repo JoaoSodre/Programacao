@@ -1,8 +1,5 @@
 # Css
 
-* [Selectors]()
-* [Usando <div> para estruturar a página]()
-
 O css é a forma de como se estiliza páginas html [...]
 
 [Todos atributos do Css](https://www.w3schools.com/cssref/default.asp)<br>
