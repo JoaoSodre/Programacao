@@ -5,9 +5,9 @@ Conceito | Exemplo (Javascript)
 -------- | -----------
 | Variável | `var k1 = 5;` <=> `k1 = 5` |
 | Constante (Var que <br>não muda) | `const pi = Math.PI;` |
-| [Condicionais](https://www.w3schools.com/jsref/jsref_statements.asp) | if, if else, else, switch, throw, etc. |
+| [Condicionais](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements) | if, if else, else, switch, throw, etc. |
 | Looping | while, for, do..while e for..in. |
-| [Operadores Lógicos](https://www.w3schools.com/jsref/jsref_operators.asp) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
+| [Operadores Lógicos](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Expressions_and_operators) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
 | Ternário | Substitui a expressão `if()` para apenas uma linha<pre>(Condição) ? (Faça caso for true):(Faça caso for false)<br>( (Se isso for true) && (Faça isso))<br>( (Se isso for false) &#124;&#124; (Faça isso)) </pre> |
 | Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2. |
 | Hash [(JSON)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp. |
@@ -27,7 +27,7 @@ Conceito | Exemplo (Javascript)
 #### Função IIFE
 
 ```javascript
-var Identificacao = (function () { 
+var Identificacao = (() => { 
     var name = "John";
     return name; 
 })();

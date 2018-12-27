@@ -1,4 +1,4 @@
-function fatorial(n) {  
+var fatorial = n => {  
     // Caso parâmetro chegar a zero, ele termina
     if (n === 0) {
         return 1;

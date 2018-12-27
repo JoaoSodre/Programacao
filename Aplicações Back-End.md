@@ -64,8 +64,8 @@ Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método
 
 Syntax para pegar os dados via métodos GET ou POST (Node.js):
 
-GET: `request.query`.<br>
-POST: `request.body`.<br>
+GET: `request.query`<br>
+POST: `request.body`<br>
 
 (Ambos são objetos)
 

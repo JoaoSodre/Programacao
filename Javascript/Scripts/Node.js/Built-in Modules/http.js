@@ -5,7 +5,7 @@ var http = require('http');
 // Criando um server com a própia máquina
 
 /* Método do módulo para criar um server */
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
 	console.log("Um request foi feito em: http://localhost:8080" + req.url);
 
 	/* Response Header com o tipo de informação que estamos 
@@ -25,7 +25,7 @@ http.createServer(function (req, res) {
 
 var fs = require('fs');
 
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 
 	// Criando readable stream

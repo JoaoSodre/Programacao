@@ -32,10 +32,10 @@ Instâncias -> Ação de **clonar** uma classe fazendo assim um **objeto**.<br>
 
 Como: | Syntax
 --- | ---
-Criar uma classe | `var + (NomeDaClasse) = function () {  }` 
+Criar uma classe | `var (NomeDaClasse) = function () {  }` 
 Criar uma Propiedade<br>(Dentro da Classe) | `this.(NomeDaPropiedade) = (Valor);` 
 Criar um Método<br>(Dentro da Classe) | `this.(NomeDoMétodo) = function () {  }` 
-Instânciar uma classe<br>(Criar um objeto) | `var + (NomeDaInstância) = new (NomeDaClasse)();` 
+Instânciar uma classe<br>(Criar um objeto) | `var (NomeDaInstância) = new (NomeDaClasse)();` 
 Colocar valor nos<br> atributos das instancias<br>(Sem construtor) | `(NomeDaInstância).(NomeDoAtributo) = (Valor);`
 
 <br>

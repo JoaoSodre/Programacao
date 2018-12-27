@@ -369,10 +369,10 @@ var maria = new Pessoa("Maria");
 var pessoas = [joao, Димитрис, maria];
 
 // Para cada atributo em 'pessoas', coloque-as em 'A'
-pessoas.forEach(function(A){
+pessoas.forEach(A => {
 	
 	// Crie um evento chamado 'Falar', que faz algo quando for chamado
-	A.on('Falar', function(msg){
+	A.on('Falar', msg => {
 
 		/* Já que são objetos, precisa colocar o atributo 'nome',
 		que foi passado pelo construtor */
@@ -403,7 +403,7 @@ Entrando na porta que o server está escutando (browser): `localhost:(NúmeroPor
 ```javascript
 var http = require('http');
 
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
 	console.log("Um request foi feito em: http://localhost:8080" + req.url);
 
 	/* Response Header com o tipo de informação que estamos 
@@ -429,7 +429,7 @@ http.createServer(function (req, res) {
 #### Enviando dados via Streams
 
 ```javascript
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 	var minhaReadStream = fs.createReadStream(__dirname + '/textoLorem.txt');
 
@@ -712,8 +712,9 @@ app.post('/', url, function(req,res){
 
 * [Markdown-It (Converte .md em html)](https://www.npmjs.com/package/markdown-it)
 * [Cheerio (Permite usar jQuery no server)](https://cheerio.js.org/)
+* [Gulp (Muitas ferramentas para taferas que consomem tempo ou que são repetitivas, como minificar um arquivo)](https://www.npmjs.com/package/gulp)
 * [Lodash (Muitas funções e ferramentas úteis para arrays, objetos, etc)](https://lodash.com/)
-* [Node-Inspector (Debbuger para o Node)](https://www.npmjs.com/package/node-inspector)
+* [Node-Inspector (Debbuger para o Node usando Dev Tools do Chrome)](https://www.npmjs.com/package/node-inspector)
 * [Nodemon (Atualizar o server toda vez que salvar um arquivo)](https://www.npmjs.com/package/nodemon)
 * [Reload (Atualiza o browser toda vez que salvar um arquivo)](https://www.npmjs.com/package/reload)
 * [Moment (Formatar e manipular datas e horários)](https://www.npmjs.com/package/moment)
