@@ -1,6 +1,8 @@
 
 # Lógica Básica
 
+> [Guia para a linguagem Javascript])(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide#Chapters)
+
 Conceito | Exemplo (Javascript)
 -------- | -----------
 | Variável | `var k1 = 5;` <=> `k1 = 5` |
