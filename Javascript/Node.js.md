@@ -577,6 +577,8 @@ Com esse tipo de ferramenta não é preciso criar uma página que contém os mes
 
 Instalação do Ejs: [Npm - Ejs](https://www.npmjs.com/package/ejs#installation)<br>
 
+> Nota: Com o Express é possível instalar o Ejs com o comando `express --view=ejs`, o que ajuda muito para não precisar usar o tempo para configurar tudo na aplicação.
+
 Ativando o Ejs atravez Express:
 
 ```javascript

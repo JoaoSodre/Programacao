@@ -1,3 +1,0 @@
-# Arquiteturas (Design Patterns)
-
-## MVC

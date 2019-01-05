@@ -1,6 +1,6 @@
 # Aplicações Back-End
 
-Conteúdo dessa página:
+Conteúdo desse documento:
 
 * Como os servers e clients funcionam?
 * Como que fazem isso? (Protocols)

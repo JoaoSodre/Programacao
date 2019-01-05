@@ -1,15 +1,15 @@
 
 # Lógica Básica
 
-> [Guia para a linguagem Javascript])(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide#Chapters)
+> [Guia para a linguagem Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide#Chapters)
 
 Conceito | Exemplo (Javascript)
 -------- | -----------
 | Variável | `var k1 = 5;` <=> `k1 = 5` |
 | Constante (Var que <br>não muda) | `const pi = Math.PI;` |
-| [Condicionais](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements) | if, if else, else, switch, throw, etc. |
-| Looping | while, for, do..while e for..in. |
-| [Operadores Lógicos](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Expressions_and_operators) | &equals;&equals;, !&equals;, >, <, && (e), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
+| [Condicionais](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements) | if, if else, else, ..., throw, etc. |
+| Looping | while, for, do..while, for..in. |
+| [Operadores Lógicos](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Expressions_and_operators) | &equals;&equals;, !&equals;, >, <, && (e), ... (spread), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
 | Ternário | Substitui a expressão `if()` para apenas uma linha<pre>(Condição) ? (Faça caso for true):(Faça caso for false)<br>( (Se isso for true) && (Faça isso))<br>( (Se isso for false) &#124;&#124; (Faça isso)) </pre> |
 | Array | `w = [3, 5, 6, 2, 3];` , `w[3]` -> 2. |
 | Hash [(JSON)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) | `g = {nome:"João", cidade:"Rp", ...};`<br>`g.nome` -> João  ,  `g.cidade` -> Rp. |
@@ -52,9 +52,9 @@ console.log(AAA);
 
 ```javascript
 function MesmoFooDeSempre(_nome) {
-    // _nome é igual a _nome ? caso não atribua "Carlos"
-    _nome = _nome || "Carlos";
-    return _nome;
+    // id é igual a _nome ? caso não atribua "Carlos"
+    var id = _nome || "Carlos";
+    return id;
 }
 
 console.log(MesmoFooDeSempre()); // -> Carlos
@@ -93,6 +93,82 @@ g.nota = 8;
 
 <br><br>
 
+#### Spread Operator
+
+O Spread Operator (...) é muito utilizado para lidar com situações de arrays no qual os colchetes são um problema como combinar dois arrays e passar dados de um array individualmente. Basicamente o que o Spread Operator faz é **remover os conchetes**
+
+Syntax: `...(Array/Objeto)`
+
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+var numbers = [1, 2, 3];
+
+var soma = sum(...numbers);
+// É o mesmo que 'sum(1, 2, 3)'
+
+console.log(soma); // -> 6
+```
+
+```javascript
+var arr1 = [[1,2,3]];
+
+var arrReduzido = [...arr1];
+// -> [1,2,3]
+```
+
+Adicionando arrays dentro de outros arrays.
+
+```javascript
+// Também pode ser usado o método '.apply()' nesses casos
+
+var carnes = ["bacon", "picanha", "frango"];
+var frutas = ["maçã", "laranja", "uva"];
+var alimentos = [...carnes, ...frutas]; 
+// -> ["bacon", "picanha" ... "laranja", "uva"];
+
+var inicio = [1, 2, 3];
+var meio = [4, 5];
+var fim = [6, 7, 8];
+var ordem = [...inicio, ...meio, ...fim]; 
+// -> [1, 2 ... 7, 8]
+```
+
+Copiando outros arrays.
+
+```javascript
+var arr1 = ["a", "b", "c"];
+var arr2 = [...arr1]; 
+/* -> ["a", "b", "c"], exatamente como se
+fosse na syntax comum (var arr2 = arr1) */
+
+var arr3 = [["a"], ["b"], ["c"]];
+var arr4 = [...arr3];
+// -> [["a"], ["b"], ["c"]]
+
+var arr5 = ...arr3;
+/* -> Error, não é possível a syntax 
+'arr5 = ["a"], ["b"], ["c"]' */
+
+var mergeArrays = (...obj) => [...obj]
+mergeArrays(arr1, arr2);
+// -> [["a", "b", "c"], ["a", "b", "c"]]
+```
+
+Também funciona com objetos.
+
+```javascript
+var obj1 = { Fst:"Primeiro", Snd:"Segundo", Trd:"Terceiro" };
+var obj2 = { Forth:"Quarto", Fifth:"Quinto" };
+
+var obj3 = {...obj1, ...obj2};
+// -> { Fst:"Primeiro" ... Fifth:"Quinto" };
+```
+
+<br><br>
+
 #### Loopings
 
 Calculo de Tabuada:
@@ -103,8 +179,7 @@ var deVezes = prompt("Até qual número você deseja repetir?");
 var daBase = prompt("De qual número você deseja começar?");
 var resultados = []; // Caso precise, os resultados vão estar aqui
 
-for (var J = daBase; J <= deVezes; J++) 
-{ 
+for (var J = daBase; J <= deVezes; J++) { 
     var multiplicacao = deQual * daBase;
     console.log(deQual + " * " + daBase + " = " + multiplicacao);
     resultados.push(multiplicacao);
@@ -116,37 +191,35 @@ Looping sem válvula de escape
 
 ```javascript
 var A = 1;
-while (A < 2)
-{
+while (A < 2) {
     console.log("Seu pc vai crashar");
 }
 ```
 
-Do...While
+Do...While, executa direto na primeira vez depois checa se precisa repetir 
 
 ```javascript
 a = 1;
-do 
-{
+do {
     console.log(a);
     a++;
-}
-while(a <= 5);
+} while(a != 5);
 ```
 
 For...In
 
 ```javascript
-var pessoa = ["Danilo", "Camões", 25]; 
+var arr = ["Danilo", "Camões", 25]; 
 
-// Para cada elemento do objeto pessoa
-for (var x in pessoa) {
+// Para cada elemento do array arr,
+// ou seja o total de elementos
+for (var x in arr) {
 
-    // Mostre os valores de 'pessoa'
-    console.log(pessoa[x])
+    // Mostre os valores do
+    console.log(arr[x])
 
-    /* Automáticamente x vai transformar em x++, e depois repete
-    o processo até terminar o array */
+    /* Automáticamente x vai transformar em x++, e 
+    repetirá o processo até terminar o array */
 }
 ```
 

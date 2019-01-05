@@ -12,7 +12,7 @@ Variável | Atributo/Propiedades
 Função | Método/Ação
 Classe | Objeto/Instância
 
-Atributo -> Mesmo que *propiedade simples* (Serve tanto como get quanto set).<br>
+Atributo -> Mesmo que *propiedade simples* (Serve tanto como getter quanto setter).<br>
 Instâncias -> Ação de **clonar** uma classe fazendo assim um **objeto**.<br>
 
 * [Introdução](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#introdu%C3%A7%C3%A3o)

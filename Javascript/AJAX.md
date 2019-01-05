@@ -2,31 +2,29 @@
 
 > Veja antes [Aplicações Back-End](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#aplica%C3%A7%C3%B5es-back-end) para conseguir entender o AJAX
 
-AJAX (Asynchronous JavaScript & XML) é um conjunto de tecnologias do própio Javascript comum que é usado para enviar e receber dados de maneira[**assíncrona**](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ele não interfere com o conteúdo da página web atual. Apesar de XML está includo no nome, ele é bastante raro de se usado. Na maior parte das aplicações irá ser usado [JSON](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) no lugar do XML.
+AJAX (Asynchronous JavaScript & XML) é um conjunto de tecnologias do própio Javascript comum que é usado para enviar e receber dados de maneira[**assíncrona**](https://github.com/JoaoSodre/Programacao/blo'b/master/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ele não interfere com o conteúdo da página web atual. Apesar de XML está includo no nome, ele é bastante raro de se usado. Na maior parte das aplicações irá ser usado [JSON](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) no lugar do XML.
 
 ## Tipos de fluxos assíncronos em Javascript
 
-### Js Comum:
+### [High-Order Function]():
 
 Passando uma segunda função pelos parâmetros e executando ela na primeira função.
 
 ```javascript
-function One(fun2){
+const Fun1 = fun => {
 
     // 'setTimeout()' é uma função assíncrona 
     setTimeout(() => {
-        console.log("Função One chamada, bloqueando o fluxo");
-    }, 3500);
+        console.log("Função Fun1 chamada, bloqueando o fluxo");
+    }, 10);
 
-    fun2();
+    fun();
 }
 
-function Two(){
-    console.log("Função Two chamada de forma assíncrona");
-    // Ou seja, não precisa de esperar a One() por completo
-}
+// Ou seja, não precisa de esperar a Fun1() por completo
+const Fun2 = () => console.log("Função Fun2 chamada de forma assíncrona");
 
-One(Two);
+Fun1(Fun2);
 ```
 
 > Nota: O símbolo "=>" é uma arrow function, mais detalhes aqui: [Arrow Functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
@@ -91,7 +89,7 @@ One(msg => {
 });
 ```
 
-<br><br>
+<br>
 
 ### Promises
 
@@ -180,27 +178,44 @@ A
         console.log("Segundo .then()");
         // ...
     });
+    
+// ----- Outra Meneira de escrever o mesmo código -----
+
+var A = new Promise((res) => { res(); });
+
+var Fun1 = () => {
+    console.log("Primeiro .then()");
+    return new Promise((res) => { res(); });
+}
+
+var Fun2 = () => {
+    console.log("Segundo .then()");
+    // ...
+}
+
+A
+    .then(Fun1)
+    .then(Fun2);
 ```
 
-
 ```javascript
-var A = function() {
+var A = () => {
     return new Promise((res,rej) => {
-        console.log("Promise A executada")
+        console.log("Promise A executada");
         res();
     });
 }
 
-var B = function() {
+var B = () => {
     return new Promise((res,rej) => {
-        console.log("Promise B executada")
+        console.log("Promise B executada");
         res();
     });
 }
 
-var C = function() {
+var C = () => {
     return new Promise((res,rej) => {
-        console.log("Promise C executada")
+        console.log("Promise C executada");
         res();
     });
 }
@@ -217,12 +232,11 @@ const fs = require('fs');
 
 var ReadFile = (_path) => {
     return new Promise((res,rej) => {
-        fs.readFile(_path, 'utf8',(err,data) => {
+        fs.readFile(_path, 'utf8', (err,data) => {
             if (err) {
-                console.log(err);
-                rej();
-            } else {
-                // Passando os dados para o ".then()"
+                rej(err);
+            } 
+            else {
                 res(data);
             }
         });
@@ -232,9 +246,13 @@ var ReadFile = (_path) => {
 ReadFile("./texto.txt")
     .then((data) => {
         console.log(data);
+    })
+    .catch((err) => {
+        console.log(err);
     });
 ```
 
+<br><br>
 
 ## Como o AJAX funciona?
 

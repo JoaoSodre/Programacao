@@ -6,14 +6,12 @@ A orientação a eventos, diferente de programas tradicionais que seguem um flux
 
 Exemplo (Em Javascript):
 
-> O método 'setTimeout()' é uma das funções assíncronas do javascript, por isso é possível passar uma função como parâmetro (callback).
-
 ```javascript
-setTimeout(() => {alert("Função1: Fui executado em primeiro!"); }, 4000); 
-setTimeout(() => {alert("Função2: Fui executado em segundo!"); }, 1000); 
+setTimeout(() => { console.log("Função1: Fui executado em primeiro!"); }, 4000); 
+setTimeout(() => { console.log("Função2: Fui executado em segundo!"); }, 1000); 
 ```
 
-Mesmo a Função1 seja executada antes, a Função2 que aparecerá primeiro, ou seja quem for mais rápido aparecerá primeiro, isso é programação assíncrona.<br><br>
+Mesmo que um dos setTimeout seja executado antes, pelo fato dele ser assíncrono não significa que será o primeiro a mandar a mensagem.<br><br>
 
 Outro Exemplo:
 
@@ -21,22 +19,21 @@ Outro Exemplo:
 function A(cb){
 
     // *Código Blocante*
+    setTimeout(() => { 
 
     // Callback
-    cb();
+        cb();
+    }, 10);
 }
 
+console.log("Antes");
+
 // Função (nos parâmetros) que irá executar quando receber o callback
-A(() => {
-    console.log("Executando depois do callback");
+A(function() {
+    console.log("Durante");
 });
 
-/* Enquando ele executa, outros comandos iram ser executados
-em sequência, sem ter que esperar o A() */
+console.log("Depois");
 ```
 
-Mudando o tempo do `setTimeout()`, nota-se claramente que a ordem não importa na programação assíncrona, apenas importa o retorno do callback quando a função for executada.
-
-
-
-
+Espera-se a sequência "Antes Durante Depois" porém o que aparece no console é "Antes Depois Durante" isso se deve ao `A()` ser assíncrono.
