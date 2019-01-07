@@ -20,7 +20,7 @@ Conceito | Exemplo (Javascript)
 | [Função IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) | <pre>(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Executado no mesmo momento") <br>})();   </pre><br>Esse tipo de função é usado para ser executado<br> apenas uma vez no exato momento em que é<br> declarada. É possível colocar o retorno numa<br> variável mas não é possível chama-lá de volta.<br><br> |
 | Orientação a Funções | Termo usado quando se da o ato de separar<br> várias funções em arquivos diferentes (.js)<br> com o objetivo de resolver um problema,<br> usando a OF faz o código ficar mais legivel<br> e organizado. <br><br> |
 | [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) | Usado príncipalmente para organização<br> utilizando os conceitos de classes, <br>encapsulamento e objetos (instâncias). <br><br> |
-| [AJAX<br> (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax) | Termo usado para quando o agoritmo<br>não usa a forma síncrona (um de cada vez)<br> para executar os comandos do algoritmo,<br> ou seja de forma **assícrona**. <br><br> |
+| [Programação Assíncrona](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#tipos-de-fluxos-ass%C3%ADncronos-em-javascript) | Termo usado para quando o algoritmo<br>não usa a forma síncrona (um de cada vez)<br> para executar os comandos do algoritmo,<br> ou seja de forma **assícrona**. <br><br> |
 
 <br><br>
 
@@ -113,10 +113,14 @@ console.log(soma); // -> 6
 ```
 
 ```javascript
-var arr1 = [[1,2,3]];
+var arr1 = [[1,2,3], [1,2,3]];
 
 var arrReduzido = [...arr1];
-// -> [1,2,3]
+// -> [[1,2,3], [1,2,3]]
+
+/*  É necessário os conchetes no arrReduzido pois 
+    se não daria erro de syntax depois da execução:
+    arrReduzido = [1,2,3], [1,2,3] */
 ```
 
 Adicionando arrays dentro de outros arrays.

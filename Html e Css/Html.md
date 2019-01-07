@@ -12,7 +12,7 @@ Value = Nome Escrito no input.
 > **Legenda:** <br> (/) = Precisa de outra tag para fechar, como `<h1></h1>`<br> < /> = Tag que tem fechamento em si mesmo, como `<img src""/>`
 
 * [ &lt;link/>](https://www.w3schools.com/tags/tag_link.asp) = Usado para integrar o [Css](https://github.com/JoaoSodre/Programacao/blob/master/Html%20e%20Css/Css.md#css) com o HTML. (não confundir com `<a>(/)`)
-* [	&lt;script>(/)](https://www.w3schools.com/tags/tag_script.asp) = Usado para integrar o [Javascript](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Front-End.md#javascript-front-end) com o HTML.
+* [	&lt;script>(/)](https://www.w3schools.com/tags/tag_script.asp) = Usado para integrar o Javascript com o HTML.
 * [	&lt;header>(/)](https://www.w3schools.com/tags/tag_header.asp) = Cabeçalho
 * [	&lt;div>(/)](https://www.w3schools.com/tags/tag_div.asp) = Dividi a página
 * [	&lt;span>(/)](https://www.w3schools.com/tags/tag_span.asp) = Utilizado para formatar pequenos textos.

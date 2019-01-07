@@ -17,6 +17,7 @@
 
 
 [Site do Node.js](https://nodejs.org/en/)<br>
+[Awesome Node.js (Lista com muitos recursos e packages relacionados ao Node.js)](https://github.com/sindresorhus/awesome-nodejs#readme)<br>
 
 O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
@@ -478,13 +479,13 @@ O NPM (Node Package Manager) já vem instalado com o Node.js, ele é um gerencia
 
 ### O Arquivo package.json
 
-Suponhamos que o código precisa ser compartilhado, como ele iria saber as **dependências** do projeto? É para isso que serve o package.json, é nesse que vai estar todas as informações sobre a aplicação para que funcione corretamente.<br>
+Suponhamos que o código precisa ser compartilhado, como que o computador iria saber as **dependências** do projeto? É para isso que serve o package.json, é nesse que vai estar todas as informações sobre a aplicação para que funcione corretamente.<br>
 
 Sabendo disso para instalar as dependencias de um outro projeto clonado do github por exemplo, basta usar o comando `npm install` para que ele faça isso automáticamente. (Será necessário estar no mesmo diretório que esse o arquivo para suportar esse comando e outros como o `npm start` ou `npm run (comando)` também). Caso não queira uma dependência específica basta usar o comando `npm uninstall (package) (-g)` para que ele remova do projeto e do package.json.<br>
 
 Para criar/alterar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
 
-Sempre quando for instalar um package, use o commando `--save` para que a versão dele fique no package.json. (Ex: `npm install express --save`)<br>
+Sempre quando for instalar um package, use o commando `--save` para que a versão dele fique no package.json. (Ex: `npm install express --save`, `npm install express@4.2.0 --save` para caso a versão 4.2.0 seja necessária)<br>
 
 No caso de que exista uma dependência que não seja necessária na aplicação mas que gostaria-se de usar-lá, usa-se o comando `--save-dev` pois ela é apenas um feature a mais no projeto.
 
@@ -493,6 +494,8 @@ No caso de que exista uma dependência que não seja necessária na aplicação 
 <br><br>
 
 ### Express
+
+[Awesome Express](https://github.com/rajikaimal/awesome-express#awesome-express--)<br>
 
 Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Espécie de ponte (código) que está back-end e front-end ou entre duas aplicações, ou seja entre o request e o response), etc.<br>
 
@@ -692,9 +695,11 @@ Agora quando renderizar tanto a home quanto a página de contatos, ambas vão es
 
 ### Body-Parser
 
+[Outros Middlewares Populares](https://github.com/azat-co/cheatsheets/tree/master/express4#connect-middleware)<br>
+
 Muitas das vezes quando se lida com um POST de um OBJETO o node simplesmente não irá conseguir lidar com eles de forma correta, muitas das eles vezes irão renderizar como [object Object], undefined, null, e o 'toString()' não conseguirá também dar certo com esses dados.<br>
 
-É aqui que o Body-Parser entra, ele faz com que os POSTS renderizem de forma correta antes de irem para o objeto 'req.body'
+É aqui que o Body-Parser entra, ele atua como **middleware** fazendo com que os POSTS renderizem de forma correta antes de irem para o objeto 'req.body'.
 
 ```javascript
 var bodyParser = require('body-parser');
@@ -711,6 +716,8 @@ app.post('/', url, function(req,res){
 <br><br>
 
 ### Outros Npm Packages Muito Úteis
+
+Recursos e Packages do Npm.
 
 * [Markdown-It (Converte .md em html)](https://www.npmjs.com/package/markdown-it)
 * [Cheerio (Permite usar jQuery no server)](https://cheerio.js.org/)
