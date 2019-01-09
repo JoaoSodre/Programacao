@@ -1,0 +1,13 @@
+<fieldset>
+    <legend>Buscar Pessoa</legend>
+
+        <form action="/search" method="GET" onsubmit="true">
+
+            <label for="nome"> Nome: </label> 
+            
+            <input required id="BuscarNome" class="dados" type="text" name="buscar_nome" id="buscar_nome" title="Buscar um nome" oninvalid="this.setCustomValidity('Coloque um nome')"
+            oninput="setCustomValidity('')"/>
+            
+            <input value="Buscar" type="submit">
+        </form>
+</fieldset>

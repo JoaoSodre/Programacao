@@ -1,0 +1,35 @@
+<fieldset>
+    <legend><%= tituloTabelaCadastro %></legend>
+
+        <!-- O "onsubmit" é usado para fazer alguma validação no formulário,
+        ou seja toda vez que eu clicar em algum submit dentro do 'form' e DEPENDENDO do que 'retornar', ele continuará ou não -->
+
+        <!-- O "action" é a ROTA para onde ele vai mandar os dados do "onsubmit" e o método que ele usará será o POST -->
+
+        <form action="/cadastro" method="POST" onsubmit="return CadastrarPessoa()">
+
+            <!--Quando faz o POST, ele manda uma requisição com os valores que estão no atributo "name"-->
+
+            <!-- Os valores dos inputs serão enviados no "Form Data" (f12 - Network) -->
+
+            <!-- Caso for pelo método GET eles serão enviados da maneira "Query String" (nome=""&area=""&hobbies="") -->
+
+            <!-- Botão Deve ser do tipo "submit" --> 
+
+            <div>
+                <label for="nome"> Nome: </label>
+                <input required class="dados" type="text" name="nome" id="nome" title="Coloque seu nome" oninvalid="this.setCustomValidity('Por favor coloque um nome')" oninput="setCustomValidity('')" />
+            </div>
+            <div>
+                <label for="area"> Área: </label>
+                <input required class="dados" type="text" name="area" id="area" title="Coloque sua área"  oninvalid="this.setCustomValidity('Por favor coloque uma área')" oninput="setCustomValidity('')" />
+            </div>
+            <div>
+                <label for="hobbies"> Hobbies: </label>
+                <input required class="dados" type="text" name="hobbies" id="hobbies" title="Coloque seus hobbies" oninvalid="this.setCustomValidity('Por favor coloque um hobbie')" oninput="setCustomValidity('')" />
+            </div>
+            <div>
+                <input value="Enviar" style="margin-top: 15px; margin-bottom: 15px" type="submit" >
+            </div>
+        </form>
+</fieldset>

@@ -1,0 +1,23 @@
+<fieldset>
+    <legend><%= tituloTabelaClientes %></legend>
+    <table id="registros" border="1">
+        <tr>
+            <td> Nome </td>
+            <td> Área </td>
+            <td> Hobbies </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <!-- Código dinâmico com os dados do POST-->
+        <% for(i = 0 ; i < pessoas.length ; i++) { %>
+        <tr>
+            <td><%= pessoas[i].nome %></td>
+            <td><%= pessoas[i].area %></td>
+            <td><%= pessoas[i].hobbies %></td>
+            <td> <a href="#" onclick="ConfirmarExclusao('<%= pessoas[i].nome.replace(/ /g, "") + i %>')">Excluir</a> </td>
+            <td> <a href="/alterar/<%= pessoas[i].nome.replace(/ /g, "") + i %>">Alterar</a> </td>
+        </tr>
+        <% } %>
+    </table>
+</fieldset>

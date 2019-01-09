@@ -1,0 +1,22 @@
+<fieldset>
+    <legend><%= tituloTabelaCadastro %></legend>
+    <form action="/alterar" method="POST" onsubmit="return CadastrarPessoa()">
+        <div>
+            <label for="nome"> Nome: </label>
+            <input required value="<%= alterar.nome %>" class="dados" type="text" name="nome" id="nome" title="Coloque seu nome" oninvalid="this.setCustomValidity('Por favor coloque um nome')" oninput="setCustomValidity('')"/>
+        </div>
+        <div>
+            <label for="area"> Area: </label>
+            <input required value="<%= alterar.area %>" class="dados" type="text" name="area" id="area" title="Coloque sua área"  oninvalid="this.setCustomValidity('Por favor coloque uma área')" oninput="setCustomValidity('')"/>
+        </div>
+        <div>
+            <label for="hobbies"> Hobbies: </label>
+            <input required value="<%= alterar.hobbies %>" class="dados" type="text" name="hobbies" id="hobbies" title="Coloque seus hobbies" oninvalid="this.setCustomValidity('Por favor coloque um hobbie')" oninput="setCustomValidity('')"/>
+
+            <input value="<%= alterar.id %>" class="dados" type="text" name="id" style="display:none">
+        </div>
+        <div>
+            <input value="Enviar" style="margin-top: 15px; margin-bottom: 15px" type="submit" >
+        </div>
+    </form>
+</fieldset>

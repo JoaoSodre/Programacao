@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "João",
+        "area": "TI",
+        "hobbies": "Tocar Violão, Estudar Programação e Inglês e Ouvir (Analizar) Músicas"
+    },
+    {
+        "nome": "Gabriel",
+        "area": "Administração",
+        "hobbies": "Jogar Uno, Treinar com Ninjas e Chutar o Portão do Vizinho"
+    },
+    {
+        "nome": "Eduardo",
+        "area": "Vendas",
+        "hobbies": "Discutir sobre Polvos, Chaleiras Industriais e Rugby(???)"    
+    },
+    {
+        "nome": "Murilo",
+        "area": "Esportes",
+        "hobbies": "Fazer compras ilegais, Hackear a Google e Fazer Caridade Sempre que Possível"    
+    }
+]

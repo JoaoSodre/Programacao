@@ -1,0 +1,21 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#nome {
+  width:47.75%;
+}
+
+#area {
+  width:48.5%;
+}
+
+#hobbies {
+  width:46.5%;
+}
+
+a {
+  color: #00B7FF;
+  cursor: pointer;
+}
