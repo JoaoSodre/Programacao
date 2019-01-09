@@ -13,7 +13,6 @@ router.get('/', HomeGet);
 router.get('/standard', Standard);
 router.post('/cadastro', f.url, CadastrarCliente);
 router.get('/search', ProcurarCliente);
-router.get('/contato', Contato);
 router.get('/excluir/:item', DelItem);
 router.get('/alterar/:item', ChangeItemPage);
 router.post('/alterar', f.url, ChangingItem);
@@ -102,15 +101,6 @@ function ProcurarCliente(req, res) {
 		res.render('search', Page.Render());
 	});
 };
-
-/**
- * Renderiza a página de contatos
- */
-
-function Contato(req, res) {
-	var Page = new f.Dado("Contato");
-	res.render('contato', Page.Render());
-}
 
 /**
  * Deleta uma pessoa da base de dados
