@@ -53,13 +53,14 @@ var Clientes = function() {
 	}
 }
 
-------- Outra forma de fazer -------
+// --------- ES6 ---------
 
-function Clientes() {
-
-	this.nome = "";
-	this.Mostrar = function() {
-		alert("Nome: " + this.nome);
+class Clientes {
+	constructor() {
+		this.nome = "";
+		this.Mostrar = function() {
+			alert("Nome: " + this.nome);
+		}
 	}
 }
 ```
@@ -81,9 +82,17 @@ São usados basicamente para economizar linhas de código, são acessados por de
 
 ```javascript
 var Casas = function(_casa1, _casa2) {
-
 	this.casa1 = _casa1;
 	this.casa2 = _casa2;
+}
+
+// --------- ES6 ---------
+
+class Casas {
+	constructor(_casa1, _casa2){
+		this.casa1 = _casa1;
+		this.casa2 = _casa2;
+	}
 }
 ```
 
@@ -91,11 +100,10 @@ var Casas = function(_casa1, _casa2) {
 var C = new Casas("Sobrado", "Triplex"); // Construtor 
 ```
 
-O uso de **HASH** pode facilitar ainda mais na organização, ele possibilita colocar **nomes** nos contrutores.
+O uso de hashs pode facilitar ainda mais na organização, ele possibilita colocar nomes nos contrutores.
 
 ```javascript
 var Casas = function(_casas, _tamanhos) {
-
 	this.casa1 = _casas.casa1;
 	this.casa2 = _casas.casa2;
 	this.tamanho1 = _tamanhos.tamanho1;
@@ -112,11 +120,10 @@ var C = new Casas({casa1:"Sobrado" , casa2:"Triplex"} , {tamanho1:"Grande" , tam
 
 ## Métodos/Atributos de Instância
 
-São usados apenas para **UMA** instância.
+São usados apenas para UMA instância.
 
 ```javascript
 var A = function(_lugar) {
-
 	this.lugar = _lugar;
 }
 
@@ -164,9 +171,7 @@ A.quantidadeInstancias = [];
 
 // Criando um Método de CLASSE
 A.ListarLugares = function() {
-
 	for (var i = 0; i < A.quantidadeLugares.length; i++) {
-	
 		cliente = i + 1;
 		J = A.quantidadeLugares[i];
 		console.log("Cliente " + cliente + ": " + J.lugar1 + " e " + J.lugar2);
@@ -221,7 +226,6 @@ var CalcularMedia = function(_nota1 , _nota2) {
 	// Atributo e Método PRIVADOS
 	var notas = [];
 	var Media = function() {
-	
 		console.log((_nota1 + _nota2)/notas.length)
 	}
 
@@ -284,7 +288,6 @@ Syntax (instanciar classe pai na classe filha): `this.super = (ClassePai).protot
 
 ```javascript
 var A = function() {
-
 	this.Calcular = function(_num1) {
 		a = _num1 * 2;
 		console.log(a);
@@ -293,7 +296,6 @@ var A = function() {
 
 // Sobreescrevendo o método da classe pai ('A')
 var B = function() {
-
 	this.Calcular = function(_num1) {
 		a = _num1 * 10;
 		console.log(a);
@@ -395,7 +397,6 @@ var Abstracao = function () {
 
 	// Proibindo de instanciar essa classe atravez do construtor
 	if (this.constructor == Abstracao) {
-	
 		throw new Error("Não pode instanciar classe abstrata, apenas herdar!");
 	}
 }

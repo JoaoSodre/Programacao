@@ -112,7 +112,7 @@ new Promise((res, rej) => {
 
 Para de fato conseguir usar os dados que vão nos objetos `res` e `rej` é necessário utilizar o `.then()` e o `.catch()` sendo o primeiro para o resolve e o segundo para o reject.
 
-Syntax: `promise.then/catch( parametros => { ... })`
+Syntax: `promise.then/catch( parâmetros => { ... })`
 
 ```javascript
 var a = true;
@@ -261,3 +261,6 @@ O Client (Browser) faz um tipo de 'Ajax request' para o server e depois que ele 
 ## O objeto XMLHttpRequest (XHR)
 
 O XHR é basicamente uma API no formato de um objeto, com ele é possível ter métodos e atributos que são fornecidos pelo própio ambiente Js browser. Seus métodos conseguem transferir dados do Cliente para o server e com esse objeto é possível usar outros [protocols](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#como-que-fazem-isso-protocols) além do HTTP.
+
+
+> Nota: Nem todos os browsers interpretam o XHR da mesma forma, use o [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery) para solucionar esse problema

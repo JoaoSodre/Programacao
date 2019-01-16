@@ -12,31 +12,31 @@ var url = bodyParser.urlencoded({ extended: false });
  * Classe com os dados dinâmicos de cada página
  */
 
-var Dado = function(_title, _tituloTabelaClientes, _tituloTabelaCadastro) {
+class Dado {
+	constructor(_title, _tituloTabelaClientes, _tituloTabelaCadastro) {
+		this.DATA_PATH = "./model/BancoDados.json";
+		this.STANDARD_DATA = "./model/DadosPadrao.json";
+		this.title = _title || "Cadastro de Pessoas";
+		this.tituloTabelaClientes = _tituloTabelaClientes || "Pessoas Cadastradas";
+		this.tituloTabelaCadastro = _tituloTabelaCadastro || "Cadastro de Pessoa";
+		this.alterar = {};
+		this.pessoas = [];
+		this.matches = [];
+		this.aprovados = [];
 
-	this.DATA_PATH = "./model/BancoDados.json";
-	this.STANDARD_DATA = "./model/DadosPadrao.json";
-	this.title = _title || "Cadastro de Pessoas"; 
-	this.tituloTabelaClientes = _tituloTabelaClientes || "Pessoas Cadastradas";
-	this.tituloTabelaCadastro = _tituloTabelaCadastro || "Cadastro de Pessoa";
-	this.alterar = {};
-	this.pessoas = []; 
-	this.matches = [];
-	this.aprovados = [];
+		/**
+		 * Retorna um objeto com as informações atualizadas da própia classe
+		 */
 
-	/**
-	 * Retorna um objeto com as informações atualizadas da própia classe
-	 */
-
-	this.Render = () => {
-		return {
-			title: this.title,
-			alterar: this.alterar,
-			pessoas: this.pessoas,
-			aprovados: this.aprovados,
-			tituloTabelaCadastro: this.tituloTabelaCadastro,
-			tituloTabelaClientes: this.tituloTabelaClientes
-		}
+		this.Render = () =>
+			({
+				title: this.title,
+				alterar: this.alterar,
+				pessoas: this.pessoas,
+				aprovados: this.aprovados,
+				tituloTabelaCadastro: this.tituloTabelaCadastro,
+				tituloTabelaClientes: this.tituloTabelaClientes
+			})
 	}
 }
 
@@ -44,7 +44,7 @@ var Dado = function(_title, _tituloTabelaClientes, _tituloTabelaCadastro) {
  * Retorna os dados da base de dados 
  */
 
-function LerDataBase(dataBase) {
+var LerDataBase = dataBase => {
 
 	var Data = new Dado();
 	var dadosPadrao = fs.readFileSync(Data.STANDARD_DATA, "utf8");
@@ -54,7 +54,7 @@ function LerDataBase(dataBase) {
 		if (err) {
 			fs.writeFile(Data.DATA_PATH, dadosPadrao, (err2) => {
 				if (err2) fs.mkdirSync('./model');
-				fs.writeFile(Data.DATA_PATH, dadosPadrao, () => {});
+				fs.writeFile(Data.DATA_PATH, dadosPadrao, () => { });
 			});
 		}
 
@@ -63,20 +63,20 @@ function LerDataBase(dataBase) {
 				dataBase(JSON.parse(dadosPadrao));
 			});
 		}
-		
-		else dataBase(JSON.parse(texto));
+
+		else dataBase(JSON.parse(texto))
 
 	});
 }
 
-function LerDataBasePadrao(dataBase) {
+var LerDataBasePadrao = dataBase => {
 
 	var Data = new Dado();
-	
-	fs.readFile(Data.STANDARD_DATA, "utf8", (err,texto) => {
-		if(err) console.log(err);
+
+	fs.readFile(Data.STANDARD_DATA, "utf8", (err, texto) => {
+		if (err) console.log(err);
 		else {
-			fs.writeFile(Data.DATA_PATH, texto, () => {});
+			fs.writeFile(Data.DATA_PATH, texto, () => { });
 			dataBase(JSON.parse(texto));
 		}
 	});

@@ -36,8 +36,8 @@ function HomeGet(req, res) {
  * Dados Padrão 
  */
 
-function Standard(req,res) {
-	
+function Standard(req, res) {
+
 	var Page = new f.Dado("Página Inicial");
 
 	f.LerDataBasePadrao((dataBase) => {
@@ -63,9 +63,9 @@ function CadastrarCliente(req, res) {
 			area: req.body.area,
 			hobbies: req.body.hobbies
 		});
-	
-		f.fs.writeFile(Page.DATA_PATH, JSON.stringify(Page.pessoas), () => {});
-	
+
+		f.fs.writeFile(Page.DATA_PATH, JSON.stringify(Page.pessoas), () => { });
+
 		res.render('index', Page.Render());
 	});
 }
@@ -77,7 +77,7 @@ function CadastrarCliente(req, res) {
 function ProcurarCliente(req, res) {
 
 	var Page = new f.Dado("Buscando em Arquivos", "Pessoas Encontradas");
-	
+
 	f.LerDataBase((dataBase) => {
 
 		Page.pessoas = dataBase;
@@ -106,12 +106,12 @@ function ProcurarCliente(req, res) {
  * Deleta uma pessoa da base de dados
  */
 
-function DelItem(req,res) {
+function DelItem(req, res) {
 
 	var Page = new f.Dado();
 
 	f.LerDataBase((dataBase) => {
-		
+
 		Page.pessoas = dataBase;
 		var reqItem = req.params.item;
 
@@ -120,15 +120,15 @@ function DelItem(req,res) {
 
 		// Pegando o index dele(s) (Caso houver vários nomes) no banco de dados
 		var indexArray = [];
-		for (i = 0; i<Page.pessoas.length; i++){
-	    	if (Page.pessoas[i].nome.replace(/ /g, "") === reqSemClass.replace(/ /g, "")) {
-	        	indexArray.push(i);
+		for (i = 0; i < Page.pessoas.length; i++) {
+			if (Page.pessoas[i].nome.replace(/ /g, "") === reqSemClass.replace(/ /g, "")) {
+				indexArray.push(i);
 			}
 		}
 
 		// Filtrando caso houver nomes iguais
-		for (i = 0; i<indexArray.length; i++){
-			if(indexArray[i] == reqItem.slice((reqItem.length - 1), reqItem.length)) {
+		for (i = 0; i < indexArray.length; i++) {
+			if (indexArray[i] == reqItem.slice((reqItem.length - 1), reqItem.length)) {
 				indexArray = null;
 				indexArray = reqItem.slice((reqItem.length - 1), reqItem.length).toString();
 				break;
@@ -137,14 +137,14 @@ function DelItem(req,res) {
 
 		// Removendo o intem do array
 		var ArraySemOIntem = [];
-		for (i = 0; i<Page.pessoas.length; i++){
-			if(reqSemClass + indexArray !== Page.pessoas[i].nome + i) {
+		for (i = 0; i < Page.pessoas.length; i++) {
+			if (reqSemClass + indexArray !== Page.pessoas[i].nome + i) {
 				ArraySemOIntem.push(Page.pessoas[i]);
 			}
 		}
 
 		Page.pessoas = ArraySemOIntem;
-		f.fs.writeFile(Page.DATA_PATH, JSON.stringify(Page.pessoas), () => {});
+		f.fs.writeFile(Page.DATA_PATH, JSON.stringify(Page.pessoas), () => { });
 		res.render('index', Page.Render());
 	});
 }
@@ -153,17 +153,17 @@ function DelItem(req,res) {
  * Da possíbilidade ao usuário de mudar um intem na base de dados
  */
 
-function ChangeItemPage(req,res) {
+function ChangeItemPage(req, res) {
 
 	var Page = new f.Dado("Alterar Pessoa", "Pessoas Cadastradas", "Alterar Pessoa");
 
 	f.LerDataBase((dataBase) => {
-		
+
 		Page.pessoas = dataBase;
-		
+
 		var reqItem = req.params.item;
 
-		for (i=0; i<Page.pessoas.length; i++) {
+		for (i = 0; i < Page.pessoas.length; i++) {
 			if (Page.pessoas[i].nome + i == reqItem) {
 				Page.alterar.nome = Page.pessoas[i].nome;
 				Page.alterar.area = Page.pessoas[i].area;
@@ -181,7 +181,7 @@ function ChangeItemPage(req,res) {
  * Recebe as alterações e as salva no banco de dados
  */
 
-function ChangingItem(req,res) {
+function ChangingItem(req, res) {
 
 	var Page = new f.Dado();
 
@@ -190,17 +190,17 @@ function ChangingItem(req,res) {
 		Page.pessoas = dataBase;
 
 		// Procurando o request no DataBase e o substituindo
-		for (p = 0; p<Page.pessoas.length; p++) {
+		for (p = 0; p < Page.pessoas.length; p++) {
 			if ((req.body.nome + req.body.id) === (Page.pessoas[p].nome + p)) {
-				Page.pessoas[p].nome = req.body.nome; 
-				Page.pessoas[p].area = req.body.area; 
+				Page.pessoas[p].nome = req.body.nome;
+				Page.pessoas[p].area = req.body.area;
 				Page.pessoas[p].hobbies = req.body.hobbies;
 				break;
 			}
 		}
 
 		f.fs.writeFile(Page.DATA_PATH, JSON.stringify(Page.pessoas), () => {
-			res.render('index',	Page.Render());
+			res.render('index', Page.Render());
 		});
 	});
 }

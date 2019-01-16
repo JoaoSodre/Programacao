@@ -2,7 +2,7 @@
     {
         "nome": "João",
         "area": "TI",
-        "hobbies": "Tocar Violão, Estudar Programação e Inglês e Ouvir (Analizar) Músicas"
+        "hobbies": "Tocar Violão, Ouvir Música, Estudar Programação e Estudar Inglês"
     },
     {
         "nome": "Gabriel",
@@ -12,11 +12,11 @@
     {
         "nome": "Eduardo",
         "area": "Vendas",
-        "hobbies": "Discutir sobre Polvos, Chaleiras Industriais e Rugby(???)"    
+        "hobbies": "Discutir sobre Polvos, Chaleiras Industriais e Rugby(???)"
     },
     {
         "nome": "Murilo",
         "area": "Esportes",
-        "hobbies": "Fazer compras ilegais, Hackear a Google e Fazer Caridade Sempre que Possível"    
+        "hobbies": "Fazer compras ilegais, Hackear a Google e Fazer Caridade Sempre que Possível"
     }
 ]
