@@ -29,9 +29,3 @@ const CalcularCaraCoroa = (quantasVezes) => {
 	console.log("Quantidades de Caras: " + quantidadeCaras.length);
 	console.log("Quantidades de Coroas: " + quantidadeCoroas.length);
 }
-
-var inicio = [1, 2, 3];
-var meio = [4, 5];
-var fim = [6, 7, 8];
-
-console.log(inicio.concat(meio).concat(fim));
