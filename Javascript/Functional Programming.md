@@ -9,9 +9,11 @@ var B = A;
 console.log(B(30)); // -> 90
 ```
 
-### Definições
+<br><br>
 
-**Funções puras** - Existem pelo menos dois critérios que devem ser compridos para que seja considerada uma função pura.
+### Funções puras
+
+Existem pelo menos dois critérios que devem ser compridos para que seja considerada uma função pura.
 
 1. São puras aquelas que sempre vão retornar o mesmo **y** dado um mesmo **x**.
 
@@ -35,7 +37,28 @@ Pura(2) // -> Valor aleatório
 Pura(2) // -> Valor aleatório
 ```
 
-2. São puras aquelas que não geram *side effects*.
+2. São puras aquelas que não geram *side effects* (Ou seja alteram algo fora do escopo/contexto).
+
+```javascript
+var contador = 0;
+
+const Contar = () => {
+	contador += 1;
+	return contador
+} 
+
+Contar(); // 1
+Contar(); // 2
+Contar(); // 3
+
+console.log(contador); // -> 3
+```
+
+<br><br>
+
+Em resumo funções puras trabalham apenas com as variáveis dos parâmetros e não geram nenhum efeito fora do seu escopo, fazendo assim com que o código fique com mais legibilidade e com menos bugs.
+
+<br><br>
 
 ## High Order Functions (Callback Functions)
 
@@ -48,7 +71,7 @@ var B = () => console.log("That's how High Order Functions work")
 A(B);
 ```
  
-A grande maioria dos [métodos para arrays](https://www.w3schools.com/jsref/jsref_obj_array.asp) utilizam High Order Functions. 
+A grande maioria dos [métodos para arrays](https://www.w3schools.com/jsref/jsref_obj_array.asp) utilizam High Order Functions nos seus callbacks. 
 
 ```javascript
 var arr = [
@@ -119,7 +142,7 @@ var gastos = [
 	{ valor:105 },
 	{ valor:37 },
 	{ valor:87 },
-    { valor:24 }
+	{ valor:24 }
 ];   
 
 /*
@@ -138,11 +161,11 @@ console.log(totalGastos); // -> 253
 Com o reduce é possível fazer um *spread operator interno*, ou seja remover os colchetes de todos os values de dentro de um único array.
 
 ```javascript
-var arr = [[0, 1], [2, 3], [4], [5, 6, 453, 2]]
+var arr = [[7, 1], [2, 7], [8], [5, 2, 7, 2]]
 
 var arraySemColchetesInternos =
 	arr.reduce((acumulador, x) => acumulador.concat(x), []);
 
 console.log(arraySemColchetesInternos);
-// -> [ 0, 1, 2, 3, 4, 5, 6, 453, 2 ]
+// -> [ 7, 1, 2, 7, 8, 5, 2, 7, 2 ]
 ```

@@ -24,9 +24,9 @@ Quando se trata de objetos tanto a "key" quando o "value" (No caso de string) pr
 
 ```json
 {
-    "nome":"João",
-    "area":"TI",
-    "favgames":["IWBTB","Touhou"]
+	"nome": "João",
+	"area": "TI",
+	"favgames": ["IWBTB", "Touhou"]
 }
 ```
 
@@ -37,16 +37,15 @@ A extensão MIME para esse tipo de arquivo é "Application/json".
 **Métodos JSON**
 
 `JSON.stringify()` = Irá colocar as aspas duplas em todos os keys e values (No caso de strings com aspas simples) de um objeto criado no Js comum.<br>
+
 `JSON.parse()` = Irá remover as aspas duplas de todos os keys de um objeto JSON.
 
 ```javascript
-var obj = {name:"John", age:31, city:"New York"}
-
+var obj = { name: "John", age: 31, city: "New York" };
 
 var json = JSON.stringify(obj);
 console.log(json);
 // -> {"name":"John", "age":31, "city":"New York"}
-
 
 var objComum = JSON.parse(json);
 console.log(objComum);

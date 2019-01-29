@@ -4,9 +4,9 @@
 
 AJAX (Asynchronous JavaScript & XML) é um conjunto de tecnologias do própio Javascript comum que é usado para enviar e receber dados de maneira [**assíncrona**](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Eventos.md#orienta%C3%A7%C3%A3o-a-eventos), ele não interfere com o conteúdo da página web atual. Apesar de XML está includo no nome, ele é bastante raro de se usado. Na maior parte das aplicações irá ser usado [JSON](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/JSON.md#json) no lugar do XML.
 
-## Tipos de fluxos assíncronos em Javascript
+## Javascript Assíncrono: Tipos de fluxos assíncronos em Javascript
 
-### [High-Order Function:](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Functional%20Programming.md#high-order-functions)
+### [High-Order Function:](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Functional%20Programming.md#high-order-functions-callback-functions)
 
 Passando uma segunda função pelos parâmetros e executando ela na primeira função.
 
@@ -27,8 +27,6 @@ const Fun2 = () => console.log("Função Fun2 chamada de forma assíncrona");
 Fun1(Fun2);
 ```
 
-> Nota: O símbolo "=>" é uma arrow function, mais detalhes aqui: [Arrow Functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
-
 <br><br>
 
 ### Callbacks:
@@ -36,7 +34,7 @@ Fun1(Fun2);
 Assim como no Js Comum, os callbacks são basicamente funções que são passadas atravez de um parâmetro quando a função príncipal for chamada. Sendo assim a função callback pode ser chamada a qualquer momento apenas executando o parâmetro do construtor.
 
 ```javascript
-function One(cb){
+const One = cb => {
 
     // *Algum Código Blocante*
 
@@ -53,7 +51,7 @@ One(() => {
 Também funciona com parâmetros
 
 ```javascript
-function One(cb) {
+const One = cb => {
 
     // *Código Blocante*
 
@@ -129,11 +127,11 @@ var promise1 = new Promise((res, rej) => {
 se usa parenteses apenas o nome) */
 
 promise1
-    .then((msg) => {
+    .then(msg => {
         console.log(msg);
         // -> "Algo deu certo"
     })
-    .catch((msg) => {
+    .catch(msg => {
         console.log(msg);
         // -> "Algo deu errado"
     });
@@ -146,7 +144,7 @@ promise1
 Demonstração de como a Promise consegue ser assíncrona
 
 ```javascript
-var promise1 = new Promise((res) => {
+var promise1 = new Promise(res => {
     res();
 });
 
@@ -167,12 +165,12 @@ mas o que aparace no console é
 É possível usar vários `.then()` em sequência apenas utilizando um returno de outra Promise dentro do própio .then()
 
 ```javascript
-var A = new Promise((res) => { res(); });
+var A = new Promise(res => { res(); });
 
 A
     .then(() => {
         console.log("Primeiro .then()");
-        return new Promise((res) => { res(); });
+        return new Promise(res => { res(); });
     })
     .then(() => {
         console.log("Segundo .then()");
@@ -181,11 +179,11 @@ A
     
 // ----- Outra Meneira de escrever o mesmo código -----
 
-var A = new Promise((res) => { res(); });
+var A = new Promise(res => { res(); });
 
 var Fun1 = () => {
     console.log("Primeiro .then()");
-    return new Promise((res) => { res(); });
+    return new Promise(res => { res(); });
 }
 
 var Fun2 = () => {
@@ -230,7 +228,7 @@ A()
 ```javascript
 const fs = require('fs');
 
-var ReadFile = (_path) => {
+var ReadFile = _path => {
     return new Promise((res,rej) => {
         fs.readFile(_path, 'utf8', (err,data) => {
             if (err) {
@@ -244,23 +242,22 @@ var ReadFile = (_path) => {
 }
 
 ReadFile("./texto.txt")
-    .then((data) => {
+    .then(data => {
         console.log(data);
     })
-    .catch((err) => {
+    .catch(err => {
         console.log(err);
     });
 ```
 
 <br><br>
 
-## Como o AJAX funciona?
+## AJAX: Como funciona?
 
 O Client (Browser) faz um tipo de 'Ajax request' para o server e depois que ele fazer o que tem que fazer com o request irá retornar um tipo de dado no formato de XML, JSON ou texto comum. Esse request pode ser feito pelo objeto `XMLHttpRequest()` do própio browser.
 
-## O objeto XMLHttpRequest (XHR)
+### O objeto XMLHttpRequest (XHR)
 
-O XHR é basicamente uma API no formato de um objeto, com ele é possível ter métodos e atributos que são fornecidos pelo própio ambiente Js browser. Seus métodos conseguem transferir dados do Cliente para o server e com esse objeto é possível usar outros [protocols](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#como-que-fazem-isso-protocols) além do HTTP.
+O XHR é basicamente uma API no formato de um objeto, com ele é possível ter métodos e atributos que são fornecidos pelo própio ambiente 'Js browser'. Seus métodos conseguem transferir dados do Cliente para o server e com esse objeto é possível usar outros [protocols](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#como-que-fazem-isso-protocols) além do HTTP.
 
-
-> Nota: Nem todos os browsers interpretam o XHR da mesma forma, use o [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery) para solucionar esse problema
+> Nem todos os browsers interpretam o XHR da mesma forma, use o [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery) para solucionar esse problema
