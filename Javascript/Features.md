@@ -5,12 +5,13 @@
 * Função IIFE
 * Ternário
 * Definindo Argumentos
+* Generators
 * Spread Operator
 * Currying
 
 ### Template Strings
 
-Além das aspas duplas e simples existe agora uma nova maneira de fazer strings: Acento Grave
+Além das aspas duplas e simples existe agora uma nova maneira de fazer strings: Usando as **Crases**
 
 ```javascript
 var idadeCao = 2;
@@ -18,7 +19,7 @@ var nomeCao = "Jesse";
 
 /*  
 	Com os acentros graves é possível adicionar
-	as variáveis de uma nova forma mais fácil
+	as variáveis de uma nova forma mais fácil.
 	Syntax: ${variável}
 */
 
@@ -184,6 +185,28 @@ var Camiseta = CalcularLucro(90);
 
 console.log(Tenis); //-> 135
 console.log(Camiseta); //-> 112.5
+```
+
+<br><br>
+
+### Generators
+
+Generators se parecem muito como uma função normal mas na verdade eles não executam todo o código em uma única chamada como na função normal, o que eles fazem é pausar entre intervalos de códigos e esperar até que eu permitir atraves de outro comando que eles continuem. Ou seja os generators são basicamente uma função com checkpoints. Eles são representados por `function* () {}`. e retornam um objeto com dois parâmetros `value` e `done` toda vez que pararem no `yield` (Checkpoint), sendo o value o valor que está no yield e done um booleano indicando de já acabaram os yields.
+
+```javascript
+function* GeneratorFunc() {
+    yield "Primeiro Yield";
+    yield "Segundo Yield";
+    console.log("Indo para o terceiro Yield");
+    yield "Terceiro Yield";
+}
+
+var gen = GeneratorFunc();
+
+console.log(gen.next().value); // Primeiro Yield
+console.log(gen.next()); // {value: "Segundo Yield", done: false}
+console.log(gen.next().done); // "Indo para o terceiro Yield" false;
+console.log(gen.next().done); // true;
 ```
 
 <br><br>

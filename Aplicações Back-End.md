@@ -1,7 +1,5 @@
 # Aplicações Back-End
 
-Conteúdo desse documento:
-
 * Como os servers e clients funcionam?
 * Como que fazem isso? (Protocols)
 * Ports
@@ -13,7 +11,7 @@ Conteúdo desse documento:
 
 ## Como os servers e clients funcionam?
 
-Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server terá que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos.
+Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dado para usar. Ou seja o browser faz um **request** (pedido) para o server num **socket** (caminho) e o server terá que lidar com o pedido dando o **response** (resposta) para o cliente assim que necessário, que é o que nós vemos. Quando o browser entra numa página ele faz um request **http** em algum lugar.
 
 <br><br>
 
@@ -21,7 +19,7 @@ Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dad
 
 É aqui que os protocols entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
 
-O Node.js por exemplo possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses ou requests para o cliente.
+O Node.js por exemplo possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses ou requests de files para o cliente.
 
 <br><br>
 

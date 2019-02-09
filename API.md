@@ -5,18 +5,16 @@ A API (Application Programming Interface) é uma interface de programação cria
 Existem dois tipos de APIs: Códigos e Serviços
 
 <br>
-<br>
 
 ## API de Códigos
 
 São essencialmente padrões de código (ou seja uma interface) feitos para serem apenas usados e não modificados (Não tem controle sobre o conteúdo dela, bem parecido com os frameworks). As APIs possuem um **contrato** (documentação) que especificam como se deve utiliza-la.
 
+<br><br>
+
 ## API de Serviços (ou API Web)
 
 As API de Serviços são distintas em dois tipos: SOAP e REST 
-
-<br>
-<br>
 
 ### SOAP
 
@@ -28,4 +26,4 @@ O SOAP (Simple Object Access Protocol) é um [protocolo](https://github.com/Joao
 
 Padrão de código: XML e JSON (Mais comum) <br>
 
-O REST (Representational State Transfer) é um modelo de arquitetura baseado em http (protocolo de pergunta e resposta) para  sistemas solicitantes acessem e manipulem representações textuais de recursos da Web usando um conjunto uniforme e predefinido de operações sem estado. Com o REST línguagens diferentes conseguem se comunicar (já que todos que trabalham com web precisam passar pelo http solucionando assim o problema do SOAP). O REST utiliza todos os [métodos http](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-http), ou seja os serviços REST utilizarão o http para fazer requests Get, Post, Delete e Put. Em um Web Services **RESTful**, requisições feitas a um URI extrairá uma resposta que pode estar em XML, JSON ou em algum outro formato. <br>
+O REST (Representational State Transfer) é um modelo de arquitetura baseado em http para  sistemas solicitantes acessem e manipulem representações textuais de recursos da Web usando um conjunto uniforme e predefinido de operações sem estado. Com o REST línguagens diferentes conseguem se comunicar (já que todos que trabalham com web precisam passar pelo http solucionando assim o problema do SOAP). O REST utiliza todos os [métodos http](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-http), ou seja os serviços REST utilizarão o http para fazer requests Get, Post, Delete e Put. Em um Web Services **RESTful**, requisições feitas a um URI extrairão uma resposta que pode estar em XML, JSON ou em algum outro formato.

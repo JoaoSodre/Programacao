@@ -6,3 +6,4 @@
 * Checar se os loops estão usando o parâmetro de forma correta, várias vezes sem perceber eles nem são usados dentro do escopo({ }).
 * Checar se os loops em geral possuem válvula de escape.
 * Não utilize códigos da internet que não se tenha 100% de como funcionam, em várias situações é mais fácil e eficiente utilizar códigos simples que funcionam (Que você criou) em vez de algo **totalmente** desconhecido da internet (Como comandos que você nunca viu antes), esses códigos desconhecidos podem estar fazendo algo a mais e que não se tenha a miníma ideia do que estão causando.
+* Se estiver usando o Express.js cheque as **ROTAS**, elas podem redirecionar a dois lugares diferentes com a mesma URL que podem causar muitos FOD%¨%%¨#$% bugs no sistema.  

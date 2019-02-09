@@ -1,4 +1,4 @@
-# Node.js
+# [Node.js](https://nodejs.org/en/)
 
 * [Node.js](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
 	* [Modules e require()](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#nodejs)
@@ -15,11 +15,9 @@
 		* [Body-Parser](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#body-parser)
 		* [Outros Npm Packages Muito Úteis](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-npm-packages-muito-%C3%BAteis)
 
-
-[Site do Node.js](https://nodejs.org/en/)<br>
 [Awesome Node.js (Lista com muitos recursos e packages relacionados ao Node.js)](https://github.com/sindresorhus/awesome-nodejs#readme)<br>
 
-O Node.Js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
+O Node.js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
 > Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) e [AJAX (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax).
 
@@ -493,15 +491,13 @@ No caso de que exista uma dependência que não seja necessária na aplicação 
 
 <br><br>
 
-### Express
+### [Express](https://www.npmjs.com/package/express)
 
 [Awesome Express](https://github.com/rajikaimal/awesome-express#awesome-express--)<br>
 
 Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Espécie de ponte (código) que está back-end e front-end ou entre duas aplicações, ou seja entre o request e o response), etc.<br>
 
-Basicamente o Express reorganiza o node para que fique muito mais intuítivo e fácil de usar.<br>
-
-Instalação do Express: [Npm - Express](https://www.npmjs.com/package/express#installation)<br><br>
+Basicamente o Express reorganiza o node para que fique muito mais intuítivo e fácil de usar.<br><br>
 
 ### O Módulo Express
 
@@ -572,13 +568,11 @@ Essa ações que acontecem entre entre um request e um response são chamadas de
 
 <br><br>
 
-### Ejs
+### [Ejs](https://www.npmjs.com/package/ejs)
 
 Ejs é um dos packages do Node e com ele é possível basicamente implementar o javascript dinâmico em uma página html.<br>
 
 Com esse tipo de ferramenta não é preciso criar uma página que contém os mesmos aspectos para cada usuário, apenas um modelo servirá.<br>
-
-Instalação do Ejs: [Npm - Ejs](https://www.npmjs.com/package/ejs#installation)<br>
 
 > Nota: Com o Express é possível instalar o Ejs com o comando `express --view=ejs`, o que ajuda muito para não precisar usar o tempo para configurar tudo na aplicação.
 

@@ -1,1 +1,0 @@
-Para abrir o projeto primeiro instale as depêndencias utilizando o comando `npm install` e depois utilize o comando `npm start` para executar o aplicativo, ambos os comandos na própia página do projeto.
