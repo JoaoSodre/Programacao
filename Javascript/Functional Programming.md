@@ -40,6 +40,7 @@ Pura(2) // -> Valor aleatório
 2. São puras aquelas que não geram *side effects* (Ou seja alteram algo fora do escopo/contexto).
 
 ```javascript
+// Função Não-Pura
 var contador = 0;
 
 const Contar = () => {
@@ -54,7 +55,18 @@ Contar(); // 3
 console.log(contador); // -> 3
 ```
 
-<br><br>
+```js
+// Função Pura
+var contador = 0;
+
+const Contar = () => contador + 1
+
+Contar(); // 1
+Contar(); // 1
+Contar(); // 1
+
+console.log(contador); // -> 1
+```
 
 Em resumo funções puras trabalham apenas com as variáveis dos parâmetros e não geram nenhum efeito fora do seu escopo, fazendo assim com que o código fique com mais legibilidade e com menos bugs.
 
@@ -70,7 +82,25 @@ var B = () => console.log("That's how High Order Functions work")
 
 A(B);
 ```
- 
+
+As high order functions podem ser usadas de forma assíncrona.
+
+```javascript
+const Fun1 = fun => {
+
+	// 'setTimeout()' é um método assíncrono 
+	setTimeout(() => {
+		console.log("Função 'Fun1' chamada, bloqueando o fluxo");
+	}, 10);
+	fun();
+}
+
+// Ou seja, não precisa de esperar a Fun1() por completo
+const Fun2 = () => console.log("Função 'Fun2' chamada de forma assíncrona");
+
+Fun1(Fun2);
+```
+
 A grande maioria dos [métodos para arrays](https://www.w3schools.com/jsref/jsref_obj_array.asp) utilizam High Order Functions nos seus callbacks. 
 
 ```javascript

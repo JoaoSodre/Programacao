@@ -30,14 +30,12 @@ Quando se trata de objetos tanto a "key" quando o "value" (No caso de string) pr
 }
 ```
 
-A extensão para esse tipo de arquivo se chama ".json".
-
+A extensão para esse tipo de arquivo se chama ".json".<br>
 A extensão MIME para esse tipo de arquivo é "Application/json".
 
 **Métodos JSON**
 
 `JSON.stringify()` = Irá colocar as aspas duplas em todos os keys e values (No caso de strings com aspas simples) de um objeto criado no Js comum.<br>
-
 `JSON.parse()` = Irá remover as aspas duplas de todos os keys de um objeto JSON.
 
 ```javascript

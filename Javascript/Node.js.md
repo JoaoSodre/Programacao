@@ -19,17 +19,17 @@
 
 O Node.js foi escrito na linguagem C++ para que possa permitir o Javascript interagir com a sua máquina/server. Com ele não é preciso aprender outras linguagens para interagir com os arquivos do pc. Outro aspecto dele é de que ele é excelente para fazer comunicações com databases.<br>
 
-> Para aprender Node.js, é preciso ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) e [AJAX (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax).
+> Para aprender Node.js, é recomendável ter conhecimento sobre [Orientação a Objeto](https://github.com/JoaoSodre/Programacao/blob/master/Orienta%C3%A7%C3%A3o%20a%20Objeto.md#orienta%C3%A7%C3%A3o-a-objeto) e [AJAX (Programação Assíncrona)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/AJAX.md#ajax).
 
  ### Por que Node.js?
 
 * Node.js útiliza a engine v8 do google (O que o deixa incrivelmente rápido).
-* Possuí um enorme ecosistema de packages open source (npm).
+* Possuí um enorme ecosistema de packages open source (Npm).
 * Muito bom para serviços em tempo real (Como chats).
 
  ### V8 Engine
 
-Como já mencionado os computadores não entendem o Javascript (Apenas browsers) e para que isso aconteça é útilizado a v8 engine. Ou seja ele converte código javascript para código de máquina (Por isso é escrito com o C++).
+Como já mencionado os computadores não entendem o Javascript (apenas browsers) e para que isso aconteça é utilizado a v8 engine. Ou seja ele converte código javascript para código de máquina (Por isso é escrito com o C++).
 
  ### Instalação
 
@@ -231,7 +231,6 @@ fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
 ele vai apagar e substituir os dados do arquivo */
 
 for (let i = 0; i < 10; i++) {
-
 	fs.readFile('./EscrevaAqui.txt', 'utf8', function(err, data) {
 
 		// Se o arquivo não existir, dará ERRO
@@ -420,7 +419,7 @@ http.createServer((req, res) => {
 }).listen(8080); // Porta que ele vai escutar
 ```
 
-> [Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#response-header)
+> [Response Header](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#response-header)<br>
 > [Status Html](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#status-http)
 
 <br><br>
@@ -529,8 +528,8 @@ app.delete('/rota', function(){...});
 
 O método '.get()' também consegue responder aos requests de forma **dinâmica**, isso significa que toda vez que por exemplo algum usuário for criar uma conta no site, ele não precisará de criar uma rota única e especifica para aquela pessoa.<br> 
 
-Syntax (Permitir Requests pela Url): `:(NomeParâmetro)`<br>
-Syntax (Acessar Parâmetro do Usuário): `req.params.(NomeParâmetro)`
+Syntax (Permitir requests pela url): `:(NomeParâmetro)`<br>
+Syntax (Acessar parâmetro do usuário): `req.params.(NomeParâmetro)`
 
 ```javascript
 app.get('/users/:id', function(req, res){

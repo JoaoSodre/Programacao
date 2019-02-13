@@ -10,7 +10,7 @@
 | Saber mais sobre um<br>comando e seus **parâmetros** | `help (NomeComando)` ou `(NomeComando) /?` |
 | Entrar numa pasta  | `cd (Pasta)` |
 | Listar todos os intens do<br>diretório ou de uma pasta | `dir` ou `dir (Pasta)\(SubPasta)` |
-| Vários comandos na<br>mesma linha | `(comando1) & (comando2)` <br>use '&&' para um em seguida do outro. |
+| Vários comandos na<br>mesma linha | `(comando1) & (comando2)` <br>use '&&' para um de cada vez. |
 | Abrir pasta atual na<br>janela do explorer | `start .` |
 | Limpar a tela | `cls` |
 | Criar uma pasta | `mkdir[md] (NomePasta)\(Subpasta)` |

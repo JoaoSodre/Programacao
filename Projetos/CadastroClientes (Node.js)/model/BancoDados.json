@@ -1,22 +1,22 @@
 [
     {
-        "nome": "João",
-        "area": "TI",
-        "hobbies": "Tocar Violão, Ouvir Música, Estudar Programação e Estudar Inglês"
+        "nome": "Ygor",
+        "area": "Botânica",
+        "hobbies": "Ler sobre auto-ajuda, discutir sobre mecânica e falar mal do Elon Musk online."
     },
     {
         "nome": "Gabriel",
         "area": "Administração",
-        "hobbies": "Jogar Uno, Treinar com Ninjas e Chutar o Portão do Vizinho"
+        "hobbies": "Jogar Uno, treinar com Ninjas e chutar o portão do vizinho"
     },
     {
         "nome": "Eduardo",
         "area": "Vendas",
-        "hobbies": "Discutir sobre Polvos, Chaleiras Industriais e Rugby(???)"
+        "hobbies": "Discutir sobre Polvos, chaleiras Industriais e praticar rugby todas terceiras quartas feiras do mês"
     },
     {
         "nome": "Murilo",
         "area": "Esportes",
-        "hobbies": "Fazer compras ilegais, Hackear a Google e Fazer Caridade Sempre que Possível"
+        "hobbies": "Fazer compras ilegais, hackear a Google e Fazer caridade sempre que possível"
     }
 ]

@@ -8,13 +8,13 @@
 | Clonar Repositório<br> (Nome é opcional) | `git clone (UrlRepositorio) (Nome)` |
 | Mostra a situação atual do<br> repositório | `git status` |
 | "Puxar" os arquivos do<br> repositório (Podem haver conflitos) | `git pull` |
-| Volta para uma versão<br> no passado (MUITO CUIDADO<br> COM ESSE COMANDO) | `git checkout (ShaId)`|
+| Voltar para uma versão<br> no passado (MUITO CUIDADO<br> COM ESSE COMANDO) | `git checkout (ShaId)`|
 | <br><br> | |
 | Configurar email ou name<br> para identificar commits | `git config --global user.(email/nome) = "(Email/Nome)"` |
 | Adicionar arquivos novos<br>para commitar (Cheque antes <br>com `git status`) | `git add .` ou `git add (ArquivoT)` |
 | Remover algum arquivo<br> (Antes de dar commit) | `git rm --cached (ArquivoT)` |
 | Dar um commit<br>(Mensagem é obrigatório) | `git commit -m "(Mensagem)"` |
-| Dar um push<br><br> Nota: Ele sempre pedirá o <br>seu usuário e senha | `git push origin (NomeBranch)` |
+| Dar um push<br>(Ele sempre pedirá o usuário<br> e senha na primeira vez.) | `git push origin (NomeBranch)` |
 | <br><br> | |
 | Criar um branch<br>(Commit Atual) | `git branch (NomeBranch)` |
 | Mudar de Branch | `git checkout (NomeBranch)` |

@@ -1,13 +1,15 @@
 # Features
 
-* Template Strings
-* Arrow Function
-* Função IIFE
-* Ternário
-* Definindo Argumentos
-* Generators
-* Spread Operator
-* Currying
+* [Template Strings]()
+* [Arrow Function]()
+* [Callbacks]()
+* [Promises]()
+* [Função IIFE]()
+* [Ternário]()
+* [Definindo Argumentos]()
+* [Generators]()
+* [Spread Operator]()
+* [Currying]()
 
 ### Template Strings
 
@@ -92,6 +94,229 @@ var Objeto = new Classe("Terry");
 ```
 
 Isso ocore pois quando a keyword `this` está dentro de uma arrow function, a mesma irá herdar o pai daquele escopo e não o própio escopo, no exemplo assima se houvesse um método `console.log(this)` dentro da classe ele iria mostrar o objeto `windown` (caso fosse em algum browser).
+
+<br><br>
+
+### Callbacks
+
+Assim como no Js Comum, os callbacks são basicamente funções que são passadas atravez de um parâmetro quando a função príncipal for chamada. Sendo assim a função callback pode ser chamada a qualquer momento apenas executando o parâmetro do construtor.
+
+```javascript
+const One = cb => {
+
+    // *Algum Código Blocante*
+
+    // Callback
+    cb();
+}
+
+// Função (nos parâmetros) que irá executar quando receber o callback
+One(() => {
+    console.log("Executando depois do callback");
+});
+```
+
+Também funciona com parâmetros
+
+```javascript
+const One = cb => {
+
+    // *Código Blocante*
+
+    var msg1 = "Mandando o callback";
+    var msg2 = "De forma Assíncrona";
+    cb(msg1, msg2);
+}
+
+One((m1, m2) => {
+    console.log(`Mensagens recebidas:\n${m1}\n${m2}`);
+});
+```
+
+Também é possível fazer vários callbacks
+
+```javascript
+function One(cb1, cb2, cb3){
+    cb1("Mensagem 1");
+    setTimeout(() => {
+        cb2("Mensagem 2");
+        setTimeout(() => {
+            cb3("Mensagem 3");
+        }, 1250);
+    }, 2250);
+}
+
+One(msg => {
+    console.log(`${msg}`);
+}, msg => {
+    console.log(`${msg}`);
+}, msg => {
+    console.log(`${msg}`);
+});
+```
+
+<br><br>
+
+### Promises
+
+As `Promises` funcionam a base de dois parâmetros que são chamado de `resolve` e `reject`. O resolve é usado para quando algo no algoritmo deu certo e o reject para quando deu errado.
+
+Syntax: `new Promise((res, rej) => { ... }`
+
+```javascript
+var a = true;
+
+new Promise((res, rej) => {
+    if(a){
+        res("Algo deu certo");
+    } else { 
+        rej("Algo deu errado");
+    }
+});
+// -> Promise {<resolved>: "Algo deu certo"}
+```
+
+Para de fato conseguir usar os dados que vão nos objetos `res` e `rej` é necessário utilizar o `.then()` e o `.catch()` sendo o primeiro para o resolve e o segundo para o reject.
+
+Syntax: `promise.then/catch( parâmetros => { ... })`
+
+```javascript
+var a = true;
+
+var promise1 = new Promise((res, rej) => {
+    if(a){
+        res("Algo deu certo");
+    } else { 
+        rej("Algo deu errado");
+    }
+});
+
+/* Chamando a Promise (Nesse caso não
+se usa parenteses apenas o nome) */
+
+promise1
+    .then(msg => {
+        console.log(msg);
+        // -> "Algo deu certo"
+    })
+    .catch(msg => {
+        console.log(msg);
+        // -> "Algo deu errado"
+    });
+```
+
+> Só é possível passar um parâmetro pelo .res()/.catch(), caso precise de dois ou mais será necessário um objeto ou um array.
+
+<br>
+
+Demonstração de como a Promise consegue ser assíncrona
+
+```javascript
+var promise1 = new Promise(res => {
+    res();
+});
+
+console.log("Antes");
+
+promise1
+    .then(() => {
+        console.log("Durante");
+    });
+
+console.log("Depois");
+
+/* Espera-se "Antes Durante Depois" 
+mas o que aparace no console é 
+"Antes Depois Durante" */
+```
+
+É possível usar vários `.then()` em sequência apenas utilizando um returno de outra Promise dentro do própio .then()
+
+```javascript
+var A = new Promise(res => { res(); });
+
+A
+    .then(() => {
+        console.log("Primeiro .then()");
+        return new Promise(res => { res(); });
+    })
+    .then(() => {
+        console.log("Segundo .then()");
+        // ...
+    });
+    
+// ----- Outra Meneira de escrever o mesmo código -----
+
+var A = new Promise(res => { res(); });
+
+var Fun1 = () => {
+    console.log("Primeiro .then()");
+    return new Promise(res => { res(); });
+}
+
+var Fun2 = () => {
+    console.log("Segundo .then()");
+    // ...
+}
+
+A
+    .then(Fun1)
+    .then(Fun2);
+```
+
+```javascript
+var A = () => {
+    return new Promise((res,rej) => {
+        console.log("Promise A executada");
+        res();
+    });
+}
+
+var B = () => {
+    return new Promise((res,rej) => {
+        console.log("Promise B executada");
+        res();
+    });
+}
+
+var C = () => {
+    return new Promise((res,rej) => {
+        console.log("Promise C executada");
+        res();
+    });
+}
+
+A()
+    .then(B)
+    .then(C);
+```
+
+É possível integra-los com o Node.js também
+
+```javascript
+const fs = require('fs');
+
+var ReadFile = _path => {
+    return new Promise((res,rej) => {
+        fs.readFile(_path, 'utf8', (err,data) => {
+            if (err) {
+                rej(err);
+            } 
+            else {
+                res(data);
+            }
+        });
+    });
+}
+
+ReadFile("./texto.txt")
+    .then(data => {
+        console.log(data);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+```
 
 <br><br>
 
