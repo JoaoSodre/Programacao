@@ -50,7 +50,7 @@ No caso de uma quantidade impar de matches feitos em sequência, o RegEx concide
 
 ### Character Set
 
-Supondo que queira-se dar match em duas palavras semelhantes que possuem apenas uma letra diferente (Ex: Gato, Rato), como seria possível fazer isso usando RegEx? Se observarmos apenas a primeira letra está sendo mudada, logo com os **colchetes** será possível permitir que ambas estejam no match. Essses caracteres nos colchetes são chamados de **Characters Set**.
+Supondo que queira-se dar match em duas palavras semelhantes que possuem apenas uma letra diferente (Ex: Gato, Rato), como seria possível fazer isso usando RegEx? Se observarmos apenas a primeira letra está sendo mudada, logo com os **colchetes** será possível permitir que ambas estejam no match. Esses caracteres nos colchetes são chamados de **Characters Set**.
 
 ```js
 "Um gato estava perseguindo um rato, depois de um tempo ele estava grato"
@@ -133,7 +133,7 @@ Metacharacter | Dará Match nos...
 
 ```js
 "k 8 P 9 3 3"
-/\w\s\d/g // -> 3 Matches ("k 8" e "P 9" e "3 3").
+/\w\s\d/g // -> 3 Matches ("k 8" , "P 9" e "3 3").
 
 /*  
     O que esse RegEx está procurando é qualquer tipo de combinação de 
@@ -153,7 +153,7 @@ Special<br>Character | Explicação
 | . | Dará match em qualquer digito (incluindo simbolos),<br> exceto os enters. |
 | ? | Fará o caractere anterior a ele ser opcional. |
 | * | Dará match caso o caractere anterior não aparecer,<br> aparecer uma ou várias vezes. |
-| $ | Match em qualquer string que possua os caracteres<br> no final. |
+| $ | Match em qualquer string que possuirem aqueles <br>caracteres no final. |
 | ^ | (Quando usado no começo) Fará o mesmo que o $ porém<br> para o inicio das expressões. |
 
 ```js
@@ -203,14 +203,12 @@ Para conseguir utilizar o RegEx no javascript utilize o modelo:
 var resultado = "String Aqui".match(/ExpressaoAqui/);
 ```
 
-O resultado sempre será um array com os matches da tipagem string, mesmo se apenas um match for feito o resultado será um array com 1 value.
-
-<br><br>
+O resultado sempre será um array com os matches da tipagem string, mesmo se apenas um match for feito o resultado será um array com 1 item.
 
 Há também a possíbilidade de usar strings como variáveis para as expressões.
 
 ```js
-// new RegExp("shaman", "ig") ---> /shaman/ig
+// new RegExp("touhou", "ig") ---> /touhou/ig
 
 var match = "cool";
 var flags = "gi";

@@ -73,11 +73,11 @@ POST: `request.body`<br>
 
 Os Status HTTP são uma forma de resposta do server a um request do client. Essas respostas são dividas em cinco categorias de acordo com o [IANA (Internet Assigned Numbers Authority)](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml):<br>
 
-* 1xx (Informativo) O request foi recebido, dando continuidade ao processo.
-* 2xx (Bem sucedido) O request foi recebido, entendido e aceitado.
-* 3xx (Redirecionamento) Precisa de procedimentos adicionais para concluir o request.
-* 4xx (Erro no Cliente) Syntax invalida ou o cliente não consegiu lidar com o request.
-* 5xx (Erro no Server) O server não conseguiu executar com um request aparentemente válido.
+* 1xx (Informativo): O request foi recebido, dando continuidade ao processo.
+* 2xx (Bem sucedido): O request foi recebido, entendido e aceitado.
+* 3xx (Redirecionamento): Precisa de procedimentos adicionais para concluir o request.
+* 4xx (Erro no Cliente): Syntax invalida ou o cliente não consegiu lidar com o request.
+* 5xx (Erro no Server): O server não conseguiu executar com um request aparentemente válido.
 
 [Lista com os Status HTTPs mais comuns](https://www.smartlabsoftware.com/ref/http-status-codes.htm)
 
