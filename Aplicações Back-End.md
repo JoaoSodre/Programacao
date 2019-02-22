@@ -17,9 +17,11 @@ Quando nós navegamos num website, nós podemos acabar pedindo algum tipo de dad
 
 ## Como que fazem isso? (Protocols)
 
-É aqui que os protocols entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
+É aqui que os protocols (em português 'protocolos') entrão em ação! O protocol basicamente é um conjunto de regras que os dois lados concordam quando estão se comunicando, pegue por exemplo um alemão e italiano que falam inglês, eles não se entendem nas suas línguas primárias, logo o inglês é usado como protocol aqui para que ambos consigão falar entre si.<br>
 
-O Node.js por exemplo possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses ou requests de files para o cliente.
+O Node.js por exemplo possíbilita a transferência de dados via FTP (File Transfer Protocol) ou seja, se tivermos o Node.js no server nós conseguimos mandar responses ou requests de files para o cliente.<br>
+
+A Internet utiliza o protocolo HTTP, que é basicamente um protocolo de perguntas e respostas entre o servidores e os browsers.
 
 <br><br>
 
@@ -37,9 +39,9 @@ Quando nós fazemos um request ou response para um server, além dos dados, nós
 
 <br><br>
 
-## Métodos HTTP
+## Métodos do Protocolo HTTP
 
-Em uma página html existem diferentes tipos de requests para auxiliar com as necessidades da aplicação, os chamados de métodos (ou verbos) HTTP, são eles: **Post, Get, Delete e Put**. Esses requests são enviados para o server que vai analisar o tipo de cada um e trata-los de uma certa forma.
+Em uma página html existem diferentes tipos de requests para **auxiliar** com as necessidades da aplicação, os chamados de métodos (ou verbos) do protocolo HTTP, são eles: **Post, Get, Delete e Put**. Esses requests são enviados para o server, que vai analisar o tipo de cada um e trata-los de uma certa forma.
 
 Método Get:
 
@@ -47,31 +49,34 @@ Método Get:
 * Usado para fazer buscas no documento (Ex: falar em qual página estamos, se existe algum dado nele).
 * Já que ficam na url, sua largura máxima é limitada (Cerca de 2000 caracteres).
 * Posse ser "cacheado" (Salva muito esforço das máquinas caso a página não foi mudada).
-* Já que os parâmetros ficam na Url, é possível fazer os requests por lá em vez nos inputs.
+* Já que os parâmetros ficam na Url, é possível fazer os requests por lá em vez nos inputs do html.
 * Não consegue mudar o server.
 
 Método Post:
 
 * Parâmetros ficam no body.
-* Usado para fazer mudanças em dados.
+* Usado para adicionar dados.
 * Não possui limite de largura (O server pode ser configurado para suportar mais quando necessário).
-* Quase nunca são cacheados (Isso por causa que provavelmente está-se alterando algum dado do server com ele).
+* Quase nunca são cacheados (Isso por causa que provavelmente está-se alterando/adicionando algum dado do server com ele).
 * Consegue mudar algo no server.
 
-Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método POST é quando se queira pegar algum dado da aplicação e usar na mesma e o método POST e quando se queira pegar algum dado e mandar para o server.<br>
+Método Put:
 
-Syntax para pegar os dados via métodos GET ou POST (Node.js):
+* Request para que o server altere algum dado do Database. 
 
-GET: `request.query`<br>
-POST: `request.body`<br>
+Método Delete:
 
-(Ambos são objetos)
+* Request para que o server delete algum dado do Database.
+
+Basicamente para se usar o mais adequado usa-se a seguinte conclusão: o método POST é quando se queira pegar algum dado da aplicação e usar na mesma e o método POST e quando se queira pegar algum dado e mandar para o server.
+
+Existem outros métodos porém estes são pouco usados pois são muito específicos e até mesmo complexos. Os quatro métodos príncipais conseguem resolver a grande maioria das dificuldades comuns.
 
 <br><br>
 
 ## Status HTTP
 
-Os Status HTTP são uma forma de resposta do server a um request do client. Essas respostas são dividas em cinco categorias de acordo com o [IANA (Internet Assigned Numbers Authority)](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml):<br>
+Os Status HTTP são uma forma de resposta do server a um **request do client**. Essas respostas são dividas em cinco categorias de acordo com o [IANA (Internet Assigned Numbers Authority)](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml):<br>
 
 * 1xx (Informativo): O request foi recebido, dando continuidade ao processo.
 * 2xx (Bem sucedido): O request foi recebido, entendido e aceitado.
