@@ -2,7 +2,7 @@
 
 > Também pode ser referenciado como 'Programação Assíncrona'
 
-A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila),  programas orientados a evento são guiados por indicações externas, chamados de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez (da maneira **blocante**), na programação assíncrona ele executa vários comandos ao mesmo tempo, todos eles dando um **callback** (Ação) quando finalizados.<br><br>
+A orientação a eventos, diferente de programas tradicionais que seguem um fluxo de controle padronizado (como se fosse uma fila). Programas orientados a evento são guiados por indicações externas chamadas de eventos.<br><br> Ou seja, em vez de seguir um comando após o outro, um de cada vez (da maneira **blocante**), na programação assíncrona ele executa vários comandos ao mesmo tempo, todos eles dando um **callback** (Ação) quando finalizados.<br><br>
 
 Exemplo (Em Javascript):
 
@@ -36,4 +36,4 @@ A(function() {
 console.log("Depois");
 ```
 
-Espera-se a sequência "Antes Durante Depois" porém o que aparece no console é "Antes Depois Durante" isso se deve ao `A()` ser assíncrono.
+Espera-se a sequência "Antes Durante Depois" porém o que aparece no console é "Antes Depois Durante" isso se deve por causa do `A()` ser assíncrono.

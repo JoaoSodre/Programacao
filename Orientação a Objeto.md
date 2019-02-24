@@ -2,7 +2,7 @@
 
 **Nota: Os exemplos foram feitos em sua grande maioria em Javascript, mas os conceitos se aplicam para qualquer linguagem que trabalha com orientação a objeto.**<br><br>
 
-A OO é usada para organizar variáveis e funções soltas no código-fonte e fora dele (como em arquivos separados), encapsulando-os em **Classes** que possuem o mesmo contexto podendo assim clona-la dentro de um **Objeto** para ser usado depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) a qualquer momento.<br><br>
+A OO (Object Orientation -- Orientação Objeto) é usada para organizar variáveis e funções soltas no código-fonte e também fora dele (como em arquivos separados) com a função de **encapsula-los** em **classes** que possuem o mesmo contexto. Depois de estarem dentro da classe podem assim ser clona-dos dentro de um **objeto** para serem usados depois, facilitando todo o processo de organização. Classes são modelos que estão disponiveis para serem copiados (instanciados) a qualquer momento.<br><br>
 
 Nomenclaturas:
 
@@ -30,7 +30,7 @@ Instâncias -> Ação de **clonar** uma classe fazendo assim um **objeto**.<br>
 
 ## Introdução 
 
-Como: | Syntax
+Como: | Syntax (Antes do ECMA 2015)
 --- | ---
 Criar uma classe | `var (NomeDaClasse) = function () {  }` 
 Criar uma Propiedade<br>(Dentro da Classe) | `this.(NomeDaPropiedade) = (Valor);` 

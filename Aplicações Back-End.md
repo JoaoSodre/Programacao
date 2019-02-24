@@ -3,9 +3,11 @@
 * Como os servers e clients funcionam?
 * Como que fazem isso? (Protocols)
 * Ports
-* Response Header
+* Header
 * Métodos HTTP
 * Status HTTP
+* Sessions
+* Cookies
 * Buffers e Streams
 * Pipes
 
@@ -33,9 +35,9 @@ Uma porta se parece com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 <br><br>
 
-## Response Header
+## Header
 
-Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os response headers. Assim como a tag `<head>` do html não mostra nada no browser porém define muitas características dela, o response header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar)
+Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os headers. Assim como a tag `<head>` do html, não mostra nada no browser, porém define muitas características dela. O header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar caso estiver no google chrome)
 
 <br><br>
 
@@ -81,10 +83,20 @@ Os Status HTTP são uma forma de resposta do server a um **request do client**. 
 * 1xx (Informativo): O request foi recebido, dando continuidade ao processo.
 * 2xx (Bem sucedido): O request foi recebido, entendido e aceitado.
 * 3xx (Redirecionamento): Precisa de procedimentos adicionais para concluir o request.
-* 4xx (Erro no Cliente): Syntax invalida ou o cliente não consegiu lidar com o request.
+* 4xx (Erro no Cliente): Syntax invalida ou o cliente não conseguiu lidar com o request. (Muito usado para lidar com sistema de cadastro de logins e de páginas não encontradas)
 * 5xx (Erro no Server): O server não conseguiu executar com um request aparentemente válido.
 
 [Lista com os Status HTTPs mais comuns](https://www.smartlabsoftware.com/ref/http-status-codes.htm)
+
+## Sessions
+
+Session é usado no servidor, por isso acabou ficando em desuso, dependendo da quantidade de pessoas o servidor pode ficar superlotado, logo caindo ou ficar muito caro pois precisaria de vários servidores interligados para lidar com tanta memória. 
+
+<br><br>
+
+## Cookies
+
+O cookie ta no cliente
 
 <br><br>
 

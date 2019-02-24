@@ -7,10 +7,10 @@ Com o Javascript DOM (Document Object Model), o JavaScript consegue acessar e mu
 > [Referência para o Js Dom](https://www.w3schools.com/js/js_htmldom_document.asp)
 
 ```javascript
-document.getElementbyId(""); // Procura um elemento pela tag
+document.getElementbyId("");    // Procura um elemento pela tag
 document.getElementbyClass(""); // Procura um elemento pela class
-document.getElementbyName(""); // Procura um elemento pelo atributo name
-document.querySelector(""); // Procura o elemento pelo seletor css
+document.getElementbyName("");  // Procura um elemento pelo atributo name
+document.querySelector("");     // Procura o elemento pelo seletor css
 ```
 
 <br>

@@ -1,6 +1,6 @@
 # API
 
-A API (Application Programming Interface) é uma interface de programação criada para que outras pessoas possam usufruir de seus **serviços e dados** porém que não podem ser alterados. Existem dois tipos de APIs: Códigos e Serviços.
+A API (Application Programming Interface) é uma interface de programação criada para que outras pessoas possam *usufruir* de seus **serviços e dados** porém as mesmas pessoas não podem alterar esses mesmos dados. Existem dois tipos de APIs: Códigos e Serviços.
 
 <br>
 
@@ -24,4 +24,12 @@ O SOAP (Simple Object Access Protocol) é um [protocolo](https://github.com/Joao
 
 Padrão de código: XML e JSON (Mais comum) <br>
 
-O REST (Representational State Transfer) é um modelo de arquitetura baseado em http para  sistemas solicitantes acessem e manipulem representações textuais de recursos da Web usando um conjunto uniforme e predefinido de operações sem estado. Com o REST línguagens diferentes conseguem se comunicar (já que todos que trabalham com web precisam passar pelo http solucionando assim o problema do SOAP). O REST utiliza todos os [métodos http](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-do-protocolo-http), ou seja os serviços REST utilizarão o http para fazer requests Get, Post, Delete e Put. Nos serviços **RESTful** (Site e API ao mesmo tempo), os requests feitos a uma URL extrairão uma response que pode estar em XML, JSON ou em algum outro formato.
+O REST (Representational State Transfer) é um modelo de arquitetura baseado em **http** para sistemas solicitantes (Browsers/Servers) acessem e manipulem dados que serão fornecidos via URL da Web.
+
+Com o REST línguagens diferentes conseguem se comunicar (já que todos que trabalham com web precisam passar pelo http, solucionando assim o problema do SOAP).
+
+O REST utiliza todos os [métodos http](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-do-protocolo-http), ou seja os serviços REST utilizarão a URL do browser para fazer requests Get, Post, Delete e Put.
+
+Nos serviços **RESTful** (Site e API ao mesmo tempo), os requests feitos a uma URL conseguiram uma response que pode estar em XML, JSON ou em algum outro formato.
+
+Algumas dessas API's necessitam de **key_id** para conseguirem permitir o acesso de terceiros, isso normalmente é feito atravez de um request GET que leva uma variável [Query String](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-do-protocolo-http) na URL.

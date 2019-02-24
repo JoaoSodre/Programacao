@@ -18,9 +18,9 @@ O Client (Browser) faz um tipo de 'Ajax request' para o server e depois que o se
 
 ### O objeto XMLHttpRequest (XHR)
 
-O XHR é basicamente uma API no formato de um objeto, com ele é possível ter métodos e atributos que são fornecidos pelo própio ambiente 'Js browser'. Seus métodos conseguem transferir dados do cliente para os servers e também com esse objeto é possível usar outros [protocols](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#como-que-fazem-isso-protocols) além do HTTP.
+O XHR é basicamente uma API no formato de um objeto, com ele é possível ter métodos e atributos que são fornecidos pelo própio ambiente 'Js browser'. Seus métodos conseguem transferir dados do cliente para os servers. Com esse objeto também é possível usar outros [protocols](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#como-que-fazem-isso-protocols) além do HTTP.
 
-> Nem todos os browsers interpretam o XHR da mesma forma, por isso que o [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery) é usado para solucionar esse problema. O jQuery também é extremamente útil para manipular o Html DOM da página quando der certo o response.
+> Nem todos os browsers interpretam o XHR da mesma forma, por isso que é recomendado usar o [jQuery](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery) para solucionar esse problema. O jQuery também é extremamente útil para manipular o HTML DOM da página quando o response estiver completo.
 
 ### Usando o XHR
 
@@ -36,17 +36,19 @@ O objeto possuí vários métodos e atributos. É dessa forma que funcionará.
 
 ```js
 // Método 'open()' especifica o que o request vai fazer
+
 xml.open('GET', 'algumaapiporai.com', true);
-// Primeiro argumento: Tipo de request (Get ou Post)
-// Segundo argumento: Local do request (URL de um site ou arquivo interno)
-// Terceiro argumento: Caso queira que seja assíncrono ou não
+
+// Primeiro arg: Tipo de request (GET ou POST)
+// Segundo  arg: Local do request (URL de um site ou arquivo interno)
+// Terceiro arg: Caso queira que seja assíncrono ou não
 ```
 
 O método 'send()' será quem fará o request, ele deve ser escrito depois que o 'open()' for declarado.
 
 ```js
-// Caso fosse um post: 'xml.send(string)'
 xml.send();
+// Caso fosse um POST: 'xml.send(string)'
 ```
 
 A cada etapa do processamento do request, existe um **número de status** que mostra como o request está sendo processado. Esses status começam no número 0 (request não iniciado) e vão até o 4 (request finalizado e a resposta está pronta).<br>
@@ -59,9 +61,8 @@ xml.onreadystatechange = function() {
 
     // Número de status
     console.log(xml.readyState);
-    if (xml.readyState == 4) {
-        console.log(xml.response);
-    }
+
+    if (xml.readyState == 4) console.log(xml.response);
 }
 
 // O que os números significam
@@ -73,6 +74,6 @@ xml.onreadystatechange = function() {
 // 4: request finalizado e a resposta está pronta
 ```
 
-Agora toda vez que a sequência de métodos do XHR for chamado ele simplesmente irá fazer um request e quando recebe-lo poderá atualizar a página usando o DOM, fazendo assim uma aplicação assíncrona que não precisa de recarregar a página.
+Agora toda vez que a sequência de métodos do XHR for chamado ele simplesmente irá fazer um request e quando recebe-lo poderá atualizar a página usando o [DOM](https://github.com/JoaoSodre/Programacao/blob/180d6fd2e9290166fc0cf3892cf0febe12a85b4f/Javascript/JavaScript%20DOM.md) dentro da função que é chamada no `onreadstage`, fazendo assim uma aplicação assíncrona que não precisa recarregar a página inteira.
 
 [Usando AJAX com jQuery. (Economiza tempo e é muito mais intuítivo em relação aos métodos)](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/jQuery.md#ajax-com-jquery)
