@@ -30,6 +30,6 @@ Com o REST línguagens diferentes conseguem se comunicar (já que todos que trab
 
 O REST utiliza todos os [métodos http](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-do-protocolo-http), ou seja os serviços REST utilizarão a URL do browser para fazer requests Get, Post, Delete e Put.
 
-Nos serviços **RESTful** (Site e API ao mesmo tempo), os requests feitos a uma URL conseguiram uma response que pode estar em XML, JSON ou em algum outro formato.
+Nos serviços **RESTful** (Site e API ao mesmo tempo), requests feitos a uma URL conseguiram uma response que pode estar em XML, JSON (mais comum) ou em algum outro formato.
 
 Algumas dessas API's necessitam de **key_id** para conseguirem permitir o acesso de terceiros, isso normalmente é feito atravez de um request GET que leva uma variável [Query String](https://github.com/JoaoSodre/Programacao/blob/master/Aplica%C3%A7%C3%B5es%20Back-End.md#m%C3%A9todos-do-protocolo-http) na URL.

@@ -6,8 +6,7 @@
 * Header
 * Métodos HTTP
 * Status HTTP
-* Sessions
-* Cookies
+* Sessions e Cookies
 * Buffers e Streams
 * Pipes
 
@@ -37,7 +36,7 @@ Uma porta se parece com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
 ## Header
 
-Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os headers. Assim como a tag `<head>` do html, não mostra nada no browser, porém define muitas características dela. O header funciona de maneira parecida mandando características a mais do request/response como o **Content-Type** e o **Status** para o browser saber com quais dados está lidando. (É possível ver essas informações na aba 'network' do inspecionar caso estiver no google chrome)
+Quando nós fazemos um request ou response para um server, além dos dados, nós também enviamos os headers. Assim como a tag `<head>` do html, não mostra nada no browser, porém define muitas características dela. O header funciona de maneira parecida mandando características a mais do request/response como o **content-type**, **status** para o browser saber com quais dados está lidando ou até mesmo ver qual tipo de browser o client está usando ou qual o tipo de device. (É possível ver essas informações na aba 'network' do inspecionar caso estiver no google chrome)
 
 <br><br>
 
@@ -88,15 +87,26 @@ Os Status HTTP são uma forma de resposta do server a um **request do client**. 
 
 [Lista com os Status HTTPs mais comuns](https://www.smartlabsoftware.com/ref/http-status-codes.htm)
 
-## Sessions
-
-Session é usado no servidor, por isso acabou ficando em desuso, dependendo da quantidade de pessoas o servidor pode ficar superlotado, logo caindo ou ficar muito caro pois precisaria de vários servidores interligados para lidar com tanta memória. 
-
 <br><br>
 
-## Cookies
+## Cookies e Sessions
 
-O cookie ta no cliente
+* Cookie - Funciona no Server e no Browser.
+
+O cookie é um "pedaço" de informação que é mandado de um site e armazenado no computador do usuário no web browser enquanto estiver navegando. Cookies foram feitos para serem um mecânismo para websites lembrarem de informações (como intens adicionados num carrinho numa loja online) ou para gravar a atividade de navegação do usuário (incluindo cliques em botões específicos, loggins, gravar quais páginas o usuário visitou antes, etc). Eles também são usados para preencher forms como nomes, endereços, senhas e números de cartão de credito. 
+
+* Com o cookie é possível determinar a quantidade de tempo que ele ficará live, desde semanas até anos.
+* Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP, é preciso ter cuidado redobrado quando for usa-los. (Recomenda-se encriptações para informações importantes, porém isso irá utilizar o processamento do server).
+
+<br>
+
+* Session - Funciona apenas no Server
+
+Session, assim como os cookies, é usado para guardar informações do usuário, porém apenas no servidor. Por ser usado em server, muitas das vezes acabou ficando em desuso, pois dependendo da quantidade de pessoas que estiverem utilizando o serviço, podem superlotar o servidor, logo tendo maiores chances de cair ou ficar muito caro, pois precisaria de escalar (interligar) vários servidores para lidar com tantos usuários. 
+
+* O session expira quando o browser é fechado. 
+* O servidor será quem determinará o tempo da Session, ou seja os operadores de infraestrutura são responsáveis por isso.
+* É mais seguro pois as informações estão no server e não trafegam no header do browser.
 
 <br><br>
 
