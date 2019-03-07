@@ -28,7 +28,7 @@ A Internet utiliza o protocolo HTTP, que é basicamente um protocolo de pergunta
 
 ## Ports
 
-Quando nós fazemos um request para o server, como que sabemos que o pedido foi o Node.js e não para outro programa rodando no server? O que acontesse é que o Node.js **listen to** (escuta) um número de porta, ou seja se você faz um request para uma porta particular naquele IP e o Node.js está escutando aquela porta, ele responderá caso contrário não irá. É dessa maneira que fazemos pedidos via Node.js.<br>
+Quando nós fazemos um request para o server, como que sabemos que o pedido foi feito pelo Node.js e não por outro programa rodando no server? O que acontece é que o Node.js **listen to** (escuta) um número de porta, ou seja se o cliente faz um request para uma porta particular naquele IP, o Node.js estará escutando-a, portanto ele responderá o request feito, caso contrário não irá. É dessa maneira que fazemos requests via server.<br>
 
 Uma porta se parece com isso num número de IP: (NúmeroIP):(NúmeroPorta)
 
@@ -95,8 +95,8 @@ Os Status HTTP são uma forma de resposta do server a um **request do client**. 
 
 O cookie é um "pedaço" de informação que é mandado de um site e armazenado no computador do usuário no web browser enquanto estiver navegando. Cookies foram feitos para serem um mecânismo para websites lembrarem de informações (como intens adicionados num carrinho numa loja online) ou para gravar a atividade de navegação do usuário (incluindo cliques em botões específicos, loggins, gravar quais páginas o usuário visitou antes, etc). Eles também são usados para preencher forms como nomes, endereços, senhas e números de cartão de credito. 
 
-* Com o cookie é possível determinar a quantidade de tempo que ele ficará live, desde semanas até anos.
-* Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP, é preciso ter cuidado redobrado quando for usa-los. (Recomenda-se encriptações para informações importantes, porém isso irá utilizar o processamento do server).
+1. Com o cookie é possível determinar a quantidade de tempo que ele ficará live, desde semanas até anos.
+2. Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP, é preciso ter cuidado redobrado quando for usa-los. (Recomenda-se encriptações para informações importantes, porém isso irá utilizar o processamento do server).
 
 <br>
 
@@ -104,15 +104,15 @@ O cookie é um "pedaço" de informação que é mandado de um site e armazenado 
 
 Session, assim como os cookies, é usado para guardar informações do usuário, porém apenas no servidor. Por ser usado em server, muitas das vezes acabou ficando em desuso, pois dependendo da quantidade de pessoas que estiverem utilizando o serviço, podem superlotar o servidor, logo tendo maiores chances de cair ou ficar muito caro, pois precisaria de escalar (interligar) vários servidores para lidar com tantos usuários. 
 
-* O session expira quando o browser é fechado. 
-* O servidor será quem determinará o tempo da Session, ou seja os operadores de infraestrutura são responsáveis por isso.
-* É mais seguro pois as informações estão no server e não trafegam no header do browser.
+1. O session expira quando o browser é fechado. 
+2. O servidor será quem determinará o tempo da Session, ou seja os operadores de infraestrutura são responsáveis por isso.
+3. É mais seguro pois as informações estão no server e não trafegam no header do browser.
 
 <br><br>
 
 ## Buffers e Streams
 
-Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, isso é um **Buffer**.<br>
+Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados para irem apenas de uma vez, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, esse pedacinho é chamado de **Buffer**.<br>
 
 Já a **Stream** é o caminho no qual os buffers vão percorrer ao longo do tempo, melhorando assim e muito o desempenho da aplicação (já que não é necessário esperar pelo processo inteiro de uma grande quantidade de dados).<br>
 
@@ -120,8 +120,8 @@ Ambas as funções podem também serem usadas para lidar com requests e response
 
 Tipos de Streams:
 
-* Writable Streams - Permite que o Node.js escreva dados a uma stream.
-* Readable Streams - Permite que o Node.js leia dados de uma stream.
+* Writable Streams - Permite que o sistema escreva dados a uma stream.
+* Readable Streams - Permite que o sistema leia dados de uma stream.
 * Duplex - Consegue ler e escrever dados numa stream.
 
 <br><br>
