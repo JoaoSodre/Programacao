@@ -6,7 +6,7 @@ MongoDB é um **NoSQL Database** ou seja em vez de armazenar os dados em tabelas
 
 ## Como funciona?
 
-Quando o client faz um request, o server -- comunicando com o Database -- simplesmente controlará tudo o que acontece com os dados dentro do Database, como: criar, ler, deletar e atualizar (chamadas **Crud Operations**).
+Quando o client faz um request, o server -- comunicando com o database -- simplesmente controlará tudo o que acontece com os dados dentro do database, como: criar, ler, deletar e atualizar (chamadas **Crud Operations**).
 
 Caso Node.js estiver sendo usado como server, será necessário o [Mongoose](https://www.npmjs.com/package/mongoose) para conseguir comunica-lo com o MongoDB. O Mongoose é um package que facilitará muito a conexão server-database.
 
@@ -21,6 +21,7 @@ const mongoose = require('mongoose');
 Conectando a um database local. Caso não existir ele criará um novo. É possível ter quandos databases for necessários com o MongoDB.
 
 ```js
+// Nome do database
 var localDB = 'MeuDB';
 
 // Essa opção é usada quando o MongoDB é instalado na máquina local
@@ -51,25 +52,54 @@ Dentro dos databases existe um **Model** (modelo) para organizar o tipo de dado 
 Já os **Schemas** (esquemas) são padrões que os dados irão seguir. Por exemplo, no modelo do Mario é necessário haver um atributo ''nomePersonagem' que esperará por uma _string_, já o atributo 'idadePersonagem' esperará por uma _number_. As propiedades dos schemas são opcionais, um personagem pode ou não ter um valor de idade, mas, se houver, irá esperar por um valor do tipo _number_.
 
 ```js
+// mongodb.js
 const mongoose = require('mongoose');
 
 // Habilitando o mongoose para utilizar os schemas
 const Schema = mongoose.Schema;
 
 // Definindo as propiedades de um schema
-const SchemaUM = new Schema({
+const SchemaFavs = new Schema({
     lugarFav: String,
-    altura: Number
+    bandaFav: String
 });
 
 const SchemaDOIS = new Schema({
-    pais: String,
-    isRico: Boolean 
+    anoNasc: Number,
+    isMan: Boolean 
 });
 
 // Criando um modelo. 
-const ModelUm = mongoose.Model("Model um", SchemaUm);
+const ModelUm = mongoose.Model("Model um", SchemaFavs);
 // Argumentos: Nome do Model e o Schema que será usado.
 
 module.exports = ModelOne;
 ```
+
+Criando um dado novo com o modelo importado e salvando no database depois.
+
+```js
+const Favs = require('./mongodb.js');
+
+// Criando dado localmente por meio do modelo. 
+var clienteUm = new Favs({
+    lugarFav: "Espanha",
+    bandaFav: "Beatles"
+});
+```
+
+Salvando no dataBase -- aquele do 'connect()'.
+
+```js
+// O método 'save()' por ser assíncrono, fora implementado uma Promise dentro dele. 
+clienteUm.save().then(function(){
+
+    // Retornará true caso o dado foi criado localmente e não está no database.
+    // Retornará false caso o dado foi criado localmente e está no database.
+    console.log(clienteUm.isNew);
+
+    // Espera-se 'false' pois o modelo não é novo e está no database
+});
+```
+
+Para conseguir visualizar os dados do MongoDB, utilize o [Robo 3T](https://robomongo.org/)

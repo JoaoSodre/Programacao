@@ -13,6 +13,7 @@
 			* [O Módulo Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#o-m%C3%B3dulo-express)
 		* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#ejs)
 		* [Body-Parser](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#body-parser)
+		* [Mocha](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#mocha)
 		* [Outros Npm Packages Muito Úteis](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#outros-npm-packages-muito-%C3%BAteis)
 
 [Awesome Node.js (Lista com muitos recursos e packages relacionados ao Node.js)](https://github.com/sindresorhus/awesome-nodejs#readme)<br>
@@ -686,11 +687,11 @@ Agora quando renderizar tanto a home quanto a página de contatos, ambas vão es
 
 <br><br>
 
-### Body-Parser
+### [Body-Parser](https://www.npmjs.com/package/body-parser)
 
 [Outros Middlewares Populares](https://github.com/azat-co/cheatsheets/tree/master/express4#connect-middleware)<br>
 
-Muitas das vezes quando se lida com um POST de um OBJETO o node simplesmente não irá conseguir lidar com eles de forma correta, muitas das eles vezes irão renderizar como [object Object], undefined, null, e o 'toString()' não conseguirá também dar certo com esses dados.<br>
+Muitas das vezes quando se lida com um POST de um OBJETO o node poderá simplesmente não conseguir lidar com eles de forma correta, muitas das vezes irá renderizar como [object Object], undefined, null, etc. O método 'toString()' não conseguirá também lidar com esses dados.<br>
 
 É aqui que o Body-Parser entra, ele atua como **middleware** fazendo com que os POSTS renderizem de forma correta antes de irem para o objeto 'req.body'.
 
@@ -708,6 +709,48 @@ app.post('/', url, function(req,res){
 
 <br><br>
 
+### [Mocha](https://www.npmjs.com/package/mocha)
+
+Mocha é usado para fazer teste durante a aplicação para se ter certeza de que tudo está funcionando corretamente, com ele muitas das vezes é possível encontrar bugs e erros no código facilmente.<br>
+
+Todos os arquivos que o Mocha irá checar precisam estar dentro de uma pasta chamada 'test' para funcionar. Esses arquivos nesta pasta podem usar comandos especiais que o Mocha disponibilizará.<br>
+
+Antes de tudo, para que o Mocha funcione é necessário um comando dentro dos scripts do package.json com o simples valor de 'mocha' e depois executa-lo no command-line.
+
+```js
+// Package.json
+"scripts": {
+	"test" : "mocha"	
+}
+```
+
+```shell
+> npm run test
+```
+
+O Primeiro comando é o 'describe()' que vai ser onde será descrito o que está sendo testado. Dentro da função de callback do 'describe()' haverá os blocos 'it()', cada bloco desse irá fazer um teste. Dentro do 'it()' haverá o método 'assert()' que esperará por um resultado booleano, baseado no resultado ele mostrará no console um resultado positivo (verde) ou negativo (vermelho com erros).
+
+```js
+//Para o 'assert' funcionar é preciso fazer o require
+const assert = require('assert');
+
+describe('Descreva o que está sendo testado aqui', function(){
+
+	it('Teste número um', function(){
+		/* Mostrará se o teste deu certo */
+		assert(5 + 5 === 10);
+	});
+
+	it('Aqui será outro teste, número dois', function(){
+		/* ou Errado */
+		assert(6 * 6 === 22);
+	});
+});
+```
+
+
+<br><br>
+
 ### Outros Npm Packages Muito Úteis
 
 Recursos e Packages do Npm.
@@ -716,7 +759,6 @@ Recursos e Packages do Npm.
 * [Cheerio (Permite usar jQuery no server)](https://cheerio.js.org/)
 * [Gulp (Muitas ferramentas para taferas que consomem tempo ou que são repetitivas, como minificar um arquivo)](https://www.npmjs.com/package/gulp)
 * [Lodash (Muitas funções e ferramentas úteis para arrays, objetos, etc)](https://lodash.com/)
-* [Mocha (_Unit testing_ com o Node -- varios testes ao longo do algoritmo)](https://www.npmjs.com/package/mocha)
 * [Node-Inspector (Debbuger para o Node usando Dev Tools do Chrome)](https://www.npmjs.com/package/node-inspector)
 * [Nodemon (Atualizar o server toda vez que salvar um arquivo)](https://www.npmjs.com/package/nodemon)
 * [Reload (Atualiza o browser toda vez que salvar um arquivo)](https://www.npmjs.com/package/reload)

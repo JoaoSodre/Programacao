@@ -112,7 +112,7 @@ Session, assim como os cookies, é usado para guardar informações do usuário,
 
 ## Buffers e Streams
 
-Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados para irem apenas de uma vez, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, esse pedacinho é chamado de **Buffer**.<br>
+Quando nós temos muitos dados para serem transferidos do ponto A ao ponto B, o que podemos fazer é ir transferindo de pouco em pouco, ou seja em vez de esperarmos todos aqueles dados serem processados para irem apenas de uma vez, eles irão ser armazenados em pequenos pedaços de memória que serão enviados assim que completos, esses pedacinhos são chamados de **Buffers**.<br>
 
 Já a **Stream** é o caminho no qual os buffers vão percorrer ao longo do tempo, melhorando assim e muito o desempenho da aplicação (já que não é necessário esperar pelo processo inteiro de uma grande quantidade de dados).<br>
 
