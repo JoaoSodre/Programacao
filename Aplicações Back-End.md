@@ -93,7 +93,7 @@ Os Status HTTP são uma forma de resposta do server a um **request do client**. 
 
 * Cookie - Funciona no Server e no Browser.
 
-O cookie é um "pedaço" de informação que é mandado de um site e armazenado no computador do usuário no web browser enquanto estiver navegando. Cookies foram feitos para serem um mecânismo para websites lembrarem de informações (como intens adicionados num carrinho numa loja online) ou para gravar a atividade de navegação do usuário (incluindo cliques em botões específicos, loggins, gravar quais páginas o usuário visitou antes, etc). Eles também são usados para preencher forms como nomes, endereços, senhas e números de cartão de credito. 
+O cookie é um "pedaço" de informação que é mandado de um site e armazenado no computador do usuário no web browser enquanto estiver navegando. Cookies foram feitos para serem um mecânismo para websites lembrarem de informações (como intens adicionados num carrinho numa loja online) ou para gravar a atividade de navegação do usuário (incluindo cliques em botões específicos, loggins, gravar quais páginas o usuário visitou antes etc). Eles também são usados para preencher forms como nomes, endereços, senhas e números de cartão de credito. 
 
 1. Com o cookie é possível determinar a quantidade de tempo que ele ficará live, desde semanas até anos.
 2. Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP, é preciso ter cuidado redobrado quando for usa-los. (Recomenda-se encriptações para informações importantes, porém isso irá utilizar o processamento do server).

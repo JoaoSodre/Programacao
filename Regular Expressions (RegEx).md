@@ -4,7 +4,7 @@
 
 > Será utilizado os termos 'palavra' e 'palavras' em vez dos termos 'digito' e 'grupo de digitos' em algumas partes para que o texto fique mais compreensível. Também o termo 'texto' será usado tendo em vista que o termo correto seria 'string'.
 
-Regular Expression (RegEx) é um mecânismo que nos permite checar uma série de caracteres em uma string por matches com as combinações que nós criamos usando o própio RegEx. Por exemplo: Checar se um e-mail é valido (Se possui o @ ou se termina em .com), checar se uma senha é forte, filtar uma frase exata em um texto, etc.
+Regular Expression (RegEx) é um mecânismo que nos permite checar uma série de caracteres em uma string por matches com as combinações que nós criamos usando o própio RegEx. Por exemplo: Checar se um e-mail é valido (Se possui o @ ou se termina em .com), checar se uma senha é forte, filtar uma frase exata em um texto etc.
 
 <br><br>
 
@@ -126,7 +126,7 @@ Metacharacter | Dará Match nos...
 ------ | ------
 | \d | digitos numéricos [0-9]. |
 | \w | caracteres de palavras [A-Za-z0-9 _]. |
-| \s | espaços em branco (Tabs, spaces, etc). |
+| \s | espaços em branco (Tabs, spaces etc). |
 | \t | caracteres 'tab'. |
 
 <br>
@@ -146,7 +146,7 @@ Metacharacter | Dará Match nos...
 
 ### Special Characters
 
-Além dos caracateres 'diferentes' que já foram mostrados ({}, [], +, etc) existem outros adicionais:
+Além dos caracateres 'diferentes' que já foram mostrados ({}, [], + etc) existem outros adicionais:
 
 Special<br>Character | Explicação
 ------ | ------
@@ -159,11 +159,11 @@ Special<br>Character | Explicação
 ```js
 "carros"
 
-/ca./ // -> 1 match (Também funcionaria 'caa', 'cab', 'cat', 'ca4', etc)
+/ca./ // -> 1 match (Também funcionaria 'caa', 'cab', 'cat', 'ca4' etc)
 /ca?rros?/g // -> 1 match (Fará match em ambos 'carro', 'carros', 'crro' e 'crros')
-/car*/ // -> 1 match ('carr', porém poderia ser 'ca', 'car', 'carrrrr', etc)
-/ros$/ // -> 1 match (Também funcionaria 'dros', 'ros', '@ros', 'yrrsros', etc)
-/^car/ // -> 1 match (Também funcionaria 'car12', 'car54534', 'carfgs', etc)
+/car*/ // -> 1 match ('carr', porém poderia ser 'ca', 'car', 'carrrrr' etc)
+/ros$/ // -> 1 match (Também funcionaria 'dros', 'ros', '@ros', 'yrrsros' etc)
+/^car/ // -> 1 match (Também funcionaria 'car12', 'car54534', 'carfgs' etc)
 
 /.+/ // -> 6 matches (Qualquer string que tenha pelo menos 1 digito.)
 ```

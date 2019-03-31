@@ -7,7 +7,7 @@ Conceito | Exemplo (Javascript)
 -------- | -----------
 | Variável | `var k1 = 5;` <=> `k1 = 5` |
 | Constante (Var que <br>não muda) | `const pi = Math.PI;` |
-| [Condicionais](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements) | if, if else, else, ..., throw, etc. |
+| [Condicionais](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements) | if, if else, else, ..., throw etc. |
 | Looping | while, for, do..while, for..in. |
 | [Operadores Lógicos](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Expressions_and_operators) | &equals;&equals;, !&equals;, >, <, && (e), ... (spread), >=, <=, &#124;&#124; (ou).<br>Não esquecer do !== e === |
 | Ternário | Substitui a expressão `if()` para apenas uma linha<pre>(Condição) ? (Faça caso for true):(Faça caso for false)<br>( (Se isso for true) && (Faça isso))<br>( (Se isso for false) &#124;&#124; (Faça isso)) </pre> |

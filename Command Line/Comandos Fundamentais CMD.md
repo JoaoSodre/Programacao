@@ -1,6 +1,6 @@
 # Cmd
 
-> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .js, etc).
+> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .js etc).
 
 > Toda vez que um comando estiver `J[K]` significa o comando entre colchetes que faz a mesma coisa que o comando fora dele, ou seja o 'J' é igual ao 'K'.
 

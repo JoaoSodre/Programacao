@@ -1,4 +1,4 @@
-# Function Programming
+# Functional Programming
 
 Na **Programação Funcional** funções são tratadas como valores assim como strings e números. Com esse feature o código fica muito mais limpo, com menos bugs e mais fácil de entender.
 

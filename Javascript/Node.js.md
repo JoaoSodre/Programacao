@@ -495,7 +495,7 @@ No caso de que exista uma dependência que não seja necessária na aplicação 
 
 [Awesome Express](https://github.com/rajikaimal/awesome-express#awesome-express--)<br>
 
-Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Espécie de ponte (código) que está back-end e front-end ou entre duas aplicações, ou seja entre o request e o response), etc.<br>
+Express é um dos packages do npm, ele fornece vários features que auxiliam na criação de aplicações web e mobile, criação de rotas flexíveis e fáceis de usar, lidar com requests POST e GET, útil como um middleware (Espécie de ponte (código) que está back-end e front-end ou entre duas aplicações, ou seja entre o request e o response) etc.<br>
 
 Basicamente o Express reorganiza o node para que fique muito mais intuítivo e fácil de usar.<br><br>
 
@@ -583,7 +583,7 @@ Ativando o Ejs atravez Express:
 app.set('view engine','ejs');
 ```
 
-Quando setamos um view engine (templates) o Express por padrão irá olhar na pasta '/views' e vai ser nela em que os arquivos `.ejs` irão ficar. Esses arquivos fazem **exatamente** o mesmo que o documento html, porém adicionando o js dinâmico. É nesta pasta que vai ficar os modelos como o index, páginas de erros, páginas de usuários, rotas para outras partes da aplicação, etc.<br><br>
+Quando setamos um view engine (templates) o Express por padrão irá olhar na pasta '/views' e vai ser nela em que os arquivos `.ejs` irão ficar. Esses arquivos fazem **exatamente** o mesmo que o documento html, porém adicionando o js dinâmico. É nesta pasta que vai ficar os modelos como o index, páginas de erros, páginas de usuários, rotas para outras partes da aplicação etc.<br><br>
 
 **Usando o Ejs**
 
@@ -691,7 +691,7 @@ Agora quando renderizar tanto a home quanto a página de contatos, ambas vão es
 
 [Outros Middlewares Populares](https://github.com/azat-co/cheatsheets/tree/master/express4#connect-middleware)<br>
 
-Muitas das vezes quando se lida com um POST de um OBJETO o node poderá simplesmente não conseguir lidar com eles de forma correta, muitas das vezes irá renderizar como [object Object], undefined, null, etc. O método 'toString()' não conseguirá também lidar com esses dados.<br>
+Muitas das vezes quando se lida com um POST de um OBJETO o node poderá simplesmente não conseguir lidar com eles de forma correta, muitas das vezes irá renderizar como [object Object], undefined, null etc. O método 'toString()' não conseguirá também lidar com esses dados.<br>
 
 É aqui que o Body-Parser entra, ele atua como **middleware** fazendo com que os POSTS renderizem de forma correta antes de irem para o objeto 'req.body'.
 
@@ -728,7 +728,11 @@ Antes de tudo, para que o Mocha funcione é necessário um comando dentro dos sc
 > npm run test
 ```
 
-O Primeiro comando é o 'describe()' que vai ser onde será descrito o que está sendo testado. Dentro da função de callback do 'describe()' haverá os blocos 'it()', cada bloco desse irá fazer um teste. Dentro do 'it()' haverá o método 'assert()' que esperará por um resultado booleano, baseado no resultado ele mostrará no console um resultado positivo (verde) ou negativo (vermelho com erros).
+O primeiro método é o `describe()` que é o local onde está descrito o que está sendo testado. 
+
+Dentro da função de callback do `describe()`, haverá os blocos `it()`, cada bloco desse possui um nome e irá fazer um teste. 
+
+Dentro da função de callback do `it()`, haverá o método `assert()` que esperará por um resultado booleano. Baseado nesse resultado, ele mostrará no console um resultado positivo (verde) ou negativo (vermelho com os erros). O sistema não sabe quando parar de fazer os testes, por isso usa-se o parâmetro `done` que irar atuar como um marcador quando o código for finalizado. 
 
 ```js
 //Para o 'assert' funcionar é preciso fazer o require
@@ -736,18 +740,21 @@ const assert = require('assert');
 
 describe('Descreva o que está sendo testado aqui', function(){
 
-	it('Teste número um', function(){
+	it('Teste número um', function(done){
+
 		/* Mostrará se o teste deu certo */
 		assert(5 + 5 === 10);
+		done();
 	});
 
-	it('Aqui será outro teste, número dois', function(){
+	it('Aqui será outro teste, número dois', function(done){
+
 		/* ou Errado */
 		assert(6 * 6 === 22);
+		done();
 	});
 });
 ```
-
 
 <br><br>
 
@@ -758,7 +765,7 @@ Recursos e Packages do Npm.
 * [Markdown-It (Converte .md em html)](https://www.npmjs.com/package/markdown-it)
 * [Cheerio (Permite usar jQuery no server)](https://cheerio.js.org/)
 * [Gulp (Muitas ferramentas para taferas que consomem tempo ou que são repetitivas, como minificar um arquivo)](https://www.npmjs.com/package/gulp)
-* [Lodash (Muitas funções e ferramentas úteis para arrays, objetos, etc)](https://lodash.com/)
+* [Lodash (Muitas funções e ferramentas úteis para arrays, objetos etc)](https://lodash.com/)
 * [Node-Inspector (Debbuger para o Node usando Dev Tools do Chrome)](https://www.npmjs.com/package/node-inspector)
 * [Nodemon (Atualizar o server toda vez que salvar um arquivo)](https://www.npmjs.com/package/nodemon)
 * [Reload (Atualiza o browser toda vez que salvar um arquivo)](https://www.npmjs.com/package/reload)

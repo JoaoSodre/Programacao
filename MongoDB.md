@@ -6,26 +6,26 @@ MongoDB é um **NoSQL Database** ou seja em vez de armazenar os dados em tabelas
 
 ## Como funciona?
 
-Quando o client faz um request, o server -- comunicando com o database -- simplesmente controlará tudo o que acontece com os dados dentro do database, como: criar, ler, deletar e atualizar (chamadas **Crud Operations**).
+Quando o client faz um request, o server — comunicando com o database — simplesmente controlará tudo o que acontece com os dados dentro do database, como: criar, ler, deletar e atualizar (chamadas **Crud Operations**).
 
 Caso Node.js estiver sendo usado como server, será necessário o [Mongoose](https://www.npmjs.com/package/mongoose) para conseguir comunica-lo com o MongoDB. O Mongoose é um package que facilitará muito a conexão server-database.
 
 ## Mongoose
 
-Conectando Mongoose ao database MongoDB.
+Fazendo require no Node.js.
 
 ```js
 const mongoose = require('mongoose');
 ```
 
-Conectando a um database local. Caso não existir ele criará um novo. É possível ter quandos databases for necessários com o MongoDB.
+Conectando a um database local; caso não existir ele criará um novo; é possível ter quandos databases for necessário com o MongoDB.
 
 ```js
 // Nome do database
-var localDB = 'MeuDB';
+var nomeDB = 'MeuDB';
 
-// Essa opção é usada quando o MongoDB é instalado na máquina local
-mongoose.connect('mongodb://localhost/' + localDB);
+// Conectando a um database local, é necessário colocar a porta padrão que é 27017
+mongoose.connect('mongodb://localhost:27017/' + nomeDB), {useNewUrlParser: true};
 ```
 
 <br><br>
@@ -36,20 +36,20 @@ Apesar de já ter conectando com o MongoDB, ele não sabe quando a conexão foi 
 // Quando a conexão for 'aberta', executará uma das seguintes funções.
 mongoose.connection
     .once('open', function(){
-        console.log("A conexão foi feita, agora faça vacas voarem.")
+        console.log("A conexão foi feita.")
     })
     .on('error', function(err){
         console.log("Erro de conexão encontrado:\n\n" + err);
     });
 ```
 
-> **DICA:** A diferença de 'on' e 'once' quando se trata de event listeners é que o 'on' irá executar o código todas as vezes que o evento for chamado, já o 'once' irá executar o código quando o evento for chamado apenas uma vez.
+> **DICA:** A diferença de 'on' e 'once' quando se trata de event listeners é que o 'on' irá executar o código todas as vezes que o evento for chamado, já o 'once' irá executar o código apenas uma vez quando o evento for chamado.
 
 ### Models e Schemas
 
 Dentro dos databases existe um **Model** (modelo) para organizar o tipo de dado que está sendo organizado. Por exemplo, é possivel ter um modelo apenas para personagens do Mario e outro só com personagens do Sonic, ambos dentro do mesmo database.<br>
 
-Já os **Schemas** (esquemas) são padrões que os dados irão seguir. Por exemplo, no modelo do Mario é necessário haver um atributo ''nomePersonagem' que esperará por uma _string_, já o atributo 'idadePersonagem' esperará por uma _number_. As propiedades dos schemas são opcionais, um personagem pode ou não ter um valor de idade, mas, se houver, irá esperar por um valor do tipo _number_.
+Já os **Schemas** (esquemas) são padrões que os dados irão seguir. Por exemplo, no modelo do Mario é necessário haver um atributo 'nomePersonagem' que esperará por uma _string_, já o atributo 'idadePersonagem' esperará por uma _number_. As propiedades dos schemas são opcionais, um personagem pode ou não ter um valor de idade, mas, se houver, irá esperar por um valor do tipo _number_.
 
 ```js
 // mongodb.js
@@ -60,45 +60,54 @@ const Schema = mongoose.Schema;
 
 // Definindo as propiedades de um schema
 const SchemaFavs = new Schema({
-    lugarFav: String,
-    bandaFav: String
+    firstName: String,
+    isMember: Boolean,
+    membershipType: String,
 });
 
-const SchemaDOIS = new Schema({
-    anoNasc: Number,
-    isMan: Boolean 
+const SchemaPersonal = new Schema({
+    birthYear: Number,
+    isMale: Boolean 
 });
 
 // Criando um modelo. 
-const ModelUm = mongoose.Model("Model um", SchemaFavs);
+const ModelUm = mongoose.model("Model um", SchemaFavs);
 // Argumentos: Nome do Model e o Schema que será usado.
 
-module.exports = ModelOne;
+// Exportando o modelo para outros files usarem.
+module.exports = ModelUm;
 ```
+
+> Nota: o Model utiliza seu método com o 'm' minúsculo: mongoose.model() 
+
+<br>
 
 Criando um dado novo com o modelo importado e salvando no database depois.
 
 ```js
+// Importando o modelo.
 const Favs = require('./mongodb.js');
 
-// Criando dado localmente por meio do modelo. 
-var clienteUm = new Favs({
-    lugarFav: "Espanha",
-    bandaFav: "Beatles"
+// Criando dado localmente por meio do modelo. É necessário criar uma instância do mesmo.
+var cliente = new Favs({
+    firstName: "Murilo",
+    isMember: false,
+    membershipType: "Free"
 });
 ```
 
-Salvando no dataBase -- aquele do 'connect()'.
+Salvando no dataBase — aquele declarado no `.connect()`.
 
 ```js
-// O método 'save()' por ser assíncrono, fora implementado uma Promise dentro dele. 
-clienteUm.save().then(function(){
+// Fora implementado uma promise dentro do 'save()', pois pode demorar alguns segundos para que os dados sejam salvos.
+cliente.save().then(function(){
 
-    // Retornará true caso o dado foi criado localmente e não está no database.
+    console.log(cliente.isNew);
+
+    // Retornará true caso o dado foi criado **localmente** e não está no database.
     // Retornará false caso o dado foi criado localmente e está no database.
-    console.log(clienteUm.isNew);
 
-    // Espera-se 'false' pois o modelo não é novo e está no database
+    // Leve em conta que o resultado será dado dentro da Promise do ".save()", logo espera-se que o dado já esteja salvo, logo false (não é novo). 
 });
 ```
 

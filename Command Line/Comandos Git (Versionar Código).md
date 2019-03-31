@@ -1,6 +1,6 @@
 # Comandos Git
 
-> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .bat, etc).
+> Nota: Toda vez que um nome terminar com T nos exemplos, significa `.TipoDoArquivo` (Como .txt, .exe, .bat etc).
 
 | Descrição | Comando |
 | --- | --- |
