@@ -9,7 +9,7 @@
 		* [Module: 'http'](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#module-http)
 	* [Npm](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#npm)
 		* [O Arquivo package.json](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#o-arquivo-packagejson)
-		* [Packages Populares]()
+		* [Packages Populares](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/Node.js.md#packages-populares)
 		
 
 [Awesome Node.js (Lista com muitos recursos e packages relacionados ao Node.js)](https://github.com/sindresorhus/awesome-nodejs#readme)<br>
@@ -491,9 +491,9 @@ No caso de que exista uma dependência que não seja necessária na aplicação 
 
 Uma pequena lista de node packages populares e como são usados.
 
-* [Express](): Administrar melhor o server-side do Node. 
-* [Ejs](): Javascript dinâmico usado atravez de um template.
-* [Body-Parser](): Fazem os POSTs funcionarem de forma correta.
-* [Mocha](): Cria testes durante a aplicação. 
+* [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Express.md#express): Administrar melhor o server-side do Node. 
+* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Ejs.md#ejs): Javascript dinâmico usado atravez de um template.
+* [Body-Parser](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Body-Parser.md#body-parser): Fazem os POSTs funcionarem de forma correta.
+* [Mocha](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Mocha.md#mocha): Cria testes durante a aplicação. 
 * [OAuth (em breve)](): Possibilita autenticar usuários pelo Facebook, Github, Twitter etc.
-* [Outros Packages Úteis]()
+* [Outros Packages Úteis](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Outros%20Packages%20%C3%9Ateis.md#outros-packages-%C3%BAteis)
