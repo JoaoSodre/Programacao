@@ -47,7 +47,7 @@ mongoose.connection
 
 ### Models e Schemas
 
-Dentro dos databases existe um **Model** (modelo) para organizar o tipo de dado que está sendo organizado. Por exemplo, é possivel ter um modelo apenas para personagens do Mario e outro só com personagens do Sonic, ambos dentro do mesmo database.<br>
+Dentro dos databases existe um **Model** (modelo) para organizar o tipo de dado que está sendo organizado. Por exemplo, é possivel ter um modelo apenas para personagens do Mario e outro só com personagens do Sonic, ambos dentro do mesmo database. O nome do modelo também é conhecido como o nome da collection.<br>
 
 Já os **Schemas** (esquemas) são padrões que os dados irão seguir. Por exemplo, no modelo do Mario é necessário haver um atributo 'nomePersonagem' que esperará por uma _string_, já o atributo 'idadePersonagem' esperará por uma _number_. As propiedades dos schemas são opcionais, um personagem pode ou não ter um valor de idade, mas, se houver, irá esperar por um valor do tipo _number_.
 
@@ -70,8 +70,8 @@ const SchemaPersonal = new Schema({
     isMale: Boolean 
 });
 
-// Criando um modelo. 
-const ModelUm = mongoose.model("Model um", SchemaFavs);
+// Criando um modelo (este vai ser o nome da collection). 
+const ModelUm = mongoose.model("coisasfavoritas", SchemaFavs);
 // Argumentos: Nome do Model e o Schema que será usado.
 
 // Exportando o modelo para outros files usarem.
@@ -96,7 +96,7 @@ var cliente = new Favs({
 });
 ```
 
-Salvando no dataBase — aquele declarado no `.connect()`.
+Salvando no database — aquele declarado no `.connect()`.
 
 ```js
 // Fora implementado uma promise dentro do 'save()', pois pode demorar alguns segundos para que os dados sejam salvos.
@@ -112,3 +112,30 @@ cliente.save().then(function(){
 ```
 
 Para conseguir visualizar os dados do MongoDB, utilize o [Robo 3T](https://robomongo.org/)
+
+<br><br>
+
+### "Dropando" uma coleção
+
+"Dropar" uma coleção significa limpar todos os dados de uma coleção. Caso não seja feito, o database ficará lotado de dados repetidos e sem uso, o que pode acarretar problemas futuros como uso desnecessário de memória e de processamento, dificuldades para procurar um dado específico, entre outros.<br> 
+
+O melhor momento para dropar a coleção é antes de um teste ser feito, para que cada teste retorne dados independentes e para que não surja os problemas mencionados anteriormente.<br> 
+
+Primeiramente para conseguir dropar-lo, então, é preciso referênciar a collection, para isso usa-se o comando: `mongoose.connect.colletions;`
+
+```js
+var listaCollections = mongoose.connect.colletions;
+
+// Irá mostrar na tela as collections existentes, junto com suas propiedades. 
+console.log(listaCollections);
+```
+
+Agora é possível dropar a collection.
+
+```js
+// Anteriormente foi usado "coisasfavoritas" para o nome da collection, este nome deve ser posto em [nomeCollection] (sem as aspas). 
+
+listaCollections.[nomeCollection].drop(function(){
+    console.log(`A coleção acabou de ser dropada`);
+});
+```

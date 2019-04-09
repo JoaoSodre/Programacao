@@ -1,5 +1,7 @@
 # API
 
+[Lista de Apis públicas](https://github.com/toddmotto/public-apis) <br>
+
 A API (Application Programming Interface) é uma interface de programação criada para que outras pessoas possam *usufruir* de seus **serviços e dados** porém as mesmas pessoas não podem alterar esses mesmos dados. Existem dois tipos de APIs: Códigos e Serviços.
 
 <br>
@@ -22,7 +24,7 @@ O SOAP (Simple Object Access Protocol) é um [protocolo](https://github.com/Joao
 
 ### REST
 
-Padrão de código: XML e JSON (Mais comum) <br>
+Padrão de código: XML e JSON, este sendo mais comum. <br>
 
 O REST (Representational State Transfer) é um modelo de arquitetura baseado em **http** para sistemas solicitantes (Browsers/Servers) acessem e manipulem dados que serão fornecidos via URL da Web.
 

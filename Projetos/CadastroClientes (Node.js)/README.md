@@ -9,6 +9,7 @@ Tecnologias usadas:
 * Ejs
 * jQuery
 * Orientação Objeto
+* Arquitetura MVC
 
 <br>
 
