@@ -96,7 +96,7 @@ Os Status HTTP são uma forma de resposta do server a um **request do client**. 
 O cookie é um "pedaço" de informação que é mandado de um site e armazenado no computador do usuário no web browser enquanto estiver navegando. Cookies foram feitos para serem um mecânismo para websites lembrarem de informações (como intens adicionados num carrinho numa loja online) ou para gravar a atividade de navegação do usuário (incluindo cliques em botões específicos, loggins, gravar quais páginas o usuário visitou antes etc). Eles também são usados para preencher forms como nomes, endereços, senhas e números de cartão de credito. 
 
 1. Com o cookie é possível determinar a quantidade de tempo que ele ficará live, desde semanas até anos.
-2. Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP, é preciso ter cuidado redobrado quando for usa-los. (Recomenda-se encriptações para informações importantes, porém isso irá utilizar o processamento do server).
+2. Possuí algumas falhas de segurança devido ás comunicações dos header dos requests com o HTTP. É preciso ter cuidado redobrado quando for usa-los. Também recomenda-se encriptações para informações importantes, porém isto irá utilizar o processamento do server.
 
 <br>
 
@@ -105,8 +105,8 @@ O cookie é um "pedaço" de informação que é mandado de um site e armazenado 
 Session, assim como os cookies, é usado para guardar informações do usuário, porém apenas no servidor. Por ser usado em server, muitas das vezes acabou ficando em desuso, pois dependendo da quantidade de pessoas que estiverem utilizando o serviço, podem superlotar o servidor, logo tendo maiores chances de cair ou ficar muito caro, pois precisaria de escalar (interligar) vários servidores para lidar com tantos usuários. 
 
 1. O session expira quando o browser é fechado. 
-2. O servidor será quem determinará o tempo da Session, ou seja os operadores de infraestrutura são responsáveis por isso.
-3. É mais seguro pois as informações estão no server e não trafegam no header do browser.
+2. O servidor será quem determinará o tempo da Session, ou seja os operadores de infraestrutura serão responsáveis por isto.
+3. São mais seguros, pois as informações estão no server e não trafegam no header do browser.
 
 <br><br>
 

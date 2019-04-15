@@ -395,7 +395,7 @@ Muito parecida com a interface, porém a classe abstrata tem mais "poderes". Ela
 ```javascript
 var Abstracao = function () {
 
-	// Proibindo de instanciar essa classe atravez do construtor
+	// Proibindo de instanciar essa classe através do construtor
 	if (this.constructor == Abstracao) {
 		throw new Error("Não pode instanciar classe abstrata, apenas herdar!");
 	}
@@ -425,7 +425,7 @@ Pessoa.prototype.Gravar = function() { // Algum código }
 
 # Classe Singleton
 
-Com a classe Singleton é possível criar uma **unica** instância atraves do seu contrutor.
+Com a classe Singleton é possível criar uma **unica** instância através do seu contrutor.
 
 > Ela pode ser usada por exemplo para organizar arquivos separados de um projeto como endereços, emails, banco de dados em tudo em um só lugar
 

@@ -196,7 +196,7 @@ var fs = require('fs');
 'BaseDados.txt', de forma SINCRONA */
 
 /* Já que só existem zeros e uns no arquivo,
-o método utiliza utf-8 como parametro para
+o método utiliza utf-8 como parâmetro para
 traduzir esses bytes em letras */
 
 var txt = fs.readFileSync('./BaseDados.txt', 'utf8');
@@ -206,10 +206,10 @@ console.log(txt);
 ----------- Modo Assíncrono -----------
 
 ```javascript
-/* Dessa vez é necessário uma função no terceiro parametro, 
+/* Dessa vez é necessário uma função no terceiro parâmetro, 
 que vai executar (disparar) quando ele terminar a ação */
 
-/* Na função é necessário 2 parametros, um para caso der
+/* Na função é necessário 2 parâmetros, um para caso der
 erro e outro que vai ser os dados do arquivo */
 
 fs.readFile('./meLeia.txt' , 'utf8', function(error, txt) {
@@ -479,7 +479,7 @@ Sabendo disso para instalar as dependencias de um outro projeto clonado do githu
 
 Para criar/alterar o conteúdo do package, digite no cmd `npm init`, ele fazerá uma série de perguntas para completar os dados do arquivo.<br>
 
-Sempre quando for instalar um package, use o commando `--save` para que a versão dele fique no package.json. (Ex: `npm install express --save`, `npm install express@4.2.0 --save` para caso a versão 4.2.0 seja necessária)<br>
+Sempre quando for instalar um package, use o comando `--save` para que a versão dele fique no package.json. (Ex: `npm install express --save`, `npm install express@4.2.0 --save` para caso a versão 4.2.0 seja necessária)<br>
 
 No caso de que exista uma dependência que não seja necessária na aplicação mas que gostaria-se de usar-lá, usa-se o comando `--save-dev` pois ela é apenas um feature a mais no projeto.
 
@@ -492,7 +492,7 @@ No caso de que exista uma dependência que não seja necessária na aplicação 
 Uma pequena lista de node packages populares e como são usados.
 
 * [Express](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Express.md#express): Administrar melhor o server-side do Node. 
-* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Ejs.md#ejs): Javascript dinâmico usado atravez de um template.
+* [Ejs](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Ejs.md#ejs): Javascript dinâmico usado através de um template.
 * [Body-Parser](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Body-Parser.md#body-parser): Fazem os POSTs funcionarem de forma correta.
 * [Mocha](https://github.com/JoaoSodre/Programacao/blob/master/Javascript/NPM%20Packages/Mocha.md#mocha): Cria testes durante a aplicação. 
 * [OAuth (em breve)](): Possibilita autenticar usuários pelo Facebook, Github, Twitter etc.

@@ -99,7 +99,7 @@ Isso ocore pois quando a keyword `this` está dentro de uma arrow function, a me
 
 ### Callbacks
 
-Assim como no Js Comum, os callbacks são basicamente funções que são passadas atravez de um parâmetro quando a função príncipal for chamada. Sendo assim a função callback pode ser chamada a qualquer momento apenas executando o parâmetro do construtor.
+Assim como no Js Comum, os callbacks são basicamente funções que são passadas através de um parâmetro quando a função príncipal for chamada. Sendo assim a função callback pode ser chamada a qualquer momento apenas executando o parâmetro do construtor.
 
 ```javascript
 const One = cb => {
@@ -416,7 +416,7 @@ console.log(Camiseta); //-> 112.5
 
 ### Generators
 
-Generators se parecem muito como uma função normal mas na verdade eles não executam todo o código em uma única chamada como na função normal, o que eles fazem é pausar entre intervalos de códigos e esperar até que eu permitir atraves de outro comando que eles continuem. Ou seja os generators são basicamente uma função com checkpoints. Eles são representados por `function* () {}`. e retornam um objeto com dois parâmetros `value` e `done` toda vez que pararem no `yield` (Checkpoint), sendo o value o valor que está no yield e done um booleano indicando de já acabaram os yields.
+Generators se parecem muito como uma função normal mas na verdade eles não executam todo o código em uma única chamada como na função normal, o que eles fazem é pausar entre intervalos de códigos e esperar até que eu permitir através de outro comando que eles continuem. Ou seja os generators são basicamente uma função com checkpoints. Eles são representados por `function* () {}`. e retornam um objeto com dois parâmetros `value` e `done` toda vez que pararem no `yield` (Checkpoint), sendo o value o valor que está no yield e done um booleano indicando de já acabaram os yields.
 
 ```javascript
 function* GeneratorFunc() {

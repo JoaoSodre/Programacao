@@ -6,7 +6,7 @@ Com esse tipo de ferramenta não é preciso criar uma página que contém os mes
 
 > Nota: Com o Express é possível instalar o Ejs com o comando `express --view=ejs`, o que ajuda muito para não precisar usar o tempo para configurar tudo na aplicação.
 
-Ativando o Ejs atravez Express:
+Ativando o Ejs através Express:
 
 ```javascript
 // O método '.set()' funciona da mesma forma que um EventEmmiter
