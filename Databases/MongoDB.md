@@ -52,7 +52,7 @@ db.createUser({
 
 ### Comandos Mongo Shell 
 
-Aqui está uma pequena lista de comandos o Mongo Shell, para uma lista maior, veja a [referência](https://docs.mongodb.com/manual/reference/mongo-shell/) ou um [compilado]() que eu mesmo fiz.
+Aqui está uma pequena lista de comandos o Mongo Shell, para uma lista maior, veja a [referência](https://docs.mongodb.com/manual/reference/mongo-shell/) ou um [compilado](https://github.com/JoaoSodre/Programacao/blob/master/Command%20Line/Comandos%20Mongo%20Shell.md#comandos-mongo-shell) de comandos que acredito serem os mais usados.
 
 | Descrição | Comando |
 | --- | --- |
